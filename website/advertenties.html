@@ -14,16 +14,63 @@
 
 <style>
 
-.visitekaartjes .frame
+
+.selection-panel
+{
+	background-color:orange;
+	height:110px;
+	border-radius:10px;
+	margin-bottom:20px;
+	
+}
+.visitekaartjesframeLeft
 {
 		
-	border: 5px solid orange;
+	border-left: 5px solid orange;
+	border-bottom:5px solid orange;
+	border-top:5px solid orange;
 	border-radius:10px;
+	border-bottom-right-radius:0px;
+	border-top-right-radius:0px;
 	height:500px;
+	width:50%;
 }	
-.visitekaartjes .kaartje
+.visitekaartjesframeRight
+{
+	float:right;
+	border-right: 5px solid orange;
+	border-bottom:5px solid orange;
+	border-top:5px solid orange;
+	border-radius:10px;
+	border-bottom-left-radius:0px;
+	border-top-left-radius:0px;
+	height:500px;
+	width:50%;
 	
+}
+.kaartjelinks
+{
+	border:1px solid black;
+	border-bottom:3px solid black;
+	border-right:3px solid black;
+	height:200px;
+	width:380px;
+	margin-top:25px;
+	margin-left:25px;
+}
+.kaartjerechts
+{
+	float:right;
+	border:1px solid black;
+	border-bottom:3px solid black;
+	border-right:3px solid black;
+	height:200px;
+	width:380px;
+	margin-top:25px;
+	margin-right:25px;	
+}
 /* Opmaak voor CONTENT eindigt hier */
+
 
 
 /* Opmaak voor FOOTER begint hier */
@@ -50,11 +97,25 @@
 	<div class="selection-panel">
     Slectiepanel
     </div>
-    <div class="visitekaartjes">
-    Visitekaartjes
-    	<div class="kaartje">
-        Kaartje
+    <div class="visitekaartjesframeRight">
+    
+    	<div class="kaartjerechts">
+        Kaartje1
         </div>
+        <div class="kaartjerechts">
+        Kaartje2
+        </div>
+     </div>
+     <div class="visitekaartjesframeLeft">
+        <div class="kaartjelinks">
+        Kaartje3
+        </div>
+        <div class="kaartjelinks">
+        Kaartje3
+        </div>
+     </div>
+        
+        
     </div>
 
 
