@@ -1,0 +1,64 @@
+body { margin: 0px; padding:0px; font-family: 'Calibri'; }
+a { text-decoration: none; color: #000; }
+a:hover { text-decoration: underline; }
+
+.clear { clear: both; }
+
+/* Opmaak voor HEADER begint hier */
+.header
+{
+	width: 100%;
+	height: 75px;
+	line-height: 75px;
+	margin: 20px 0px 0px 0px;
+	
+	background-color: orange;
+}
+
+.header .center
+{
+	width: 900px;
+	height: inherit;
+	line-height: inherit;
+	margin: 0px auto 0px auto;
+}
+.header .center div { float: left; height: inherit; line-height: inherit; }
+.header .center .left
+{ 
+	width: 23%;
+	padding-left: 2%;
+	font-size: 40px;
+	font-family: 'Bad Script';
+}
+.header .center .middle { width: 40%; }
+.header .center .right { width: 35%;}
+
+.header .center .right div { width: 100%; font-size: 16px; float: left;}
+
+.header .center .right .label 
+{ 
+	text-align: center; 
+	line-height: 40px; height: 30px; 
+}
+.header .center .right .login 
+{ 
+	text-align: center;
+	line-height: 45px; height: 45px; 
+}
+
+.header .center .right div input { width: 120px; }
+.header .center .right div button { width: 15%; }
+/* Opmaak voor HEADER stopt hier */
+
+
+
+/* Opmaak voor CONTENT begint hier */
+.content
+{
+	width: 900px;
+	margin: 10px auto 50px auto;
+	min-height: 500px;	
+	
+	border: 5px solid orange;
+	border-radius:10px;
+}
