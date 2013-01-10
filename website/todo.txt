@@ -1,0 +1,9 @@
+TO DO
+
+REGISTRATIEFORM
+- label MaW hover
+- checkbox click woord click box
+
+HOME
+
+ADVERTENTIES
