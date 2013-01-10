@@ -50,8 +50,6 @@ a:hover { text-decoration: underline; }
 .header .center .right div button { width: 15%; }
 /* Opmaak voor HEADER stopt hier */
 
-
-
 /* Opmaak voor CONTENT begint hier */
 .content
 {
@@ -60,5 +58,15 @@ a:hover { text-decoration: underline; }
 	
 	border-radius:10px;
 }
-/* Opmaak voor CONTENT begint hier */
+/* Opmaak voor CONTENT eindigt hier */
 
+/* Opmaak voor het eerste blok boven begint hier */
+.page-intro
+{
+    background-color:orange;
+    height:110px;
+    border-radius:10px;
+    margin-bottom:20px;
+
+}
+/* Opmaak voor het eerste blok boven eindigt hier */
