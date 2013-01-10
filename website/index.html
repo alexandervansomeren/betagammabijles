@@ -7,6 +7,61 @@
 		<title>webdb13BG2</title>
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+		
+		<style>
+		.content .buttons
+		{
+		    width: inherit;
+		    height: 300px;
+		}
+		.content .buttons a
+		{
+		    display: block;
+		    float: left;
+		    
+		    width: 440px;
+		    height: 300px;
+		    
+		    border: 1px solid orange;
+		}
+		
+		.content .buttons .left { margin-right: 16px; background: url(img/docent.jpg); }
+		.content .buttons .right { background: url(img/student.jpg); }
+		
+		.content .buttons a:hover { background-color: green; }
+				
+		.content .buttons a div
+		{
+		    width: 175px;
+		    height: 100px;
+		    opacity: 0.8;
+		    
+		    position: relative;
+		    top: 50px; 
+		    background-color: #fff;		    
+		}
+		
+		
+		.footer
+		{
+		    width: 900px;
+		    margin: 0px auto 0px auto;
+		    
+		}
+		
+		.footer a
+		{
+		    width: 20%;
+		    height: 30px;
+		    line-height: 30px;
+		    
+		    float: left;
+		    display: block;
+		    text-align: center;
+		}
+		</style>
+		
+		
 	</head>
 
 	<body>
@@ -19,16 +74,26 @@
             		<div class="login"><input value="User name" /> <input value="Password" /><button type="submit">Login</button></div>
         		</div>
     			</div>
-		</div>
+		</div>		
+
 		<div class="content">
-   			Dit is de <em>Webprogrammeren en Databases</em> pagina voor groep <b>webdb13BG2</b>.
-	    		<p />
-	    		Je bent hier gekomen via het domein:<pre>
-	    		webdb.science.uva.nl	    		</pre>
-			Klik hier om door te gaan naar de: <br>
-			* <a href="about.html">Wie zijn wij</a><br>
-			* <a href="advertenties.html">Advertenties</a><br>
-			* <a href="registratieformulier.html">Registratieformulier</a><br>
+		
+		    <div class="buttons">
+		        <a href="Advertenties.html" class="left">
+	                <div class="white">White</div>		            
+		        </a>
+		        <a href="Registratieformulier.html" class="right">
+		            <div class="white">White</div>		            
+		        </a>
+		    </div>
+		</div>
+		
+		<div class="footer">
+	        <a href="About.html">Wie zijn wij?</a>
+	        <a href="About.html">Meld aan als student</a>
+	        <a href="About.html">Meld aan als docent</a>
+			<a href="Advertenties.html">Advertenties</a>
+			<a href="Registratieformulier.html">Registratieformulier</a>
 		</div>
   </body>
 </html>

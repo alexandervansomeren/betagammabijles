@@ -23,58 +23,50 @@
 	margin-bottom:20px;
 	
 }
-.visitekaartjesframeLeft
+.visitcardsframe
 {
 		
-	border-left: 5px solid orange;
-	border-bottom:5px solid orange;
-	border-top:5px solid orange;
+	border: 5px solid orange;
 	border-radius:10px;
-	border-bottom-right-radius:0px;
-	border-top-right-radius:0px;
-	height:600px;
-	width:50%;
-}	
-.visitekaartjesframeRight
-{
-	float:right;
-	border-right: 5px solid orange;
-	border-bottom:5px solid orange;
-	border-top:5px solid orange;
-	border-radius:10px;
-	border-bottom-left-radius:0px;
-	border-top-left-radius:0px;
-	height:600px;
-	width:50%;
-	
+	width:890px;
 }
-.kaartjelinks
+.card .frame
 {
 	border:1px solid black;
 	border-bottom:3px solid black;
 	border-right:3px solid black;
 	height:200px;
-	width:380px;
-	margin-top:25px;
-	margin-left:25px;
+	width:400px;
+	margin-top:30px;
+	margin-left:30px;
+	float:left;
 }
-.kaartjerechts
+.card .photoframe
 {
-	float:right;
-	border:1px solid black;
-	border-bottom:3px solid black;
-	border-right:3px solid black;
-	height:200px;
-	width:380px;
-	margin-top:25px;
-	margin-right:25px;	
+	width:120px;
+	height:150px;
+	background-color:#000;	
+	margin-top:20px;
+	margin-left:20px;
+}
+.prevnexbuttons
+{
+	float:left;
+	width:890px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+.prevnexbuttonsCenter
+{
+	width:250px;
+	background-color:#0FF;	
+	margin-left:auto;
+	margin-right:auto;	
 }
 .nextbutton
 {
-	float:left;
+	float:right;
 	width:75px;
-	margin-top: 100px;
-	margin-left: 30px;
 	border-right:3px solid orange;
 	border-left:2px solid orange;	
 	text-align:center;
@@ -85,10 +77,8 @@
 }
 .previousbutton
 {
-	float:right;
+	float:left;	
 	width:75px;
-	margin-top: 100px;
-	margin-right: 30px;
 	border-left:3px solid orange;
 	border-right:2px solid orange;
 	text-align:center;
@@ -125,34 +115,33 @@
 	<div class="selection-panel">
     Slectiepanel
     </div>
-    <div class="visitekaartjesframeRight">
     
-    	<div class="kaartjerechts">
-        Kaartje1
+     <div class="visitcardsframe">
+        <div class="card">
+        	<div class="frame">
+                <div class="photoframe">
+                </div>	
+            </div>
+        </div>
+        <div class="card">
         </div>
         
-        <div class="kaartjerechts">
-        Kaartje2
-        </div>
-        <a href="#">
-            <div class="nextbutton" href="#">
-            Volgende
+        <div class="prevnexbuttons">
+        	<div class="prevnexbuttonsCenter">
+                <a href="#">
+                    <div class="previousbutton">
+                    Vorige
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nextbutton" href="#">
+                    Volgende
+                    </div>
+                </a>
             </div>
-        </a>
-        
-     </div>
-     <div class="visitekaartjesframeLeft">
-        <div class="kaartjelinks">
-        Kaartje3
         </div>
-        <div class="kaartjelinks">
-        Kaartje4
+        <div class="clear">
         </div>
-        <a href="#">
-            <div class="previousbutton">
-            Vorige
-            </div>
-        </a>
      </div>
         
         
