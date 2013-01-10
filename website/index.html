@@ -30,7 +30,7 @@
 		
 		.content .buttons a:hover { background-color: green; }
 				
-		.content .buttons a div
+		.content .buttons a .whiteBox
 		{
 		    width: 175px;
 		    height: 100px;
@@ -41,12 +41,17 @@
 		    background-color: #fff;		    
 		}
 		
+		.content .buttons .left .whiteBox { top: 50px; left: 265px; }
+		.content .buttons .right .whiteBox { top: 50px; }
+		
+		.content .buttons a .whiteBox .small { font-size: 22px; }		
+		.content .buttons a .whiteBox .large { font-size: 39px; }
+		
 		
 		.footer
 		{
 		    width: 900px;
-		    margin: 0px auto 0px auto;
-		    
+		    margin: 0px auto 0px auto;		    
 		}
 		
 		.footer a
@@ -79,11 +84,17 @@
 		<div class="content">
 		
 		    <div class="buttons">
-		        <a href="Advertenties.html" class="left">
-	                <div class="white">White</div>		            
+		        <a href="Registratieformulier.html" class="left">
+	                <div class="whiteBox">
+	                    <div class="small">Ik ben een</div>
+	                    <div class="large">docent</div>	                
+	                </div>	            
 		        </a>
-		        <a href="Registratieformulier.html" class="right">
-		            <div class="white">White</div>		            
+		        <a href="Advertenties.html" class="right">
+		            <div class="whiteBox">
+	                    <div class="small">Ik ben een</div>
+	                    <div class="large">student</div>	                
+	                </div>	  	            
 		        </a>
 		    </div>
 		</div>
@@ -92,7 +103,7 @@
 	        <a href="About.html">Wie zijn wij?</a>
 	        <a href="About.html">Meld aan als student</a>
 	        <a href="About.html">Meld aan als docent</a>
-			<a href="Advertenties.html">Advertenties</a>
+			<a href="todo.txt">Te doen lijstje ons</a>
 			<a href="Registratieformulier.html">Registratieformulier</a>
 		</div>
   </body>
