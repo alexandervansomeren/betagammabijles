@@ -12,7 +12,7 @@
 		.content .buttons
 		{
 		    width: inherit;
-		    height: 300px;
+		    height: 400px;
 		}
 		.content .buttons a
 		{
@@ -20,16 +20,16 @@
 		    float: left;
 		    
 		    width: 440px;
-		    height: 300px;
-		    
-		    border: 1px solid orange;
+		    height: 400px;
 		}
 		
 		.content .buttons .left { margin-right: 16px; background: url(img/docent.jpg); }
 		.content .buttons .right { background: url(img/student.jpg); }
 		
-		.content .buttons a:hover { background-color: green; }
-				
+		.content .buttons a:hover {}
+	    .content .buttons a:hover .whiteBox { text-decoration: underline; }
+	    .content .buttons a:hover .orangeBox { visibility:visible; text-decoration: none; }
+	    
 		.content .buttons a .whiteBox
 		{
 		    width: 175px;
@@ -37,15 +37,28 @@
 		    opacity: 0.8;
 		    
 		    position: relative;
+		    float: left;
 		    top: 50px; 
 		    background-color: #fff;		    
 		}
-		
+
 		.content .buttons .left .whiteBox { top: 50px; left: 265px; }
 		.content .buttons .right .whiteBox { top: 50px; }
 		
 		.content .buttons a .whiteBox .small { font-size: 22px; }		
-		.content .buttons a .whiteBox .large { font-size: 39px; }
+		.content .buttons a .whiteBox .large { font-size: 45px; }
+		
+		.content .buttons a .orangeBox
+		{
+		    width: inherit;
+		    height: 25px;
+		    
+		    position: relative;
+		    top: 375px;
+		    
+		    background-color: orange;
+		    visibility:hidden;
+		}
 		
 		
 		.footer
@@ -64,6 +77,7 @@
 		    display: block;
 		    text-align: center;
 		}
+		
 		</style>
 		
 		
@@ -88,13 +102,19 @@
 	                <div class="whiteBox">
 	                    <div class="small">Ik ben een</div>
 	                    <div class="large">docent</div>	                
-	                </div>	            
+	                </div>
+	                <div class="orangeBox">
+	                    This stuff is in the orange box
+	                </div>           
 		        </a>
 		        <a href="Advertenties.html" class="right">
 		            <div class="whiteBox">
 	                    <div class="small">Ik ben een</div>
 	                    <div class="large">student</div>	                
 	                </div>	  	            
+	                <div class="orangeBox">
+	                    Klik hier om u als student aan te melden bij bijlesje.nl
+	                </div>
 		        </a>
 		    </div>
 		</div>
