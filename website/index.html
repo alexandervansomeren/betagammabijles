@@ -19,14 +19,27 @@
 		    display: block;
 		    float: left;
 		    
-		    width: 450px;
+		    width: 440px;
 		    height: 300px;
+		    
+		    border: 1px solid orange;
 		}
 		
-		.content .buttons .left { background-color: blue; }
-		.content .buttons .right { background-color: red;}
+		.content .buttons .left { margin-right: 16px; background: url(img/docent.jpg); }
+		.content .buttons .right { background: url(img/student.jpg); }
 		
 		.content .buttons a:hover { background-color: green; }
+				
+		.content .buttons a div
+		{
+		    width: 175px;
+		    height: 100px;
+		    opacity: 0.8;
+		    
+		    position: relative;
+		    top: 50px; 
+		    background-color: #fff;		    
+		}
 		
 		
 		.footer
@@ -67,15 +80,19 @@
 		
 		
 		    <div class="buttons">
-		        <a href="Advertenties.html" class="left">Left</a>
-		        <a href="Registratieformulier.html" class="right">Right</a>
+		        <a href="Advertenties.html" class="left">
+	                <div class="white">White</div>		            
+		        </a>
+		        <a href="Registratieformulier.html" class="right">
+		            <div class="white">White</div>		            
+		        </a>
 		    </div>
-		
 		</div>
+		
 		<div class="footer">
-	        <a href="About.html">Wie zijn wij</a>
-	        <a href="About.html">Link2</a>
-	        <a href="About.html">Link 3</a>
+	        <a href="About.html">Wie zijn wij?</a>
+	        <a href="About.html">Meld aan als student</a>
+	        <a href="About.html">Meld aan als docent</a>
 			<a href="Advertenties.html">Advertenties</a>
 			<a href="Registratieformulier.html">Registratieformulier</a>
 		</div>
