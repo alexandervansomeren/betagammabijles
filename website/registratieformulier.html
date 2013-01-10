@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<title>webdb13BG2</title>
-		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
+		<!-- stylesheetreference -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<style>
         .content .form .label {
@@ -36,6 +36,7 @@
             float: left;
             display: block;
         }
+        
         </style>
 	</head>
 
@@ -51,7 +52,9 @@
     			</div>
 		</div>
 		<div class="content">
-   			Welkom op het registratieformulier.<br><br>
+            <div class="page-intro">
+              	Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever? Vul hieronder het formulier in!
+            </div>
             <div class="form">
                 <em>Over jou</em>
                     <div class="paragraph">   
@@ -100,6 +103,12 @@
                                 <span class="label">Nederlands</span>
                             <input type="checkbox" value="wia" name="Wiskunde A">
                                 <span class="label">Wiskunde A</span>
+                            <input type="checkbox" value="wib" name="Wiskunde B">
+                                <span class="label">Wiskunde B</span>
+                            <input type="checkbox" value="wic" name="Wiskunde C">
+                                <span class="label">Wiskunde C</span>
+                            <input type="checkbox" value="wid" name="Wiskunde D">
+                                <span class="label">Wiskunde D</span>
                             <input type="checkbox" value="fa" name="Frans">
                                 <span class="label">Frans</span>
                             <input type="checkbox" value="du" name="Duits">
@@ -120,12 +129,6 @@
                                 <span class="label">Natuurkunde</span>
                             <input type="checkbox" value="anw" name="ANW">
                                 <span class="label">ANW</span>
-                            <input type="checkbox" value="wib" name="Wiskunde B">
-                                <span class="label">Wiskunde B</span>
-                            <input type="checkbox" value="wic" name="Wiskunde C">
-                                <span class="label">Wiskunde C</span>
-                            <input type="checkbox" value="wid" name="Wiskunde D">
-                                <span class="label">Wiskunde D</span>
                             <input type="checkbox" value="fr" name="Fries">
                                 <span class="label">Fries</span>
                             <input type="checkbox" value="sp" name="Spaans">
@@ -155,7 +158,7 @@
                         Heb je ervaring met bijles geven?<br>
                             <input type="text" name="ervaring" style="width:300px; height:200px;"><br>
                     </div>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Registreer" style="color:orange;">
    			</div>
 		</div>
   </body>
