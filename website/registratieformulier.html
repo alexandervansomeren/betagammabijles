@@ -22,7 +22,8 @@
         }
         
         .content .form .ans {
-            width: 200px;
+            width: auto;
+            float: left;
             height: 30px;
             line-height: 30px;
         }
@@ -101,17 +102,23 @@
                             <div class="ques">Postcode:</div>
                                 <div class="ans"><input type="text" name="postal"></div><br/>  
                         </div>
-                    </div><br>
+                    </div>
                 <em>Profiel</em>
                     <div class="paragraph">
-                        <span class="ques">Gebruikersnaam:</span>
-                        <span class="ans"> <input type="text" name="username"></span><br>
-                        <span class="ques">Wachtwoord:</span>
-                        <span class="ans"> <input type="password" name="pwd"></span><br>
-                        <span class="ques">Selecteer geslacht:</span>
-                            <span class="ans"><input type="radio" name="sex" value="male">Male</span>
-                            <span class="ans"><input type="radio" name="sex" value="female">Female</span>
-                    </div><br>
+                        <div class="field">
+                            <div class="ques">Gebruikersnaam:</div>
+                                <div class="ans"> <input type="text" name="username"></div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Wachtwoord:</div>
+                                <div class="ans"> <input type="password" name="pwd"></div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Selecteer geslacht:</div>
+                                <div class="ans"><input type="radio" name="sex" value="male">Man</div>
+                                <div class="ans"><input type="radio" name="sex" value="female">Vrouw</div>
+                        </div>
+                    </div>
                 <em>De bijles</em>
                     <div class="paragraph">
                         In welk vak wil je bijles geven?<br>
