@@ -3,6 +3,7 @@ TO DO
 REGISTRATIEFORM
 - label MaW hover
 - checkbox click woord click box
+- margin-bottom paragraph zodat <br> wegkan
 
 HOME
 
