@@ -18,40 +18,44 @@
 
 		.content .right
 		{
-		width: 551px;
-		height: 509px;
+		width: 525px;
+		height: 470px;
 		float: left;
 		margin-left: 25px;
-		
+		padding: 15px;
 		background-color:orange;
 		border-radius:10px;
 		}
 
 		.content .bottom
 		{
-		width: 894px;
+		width: 870px;
+		height: 415px;
 		margin: 25px 0px 25px 0px;
 		float: left;
 		background-color:orange;
 		border-radius:10px;
+		padding: 15px;
 		}
-
-		.content .left div { width:inherit; }
-
-		.content .left .wie 
-		{ 
-		height: 184px; 
-		margin-top: 25px; 
-		background-color:orange; 
-		border-radius:10px;
-		}	
 	
 		.content .left .contact 
 		{ 
-		height: 300px; 
+		height: 270px; 
+        width:inherit-30px;
 		background-color:orange; 
 		border-radius:10px;
-		}		
+		padding: 15px;
+		}	
+			
+		.content .left .wie 
+		{ 
+		height: 145px;
+        width:inherit-30px;
+		margin-top: 25px; 
+		padding: 15px;
+		background-color:orange; 
+		border-radius:10px;
+		}	
 
 		.name
 		{
@@ -62,6 +66,11 @@
 		{
 		width: 600px;
 		height: 300px;
+		}
+
+        .justtext
+		{
+        
 		}
 		
 	</style>
@@ -79,38 +88,52 @@
     			</div>
 		</div>
 		<div class="content">
-			<div class="page-intro">
-  			  Slectiepanel
-  			  </div>
+			
 
 
 
 			<div class= "left">
 				<div class= "contact">
-				Contactgegevens
+                   
+				        <div class= "justtext"> 
+                        Wie zijn wij? <br></br>
+                        <img src = "file:///home/10198539/Downloads/bril.jpg" width="230" height="230"></img>
+                        </div> 
+                   
 				</div>
 				<div class= "wie">
-				Wie zijn wij?<br>
-				Wij zijn Alexander van Someren, Emma Boumans, Laura Helgering en Tim Leunissen, de beheerders van BETAGAMMABIJLES!
+				    
+				        <div class= "justtext"> Contactgegevens<br>
+				        Alexander, Emma, Laura en Tim<br>
+				        <br>
+				        Science Park 409<br>
+                        1098 XH Amsterdam<br>
+                        Nederland
+                        </div>
+                    
 				</div>
-
 			</div>
+
 			<div class= "right">
-				
-				About en Onze missie
+				    <div class= "justtext">
+				    About en Onze missie
+				    </div>
+			
 			
 			</div>
 			<div class= "bottom">
-				Wil je ons contacteren?
+				<div class= "justtext">
+                Wil je ons contacteren?
+                </div>
 				<br> <br>
 				<div class="name">
-				Naam: <input></input>
+				<div class= "justtext">Naam: <input></input></div>
 				</div>
 				<div> 
-				Email-adres: <input></input> <br>
+				<div class= "justtext">Email-adres: <input></input> <br></div>
 				</div>
 				<div>				
-				Bericht: </br> <input class= "bericht"> </input>
+				<div class= "justtext">Bericht: </br> <input class= "bericht"> </input></div>
 				</div>
 			</div>
 			
