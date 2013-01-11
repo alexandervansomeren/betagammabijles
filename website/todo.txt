@@ -2,7 +2,8 @@ TO DO
 
 REGISTRATIEFORM
 - label MaW hover
-- checkbox click woord click box
+- checkbox netjes in rij/tabelish ding.
+- margin-bottom paragraph zodat <br> wegkan
 
 HOME
 

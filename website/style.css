@@ -23,7 +23,10 @@ a:hover { text-decoration: underline; }
 	margin-top:20px;
 	margin-bottom:25px;
 	
-	background-color: orange;
+	background-image:url(img/header.jpg);
+	background-color:orange;
+	background-repeat:no-repeat;
+	background-position:center;
 }
 
 .header .center
@@ -72,12 +75,30 @@ a:hover { text-decoration: underline; }
 /* Opmaak voor CONTENT eindigt hier */
 
 /* Opmaak voor het eerste blok boven begint hier */
-.page-intro
+.content .page-intro
 {
     background-color:orange;
     height:110px;
     border-radius:10px;
     margin-bottom:25px;
-
 }
 /* Opmaak voor het eerste blok boven eindigt hier */
+
+/* Opmaak voor een blok van 100%vullend content en lengte afhankelijk van inhoud */
+.content .page-field
+{
+    background-color:orange;
+    height:auto;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+/* Einde Opmaak	 */
+
+/* Opmaak voor een regel in de content */
+.content .field 
+{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+/* Dit was de opmaak voor een regel content. Ajb niet gebruiken voor het opmaken van de tekst of iets dergelijks, dit is alleen om een gevulde regel te krijgen die een lijn beslaat van je content. */

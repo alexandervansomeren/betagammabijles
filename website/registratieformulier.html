@@ -8,13 +8,7 @@
 		<!-- stylesheetreference -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<style>
-		.content .field {
-		    width: 100%;
-		    height: auto;
-		    float: left;
-		}
-		
-        .content .ques {
+		.content .ques {
             width: 155px;
             float: left;
             height: 30px;
@@ -37,13 +31,10 @@
         
         .content .paragraph {
             margin-left: 8px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            <!-- de margin-bottom werkt niet waardoor er nog <br> nodig zijn :(-->
         }
-        
-        .content input[type="checkbox"] {
-            float: left;
-            display: block;
-        }
-        
         </style>
 	</head>
 
@@ -62,133 +53,135 @@
             <div class="page-intro">
               	Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever? Vul hieronder het formulier in!
             </div>
-            <em>Over jou</em>
-                <div class="paragraph">
-                    <div class="field">   
-                        <div class="ques">Voornaam:</div>
-                            <div class="ans"><input type="text" name="firstname"></div>
+            <div class="page-field">
+                <em>Over jou</em>
+                    <div class="paragraph">
+                        <div class="field">   
+                            <div class="ques">Voornaam:</div>
+                                <div class="ans"><input type="text" name="firstname"></div>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Achternaam:</div>
+                                <div class="ans"><input type="text" name="lastname"></div>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Geboortedatum:</div>
+                                <div class="ans"> <input type="" name="age"></div>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Email:</div>
+                                <div class="ans"> <input type="text" name="email"></div>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Telefoon:</div>
+                                <div class="ans"><input type="text" name="telefoon1"></div><br/>
+                                <div class="field2"><input type="text" name="telefoon2"></div><br/>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Woonplaats:</div>
+                                <div class="ans"> <input type="text" name="city"></div><br/>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Straatnaam:</div>
+                                <div class="ans"><input type="text" name="street"></div><br/>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Huisnummer:</div>
+                                <div class="ans"><input type="text" name="streetnumber"></div><br/>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Postcode:</div>
+                                <div class="ans"><input type="text" name="postal"></div><br/>  
+                        </div>
                     </div>
-                    <div class="field"> 
-                        <div class="ques">Achternaam:</div>
-                            <div class="ans"><input type="text" name="lastname"></div>
+                <em><br>Profiel</em>
+                    <div class="paragraph">
+                        <div class="field">
+                            <div class="ques">Gebruikersnaam:</div>
+                                <div class="ans"> <input type="text" name="username"></div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Wachtwoord:</div>
+                                <div class="ans"> <input type="password" name="pwd"></div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Selecteer geslacht:</div>
+                                <div class="ans"><input type="radio" name="sex" value="male">Man</div>
+                                <div class="ans"><input type="radio" name="sex" value="female">Vrouw</div>
+                        </div>
                     </div>
-                    <div class="field"> 
-                        <div class="ques">Geboortedatum:</div>
-                            <div class="ans"> <input type="" name="age"></div>
+                <em><br>De bijles</em>
+                    <div class="paragraph">
+                        In welk vak wil je bijles geven?<br>
+                            <label><div class="ques"><input type="checkbox" value="ak" name="Aardrijkskunde">
+                                Aardrijkskunde</div></label>
+                            <label><div class="ques"><input type="checkbox" value="bio" name="Biologie">
+                                Biologie</div></label>
+                            <label><div class="ques"><input type="checkbox" value="sk" name="Scheikunde">
+                                Scheikunde</div></label>
+                            <label><div class="ques"><input type="checkbox" value="en" name="Engels">
+                                Engels</div></label>
+                            <label><div class="ques"><input type="checkbox" value="ne" name="Nederlands">
+                                Nederlands</div></label>
+                            <label><div class="ques"><input type="checkbox" value="wia" name="Wiskunde A">
+                                Wiskunde A</div></label>
+                            <label><div class="ques"><input type="checkbox" value="wib" name="Wiskunde B">
+                                Wiskunde B</div></label>
+                            <label><div class="ques"><input type="checkbox" value="wic" name="Wiskunde C">
+                                Wiskunde C</div></label>
+                            <label><div class="ques"><input type="checkbox" value="wid" name="Wiskunde D">
+                                Wiskunde D</div></label>
+                            <label><div class="ques"><input type="checkbox" value="fa" name="Frans">
+                                Frans</div></label>
+                            <label><div class="ques"><input type="checkbox" value="du" name="Duits">
+                                Duits</div></label>
+                            <label><div class="ques"><input type="checkbox" value="eco" name="Economie">
+                                Economie</div></label>
+                            <label><div class="ques"><input type="checkbox" value="la" name="Latijn">
+                                Latijn</div></label>
+                            <label><div class="ques"><input type="checkbox" value="gr" name="Grieks">
+                                Grieks</div></label>
+                            <label><div class="ques"><input type="checkbox" value="mo" name="Management & Organisatie">
+                                M & O</div></label>
+                            <label><div class="ques"><input type="checkbox" value="mal" name="Maatschappijleer">
+                                MaL</div></label>
+                            <label><div class="ques"><input type="checkbox" value="mu" name="Muziek">
+                                Muziek</div></label>
+                            <label><div class="ques"><input type="checkbox" value="na" name="Natuurkunde">
+                                Natuurkunde</div></label>
+                            <label><div class="ques"><input type="checkbox" value="anw" name="ANW">
+                                ANW</div></label>
+                            <label><div class="ques"><input type="checkbox" value="fr" name="Fries">
+                                Fries</div></label>
+                            <label><div class="ques"><input type="checkbox" value="sp" name="Spaans">
+                                Spaans</div></label>
+                            <label><div class="ques"><input type="checkbox" value="it" name="Italiaans">
+                                Italiaans</div></label>
+                            <label><div class="ques"><input type="checkbox" value="ru" name="Russisch">
+                                Russisch</div></label>
+                            <label><div class="ques"><input type="checkbox" value="tu" name="Turks">
+                                Turks</div></label>
+                            <label><div class="ques"><input type="checkbox" value="ar" name="Arabisch">
+                                Arabisch</div></label>
+                            <label><div class="ques"><input type="checkbox" value="nlt" name="Natuur, leven & techniek">
+                                N, L & T</div></label>
+                            <label><div class="ques"><input type="checkbox" value="in" name="Informatica">
+                                Informatica</div></label>
+                            <label><div class="ques"><input type="checkbox" value="gs" name="Geschiedenis">
+                                Geschiedenis</div></label>
+                            <label><div class="ques"><input type="checkbox" value="maw" name="Maatschappijwetenschappen">
+                                MaW</div></label>
+                            <label><div class="ques"><input type="checkbox" value="fi" name="Filosofie">
+                                Filosofie</div></label>
+                            <label><div class="ques"><input type="checkbox" value="kua" name="Kunst Algemeen">
+                                Kunst Alg.</div></label>
+                            <label><div class="ques"><input type="checkbox" value="ckv" name="CKV">
+                                CKV</div></label>
+                        <div class="field">Heb je ervaring met bijles geven?</div>
+                        <div class="field"><input type="text" name="ervaring" style="width:300px; height:200px;"></div>
                     </div>
-                    <div class="field"> 
-                        <div class="ques">Email:</div>
-                            <div class="ans"> <input type="text" name="email"></div>
-                    </div>
-                    <div class="field"> 
-                        <div class="ques">Telefoon:</div>
-                            <div class="ans"><input type="text" name="telefoon1"></div><br/>
-                            <div class="field2"><input type="text" name="telefoon2"></div><br/>
-                    </div>
-                    <div class="field"> 
-                        <div class="ques">Woonplaats:</div>
-                            <div class="ans"> <input type="text" name="city"></div><br/>
-                    </div>
-                    <div class="field"> 
-                        <div class="ques">Straatnaam:</div>
-                            <div class="ans"><input type="text" name="street"></div><br/>
-                    </div>
-                    <div class="field"> 
-                        <div class="ques">Huisnummer:</div>
-                            <div class="ans"><input type="text" name="streetnumber"></div><br/>
-                    </div>
-                    <div class="field"> 
-                        <div class="ques">Postcode:</div>
-                            <div class="ans"><input type="text" name="postal"></div><br/>  
-                    </div>
-                </div>
-            <em>Profiel</em>
-                <div class="paragraph">
-                    <div class="field">
-                        <div class="ques">Gebruikersnaam:</div>
-                            <div class="ans"> <input type="text" name="username"></div>
-                    </div>
-                    <div class="field">
-                        <div class="ques">Wachtwoord:</div>
-                            <div class="ans"> <input type="password" name="pwd"></div>
-                    </div>
-                    <div class="field">
-                        <div class="ques">Selecteer geslacht:</div>
-                            <div class="ans"><input type="radio" name="sex" value="male">Man</div>
-                            <div class="ans"><input type="radio" name="sex" value="female">Vrouw</div>
-                    </div>
-                </div>
-            <em>De bijles</em>
-                <div class="paragraph">
-                    In welk vak wil je bijles geven?<br>
-                        <input type="checkbox" value="ak" name="Aardrijkskunde">
-                            <span class="ques">Aardrijkskunde</span>
-                        <input type="checkbox" value="bio" name="Biologie">
-                            <span class="ques">Biologie</span>
-                        <input type="checkbox" value="sk" name="Scheikunde">
-                            <span class="ques">Scheikunde</span>
-                        <input type="checkbox" value="en" name="Engels">
-                            <span class="ques">Engels</span>
-                        <input type="checkbox" value="ne" name="Nederlands">
-                            <span class="ques">Nederlands</span>
-                        <input type="checkbox" value="wia" name="Wiskunde A">
-                            <span class="ques">Wiskunde A</span>
-                        <input type="checkbox" value="wib" name="Wiskunde B">
-                            <span class="ques">Wiskunde B</span>
-                        <input type="checkbox" value="wic" name="Wiskunde C">
-                            <span class="ques">Wiskunde C</span>
-                        <input type="checkbox" value="wid" name="Wiskunde D">
-                            <span class="ques">Wiskunde D</span>
-                        <input type="checkbox" value="fa" name="Frans">
-                            <span class="ques">Frans</span>
-                        <input type="checkbox" value="du" name="Duits">
-                            <span class="ques">Duits</span>
-                        <input type="checkbox" value="eco" name="Economie">
-                            <span class="ques">Economie</span>
-                        <input type="checkbox" value="la" name="Latijn">
-                            <span class="ques">Latijn</span>
-                        <input type="checkbox" value="gr" name="Grieks">
-                            <span class="ques">Grieks</span>
-                        <input type="checkbox" value="mo" name="Management & Organisatie">
-                            <span class="ques">M & O</span>
-                        <input type="checkbox" value="mal" name="Maatschappijleer">
-                            <span class="ques">Maatschappijleer</span>
-                        <input type="checkbox" value="mu" name="Muziek">
-                            <span class="ques">Muziek</span>
-                        <input type="checkbox" value="na" name="Natuurkunde">
-                            <span class="ques">Natuurkunde</span>
-                        <input type="checkbox" value="anw" name="ANW">
-                            <span class="ques">ANW</span>
-                        <input type="checkbox" value="fr" name="Fries">
-                            <span class="ques">Fries</span>
-                        <input type="checkbox" value="sp" name="Spaans">
-                            <span class="ques">Spaans</span>
-                        <input type="checkbox" value="it" name="Italiaans">
-                            <span class="ques">Italiaans</span>
-                        <input type="checkbox" value="ru" name="Russisch">
-                            <span class="ques">Russisch</span>
-                        <input type="checkbox" value="tu" name="Turks">
-                            <span class="ques">Turks</span>
-                        <input type="checkbox" value="ar" name="Arabisch">
-                            <span class="ques">Arabisch</span>
-                        <input type="checkbox" value="nlt" name="Natuur, leven & techniek">
-                            <span class="ques">N, L & T</span>
-                        <input type="checkbox" value="in" name="Informatica">
-                            <span class="ques">Informatica</span>
-                        <input type="checkbox" value="gs" name="Geschiedenis">
-                            <span class="ques">Geschiedenis</span>
-                        <input type="checkbox" value="maw" name="Maatschappijwetenschappen">
-                            <span class="ques">MaW</span>
-                        <input type="checkbox" value="fi" name="Filosofie">
-                            <span class="ques">Filosofie</span>
-                        <input type="checkbox" value="kua" name="Kunst Algemeen">
-                            <span class="ques">Kunst Algemeen</span>
-                        <input type="checkbox" value="ckv" name="CKV">
-                            <span class="ques">CKV</span>
-                    Heb je ervaring met bijles geven?<br>
-                        <input type="text" name="ervaring" style="width:300px; height:200px;"><br>
-                </div>
-            <input type="submit" value="Registreer" style="color:orange;">
+                <div class="field"><input type="submit" value="Registreer" style="background-color:orange;"></div>
+            </div>
 		</div>
   </body>
 </html>
