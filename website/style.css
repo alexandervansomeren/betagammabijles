@@ -72,15 +72,24 @@ a:hover { text-decoration: underline; }
 /* Opmaak voor CONTENT eindigt hier */
 
 /* Opmaak voor het eerste blok boven begint hier */
-.page-intro
+.content .page-intro
 {
     background-color:orange;
     height:110px;
     border-radius:10px;
     margin-bottom:25px;
-
 }
 /* Opmaak voor het eerste blok boven eindigt hier */
+
+/* Opmaak voor een blok van 100%vullend content en lengte afhankelijk van inhoud */
+.content .page-field
+{
+    background-color:orange;
+    height:auto;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+/* Einde Opmaak */
 
 /* Opmaak voor een regel in de content */
 .content .field {
