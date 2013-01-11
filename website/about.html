@@ -7,23 +7,100 @@
 		<title>webdb13BG2</title>
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+	<style>
+		.content .left
+		{
+		width: 320px;
+		height: 500px;
+		float: left;
+		margin-left: 15px;
+		}
+
+		.content .right
+		{
+		width: 530px;
+		height: 500px;
+		float: left;
+		margin-left: 15px;
+		border: solid 1px #000;
+		}
+
+		.content .bottom
+		{
+		width: 867px;
+		margin: 15px 15px 15px 15px;
+		border: solid 1px #000;
+		float: left;
+		border: solid 1px #000;
+		}
+
+		.content .left div { width:inherit; }
+		.content .left .wie { height: 184px; margin-top: 14px; border: solid 1px #000;}		
+		.content .left .contact { height: 300px; border: solid 1px #000;}		
+
+		.name
+		{
+		float: left;
+		}
+
+		.bericht
+		{
+		
+		width: 600px;
+		height: 300px;
+		}
+		
+	</style>
 	</head>
 
 	<body>
 		<div class="header">
-		<div class="center">
-    		<div class="left">Bijlessen.nl</div>
-        		<div class="middle"></div>
-        		<div class="right">
-            		<div class="label">Voor leden geef je gegevens en log in</div>
-            		<div class="login"><input value="User name" /> <input value="Password" /><button type="submit">Login</button></div>
-        		</div>
+			<div class="center">
+    				<div class="left">Bijlessen.nl</div>
+        			<div class="middle"></div>
+        			<div class="right">
+            				<div class="label">Voor leden geef je gegevens en log in</div>
+            				<div class="login"><input value="User name" /> <input value="Password" /><button type="submit">Login</button></div>
+        			</div>
     			</div>
 		</div>
 		<div class="content">
    			Dit is de <em>Webprogrammeren en Databases</em> pagina voor groep <b>webdb13BG2</b>.<br>
 			Dit is de <em>About</em> pagina.<br>
-			Hoi ik ben Laura!<br>
+			<br>
+
+			<div class= "left">
+				<div class= "contact">
+				Contactgegevens
+				</div>
+				<div class= "wie">
+				Wie zijn wij?<br>
+				Wij zijn Alexander van Someren, Emma Boumans, Laura Helgering en Tim Leunissen, de beheerders van BETAGAMMABIJLES!
+				</div>
+
+			</div>
+			<div class= "right">
+				
+				About en Onze missie
+			
+			</div>
+			<div class= "bottom">
+				Wil je ons contacteren?
+				<br> <br>
+				<div class="name">
+				Naam: <input></input>
+				</div>
+				<div> 
+				Email-adres: <input></input> <br>
+				</div>
+				<div>				
+				Bericht: <input class= "bericht"> </input>
+				</div>
+			</div>
+			
 		</div>
-  </body>
+  	</body>
 </html>
+
+
