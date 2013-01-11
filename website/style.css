@@ -81,3 +81,11 @@ a:hover { text-decoration: underline; }
 
 }
 /* Opmaak voor het eerste blok boven eindigt hier */
+
+/* Opmaak voor een regel in de content */
+.content .field {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+/* Dit was de opmaak voor een regel content. Ajb niet gebruiken voor het opmaken van de tekst of iets dergelijks, dit is alleen om een gevulde regel te krijgen die een lijn beslaat van je content. */
