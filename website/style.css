@@ -102,3 +102,16 @@ a:hover { text-decoration: underline; }
     float: left;
 }
 /* Dit was de opmaak voor een regel content. Ajb niet gebruiken voor het opmaken van de tekst of iets dergelijks, dit is alleen om een gevulde regel te krijgen die een lijn beslaat van je content. */
+
+/* Opmaak voor FOOTER begint hier */
+.bottom
+{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height: 25%;
+	background: url("img/background.jpg");
+	background-size: 100% 100%;
+	z-index: -1;
+}
+/* Opmaak voor FOOTER eindigt hier */
