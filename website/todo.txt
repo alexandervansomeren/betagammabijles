@@ -2,8 +2,9 @@ TO DO
 
 REGISTRATIEFORM
 - label MaW hover
-- checkbox netjes in rij/tabelish ding.
 - margin-bottom paragraph zodat <br> wegkan
+- het oranje achtergrondblok groter
+- Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc
 
 HOME
 
