@@ -74,7 +74,8 @@ a:hover { text-decoration: underline; }
         .content .page-intro
         {
             background-color:orange;
-            height:110px;
+            min-height:50px;
+            line-height:30px;
             border-radius:10px;
             margin-bottom:25px;
         }
@@ -103,19 +104,21 @@ a:hover { text-decoration: underline; }
     .footer
     {
         width: 900px;
-        margin: 0px auto 0px auto;
+        margin: 0px auto 20px auto;
         background-color:orange;
         border-radius:10px;
-        min-height: 50px;		    
+        min-height: 30px;		    
     }
 
     .footer a
     {
-        min-width: 23%;
-        height: 30px;
+        margin-left: 8px;
+        min-width: 20%;
+        min-height: 10px;
         line-height: 30px;
-        display: block;
         float: left;
+        border-left-style: solid;
+        border-left-width: 0.1px;
     }
 /*Opmaak voor FOOTER */
 

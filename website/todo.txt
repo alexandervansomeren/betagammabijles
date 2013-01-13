@@ -1,12 +1,11 @@
 TO DO
 
 REGISTRATIEFORM
-- label MaW hover
 - margin-bottom paragraph zodat <br> wegkan
-- het oranje achtergrondblok groter
 - Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc
 
 HOME
+- tekst in orange field netter
 
 ADVERTENTIES
 
