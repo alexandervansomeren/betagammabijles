@@ -69,7 +69,7 @@ a:hover { text-decoration: underline; }
 {
 	width: 900px;
 	margin: 10px auto 50px auto;
-	
+	height: 100%;
 	border-radius:10px;
 }
 /* Opmaak voor CONTENT eindigt hier */
@@ -103,7 +103,26 @@ a:hover { text-decoration: underline; }
 }
 /* Dit was de opmaak voor een regel content. Ajb niet gebruiken voor het opmaken van de tekst of iets dergelijks, dit is alleen om een gevulde regel te krijgen die een lijn beslaat van je content. */
 
-/* Opmaak voor FOOTER begint hier */
+/* Opmaak voor FOOTER */
+.footer
+{
+    width: 900px;
+    margin: 0px auto 0px auto;		    
+}
+
+.footer a
+{
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    
+    float: left;
+    display: block;
+    text-align: center;
+}
+/*Opmaak voor FOOTER */
+
+/* Opmaak voor BOTTOM begint hier */
 .bottom
 {
 	position:fixed;
@@ -114,4 +133,4 @@ a:hover { text-decoration: underline; }
 	background-size: 100% 100%;
 	z-index: -1;
 }
-/* Opmaak voor FOOTER eindigt hier */
+/* Opmaak voor BOTTOM eindigt hier */
