@@ -11,8 +11,41 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <style type="text/css">
-
-.visitcardsframe
+.content .page-intro .test
+{
+	height:50px;
+}
+.selection
+{
+	margin-top:10px;
+}
+.selection .part
+{
+	margin-left:25px;
+	float:left;
+	margin-top:10px;
+	height:30px;
+}
+.selection .selectpart
+{
+	margin-left:25px;
+	float:left;
+	margin-top:10px;
+	height:30px;
+	width:120px;
+	background-color:green;
+}
+.selection .part .veldje
+{
+	border-radius:6px;
+	border-color:transparent;
+	background-color:#FFF;
+	color:#000;	
+	border-left-color:#CCC;
+	border-top-color:#CCC;
+	height:20px;
+}
+.visitcardsframe /* wordt nu niet gebruikt */
 {
 		
 	border: 5px solid orange;
@@ -137,11 +170,31 @@
 
 <div class="content">
 	<div class="page-intro">
-   	Selectiepanel
-  </div>
-    
-     <div class="page-field">
-     <a href="#">
+   		<div class="selection">
+        	<div class="part">
+            	Vak: 
+        		<input class="veldje" type="text" placeholder="bijv. Natuurkunde"/>
+            </div>
+            <div class="part">
+            	Stad:
+            	<input class="veldje" type="text" placeholder="bijv. Amsterdam" autocomplete="on" />
+            </div>
+            <div class="part">
+            	Niveau: 
+				<input class="veldje" type="text" placeholder="bijv. havo"/>
+ <!--     	<div class="selectpart"> 
+          	Geslacht:
+				<select>
+                	<option>Geen voorkeur</option>
+                    <option>Man</option>
+                    <option>Vrouw</option>
+                </select>
+-->
+             </div>
+        </div>
+  	</div>
+    <div class="page-field">
+   	<a href="#">
         <object class="card">
             <div class="frame">
                 <div class="photoframe">
