@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Bijlesje.nl</title>
+<title>webdb13BG2</title>
 
 <!-- Link van wat ik een mooi inlog ding vind: http://www.freebiesgallery.com/login-page-design-psd-template/ -->
 
@@ -22,7 +22,7 @@
 }
 .card .frame
 {
-	background-image:url(img/card-backgroundRoll.jpg);
+	background-image:url(img/card-background.jpg);
 	border:1px solid black;
 	border-bottom:3px solid black;
 	border-right:3px solid black;
@@ -35,13 +35,12 @@
 }
 .card .frame:hover
 {
-	background-image:url(img/card-background.jpg)	
+	background-image:url(img/card-backgroundRoll.jpg)	
 }
 .card .frame .photoframe
 {
 	width:120px;
-	height:150px;
-	background-image:url(img/pasfoto.jpg);	
+	height:150px;	
 	margin-top:20px;
 	margin-left:20px;
 	border:2px solid black;
@@ -55,6 +54,29 @@
 	margin-left:20px;
 	margin-top:20px;
 	font-size:20px;
+}
+.card .frame .infoframe .attributes
+{
+	width:inherit;
+	margin-top:0px;
+}
+.card .frame .infoframe .name h1
+{
+	font-size:18px;
+	margin-top:0px;
+	height:46px;
+}
+.card .frame .infoframe .attributes h1
+{
+	font-size:16px;
+	margin-top:5px;
+	margin-bottom:2px;
+}
+.card .frame .infoframe .attributes p
+{
+	font-size:14px;
+	margin-top:0px;
+	margin-bottom:0px;
 }
 .prevnexbuttons
 {
@@ -118,34 +140,71 @@
    	Selectiepanel
   </div>
     
-     <div class="visitcardsframe">
+     <div class="page-field">
      <a href="#">
         <object class="card">
             <div class="frame">
                 <div class="photoframe">
+                	<img src="img/pasfoto3.jpg" width="120" height="150" />
                 </div>	
                 <div class="infoframe">
-                <strong>Alexander van Someren</strong>
-                <p><strong>Amsterdam</strong></p>
-                <p><strong>Natuurkunde, Wiskunde,</strong></p>
+                	<div class = "name">
+                        <h1>Emma Boumans</h1>
+                    </div>
+                    <div class="attributes">
+                        <h1>Vakken:</h1>
+                        <p>Natuurkunde, Wiskunde, Economie, Turks, Russisch.</p>
+                    </div>
+                    <div class="attributes">
+                    	<h1>Locatie:</h1>
+                        <p>Amsterdam</p>
+                    </div>
+                 </div>
               </div>
-            </div>
         </object>
     </a>
     <a href="#">
         <object class="card">
             <div class="frame">
                 <div class="photoframe">
-                </div>	
-            </div>
-    </object>
+                	<img src="img/pasfoto.jpg" width="120" height="150" />
+                </div>
+                <div class="infoframe">
+                	<div class = "name">
+                        <h1>Alexander Rafaël van Someren</h1>
+                    </div>
+                    <div class="attributes">
+                        <h1>Vakken:</h1>
+                        <p>Natuurkunde, Wiskunde, Economie, M & O, Russisch.</p>
+                    </div>
+                    <div class="attributes">
+                    	<h1>Locatie:</h1>
+                        <p>Amsterdam</p>
+                	</div>
+              	</div>
+          	</div>
+            </object>
     </a>
     <a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    </div>	
+        <object class="card">
+            <div class="frame">
+                <div class="photoframe">
+                	<img src="img/pasfoto2.jpg" width="120" height="150" />
                 </div>
+                <div class="infoframe">
+                	<div class = "name">
+                        <h1>Laura Helgering</h1>
+                    </div>
+                    <div class="attributes">
+                        <h1>Vakken:</h1>
+                        <p>Informatica, Frans, Economie, M & O, Turks.</p>
+                    </div>
+                    <div class="attributes">
+                    	<h1>Locatie:</h1>
+                        <p>Amsterdam</p>
+                	</div>
+              	</div>
+          	</div>
             </object>
     </a>
     <div class="prevnexbuttons">
@@ -169,9 +228,11 @@
 </div>
 <div class="bottom">
 </div>
-<p>
-    <a href="http://validator.w3.org/check?uri=referer"><img
-      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
-</p>
+<div class="footer">
+            <a href="about.html">Wie zijn wij?</a>
+            <a href="index.html">Welkom</a>
+            <a href="about.html">Meld je aan</a>
+		    <a href="registratieformulier.html">Registratieformulier</a>
+</div>
 </body>
 </html>
