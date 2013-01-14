@@ -2,28 +2,154 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>webdb13BG2</title>
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+	<style type="text/css">
+		.content .left
+		{
+		width: 320px;
+		height: 500px;
+		float: left;
+		}
+
+		.content .right
+		{
+		width: 525px;
+		height: 470px;
+		float: left;
+		margin-left: 25px;
+		padding: 15px;
+		background-color:orange;
+		border-radius:10px;
+		}
+
+		.content .bottom
+		{
+		width: 870px;
+		height: 415px;
+		margin: 25px 0px 25px 0px;
+		float: left;
+		background-color:orange;
+		border-radius:10px;
+		padding: 15px;
+		}
+	
+		.content .left .contact 
+		{ 
+		height: 270px; 
+        width:inherit-30px;
+		background-color:orange; 
+		border-radius:10px;
+		padding: 15px;
+		}	
+			
+		.content .left .wie 
+		{ 
+		height: 145px;
+        width:inherit-30px;
+		margin-top: 25px; 
+		padding: 15px;
+		background-color:orange; 
+		border-radius:10px;
+		}	
+
+		.name
+		{
+		float: left;
+		}
+
+		.bericht
+		{
+		width: 600px;
+		height: 300px;
+		}
+
+        .justtext
+		{
+        
+		}
+		
+	</style>
 	</head>
 
 	<body>
 		<div class="header">
-		<div class="center">
-    		<div class="left">Bijlessen.nl</div>
-        		<div class="middle"></div>
-        		<div class="right">
-            		<div class="label">Voor leden geef je gegevens en log in</div>
-            		<div class="login"><input value="User name" /> <input value="Password" /><button type="submit">Login</button></div>
-        		</div>
+			<div class="center">
+    				<div class="left"></div>
+        			<div class="middle"></div>
+        			<div class="right">
+            				<div class="label">Voor leden geef je gegevens en log in</div>
+            				<div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord" /><button type="submit">Login</button></div>
+        			</div>
     			</div>
 		</div>
 		<div class="content">
-   			Dit is de <em>Webprogrammeren en Databases</em> pagina voor groep <b>webdb13BG2</b>.<br>
-			Dit is de <em>About</em> pagina.<br>
-			Hoi ik ben Laura!<br>
+			
+
+
+
+			<div class= "left">
+				<div class= "contact">
+                   
+				        <div class= "justtext"> 
+                        Wie zijn wij? </br></br>
+                        <img src = "file:///home/10198539/Downloads/bril.jpg" width="230" height="230"></img>
+                        </div> 
+                   
+				</div>
+				<div class= "wie">
+				    
+				        <div class= "justtext"> Contactgegevens</br></br>
+				        Alexander, Bastiaan, Emma, Laura en Tim</br>
+				        Science Park 409</br>
+                        1098 XH Amsterdam</br>
+                        Nederland
+                        </div>
+                    
+				</div>
+			</div>
+
+			<div class= "right">
+				    <div class= "justtext">
+				    Onze missie!</br>
+				    </br>
+				    Wij zijn 5 enthousiaste studenten die een bijles-site begonnen zijn. </br>
+				    Via deze site is het mogelijk om je te registreren om bijles te gaan geven of bijles te nemen.</br>
+				    Je kan ook eerst even rondkijken of er een persoon bij zit die jou zou kunnen bijlessen.</br>
+				    </br>Er wordt in bijna elk vak wel bijles gegeven, dus neem een kijkje!</br>
+				   </br>
+				    Liefs,</br>
+				    Alexander, Bastiaan, Emma, Laura en Tim
+				    </div>
+			
+			
+			</div>
+			<div class= "bottom">
+				<div class= "justtext">
+                Wil je ons contacteren?
+                </div>
+				</br>
+				<div class="name">
+				<div class= "justtext">Naam: <input></input></div>
+				</div>
+				<div> 
+				<div class= "justtext">Email-adres: <input></input> <br></br></div>
+				</div>
+				<div>				
+				    <div class= "justtext">
+				        Bericht: 
+				         </br>
+				        <input class= "bericht" placeholder="Typ hier uw bericht"></input>
+				    </div>
+				</div>
+			</div>
+			
 		</div>
-  </body>
+  	</body>
 </html>
+
+

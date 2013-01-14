@@ -2,81 +2,135 @@ body {
     margin: 0px; 
     padding:0px; 
     font-family: 'Calibri';
-    
     /*background: url("img/achter.jpg");
     background-size: 100%;*/
 }
 		
-
-
 a { text-decoration: none; color: black; }
 a:hover { text-decoration: underline; }
 
 .clear { clear: both; }
 
 /* Opmaak voor HEADER begint hier */
-.header
-{
-	width: 100%;
-	height: 75px;
-	line-height: 75px;
-	margin: 20px 0px 0px 0px;
+    .header
+    {
+	    width: 100%;
+	    height: 75px;
+	    line-height: 75px;
+	    margin-top:20px;
+	    margin-bottom:25px;
 	
-	background-color: orange;
-}
+	    background-image:url(img/header.jpg);
+	    background-color:orange;
+	    background-repeat:no-repeat;
+	    background-position:center;
+    }
 
-.header .center
-{
-	width: 900px;
-	height: inherit;
-	line-height: inherit;
-	margin: 0px auto 0px auto;
-}
-.header .center div { float: left; height: inherit; line-height: inherit; }
-.header .center .left
-{ 
-	width: 23%;
-	padding-left: 2%;
-	font-size: 40px;
-	font-family: 'Bad Script';
-}
-.header .center .middle { width: 40%; }
-.header .center .right { width: 35%;}
+    .header .center
+    {
+	    width: 900px;
+	    height: inherit;
+	    line-height: inherit;
+	    margin: 0px auto 0px auto;
+    }
+    .header .center div { float: left; height: inherit; line-height: inherit; }
+    .header .center .left
+    { 
+	    width: 23%;
+	    padding-left: 2%;
+	    font-size: 40px;
+	    font-family: 'Bad Script';
+    }
+    .header .center .middle { width: 40%; }
+    .header .center .right { width: 35%;}
 
-.header .center .right div { width: 100%; font-size: 16px; float: left;}
+    .header .center .right div { width: 100%; font-size: 16px; float: left;}
 
-.header .center .right .label 
-{ 
-	text-align: center; 
-	line-height: 40px; height: 30px; 
-}
-.header .center .right .login 
-{ 
-	text-align: center;
-	line-height: 45px; height: 45px; 
-}
+    .header .center .right .label 
+    { 
+	    text-align: center; 
+	    line-height: 40px; height: 30px; 
+    }
+    .header .center .right .login 
+    { 
+	    text-align: center;
+	    line-height: 45px; height: 45px; 
+    }
 
-.header .center .right div input { width: 120px; }
-.header .center .right div button { width: 15%; }
+    .header .center .right div input { width: 120px; }
+    .header .center .right div button { width: 15%; }
 /* Opmaak voor HEADER stopt hier */
 
 /* Opmaak voor CONTENT begint hier */
-.content
-{
-	width: 900px;
-	margin: 10px auto 50px auto;
-	
-	border-radius:10px;
-}
+    .content
+    {
+	    width: 900px;
+	    margin: 10px auto 50px auto;
+	    height: 100%;
+	    border-radius:10px;
+    }
+    
+    /* Opmaak voor het eerste blok boven */
+        .content .page-intro
+        {
+            background-color:orange;
+            min-height:50px;
+            line-height:30px;
+            border-radius:10px;
+            margin-bottom:25px;
+        }
+
+    /* Opmaak voor een blok van 100%vullend content en lengte afhankelijk van inhoud */
+        .content .page-field
+        {
+            background-color:orange;
+            min-height: 100px;
+            border-radius:10px;
+            margin-bottom:10px;
+            overflow: hidden;
+        }
+
+    /* Opmaak voor een regel in de content. Ajb niet gebruiken voor het opmaken van de tekst of iets dergelijks, dit is alleen om een gevulde regel te krijgen die een lijn beslaat van je content.  */
+        .content .field 
+        {
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+
 /* Opmaak voor CONTENT eindigt hier */
 
-/* Opmaak voor het eerste blok boven begint hier */
-.page-intro
-{
-    background-color:orange;
-    height:110px;
-    border-radius:10px;
-    margin-bottom:20px;
+/* Opmaak voor FOOTER */
+    .footer
+    {
+        width: 900px;
+        margin: 0px auto 20px auto;
+        background-color:orange;
+        border-radius:10px;
+        min-height: 30px;		    
+    }
 
-}
-/* Opmaak voor het eerste blok boven eindigt hier */
+    .footer a
+    {
+        margin-left: 8px;
+        min-width: 20%;
+        min-height: 10px;
+        line-height: 30px;
+        float: left;
+        border-left-style: solid;
+        border-left-width: 0.1px;
+    }
+/*Opmaak voor FOOTER */
+
+/* Opmaak voor BOTTOM begint hier */
+    .bottom
+    {
+	    position:fixed;
+	    bottom:0;
+	    width:100%;
+	    height: 25%;
+	    background: url("img/background.jpg");
+	    background-size: 100% 100%;
+	    z-index: -1;
+    }
+/* Opmaak voor BOTTOM eindigt hier */

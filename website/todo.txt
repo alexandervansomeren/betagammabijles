@@ -1,10 +1,11 @@
 TO DO
 
 REGISTRATIEFORM
-- label MaW hover
-- checkbox click woord click box
+- margin-bottom paragraph zodat <br> wegkan
+- Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc
 
 HOME
+- tekst in orange field netter
 
 ADVERTENTIES
 
