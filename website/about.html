@@ -9,68 +9,61 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 
 	<style type="text/css">
-		.content .left
+		
+		.content .oneThirdWidth
 		{
-		width: 320px;
-		height: 500px;
-		float: left;
+		    width: 30%;
+		    float: left;
+		    padding: 15px;
+		    background-color:orange;
+		    border-radius:10px;
 		}
 
-		.content .right
+		.content .twoThirdWidth
 		{
-		width: 525px;
-		height: 470px;
-		float: left;
-		margin-left: 25px;
-		padding: 15px;
-		background-color:orange;
-		border-radius:10px;
+		    width: 60%;
+		    float: left;
+		    margin-left: 25px;
+		    padding: 15px;
+		    background-color:orange;
+		    border-radius:10px;
 		}
 
-		.content .bottom
+		.content .fullWidth
 		{
-		width: 870px;
-		height: 415px;
-		margin: 25px 0px 25px 0px;
-		float: left;
-		background-color:orange;
-		border-radius:10px;
-		padding: 15px;
+		    width: 100%;
+		    margin: 25px 0px 25px 0px;
+		    float: left;
+		    background-color:orange;
+		    border-radius:10px;
+		    padding: 15px;
 		}
 	
-		.content .left .contact 
-		{ 
-		height: 270px; 
-        width:inherit-30px;
-		background-color:orange; 
-		border-radius:10px;
-		padding: 15px;
-		}	
+	
 			
-		.content .left .wie 
+		.content .oneThirdWidth .wie 
 		{ 
-		height: 145px;
-        width:inherit-30px;
-		margin-top: 25px; 
-		padding: 15px;
-		background-color:orange; 
-		border-radius:10px;
+		    height: 145px;
+		    margin-top: 25px; 
+		    padding: 15px;
+		    background-color:orange; 
+		    border-radius:10px;
 		}	
 
 		.name
 		{
 		float: left;
 		}
-
-		.bericht
+	
+		.twoThirdWidth .half { width: 50%; float: left; }
+		.twoThirdWidth .half .label { width: 100%; height: 30px; line-height: 30px; }
+		.twoThirdWidth .half .name { width: 100%; height: 30px; line-height: 30px; }
+		
+		.title
 		{
-		width: 600px;
-		height: 300px;
-		}
-
-        .justtext
-		{
-        
+		    width: 100%;
+		    height: 40px;
+		    font-size: 25px;
 		}
 		
 	</style>
@@ -89,63 +82,46 @@
 		</div>
 		<div class="content">
 			
+			<div class="oneThirdWidth">
+		        <div class= "title">Wie zijn wij?</div> 
+                <img src = "file:///home/10198539/Downloads/bril.jpg" width="230" height="230" />
+            </div>             
 
-
-
-			<div class= "left">
-				<div class= "contact">
-                   
-				        <div class= "justtext"> 
-                        Wie zijn wij? </br></br>
-                        <img src = "file:///home/10198539/Downloads/bril.jpg" width="230" height="230"></img>
-                        </div> 
-                   
-				</div>
-				<div class= "wie">
-				    
-				        <div class= "justtext"> Contactgegevens</br></br>
-				        Alexander, Bastiaan, Emma, Laura en Tim</br>
-				        Science Park 409</br>
-                        1098 XH Amsterdam</br>
-                        Nederland
-                        </div>
-                    
-				</div>
+			<div class= "twoThirdWidth">
+				    <div class= "title">Onze missie!</div> 
+				    <p>Wij zijn 5 enthousiaste studenten die een bijles-site begonnen zijn. Via deze site is het mogelijk om je te registreren om bijles te gaan geven of bijles te nemen. </p>
+				    <p>Je kan ook eerst even rondkijken of er een persoon bij zit die jou zou kunnen bijlessen.Er wordt in bijna elk vak wel bijles gegeven, dus neem een kijkje!</p>
+				    <p>Liefs,</p>
+				    <p>Alexander, Bastiaan, Emma, Laura en Tim</p>
+				    <p>lorum ipsum</p>
 			</div>
-
-			<div class= "right">
-				    <div class= "justtext">
-				    Onze missie!</br>
-				    </br>
-				    Wij zijn 5 enthousiaste studenten die een bijles-site begonnen zijn. </br>
-				    Via deze site is het mogelijk om je te registreren om bijles te gaan geven of bijles te nemen.</br>
-				    Je kan ook eerst even rondkijken of er een persoon bij zit die jou zou kunnen bijlessen.</br>
-				    </br>Er wordt in bijna elk vak wel bijles gegeven, dus neem een kijkje!</br>
-				   </br>
-				    Liefs,</br>
-				    Alexander, Bastiaan, Emma, Laura en Tim
-				    </div>
 			
-			
+            <div class= "oneThirdWidth">				    
+		        <div class= "title">Contactgegevens</div> 
+		        <p>
+		        Alexander, Bastiaan, Emma, Laura en Tim</br>
+		        Science Park 409</br>
+                1098 XH Amsterdam</br>
+                Nederland
+                </p>                    
 			</div>
-			<div class= "bottom">
-				<div class= "justtext">
-                Wil je ons contacteren?
-                </div>
-				</br>
-				<div class="name">
-				<div class= "justtext">Naam: <input></input></div>
+			
+			<div class= "twoThirdWidth">
+				<div class= "title">Wil je ons contacteren?</div>
+				
+				<div class="half">
+				<div class="label">Naam: </div>
+				<div class="input"><input /></div>
+							
+				<div class="label">Email-adres: </div>
+				<div class="input"><input /></div>
 				</div>
-				<div> 
-				<div class= "justtext">Email-adres: <input></input> <br></br></div>
-				</div>
-				<div>				
-				    <div class= "justtext">
-				        Bericht: 
-				         </br>
-				        <input class= "bericht" placeholder="Typ hier uw bericht"></input>
-				    </div>
-				</div>
+                
+                <div class="half">
+				<div class="label">Uw bericht aan ons</div>
+				<div class="input"><textarea style="resize:vertical;" type="text" rows="9" cols="35" placeholder="Typ hier uw bericht"></textarea></div>
+			    </div>
+
 			</div>
 			
 		</div>
