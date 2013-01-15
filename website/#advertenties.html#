@@ -7,8 +7,8 @@
 <!-- Link van wat ik een mooi inlog ding vind: http://www.freebiesgallery.com/login-page-design-psd-template/ -->
 
 <!-- A google font to use on the webpage -->
-<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'/>
-<link rel="stylesheet" type="text/css" href="style.css" />
+[1OBlink href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'/>
+<lin1k rel="stylesheet" type="text/css" href="style.css" />
 
 <style type="text/css">
 .content .page-intro .test
@@ -32,6 +32,8 @@
 	float:left;
 	margin-top:10px;
 	height:30px;
+	width:120px;
+	background-color:green;
 }
 .selection .part .veldje
 {
@@ -180,15 +182,14 @@
             <div class="part">
             	Niveau: 
 				<input class="veldje" type="text" placeholder="bijv. havo"/>
-            </div>
-     	<div class="selectpart"> 
+ <!--     	<div class="selectpart"> 
           	Geslacht:
 				<select>
                 	<option>Geen voorkeur</option>
                     <option>Man</option>
                     <option>Vrouw</option>
                 </select>
-
+-->
              </div>
         </div>
   	</div>
@@ -223,7 +224,7 @@
                 </div>
                 <div class="infoframe">
                 	<div class = "name">
-                        <h1>Alexander Rafa√´l van Someren</h1>
+                        <h1>Alexander RafaÅÎl van Someren</h1>
                     </div>
                     <div class="attributes">
                         <h1>Vakken:</h1>
@@ -278,13 +279,13 @@
   </div>
 <div class="clear"></div>
 </div>
+<div class="bottom">
+</div>
 <div class="footer">
             <a href="about.html">Wie zijn wij?</a>
             <a href="index.html">Welkom</a>
             <a href="about.html">Meld je aan</a>
 		    <a href="registratieformulier.html">Registratieformulier</a>
-</div>
-<div class="bottom">
 </div>
 </body>
 </html>
