@@ -14,7 +14,7 @@
         }
         
         .content .ans {
-            width: auto;
+            min-width: 1px;
             float: left;
             height: 30px;
             line-height: 30px;
@@ -57,38 +57,38 @@
                     <div class="paragraph">
                         <div class="field">   
                             <div class="ques">Voornaam:</div>
-                                <div class="ans"><input type="text" name="firstname"></div>
+                                <div class="ans"><input type="text" name="firstname" size="30"></div>
                         </div>
                         <div class="field"> 
                             <div class="ques">Achternaam:</div>
-                                <div class="ans"><input type="text" name="lastname"></div>
+                                <div class="ans"><input type="text" name="lastname" size="30"></div>
                         </div>
                         <div class="field"> 
                             <div class="ques">Geboortedatum:</div>
-                                <div class="ans"> <input type="text" name="age" placeholder="Bijv. 01-01-2000"></div>
+                                <div class="ans"> <input type="text" name="age" placeholder="Bijv. 01-01-2000" size="30"></div>
                         </div>
                         <div class="field"> 
                             <div class="ques">Email:</div>
-                                <div class="ans"> <input type="text" name="email"></div>
+                                <div class="ans"> <input type="text" name="email" size="30"></div>
                         </div>
                         <div class="field"> 
                             <div class="ques">Telefoon:</div>
-                                <div class="ans"><input type="text" name="telefoon1" placeholder="Telefoon 1"></div><br/>
-                                <div class="field2"><input type="text" name="telefoon2" placeholder="Telefoon 2"></div><br/>
+                                <div class="ans"><input type="text" name="telefoon1" placeholder="Telefoon 1" size="15"></div><br/>
+                                <div class="field2"><input type="text" name="telefoon2" placeholder="Telefoon 2" size="15"></div><br/>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Adres:</div>
+                                <div class="ans"><input type="text" name="street" placeholder="Straatnaam"></div>
+                                <div class="ans"><input type="text" name="streetnumber" placeholder="Huisnummer"></div>
+                        </div>
+                        <div class="field"> 
+                            <div class="ques">Postcode:</div>
+                                <div class="ans"><input type="text" name="postal" placeholder="Bijv. 1234"></div>
+                                <div class="ans"><input type="text" name="postal" placeholder="Bijv. AB"></div>  
                         </div>
                         <div class="field"> 
                             <div class="ques">Woonplaats:</div>
                                 <div class="ans"> <input type="text" name="city"></div>
-                        </div>
-                        <div class="field"> 
-                            <div class="ques">Straatnaam:</div>
-                                <div class="ans"><input type="text" name="street"></div>
-                            <div class="ques">Huisnummer:</div>
-                                    <div class="ans"><input type="text" name="streetnumber"></div>
-                        </div>
-                        <div class="field"> 
-                            <div class="ques">Postcode:</div>
-                                <div class="ans"><input type="text" name="postal" placeholder="Bijv. 1234AB"></div>  
                         </div>
                     </div>
                 <em><br>Profiel</em>
