@@ -31,7 +31,7 @@ a:hover { text-decoration: underline; }
 	    width: 900px;
 	    height: inherit;
 	    line-height: inherit;
-	    margin: 0px auto 0px auto;
+	    margin: auto;
     }
     .header .center div { float: left; height: inherit; line-height: inherit; }
     .header .center .left
