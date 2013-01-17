@@ -25,6 +25,7 @@
 	float:left;
 	margin-top:10px;
 	height:30px;
+	width:190px;
 }
 .selection .selectpart
 {
@@ -32,16 +33,21 @@
 	float:left;
 	margin-top:10px;
 	height:30px;
+	width:200px;	
 }
-.selection .part .veldje
+.selection .part .inputfield
 {
 	border-radius:6px;
-	border-color:transparent;
-	background-color:#FFF;
+	border-color:transparent;	background-color:#FFF;
 	color:#000;	
 	border-left-color:#CCC;
 	border-top-color:#CCC;
 	height:20px;
+}
+.selection .selectpart .selectiondrop
+{
+	float:left;	
+	background:yellow;
 }
 .visitcardsframe /* wordt nu niet gebruikt */
 {
@@ -170,24 +176,20 @@
 	    <div class="page-intro">
        		<div class="selection">
             	<div class="part">
-                	Vak: 
-            		<input class="veldje" type="text" placeholder="bijv. Natuurkunde"/>
+                	Vak:
+            		<input class="inputfield" type="text" placeholder="bijv. Natuurkunde"/>
                 </div>
                 <div class="part">
                 	Stad:
-                	<input class="veldje" type="text" placeholder="bijv. Amsterdam" autocomplete="on" />
+                	<input class="inputfield" type="text" placeholder="bijv. Amsterdam" autocomplete="on" />
                 </div>
                 <div class="part">
-                	Niveau: 
-				    <input class="veldje" type="text" placeholder="bijv. havo"/>
+                	Niveau:
+				    <input class="inputfield" type="text" placeholder="bijv. havo"/>
                 </div>
          	<div class="selectpart"> 
-              	Geslacht:
-			    <select>
-                	<option>Geen voorkeur</option>
-                    <option>Man</option>
-                    <option>Vrouw</option>
-                </select>
+              	<label class="ques">Man <input type="checkbox" value="male" name="Man", checked="checked">	</label>
+                <label class="ques">Vrouw <input type="checkbox" value="female" name="Vrouw", checked="checked">	</label>
             </div>
         </div>
   	</div>
@@ -275,6 +277,72 @@
                         <div class="attributes">
                         	<h1>Locatie:</h1>
                             <p>Amsterdam, Rijswijk</p>
+                    	</div>
+                  	</div>
+              	</div>
+            </object>
+        </a>
+        <a href="#">
+            <object class="card">
+                <div class="frame">
+                    <div class="photoframe">
+                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    </div>
+                    <div class="infoframe">
+                    	<div class = "name">
+                            <h1>Laura Helgering</h1>
+                        </div>
+                        <div class="attributes">
+                            <h1>Vakken:</h1>
+                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
+                        </div>
+                        <div class="attributes">
+                        	<h1>Locatie:</h1>
+                            <p>Amsterdam</p>
+                    	</div>
+                  	</div>
+              	</div>
+            </object>
+        </a>
+        <a href="#">
+            <object class="card">
+                <div class="frame">
+                    <div class="photoframe">
+                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    </div>
+                    <div class="infoframe">
+                    	<div class = "name">
+                            <h1>Laura Helgering</h1>
+                        </div>
+                        <div class="attributes">
+                            <h1>Vakken:</h1>
+                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
+                        </div>
+                        <div class="attributes">
+                        	<h1>Locatie:</h1>
+                            <p>Amsterdam</p>
+                    	</div>
+                  	</div>
+              	</div>
+            </object>
+        </a>
+        <a href="#">
+            <object class="card">
+                <div class="frame">
+                    <div class="photoframe">
+                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    </div>
+                    <div class="infoframe">
+                    	<div class = "name">
+                            <h1>Laura Helgering</h1>
+                        </div>
+                        <div class="attributes">
+                            <h1>Vakken:</h1>
+                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
+                        </div>
+                        <div class="attributes">
+                        	<h1>Locatie:</h1>
+                            <p>Amsterdam</p>
                     	</div>
                   	</div>
               	</div>
