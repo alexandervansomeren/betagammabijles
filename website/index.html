@@ -23,12 +23,23 @@
 		    height: 250px;
 		}
 		
-		.content .buttons .left { margin-right: 20px; background: url(img/docent.jpg); }
-		.content .buttons .right { background: url(img/student.jpg); }
+		.content .buttons .left
+                {
+                    margin-right: 20px; background: url(img/docent.jpg);
+                }
+		.content .buttons .right { 
+                    background: url(img/student.jpg);
+                }
 		
 		.content .buttons a:hover {}
-	    .content .buttons a:hover .whiteBox { text-decoration: underline; }
-	    .content .buttons a:hover .orangeBox { visibility:hidden; text-decoration: none; }
+	        .content .buttons a:hover .whiteBox
+                 { 
+                    text-decoration: underline; 
+                 }
+	        .content .buttons a:hover .orangeBox 
+                {
+                    visibility:hidden; text-decoration: none;
+                }
 	    
 		.content .buttons a .whiteBox
 		{
@@ -54,15 +65,12 @@
 		{
 		    width: inherit;
 		    height: 25px;
-		    
-		    position: relative;
+                    position: relative;
 		    top: 375px;
-		    
-		    background-color: orange;
+                    background-color: orange;
 		    visibility:hidden;
 		}
-		
-		.populair
+                .populair
 		{
 		    width: inherit;
 		    height: 200px;
@@ -77,21 +85,23 @@
 		.bottom
 		{
 		    position:fixed;
-            bottom:0;
-            width:100%;
-            height: 25%;
-            background: url("img/background2.jpg");
-            background-size: 100% 100%;
-            z-index: -1;
+                    bottom:0;
+                    width:100%;
+                    height: 25%;
+                    background: url("img/background2.jpg");
+                    background-size: 100% 100%;
+                    z-index: -1;
 		}
-                footer
+                .footer
                 {
-                    border:none;
-                    text-decoration:none;
-                    a{color:#000;}
+                    div{border:none;}
+                    a
+                    {
+                       text-decoration:none;
+                       color:#000;
+                    }
                     a.hover{color:#02F;}
                 }
-
 		</style>
 		
 		
@@ -99,54 +109,62 @@
 
 	<body>
 		<div class="header">
-		<div class="center">
-    		<div class="left"></div>
-        		<div class="middle"></div>
-        		<div class="right">
-            		<div class="label">Voor leden geef je gegevens en log in</div>
-            		<div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord" /><button type="submit">Login</button></div>
+		    <div class="center">
+    		    	<div class="left">
+			</div>
+        		
+			<div class="middle">
+			</div>
+        		
+			<div class="right">
+            		    <div class="label">
+                               	Voor leden geef je gegevens en log in
+                            </div>
+            	      	    <div class="login">
+                                <input value="Gebruikersnaam" />
+                                <input value="Wachtwoord" />
+                                <button type="submit">Login</button>
+                            </div>
         		</div>
-    			</div>
-		</div>		
+    		    </div>
+	        </div>		
 
 		<div class="content">
 		
 		    <div class="buttons">
 		        <a href="registratieformulier.html" class="left">
-	                <div class="whiteBox">
-	                    <div class="small">Ik ben een</div>
-	                    <div class="large">docent</div>	                
-	                </div>
-	                <div class="orangeBox">
+	                    <div class="whiteBox">
+	                    	<div class="small">Ik ben een</div>
+	                    	<div class="large">docent</div>	                
+	                    </div>
+	                    <div class="orangeBox">
 	                    Klik hier om je aan te melden om bijles te geven!
-	                </div>           
+	                    </div>           
 		        </a>
 		        <a href="advertenties.html" class="right">
 		            <div class="whiteBox">
-	                    <div class="small">Ik ben een</div>
-	                    <div class="large">student</div>	                
-	                </div>	  	            
-	                <div class="orangeBox">
-	                    Klik hier om u als student aan te melden bij bijlesje.nl
-	                </div>
+	                	<div class="small">Ik ben een</div>
+	                        <div class="large">student</div>                
+	      		    </div>	  	            
+	                    <div class="orangeBox">
+	                        Klik hier om u als student 
+				aan te melden bij bijlesje.nl
+	                    </div>
 		        </a>
 		    </div>
 		    
 		    <div class="populair">
 		        <div class="title"></div>
 		        <div class="list"></div>
-		    </div>
-		    
+		    </div>		    
 		</div>
 		
 		<div class="footer">
-	        <a href="about.html">Wie zijn wij?</a>
-	        <a href="advertenties.html">Aanbod aan docenten</a>
-	        <a href="about.html">Meld aan als docent/student</a>
-			
+	            <a href="about.html">Wie zijn wij?</a>
+	            <a href="advertenties.html">Aanbod aan docenten</a>
+	            <a href="about.html">Meld aan als docent/student</a>
 		</div>
 		
-		<div class="bottom"></div>
-		
-  </body>
+		<div class="bottom"></div>		
+	</body>
 </html>
