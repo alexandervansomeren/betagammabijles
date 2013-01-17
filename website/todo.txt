@@ -14,3 +14,12 @@ ALGEMENE NICE TO HAVES
  - Achtergrond afbeelding op IP
  - validator.w3.org optimalisatie
  - Aantal keer bekeken op profielpagina
+
+TABLES:
+- Samenvoegen user_personal_data & user_data
+
+-Hoogste getal uit tabel ipv ingewikkelde query
+
+
+VERSLAG:
+-
