@@ -10,12 +10,7 @@ HOME
 
 ADVERTENTIES
 
-
-
-
-
-
 ALGEMENE NICE TO HAVES
-
  - Achtergrond afbeelding op IP
  - validator.w3.org optimalisatie
+ - Aantal keer bekeken op profielpagina
