@@ -112,18 +112,23 @@ a:hover { text-decoration: underline; }
         margin: 0px auto 50px auto;
         background-color:orange;
         border-radius:10px;
-        min-height: 30px;		    
+        min-height: 30px;	
+        text-align: center;	    
+    }
+    
+    .footer .centerwrapper
+    {
+       margin: auto;
+       min-width: 302pt;
     }
 
-    .footer a
+    .footer .centerwrapper a
     {
         margin-left: 100px;
         min-width: 20%;
         min-height: 10px;
         line-height: 30px;
         float: center;
-        border-left-style: solid;
-        border-left-width: 0.1px;
     }
 /*Opmaak voor FOOTER */
 
