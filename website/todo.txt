@@ -14,6 +14,7 @@ ALGEMENE NICE TO HAVES
  - Achtergrond afbeelding op IP
  - validator.w3.org optimalisatie
  - Aantal keer bekeken op profielpagina
+ - Bij meerdere adressen voorkeur welk adres
 
 TABLES:
 - Samenvoegen user_personal_data & user_data
