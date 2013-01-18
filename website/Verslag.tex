@@ -1,10 +1,12 @@
 \documentclass{report}
 \usepackage{amsfonts}
-\usepackage{enumerate}
 \usepackage{comment}
+\usepackage{tweaklist} %dit is om de lijstjes mooier te krijgen (werkt niet)
 \usepackage[english]{babel}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+  \setlength{\itemsep}{0pt}} %dit is ook om de lijstjes mooier te krijgen (werkt ook niet)
 
 \begin {document}
 
@@ -22,7 +24,7 @@ Dit is een comment waarin we de voortgang van het verslag kunnen bijhouden. Als 
         {\huge \bfseries Webdb13BG2}\\[0.4cm]
         \HRule \\[1.5cm]
         
-        \begin{minipage}{0.4\textwidth}
+        \begin{minipage}{\textwidth}
             \begin{flushleft}
                 \large \emph{Studenten:}\\
                 Alexander \textsc{Van Someren} \\
@@ -32,7 +34,8 @@ Dit is een comment waarin we de voortgang van het verslag kunnen bijhouden. Als 
                 Emma \textsc{Boumans}
             \end{flushleft}
         \end{minipage}
-        \begin{minipage}{0.4\textwidth}
+        
+        \begin{minipage}{\textwidth}
             \begin{flushright}
                 \large \emph{Docenten:} \\
                 Dr.Robert \textsc{Belleman}\\
@@ -48,19 +51,25 @@ Dit is een comment waarin we de voortgang van het verslag kunnen bijhouden. Als 
 
 \tableofcontents
 
+\section*{Inleiding}
+\addcontentsline{toc}{section}{Inleiding}
+    Voor je ligt de handleiding voor de website "Bijles.nl". In deze handleiding zullen de keuzes van de programmeurs en ontwerpers worden toegelicht op het gebied van ontwerp, gebruiksvriendelijkheid, efficientie en onderhoud. In het hoofdstuk \emph{Clientfile} zullen de keuzes die gemaakt zijn in het ontwerp en de architectuur van de website toegelicht worden. In het hoofdstuk \emph{IT file} wordt de technische realisatie van de website beschreven. Hierin zullen ook de installatie- en onderhoudshandleiding gegeven worden.\\
+    
+    Namens de programmeurs; Laura, Alexander, Tim, Bas en Emma, veel leesplezier en gebruiksgemak!
+
 \chapter{Clientfile}
     In dit deel worden ontwerpkeuzen toegelicht voor de klant.\\
 
     \section{De pagina's}
         De website is onderverdeeld in de volgende pagina's:
-        \begin{itemize} \itemsep1pt
+        \begin{itemize}
             \item Welkom-pagina
             \item Wie zijn wij?
             \item Registratieformulier
             \item Advertentiepagina
             \item Een pagina voor een uitgeklapte advertentie
         \end{itemize}
-        \\
+        
         Op de welkom pagina wordt de gebruiker een overzichtelijke keuze aangeboden. Twee grote klikbare foto's moedigen de klant 
     
         \subsection{Navigeren}
