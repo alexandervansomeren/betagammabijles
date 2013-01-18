@@ -15,6 +15,7 @@ ALGEMENE NICE TO HAVES
  - validator.w3.org optimalisatie
  - Aantal keer bekeken op profielpagina
  - Bij meerdere adressen voorkeur welk adres
+ - Footer perfectioneren
 
 TABLES:
 - Samenvoegen user_personal_data & user_data
