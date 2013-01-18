@@ -17,9 +17,7 @@ ALGEMENE NICE TO HAVES
 
 TABLES:
 - Samenvoegen user_personal_data & user_data
-
--Hoogste getal uit tabel ipv ingewikkelde query
-
+- Hoogste getal uit tabel ipv ingewikkelde query
 
 VERSLAG:
 -
