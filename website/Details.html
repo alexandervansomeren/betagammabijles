@@ -10,49 +10,32 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		
 		<style>
-		.content .buttons
+		.content .details
 		{
-		    width: inherit; height: 350px;
+		    width: inherit;
 			position: relative;
 		    margin: 0px 0px 20px 0px;
 		}
-		.content .buttons .left,
-		.content .buttons .right
+		.content .details .image 
 		{
-			border: 2px solid #FF7F00;		
-			display: block;
-		    float: left;		    
-		    width: 436px;
-		    height: 346px;
-			box-shadow: 0px 0px 5px 0px #FF7F00;
+			width: 356px; height: 496px; float: left;
+			border: 2px solid #FF7F00;
+		}
+		.content .details .information
+		{
+			width: 530px; height: 500px; float: right;
+		}
+		.content .details .buttons
+		{
+			width: inherit; height: 100px; float: left;
+			margin: 25px 0px 25px 0px;
+			background-color: red;			
 		}
 		
-		.content .buttons a .title
-		{
-			width: inherit; height: 60px; line-height: 60px;
-			text-indent: 10px;
-			position: absolute;
-			bottom: 0px;
-			display:block;
-			background-color: #FF7F00;
-			font-size: 38px;
-			opacity: 0.80;
-		}
 		
-		.content .buttons .left { margin-right: 20px; }
-		.content .buttons .right { }
-		
-		.content .buttons > a:hover { box-shadow: 0px 0px 10px 2px #FF7F00; }
-	    .content .buttons > a:hover .title { text-decoration: underline; }
-		
-		.main_title
-		{
-			width: inherit;
-			height: 25px;
-			margin-bottom: 25px;	
-			
-			font-size: 24px;
-		}
+		.content .details .information .category { width: inherit; height: 40px; float: left; line-height: 40px; font-weight:600; }
+		.content .details .information .label { width: 45%; height: 30px; float: left; line-height:30px;  }
+		.content .details .information .content { width: 55%; height: 30px; float: left; line-height:30px; }
 		</style>
 		
 		
@@ -70,22 +53,38 @@
     		</div>
 		</div>		
 
-		<div class="content">
-			
-             <div class="main_title">Welkom op 'ozne naam'.nl!</div>
+		<div class="content">		
+
+		  <div class="details">
+          	<div class="image"><img src="img/student_1.jpg" width="100%" height="100%" /></div>
             
-		    <div class="buttons">
-		        <a href="registratieformulier.html" class="left">
-                    <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
-	                <span class="title">Ik geef bijles</span>
-                </a>
-		        <a href="advertenties.html" class="right">	                
-                    <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
-                    <span class="title">Ik wil bijles</span>
-		        </a>
-		    </div>
-		    
-          <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
+            
+            
+            <div class="information">
+            <div class="category">Contactgegevens</div>
+            <div class="label">Naam:</div><div class="content">Emma Boumans</div>
+            <div class="label">Woonplaats:</div><div class="content">Amsterdam, Diemen</div>
+            <div class="label">E-mail:</div><div class="content">henk123@hotmail.com</div>
+            <div class="category">Studiegegevens</div>
+            <div class="label">Natuurkunde</div><div class="content">VWO 4</div>
+            <div class="label">Scheikunde</div><div class="content">VWO 3</div>
+            <div class="label">Biologie</div><div class="content">VWO 5</div>
+            <div class="label">Maatschappijwetenschappen</div><div class="content">HAVO 2</div>
+            <div class="category">Over mij</div>
+            <div class="txt">Ik ben een lorum ipsum die enorm houdt van lorum ipsum. In mijn vrije tijd doe ik ongeveer de helft van de tijd lorum en de andere helft van de tijd ipsum.</div> 
+            <div class="category">Google Maps Locatie</div>
+            
+            </div>
+            <div class="buttons">
+            	<a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>                
+            </div>
+          	<div class="clear"></div>
+          </div>          
+            
+          <div class="main_title">Soortgelijke docenten:</div>
             
 		    <div class="populair">
             	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
@@ -119,8 +118,8 @@
                     <span class="vak">Natuurkunde, KI, Wiskunde</span>
                     <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
-		    </div>		    
-	</div>
+		    </div> 		    
+		</div>
 		
 		<div class="footer">
 	        <a href="About.html">Wie zijn wij?</a>
