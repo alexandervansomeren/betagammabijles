@@ -27,6 +27,10 @@
 	height:30px;
 	width:190px;
 }
+.selection .part .text
+{
+	float:left;		
+}
 .selection .selectpart
 {
 	margin-left:25px;
@@ -43,6 +47,9 @@
 	border-left-color:#CCC;
 	border-top-color:#CCC;
 	height:20px;
+	width:120px;
+	float:left;
+	margin-left:10px;
 }
 .selection .selectpart .selectiondrop
 {
@@ -53,55 +60,54 @@
 {
 		
 	border: 5px solid orange;
-	border-radius:10px;
+	border-radius:1px;
 	width:890px;
 	background-color:orange;
 }
 .card .frame
 {
-	background-image:url(img/card-background.jpg);
+	background-color:white;
 	border:1px solid black;
-	border-bottom:3px solid black;
-	border-right:3px solid black;
-	border-radius:5px;
+	border-radius:8px;
 	height:200px;
 	width:400px;
 	margin-top:30px;
 	margin-left:30px;
 	float:left;
-}
-.card .frame:hover
-{
-	background-image:url(img/card-backgroundRoll.jpg)	
+	overflow:hidden;
 }
 .card .frame .photoframe
 {
-	width:120px;
-	height:150px;	
-	margin-top:20px;
-	margin-left:20px;
-	border:2px solid black;
+	width:150px;
+	height:200px;
 	float:left;
+	background:black;
 }
 .card .frame .infoframe
 {
 	float:left;
-	width:220px;
-	height:160;
-	margin-left:20px;
-	margin-top:20px;
+	width:250px;
+	height:inherit;
 	font-size:20px;
+}
+.card .frame .infoframe:hover
+{
+	background-color:#999;
 }
 .card .frame .infoframe .attributes
 {
-	width:inherit;
-	margin-top:0px;
+	width:230px;
+	margin-top:auto;
+	magrin-bottom:auto;
+	margin-left:10px;
 }
 .card .frame .infoframe .name h1
 {
 	font-size:18px;
-	margin-top:0px;
+	margin-top:10px;
 	height:46px;
+	margin-left:10px;
+	margin-bottom:10px;
 }
 .card .frame .infoframe .attributes h1
 {
@@ -132,7 +138,7 @@
 .nextbutton
 {
 	float:right;
-	width:75px;
+	width:80px;
 	border-right:3px solid white;
 	border-left:2px solid white;	
 	text-align:center;
@@ -144,7 +150,7 @@
 .previousbutton
 {
 	float:left;	
-	width:75px;
+	width:80px;
 	border-left:3px solid white;
 	border-right:2px solid white;
 	text-align:center;
@@ -163,7 +169,7 @@
 
     <div class="header">
 	    <div class="center">
-        	<div class="left"> <a href="index.html" class="left"> Waarbijles </a> </div>
+        	<div class="left"> <a href=/index.html" class="left"> Waarbijles </a> </div>
             <div class="middle"></div>
             <div class="right">
                 <div class="label">Voor leden geef je gegevens en log in</div>
@@ -176,15 +182,15 @@
 	    <div class="page-intro">
        		<div class="selection">
             	<div class="part">
-                	Vak:
+                	<div class="text"> Vak: </div>
             		<input class="inputfield" type="text" placeholder="bijv. Natuurkunde"/>
                 </div>
                 <div class="part">
-                	Stad:
-                	<input class="inputfield" type="text" placeholder="bijv. Amsterdam" autocomplete="on" />
+                	<div class="text"> Stad: </div>
+                 	<input class="inputfield" type="text" placeholder="bijv. Amsterdam" autocomplete="on" />
                 </div>
                 <div class="part">
-                	Niveau:
+                	<div class="text"> Niveau: </div>
 				    <input class="inputfield" type="text" placeholder="bijv. havo"/>
                 </div>
          	<div class="selectpart"> 
@@ -198,7 +204,7 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto3.jpg" width="120" height="150" />
+                    	<img src="img/pasfoto3.jpg" height="200" width="150" />
                     </div>	
                     <div class="infoframe">
                     	<div class = "name">
@@ -220,7 +226,7 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto.jpg" width="120" height="150" />
+                    	<img src="img/pasfoto.jpg" height="200" width="150" />
                     </div>
                     <div class="infoframe">
                     	<div class = "name">
@@ -242,7 +248,7 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    	<img src="img/pasfoto2.jpg" height="200" width="150" />
                     </div>
                     <div class="infoframe">
                     	<div class = "name">
@@ -260,11 +266,11 @@
               	</div>
             </object>
         </a>
-        <a href="aanbod.html">
+        <a href="/aanbod.html">
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/bas.jpg" width="120" height="150" />
+                    	<img src="img/bas.jpg" height="200" width="150" />
                     </div>
                     <div class="infoframe">
                     	<div class = "name">
@@ -286,7 +292,7 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    	<img src="img/pasfoto2.jpg" height="200" width="150"/>
                     </div>
                     <div class="infoframe">
                     	<div class = "name">
@@ -308,7 +314,7 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    	<img src="img/pasfoto2.jpg" height="200" width="150" />
                     </div>
                     <div class="infoframe">
                     	<div class = "name">
@@ -330,7 +336,7 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" width="120" height="150" />
+                    	<img src="img/pasfoto2.jpg" height="200" width="150" />
                     </div>
                     <div class="infoframe">
                     	<div class = "name">
