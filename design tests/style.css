@@ -1,0 +1,198 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body { 
+	overflow-x: hidden;	/* Om te breedheid niet zichtbar te maken */
+	font-family: 'Calibri';
+	font-family: 'Open Sans', sans-serif;
+    /*background: url("img/achter.jpg");
+    background-size: 100%;*/
+}
+
+a { text-decoration: none; color: black; }
+a img { border: none; }
+a:hover { text-decoration: underline; }
+
+.clear { clear: both; }
+
+/* Opmaak voor HEADER begint hier */
+    .header
+    {
+	    width: 102%;
+		position: relative;
+		left: -1%;
+
+	    height: 105px;
+	    line-height: 75px;
+	    margin-bottom:25px;
+		
+	    background-image:url(img/header2.png);
+	    background-color:orange;
+	    background-repeat:repeat-x;
+		background-size: cover;
+	    background-position:center;
+		box-shadow: 0 5px 3px -2px gray;
+    }
+
+    .header .center
+    {
+	    width: 900px;
+	    height: inherit;
+	    line-height: inherit;
+	    margin: auto;
+    }
+    .header .center div { float: left; height: inherit; line-height: inherit; }
+    .header .center .left
+    { 
+	    width: 23%;
+	    padding-left: 2%;
+	    font-size: 40px;
+    }
+    .header .center .middle { width: 40%; }
+    .header .center .right { width: 35%;}
+
+    .header .center .right div { width: 100%; font-size: 16px; float: left;}
+
+    .header .center .right .label 
+    { 
+	    text-align: center; 
+	    line-height: 40px; height: 30px; 
+    }
+    .header .center .right .login 
+    { 
+	    text-align: center;
+	    line-height: 45px; height: 45px; 
+    }
+
+    .header .center .right div input { width: 120px; }
+    .header .center .right div button { width: 15%; }
+/* Opmaak voor HEADER stopt hier */
+
+/* Opmaak voor CONTENT begint hier */
+    .content
+    {
+	    width: 900px;
+	    margin: 0px auto 0px auto;
+	    height: 100%;
+	    border-radius:10px;
+    }
+    
+    /* Opmaak voor het eerste blok boven */
+	.content .page-intro
+	{
+		background-color:orange;
+		min-height:50px;
+		line-height:30px;
+		border-radius:10px;
+		margin-bottom:25px;
+	}
+
+    /* Opmaak voor een blok van 100%vullend content en lengte afhankelijk van inhoud */
+	.content .page-field
+	{
+		background-color: orange;
+		min-height: 100px;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		overflow: hidden;
+    }
+
+    /* Opmaak voor een regel in de content. Ajb niet gebruiken voor het opmaken van de tekst of iets dergelijks, dit is alleen om een gevulde regel te krijgen die een lijn beslaat van je content.  */
+	.content .field 
+	{
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+
+			.main_title
+	{
+		width: inherit;
+		height: 25px;
+		margin-bottom: 25px;	
+		
+		font-size: 24px;
+	}
+	/* Velden voor populair */
+	.populair
+	{
+		width: inherit; height: 225px; position: relative;
+		margin-bottom: 25px;		    
+	}
+	
+	.populair .docent 
+	{			
+		margin-right: 11px;
+		position: relative;
+		width: 169px;
+		height: inherit;
+		float: left;
+		display: block;
+	}
+	
+	.populair .docent .name { width: inherit; height: 10%; overflow: hidden; text-align: center; display: block;}
+	.populair .docent img { border: 1px solid #FF7F00; width: 169px; height: inherit; box-shadow: 0px 0px 5px 0px #FF7F00; }
+	.populair .docent .vak { width: 167px; padding: 2px; display: block; position: absolute; bottom: -11%; background-color: #FF7F00; font-size:13px; opacity: 0.85;}
+	.populair .docent .last { margin-right: 0px; }
+	
+	.populair .docent img:hover { box-shadow: 0px 0px 10px 2px #FF7F00; }
+	
+	.populair .ctrlLeft 
+	{  
+		position: absolute; height: inherit; width: 45px; 
+		background-color: #FF7F00; 
+		left: -60px; top: 10%; 
+	}
+	.populair .ctrlRight 
+	{
+		position: absolute; height: inherit; width: 45px; 
+		background-color: #FF7F00; 
+		right: -60px; top: 10%; 	
+	}
+
+
+/* Opmaak voor CONTENT eindigt hier */
+
+
+
+
+
+
+/* Opmaak voor FOOTER */
+    .footer
+    {
+        width: 900px;
+        margin: 50px auto 50px auto;
+        border-radius:10px;
+        min-height: 30px;		    
+    }
+
+    .footer a
+    {
+        margin-right: 1%;
+        width: 24%;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+		display: block; 
+		text-align: center;
+    }
+	.footer .last { margin-right: 0%; }
+/*Opmaak voor FOOTER */
+
+/* Opmaak voor BOTTOM begint hier */
+    .bottom
+    {
+	    position:relative;
+	    bottom:0;
+		margin:auto;	
+	    width:1200px;
+	    height: 200px;
+	    background: url("img/background.jpg");
+	    background-size: 100% 100%;
+	    z-index: -1;
+    }
+/* Opmaak voor BOTTOM eindigt hier */
