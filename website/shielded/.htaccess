@@ -1,4 +1,5 @@
-Authname ="University of Amsterdam students"
-Authtype = "Basic"
-Require file owner
-
+AuthName ="University of Amsterdam students"
+AuthType = "Basic"
+Require File Owner
+AllowOverride None
+Deny from All
