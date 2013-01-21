@@ -6,79 +6,92 @@
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
-  \setlength{\itemsep}{0pt}} %dit is ook om de lijstjes mooier te krijgen (werkt ook niet)
+  \setlength\itemsep{0pt}} %dit is ook om de lijstjes mooier te krijgen (werkt ook niet)
+\renewcommand\chaptername{}
+\addto\captionsenglish{\renewcommand\chaptername{}}
 
-\begin {document}
+\begin{document}
 
-\begin{comment}
-Dit is een comment waarin we de voortgang van het verslag kunnen bijhouden. Als je iets update, is het handig als je dat hier even bij zet. Ik (Emma) ben zojuist begonnen aan het verslag. Er is nu een titelpagina.
-\end{comment}
+    \begin{comment}
+    Dit is een comment waarin we de voortgang van het verslag kunnen bijhouden. Als je iets update, is het handig als je dat hier even bij zet. Ik (Emma) ben zojuist begonnen aan het verslag. Ik heb Bas zijn tekst ingevoerd.
+    \end{comment}
 
-\begin{titlepage}
-    \begin{center}
+    \begin{titlepage}
+        \begin{center}
 
-        \textsc{\LARGE Webprogrammeren \& Databases}\\[1.5cm]
-        \textsc{\Large Projectverslag}\\[0.5cm]
+            \textsc{\LARGE Webprogrammeren \& Databases}\\[1.5cm]
+            \textsc{\Large Projectverslag}\\[0.5cm]
+            
+            \HRule \\[0.4cm]
+            {\huge \bfseries Webdb13BG2}\\[0.4cm]
+            \HRule \\[1.5cm]
+            
+            \begin{minipage}{\textwidth}
+                \begin{flushleft}
+                    \large \emph{Studenten:}\\
+                    Alexander \textsc{Van Someren} \\
+                    Laura \textsc{Helgering} \\
+                    Tim \textsc{Leunissen} \\
+                    Bas \textsc{Nachtegaal} \\
+                    Emma \textsc{Boumans}
+                \end{flushleft}
+            \end{minipage}
+            
+            \begin{minipage}{\textwidth}
+                \begin{flushright}
+                    \large \emph{Docenten:} \\
+                    Dr.Robert \textsc{Belleman}\\
+                    Tim \textsc{Van Rossum}
+                \end{flushright}
+            \end{minipage}
+            
+            \vfill
+            {\large januari 2013}
         
-        \HRule \\[0.4cm]
-        {\huge \bfseries Webdb13BG2}\\[0.4cm]
-        \HRule \\[1.5cm]
+        \end{center}
+    \end{titlepage}
+
+    \tableofcontents
+
+    \section*{Inleiding}
+    \addcontentsline{toc}{section}{Inleiding}
+        Voor je ligt de handleiding voor de website "Bijles.nl". In deze handleiding zullen de keuzes van de programmeurs en ontwerpers worden toegelicht op het gebied van ontwerp, gebruiksvriendelijkheid, efficientie en onderhoud. In het hoofdstuk \emph{Clientfile} zullen de keuzes die gemaakt zijn in het ontwerp en de architectuur van de website toegelicht worden. In het hoofdstuk \emph{IT file} wordt de technische realisatie van de website beschreven. Hierin zullen ook de installatie- en onderhoudshandleiding gegeven worden.\\
         
-        \begin{minipage}{\textwidth}
-            \begin{flushleft}
-                \large \emph{Studenten:}\\
-                Alexander \textsc{Van Someren} \\
-                Laura \textsc{Helgering} \\
-                Tim \textsc{Leunissen} \\
-                Bas \textsc{Nachtegaal} \\
-                Emma \textsc{Boumans}
-            \end{flushleft}
-        \end{minipage}
+        Als studenten binnen het Instituut voor Interdisciplinaire studies hebben vijf studenten aan de Universiteit van Amsterdam de koppeling van vraag en aanbod van bijles aangegrepen als onderwerp van een website. Deze website maken we in de context van het vak Webprogrammeren en Databases. Hierbij wordt de basis van het ontwerpen van een goed functionerende website onderwezen. Namens de programmeurs; Laura, Alexander, Tim, Bas en Emma, veel leesplezier en gebruiksgemak!
+
+    \chapter{Clientfile}
+        \subsection*{Introductie}
+            Binnen de universiteit van Amsterdam is het een bekend tafereel: haast wanhopig wordt er per flyer, poster of kattenbelletje een verzoek tot het geven van bijles gedaan. Hoeveel handiger zou het zijn als deze koppeling van vraag en aanbod op het gebied van het geven van bijles per zoekmachine en per computer mogelijk is? \\
         
-        \begin{minipage}{\textwidth}
-            \begin{flushright}
-                \large \emph{Docenten:} \\
-                Dr.Robert \textsc{Belleman}\\
-                Tim \textsc{Van Rossum}
-            \end{flushright}
-        \end{minipage}
+            In dit deel worden ontwerpkeuzen toegelicht voor de klant.\\
+
+        \section{De pagina's}
+            De website is onderverdeeld in de volgende pagina's:
+            \begin{itemize}
+                \item Welkom-pagina
+                \item Wie zijn wij?
+                \item Registratieformulier
+                \item Advertentiepagina
+                \item Een pagina voor een uitgeklapte advertentie
+            \end{itemize}
+            
+            Op de welkom pagina wordt de gebruiker een overzichtelijke keuze aangeboden. Twee grote klikbare foto's moedigen de klant 
         
-        \vfill
-        {\large januari 2013}
-    
-    \end{center}
-\end{titlepage}
-
-\tableofcontents
-
-\section*{Inleiding}
-\addcontentsline{toc}{section}{Inleiding}
-    Voor je ligt de handleiding voor de website "Bijles.nl". In deze handleiding zullen de keuzes van de programmeurs en ontwerpers worden toegelicht op het gebied van ontwerp, gebruiksvriendelijkheid, efficientie en onderhoud. In het hoofdstuk \emph{Clientfile} zullen de keuzes die gemaakt zijn in het ontwerp en de architectuur van de website toegelicht worden. In het hoofdstuk \emph{IT file} wordt de technische realisatie van de website beschreven. Hierin zullen ook de installatie- en onderhoudshandleiding gegeven worden.\\
-    
-    Namens de programmeurs; Laura, Alexander, Tim, Bas en Emma, veel leesplezier en gebruiksgemak!
-
-\chapter{Clientfile}
-    In dit deel worden ontwerpkeuzen toegelicht voor de klant.\\
-
-    \section{De pagina's}
-        De website is onderverdeeld in de volgende pagina's:
-        \begin{itemize}
-            \item Welkom-pagina
-            \item Wie zijn wij?
-            \item Registratieformulier
-            \item Advertentiepagina
-            \item Een pagina voor een uitgeklapte advertentie
-        \end{itemize}
+            \subsection{Navigeren}
+                Navigeren kan handig via de balk onderaan het scherm. 
         
-        Op de welkom pagina wordt de gebruiker een overzichtelijke keuze aangeboden. Twee grote klikbare foto's moedigen de klant 
-    
-        \subsection{Navigeren}
-            Navigeren kan handig via de balk onderaan het scherm. 
-    
-    \section{Design}
-        Het design is overzichtelijk en strak. Toch krijgt de gebruiker door de warme kleuren een welkom gevoel.
+        \section{Design}
+            Het design is overzichtelijk en strak. Toch krijgt de gebruiker door de warme kleuren een welkom gevoel.
 
-\chapter{IT file}
-    Dit deel is geschreven voor de ICT-afdeling van de klant. Hierin staat hoe de site technisch is gerealiseerd. Dit dient als installatie- en onderhoudshandleiding.
+    \chapter{IT file}
+        Dit deel is geschreven voor de ICT-afdeling van de klant. Hierin staat hoe de site technisch is gerealiseerd. Dit dient als installatie- en onderhoudshandleiding.
+        
+        \section{De opzet}
+            De layout is in de websitetaal HTML gemaakt. De database is ontworpen vanuit de PHPmyAdmin
+    website, waarmee ook de verschillende veldtypes binnen de database gedefineerd. Een belangrijk onderdeel van de dynamische website is dat gebruikers zich zowel kunnen aanmelden als bijlesgever ( danwel docent ) of juist als bijleszoeker ( danwel student ). De koppeling van de database aan de gebruikersinterface is gebeurt met de serverside scripting language PHP. PHP is een programmeertaal die aan de serverkant uitgevoerd wordt. Het resultaat is op maat gemaakte HTML zodat de bezoeker van de website dit weer te zien kan krijgen.
 
+        \section{Aanmelden \& Registreren}
+            Zowel als aanbieder van bijles als als vrager van bijles kun je in eerste instantie een acount aanmaken waarmee vervolgens ingelogd kan worden. Voordeel van het relatief afgeschermd zijn is dat de drempel om misbruik te maken van de site hoger wordt. Bovendien bied dit de mogelijkheid om eventueel als aanbieder van de website geld te ontvangen voor de geleverde koppelingsdienst. Facturering is in eerste instantie geen onderdeel van deze website.\\
+            Gebruikers kunnen aangeven of men bijles wil geven danwel bijles wil ontvangen. Het initiatief is in eerste instantie aan de bijlesontvanger. Met behulp van zoekopdrachten kunnen profielen van bijlesaanbieders vergeleken worden. Vervolgens kan contact opgenomen worden met een bijlesgever naar keuze. 
+        
 \end{document}
