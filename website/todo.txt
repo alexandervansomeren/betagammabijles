@@ -23,3 +23,14 @@ TABLES:
 
 VERSLAG:
 -
+
+NIVEAUS:
+-Basisschool 
+-PRO (Praktijk gericht onderwijs)
+-VMBO-BBL
+-VMBO-KBL
+-VMBO-GL
+-HAVO Onderbouw
+-HAVO Bovenbouw
+-VWO Onderbouw
+-VWO Bovenbouw
