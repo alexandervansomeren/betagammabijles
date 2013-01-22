@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<style type="text/css">
 		.content .ques {
-            width: 155px;
+            min-width: 155px;
             float: left;
             height: 30px;
             line-height: 30px;
@@ -39,7 +39,7 @@
 	<body>
 		<div class="header">
 		    <div class="center">
-        		<div class="left"> <a href="index.html" class="left"> Waarbijles </a> </div>
+        		<div class="left"> <a href="index.html" class="left"> Openbijles </a> </div>
             		<div class="middle"></div>
                 		<div class="right">
                     		<div class="label">Voor leden geef je gegevens en log in</div>
@@ -106,7 +106,7 @@
                                         <div class="ans"><input type="text" name="city" /></div>
                                 </div>
                             </div>
-                        <em><br>Profiel</em>
+                        <em><br />Profiel</em>
                             <div class="paragraph">
                                 <div class="field">
                                     <div class="ques">Gebruikersnaam:</div>
@@ -122,19 +122,19 @@
                                         <div class="ans"><input type="radio" name="gender" value="1" />Vrouw</div>
                                 </div>
                             </div>
-                       <em><br>Hamvraag</em>
+                       <em><br />Hamvraag</em>
                             <div class="paragraph">
                                 <div class="field">
                                     Wil je bijles geven of een profiel aanmaken?
                                 </div>
                                 <div class="field">
-                                        <div class="ans"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
-                                        <div class="ans"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
+                                        <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
+                                        <div class="ques"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
                                 </div>
                             </div>
-                        <em><br>De bijles</em>
+                        <em><br />De bijles</em>
                             <div class="paragraph">
-                                In welk vak wil je bijles geven?<br>
+                                In welk vak wil je bijles geven?<br />
                                     <label class="ques"><input type="checkbox" value="Aardrijkskunde" name="bijlesvak[]" />Aardrijkskunde</label>
                                     <label class="ques"><input type="checkbox" value="Biologie" name="bijlesvak[]" />Biologie</label>
                                     <label class="ques"><input type="checkbox" value="Scheikunde" name="bijlesvak[]" /> Scheikunde</label>
@@ -149,7 +149,7 @@
                                     <label class="ques"><input type="checkbox" value="Economie" name="bijlesvak[]" />Economie</label>
                                     <label class="ques"><input type="checkbox" value="Latijn" name="bijlesvak[]" />Latijn</label>
                                     <label class="ques"><input type="checkbox" value="Grieks" name="bijlesvak[]" />Grieks</label>                            
-                                    <label class="ques" title="Management & Organisatie"><input type="checkbox[]" value="Management & Organisatie" name="bijlesvak" />M & O</label>
+                                    <label class="ques" title="Management &amp; Organisatie"><input type="checkbox" value="Management &amp; Organisatie" name="bijlesvak[]" />M &amp; O</label>
                                     <label class="ques" title="Maatschappijleer"><input type="checkbox" value="Maatschappijleer" name="bijlesvak[]" />MaL</label>
                                     <label class="ques"><input type="checkbox" value="Muziek" name="bijlesvak[]" /> Muziek</label>
                                     <label class="ques"><input type="checkbox" value="Natuurkunde" name="bijlesvak[]" />Natuurkunde</label>
@@ -160,7 +160,7 @@
                                     <label class="ques"><input type="checkbox" value="Russisch" name="bijlesvak[]" />Russisch</label>
                                     <label class="ques"><input type="checkbox" value="Turks" name="bijlesvak[]" />Turks</label>
                                     <label class="ques"><input type="checkbox" value="Arabisch" name="bijlesvak[]" />Arabisch</label>
-                                    <label class="ques" title="Natuur, Leven & Techniek"><input type="checkbox" value="Natuur, leven & techniek" name="bijlesvak[]" />N, L & T</label >
+                                    <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="Natuur, leven &amp; techniek" name="bijlesvak[]" />N, L &amp; T</label >
                                     <label class="ques" title="Awesome!"><input type="checkbox" value="Informatica" name="bijlesvak[]" />Informatica</label>
                                     <label class="ques"><input type="checkbox" value="Geschiedenis" name="bijlesvak[]" />Geschiedenis</label>
                                     <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="Maatschappijwetenschappen" name="bijlesvak[]" />MaW</label>
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                     </div>
-            </fom>
+            </form>
 		</div>
 	    
 	    <div class="footer">
