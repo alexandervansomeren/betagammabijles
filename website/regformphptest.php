@@ -50,14 +50,14 @@
 		<div class="content">
             <div class="page-intro">
                 <?php 
-                    //if(3 == 2)
-                    //{
-                        //print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
-                    //}
-                        //else
-                    //{
+                    if(3 == 2)
+                    {
+                        print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
+                    }
+                        else
+                    {
                         print "Hello";
-                    //}
+                    }
                 ?>
             </div>
                 <form action="{$_SERVER['PHP_SELF']}" method="post">
