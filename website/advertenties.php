@@ -203,7 +203,14 @@
   	</div>
     
     <?php
-	echo $_GET['vak'];
+	if ($_GET['vak']!=null)
+	{
+		echo "Jee, niet null";	
+	}
+	if ($_GET['vak']=="Natuurkunde")
+	{
+		echo "Jee, natuurkunde.";
+	}
 	
 	?>
     
