@@ -50,14 +50,14 @@
 		<div class="content">
             <div class="page-intro">
                 <?php 
-                    if(!empty($_POST["firstname"]))
-                    {
-                        print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
-                    }
-                        else
-                    {
+                    //if(3 == 2)
+                    //{
+                        //print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
+                    //}
+                        //else
+                    //{
                         print "Hello";
-                    }
+                    //}
                 ?>
             </div>
                 <form action="{$_SERVER['PHP_SELF']}" method="post">
@@ -72,10 +72,10 @@
                                 <div class="field"> 
                                     <div class="ques">Achternaam:</div>
                                         <div class="ans">
-                                            <input type="text" name="middlename" placeholder="Bijv. van" style="width:50px;" />
+                                            <input type="text" name="middlename" placeholder="Bijv. van" style="width:58px;" />
                                         </div>
                                         <div class="ans">
-                                            <input type="text" name="lastname" size="24" placeholder="Achternaam" style="width:101px;" />
+                                            <input type="text" name="lastname" size="24" placeholder="Achternaam" style="width:93px;" />
                                         </div>
                                 </div>
                                 <div class="field"> 
