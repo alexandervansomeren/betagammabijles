@@ -126,7 +126,7 @@ $page = '<?xml version="1.0"?>
 	 <div class="footer">
 	    <a href="About.html">Wie zijn wij?</a>
             <a href="Aanmeld.html">Meld aan als docent</a>	
-	    <a href="registaratieformulier.html">Meld aan als student</a>		
+	    <a href="registratieformulier.html">Meld aan als student</a>		
             <a href="Aanmeld.html" class="last">Contact</a>			
 	 </div>
 		
