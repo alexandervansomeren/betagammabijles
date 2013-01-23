@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-<servername>webdb.science.uva.nl</servername>
-<serverport>1234</serverport>
+<servername>localhost</servername>
+<serverport>3306</serverport>
 <databasename>webdb13BG2</databasename>
 <loginname>webdb13BG2</loginname>
-<password>temptest</password>
+<password>fillinthepassword</password>
 </database>
