@@ -187,7 +187,7 @@ $page = '<?xml version="1.0"?>
 		<div class="bottom"></div>
 		
   </body>
-</html>');
+</html>';
 $length = strval( strlen( $page ) );
 $md5sum = md5( $page );
 header( 'Content-Language: nl' );
