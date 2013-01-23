@@ -3,14 +3,16 @@
 
 class ConnectorClass
 {
-    private $Connection;                       // String with Connectiion Resource.
-    private $ConnectionIniObject;              // Object with Array of xml containing databaseconnection information.
+    private $Connection;                       // String with connection resource.
+    private $ConnectionIniObject;              // Object with array of xml containing databaseconnection information.
     private $ConnectionIniArray;               // Array with xml containing databaseconnection information.
     private $databaseserver;                   // String containing databaseserver hostname.
     private $username;                         // String containing database username.
     private $password;                         // String containing database password.
-    public $Query;                             // String containing the Query. Should become of type private when properly defined.
-
+    public $Query;                             // String containing the query. Should become of type private when properly defined.
+    private $QueryHandle;                      // String containing the resource of the query.
+    public $QueryResult;                       // Array containing the query result.
+    
     public function ConnectorClass()           // Main function.
     {
         $this -> VariableDeclaration();
@@ -26,6 +28,7 @@ class ConnectorClass
         settype( $this -> username, "string" );
         settype( $this -> password, "string" );
         settype( $this -> Query, "string" );
+        settype( $this -> QueryResult, "array" );
     }
 
     private function Connect()                 // Connection preparing function.
@@ -59,19 +62,29 @@ class ConnectorClass
 
      public function Querying()
      {
+         $counter = 0; 
          // List of predefined query's should be put here.
-         try{ return ( mysql_query( $this -> Query, $this -> Connection ) ); } 
-         catch( Exeption $e ) { echo( 'Querying failed.' ); }       
-     }
+         try{ $this -> QueryHandle = mysql_query( $this -> Query, $this -> Connection );    
+         while ( $row = mysql_fetch_array( $this -> QueryHandle, MYSQL_BOTH ) ) { $counter++; $this -> QueryResult[$counter]= $row; } 
+         return( $this -> QueryResult); } 
+         catch( Exeption $e ) { echo( 'Querying failed.' ); }
+           
+      }
 
 }
 
 // Here the class defined above is used:
 $connectionObject = new ConnectorClass;
 // Test query's here. Should become a set of predefined query's as part of the function Querying().
-$connectionObject -> Query = "SELECT * FROM *;";
+$connectionObject -> Query = "SELECT *
+FROM webdb13BG2.course_difficulty
+ORDER BY webdb13BG2.course_difficulty.difficulty_id ASC
+LIMIT 0 , 30";
 echo('Result of the Query ('.$connectionObject -> Query.') :');
-var_dump( $connectionObject -> Querying() );
+echo('<pre>');
+print_r( $connectionObject -> Querying() );
+echo('</pre>');
 // Disconnecting function directed:
 $connectionObject -> Disconnect();
 // End of File
+?>
