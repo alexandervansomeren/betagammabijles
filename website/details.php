@@ -95,25 +95,25 @@ $page = '<?xml version="1.0"?>
                     <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent">
+            	<a href="details.php" class="docent">
                     <span class="name">Jan-roelof</span>
                     <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
                     <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent">
+            	<a href="details.php" class="docent">
                     <span class="name">Emma</span>
                     <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
                     <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent">
+            	<a href="details.php" class="docent">
                     <span class="name">Berend</span>
                     <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
                     <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent last">
+            	<a href="details.php" class="docent last">
                     <span class="name">Henk</span>
                     <span class="vak">Natuurkunde, KI, Wiskunde</span>
                     <img src="img/student_1.jpg" alt="student_1" /> 
@@ -122,10 +122,10 @@ $page = '<?xml version="1.0"?>
 		</div>
 		
 		<div class="footer">
-	        <a href="About.html">Wie zijn wij?</a>
-            <a href="Aanmeld.html">Meld aan als docent</a>	
-	        <a href="Advertenties.html">Meld aan als student</a>		
-            <a href="Aanmeld.html" class="last">Contact</a>			
+	        <a href="about.php">Wie zijn wij?</a>
+            <a href="registratieformulier.php">Meld aan als docent</a>	
+	        <a href="advertenties.php">Meld aan als student</a>		
+            <a href="" class="last">Contact</a>			
 		</div>
 		
 		<div class="bottom"></div>
