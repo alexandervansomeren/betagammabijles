@@ -179,8 +179,8 @@ $page = '<?xml version="1.0"?>
 	    
 	    <div class="footer">
 	        <div class="centerwrapper">
-                <a href="index.html">Welkom</a>
-                <a href="about.html">Wie zijn wij?</a>
+                <a href="index.php"ll>Welkom</a>
+                <a href="about.php">Wie zijn wij?</a>
             </div>
 		</div>
 		
