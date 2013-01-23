@@ -193,27 +193,31 @@
                         <input class="inputfield" type="text" placeholder="bijv. havo"/>
                     </div>
                     <div class="selectpart" style="width:140px"> 
-                        <label class="ques">Man <input type="checkbox" value="male" name="Man", checked="checked">	</label>
-                        <label class="ques">Vrouw <input type="checkbox" value="female" name="Vrouw", checked="checked">	</label>
+                        <label class="ques">Man <input type="checkbox" name="male", checked="checked">	</label>
+                        <label class="ques">Vrouw <input type="checkbox" name="female", checked="checked">	</label>
                     </div> 
                     <input class="text" type="submit" value="submit"/>
             </form>
-            </div>
         </div>
-  	</div>
-    
     <?php
 	if ($_GET['vak']!=null)
 	{
-		echo "Jee, niet null";	
-	}
-	if ($_GET['vak']=="Natuurkunde")
-	{
-		echo "Jee, natuurkunde.";
+		echo "Jee, niet null <br>";	
+		if ($_GET['vak']=="Natuurkunde")
+		{
+			echo "Jee, ";
+			echo $_GET['vak'];
+			echo".";
+		}
+		else
+		{
+			echo "dan maar ";
+			echo $_GET['vak'], ".";
+		}
 	}
 	
+
 	?>
-    
     <div class="page-field">
        	<a href="#">
             <object class="card">
