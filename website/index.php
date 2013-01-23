@@ -91,31 +91,31 @@ $page = '<?xml version="1.0"?>
 	        <div class="populair">
             	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
                 <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
-                <a href="Details.php?id=1" class="docent">
+                <a href="details.php?id=1" class="docent">
                    <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.php" class="docent">
+            	<a href="details.php" class="docent">
                    <span class="name">Jan-roelof</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.php" class="docent">
+            	<a href="details.php" class="docent">
                    <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.php" class="docent">
+            	<a href="details.php" class="docent">
                    <span class="name">Berend</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.php" class="docent last">
+            	<a href="details.php" class="docent last">
                    <span class="name">Henk</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
@@ -124,7 +124,7 @@ $page = '<?xml version="1.0"?>
          </div>
 		
 	 <div class="footer">
-	    <a href="About.php">Wie zijn wij?</a>
+	    <a href="about.php">Wie zijn wij?</a>
             <a href="registratieformulier.php">Meld aan als docent</a>	
 	    <a href="registratieformulier.php">Meld aan als student</a>		
             <a href="" class="last">Contact</a>			
