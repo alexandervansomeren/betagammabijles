@@ -97,8 +97,8 @@ $page = '<?xml version="1.0"?>
 				    <div class="input"><input /></div>
 				    </div>
                     
-                    <div class="half">
-				    <div class="label">Uw bericht aan ons</div>
+                        <div class="half">
+  				    <div class="label">Uw bericht aan ons</div>
 				    <div class="input"><textarea style="resize:vertical;" type="text" rows="9" cols="25" placeholder="Typ hier uw bericht"></textarea></div>
 			        </div>
 			    </div>
@@ -116,10 +116,10 @@ $page = '<?xml version="1.0"?>
 		</div>
 		
 		<div class="footer">
-            <a href="about.html">Wie zijn wij?</a>
-            <a href="index.html">Welkom</a>
-            <a href="about.html">Meld je aan</a>
-		    <a href="registratieformulier.html">Registratieformulier</a>
+            <a href="about.php"ll>Wie zijn wij?</a>
+            <a href="index.php">Welkom</a>
+            <a href="about.php">Meld je aan</a>
+	    <a href="registratieformulier.php">Registratieformulier</a>
         </div>        
         
         <div class="bottom"></div>
