@@ -65,8 +65,8 @@ $page = '<?xml version="1.0"?>
                  <div class="middle"></div>
                  <div class="right">
                     <div class="label">Voor leden geef je gegevens en log in</div>
-                    <div class="login"><input placeholder="Gebruikersnaam" />
-                       <input placeholder="Wachtwoord" />
+                    <div class="login"><input value="Gebruikersnaam" />
+                       <input value="Wachtwoord" />
                        <button type="submit">Login</button>
                     </div>
                  </div>
@@ -76,11 +76,11 @@ $page = '<?xml version="1.0"?>
            <div class="content">	
               <div class="main_title">Welkom op <i>onze naam</i>.nl</div>
 		 <div class="buttons">
-	            <a href="registratieformulier.html" class="left">
+	            <a href="registratieformulier.php" class="left">
                        <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
 	               <span class="title">Ik geef bijles</span>
                     </a>
-	            <a href="advertenties.html" class="right">	                
+	            <a href="advertenties.php" class="right">	                
                        <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
                        <span class="title">Ik wil bijles</span>
 	            </a>
@@ -91,31 +91,31 @@ $page = '<?xml version="1.0"?>
 	        <div class="populair">
             	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
                 <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
-                <a href="Details.html?id=1" class="docent">
+                <a href="Details.php?id=1" class="docent">
                    <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent">
+            	<a href="Details.php" class="docent">
                    <span class="name">Jan-roelof</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent">
+            	<a href="Details.php" class="docent">
                    <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent">
+            	<a href="Details.php" class="docent">
                    <span class="name">Berend</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
-            	<a href="Details.html" class="docent last">
+            	<a href="Details.php" class="docent last">
                    <span class="name">Henk</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
@@ -124,10 +124,10 @@ $page = '<?xml version="1.0"?>
          </div>
 		
 	 <div class="footer">
-	    <a href="About.html">Wie zijn wij?</a>
-            <a href="Aanmeld.html">Meld aan als docent</a>	
-	    <a href="registratieformulier.html">Meld aan als student</a>		
-            <a href="Aanmeld.html" class="last">Contact</a>			
+	    <a href="About.php">Wie zijn wij?</a>
+            <a href="registratieformulier.php">Meld aan als docent</a>	
+	    <a href="registratieformulier.php">Meld aan als student</a>		
+            <a href="" class="last">Contact</a>			
 	 </div>
 		
 	 <div class="bottom"></div>
