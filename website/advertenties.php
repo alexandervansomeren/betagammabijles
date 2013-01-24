@@ -255,9 +255,9 @@
 	
 	$queryResultsArray = $db -> Querying();
 	
-	echo "<pre>"
-	print_r($queryResultsArray);
-	echo "</pre>"
+	echo('<pre>');
+	print_r( $queryResultsArray );
+	echo('</pre>');
 	
 	// Disconnect from the database
 	$db -> Disconnect();
