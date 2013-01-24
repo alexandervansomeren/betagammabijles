@@ -30,6 +30,7 @@ class ConnectorClass
         settype( $this -> password, "string" );
         settype( $this -> Query, "string" );
         settype( $this -> QueryResult, "array" );
+        settype( $this -> QueryHandle, "string" );
     }
 
     private function Connect()                 // Connection preparing function.
