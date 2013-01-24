@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<!--<?xml version="1.0"?>-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -71,55 +71,55 @@
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Achternaam:</div>
-                                        <div class="ans">
-                                            <input type="text" name="middlename" placeholder="Bijv. van" style="width:58px;" />
-                                        </div>
-                                        <div class="ans">
-                                            <input type="text" name="lastname" size="24" placeholder="Achternaam" style="width:93px;" />
-                                        </div>
+                                    <div class="ans">
+                                        <input type="text" name="middlename" placeholder="Bijv. van" style="width:58px;" />
+                                    </div>
+                                    <div class="ans">
+                                        <input type="text" name="lastname" size="24" placeholder="Achternaam" style="width:93px;" />
+                                    </div>
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Geboortedatum:</div>
-                                        <div class="ans"> <input type="text" name="date_of_birth" placeholder="Bijv. 01-01-2000" /></div>
+                                    <div class="ans"> <input type="text" name="date_of_birth" placeholder="Bijv. 01-01-2000" /></div>
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Email:</div>
-                                        <div class="ans"> <input type="text" name="emailadress" /></div>
+                                    <div class="ans"> <input type="text" name="emailadress" /></div>
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Telefoon:</div>
-                                        <div class="ans"><input type="text" name="phone_1" placeholder="Telefoon 1" style="width:76px;" /></div>
-                                        <div class="ans"><input type="text" name="phone_2" placeholder="Telefoon 2" style="width:75px;" /></div>
+                                    <div class="ans"><input type="text" name="phone_1" placeholder="Telefoon 1" style="width:76px;" /></div>
+                                    <div class="ans"><input type="text" name="phone_2" placeholder="Telefoon 2" style="width:75px;" /></div>
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Adres:</div>
-                                        <div class="ans"><input type="text" name="street" placeholder="Straatnaam" style="width:120px;" /></div>
-                                        <div class="ans"><input type="text" name="streetnumber" placeholder="Nr." style="width:31px;" /></div>
+                                    <div class="ans"><input type="text" name="street" placeholder="Straatnaam" style="width:120px;" /></div>
+                                    <div class="ans"><input type="text" name="streetnumber" placeholder="Nr." style="width:31px;" /></div>
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Postcode:</div>
-                                        <div class="ans"><input type="text" name="postal" placeholder="Bijv. 1234" style="width:50px;" /></div>
-                                        <div class="ans"><input type="text" name="postal_extra" placeholder="AB" style="width:22px;" /></div>  
+                                    <div class="ans"><input type="text" name="postal" placeholder="Bijv. 1234" style="width:50px;" /></div>
+                                    <div class="ans"><input type="text" name="postal_extra" placeholder="AB" style="width:22px;" /></div>  
                                 </div>
                                 <div class="field"> 
                                     <div class="ques">Woonplaats:</div>
-                                        <div class="ans"><input type="text" name="city" /></div>
+                                    <div class="ans"><input type="text" name="city" /></div>
                                 </div>
                             </div>
                         <em><br />Profiel</em>
                             <div class="paragraph">
                                 <div class="field">
                                     <div class="ques">Gebruikersnaam:</div>
-                                        <div class="ans"><input type="text" name="username" /></div>
+                                    <div class="ans"><input type="text" name="username" /></div>
                                 </div>
                                 <div class="field">
                                     <div class="ques">Wachtwoord:</div>
-                                        <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
+                                    <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
                                 </div>
                                 <div class="field">
                                     <div class="ques">Selecteer geslacht:</div>
-                                        <div class="ans"><input type="radio" name="gender" value="0" />Man</div>
-                                        <div class="ans"><input type="radio" name="gender" value="1" />Vrouw</div>
+                                    <div class="ans"><input type="radio" name="gender" value="0" />Man</div>
+                                    <div class="ans"><input type="radio" name="gender" value="1" />Vrouw</div>
                                 </div>
                             </div>
                        <em><br />Hamvraag</em>
@@ -128,8 +128,8 @@
                                     Wil je bijles geven of een profiel aanmaken?
                                 </div>
                                 <div class="field">
-                                        <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
-                                        <div class="ques"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
+                                    <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
+                                    <div class="ques"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
                                 </div>
                             </div>
                         <em><br />De bijles</em>
