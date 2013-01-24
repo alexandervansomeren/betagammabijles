@@ -25,7 +25,7 @@ class ConnectorClass
         settype( $this -> ConnectionIniObject, "object" );
         settype( $this -> ConnectionIniArray, "array" );
         settype( $this -> databaseserver, "string" );
-		//settype( $this -> databaseName, "string" ); // for PDO, the database name is required
+		settype( $this -> databaseName, "string" ); // for PDO, the database name is required
         settype( $this -> username, "string" );
         settype( $this -> password, "string" );
         settype( $this -> Query, "string" );
@@ -41,7 +41,7 @@ class ConnectorClass
                                                // Sanitize filtering variables.
         $this -> databaseserver = filter_var( $this -> ConnectionIniArray[ "servername" ], FILTER_SANITIZE_URL ) .
                                    ':' . filter_var( $this -> ConnectionIniArray[ "serverport" ], FILTER_SANITIZE_NUMBER_INT );
-		//$this -> databaseName = filter_var( $this -> ConnectionIniArray["databasename"], FILTER_SANITIZE_STRING );
+		$this -> databaseName = filter_var( $this -> ConnectionIniArray["databasename"], FILTER_SANITIZE_STRING );
         $this -> password = filter_var( $this -> ConnectionIniArray["password"], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_AMP );
         $this -> username = filter_var( $this -> ConnectionIniArray["loginname"], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_AMP );
                                                // The database connection grows up here:
