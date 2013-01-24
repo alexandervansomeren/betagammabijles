@@ -251,7 +251,7 @@
 		
 		WHERE ci.course_name LIKE '%". $course ."%' 
 		AND 
-		ad.city LIKE '%". $course ."%' 
+		ad.city LIKE '%". $city ."%' 
 		AND 
 		cd.difficulty_name LIKE '%". $level ."%'
 	";
