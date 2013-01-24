@@ -235,27 +235,21 @@
 	// Making query
 	$db -> Query = 
 	"
-		USE webdb13BG2
-		SELECT 
-		ad.user_id AS user_id, 
-		ad.city AS user_city, 
-		cu.course_code AS course_id, 
-		ci.course_name AS course_name, 
-		cd.difficulty_name AS course_difficulty 
+		SELECT DISTINCT
+		ad.user_id AS user_id
 		
-		FROM adress_data ad 
-		INNER JOIN course_user cu ON cu.user_id = ad.user_id 
-		INNER JOIN course_code cc ON cc.course_code = cu.course_code 
-		INNER JOIN course_id ci ON cc.course_id = ci.course_id 
-		INNER JOIN course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
+		FROM webdb13BG2.adress_data ad 
+		INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
+		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
+		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
+		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
 		
 		WHERE ci.course_name LIKE '%". $course ."%' 
 		AND 
 		ad.city LIKE '%". $city ."%' 
 		AND 
 		cd.difficulty_name LIKE '%". $level ."%'
-	";
-	
+	;";
 	echo $db -> Query, "<br>";
 	
 	$queryResultsArray = $db -> Querying();
@@ -263,6 +257,8 @@
 	echo('<pre>');
 	print_r( $queryResultsArray );
 	echo('</pre>');
+	
+	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
 	
 	// Disconnect from the database
 	$db -> Disconnect();

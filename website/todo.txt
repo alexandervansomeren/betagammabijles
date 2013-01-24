@@ -34,3 +34,9 @@ NIVEAUS:
 -HAVO Bovenbouw
 -VWO Onderbouw
 -VWO Bovenbouw
+
+BEHEERDER:
+-rijen/kolommen weg kunnen gooien. 
+-VEREIST?!
+
+SESSIES!

@@ -61,7 +61,7 @@
                             <div class="ans">
                                 <input type="text" name="firstname" placeholder="Voornaam" /></div>
                         </div>
-                        <div class="field"> 
+                        <div class="field">
                             <div class="ques">Achternaam:</div>
                             <div class="ans">
                                 <input type="text" name="middlename" placeholder="Bijv. van" style="width:58px;" />
@@ -169,6 +169,12 @@
                     <div class="paragraph">
                         <div class="field">
                             <input type="submit" value="Registreer" style="background-color:orange;" />
+                            <?php
+                                if(empty($_POST["firstname"]))
+                                {
+                                    print "Hier komt submit code";
+                                }
+                            ?>
                         </div>
                         <div class="field">
                             <a href="http://validator.w3.org/check?uri=referer">
