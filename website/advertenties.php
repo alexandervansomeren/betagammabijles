@@ -223,32 +223,47 @@
 	else $level="";
 	if (isset($_GET['male']))
 	{
-		$male="on";
+		$gender="1";
 	}
-	else $male="off";
+	else $male=null;
 	if (isset($_GET['female']))
 	{
-		$female="on";
+		$gender="0";
 	}
-	else $female="off";
+	else $gender=null;
+	
+	if ($gender=null)
+	{
+		$genderQuery = "";
+	}
+	else if ($gender="1")
+	{
+		$genderQuery = "AND up.gender=1";
+	}
+	else if ($gender="0")
+	{
+		$genderQuery = "AND up.gender=0";
+	}
 	
 	// Making query
 	$db -> Query = 
 	"
-		SELECT
+		SELECT DISTINCT
 		ad.user_id AS user_id
 		
 		FROM webdb13BG2.adress_data ad 
 		INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
 		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
 		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
+		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
+		INNER JOIN webdb13BG2.user_personal_data up ON up.user_id = ad.user_id 
 		
 		WHERE ci.course_name LIKE '%". $course ."%' 
 		AND 
 		ad.city LIKE '%". $city ."%' 
 		AND 
 		cd.difficulty_name LIKE '%". $level ."%'
+		". $genderQuery ."
 	;";
 	echo $db -> Query, "<br>";
 	
