@@ -231,7 +231,7 @@
 	
 	//Connecting to the database
 	
-	include 'shielded/connector2.php';
+	//include 'shielded/connector2.php';
 	//$connectionObject = new ConnectorClass;
 	
 	$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
