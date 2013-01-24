@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text');
 include('shielded/connector.php');
 $connectionObject = new ConnectorClass;
 
