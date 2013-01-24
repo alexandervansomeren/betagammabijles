@@ -258,6 +258,8 @@
 	print_r( $queryResultsArray );
 	echo('</pre>');
 	
+	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
+	
 	// Disconnect from the database
 	$db -> Disconnect();
 	echo "Disconnected";
