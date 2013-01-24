@@ -1,4 +1,4 @@
-<!--<?xml version="1.0"?>-->
+<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -39,21 +39,21 @@
 	<body>
 		<div class="header">
 		    <div class="center">
-        		<div class="left"> <a href="index.html" class="left"> Openbijles </a> </div>
-            		<div class="middle"></div>
-                		<div class="right">
-                    		<div class="label">Voor leden geef je gegevens en log in</div>
-                    		<div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord" /><button type="submit">Login</button></div>
-                		</div>
-        			</div>
-		    </div>
+        		<div class="left"><a href="index.html" class="left">Openbijles</a></div>
+           		<div class="middle"></div>
+           		<div class="right">
+            		<div class="label">Voor leden geef je gegevens en log in</div>
+               		<div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord" /><button type="submit">Login</button></div>
+                </div>
+        	</div>
+		</div>
 		<div class="content">
             <div class="page-intro">
                 <?php 
                     print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
                 ?>
             </div>
-                <form action="<? echo $_SERVER['PHP_SELF'];?>" method="post">
+                <form action="<? echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="page-field">
                         <em>Over jou</em>
                             <div class="paragraph">
@@ -190,9 +190,8 @@
                 <a href="index.html">Welkom</a>
                 <a href="about.html">Wie zijn wij?</a>
             </div>
-		</div>
-		
-		<div class="bottom"></div>
-		
-  </body>
+		</div>	
+        <div class="bottom"></div>	
+        
+    </body>
 </html>
