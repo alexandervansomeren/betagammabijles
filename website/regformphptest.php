@@ -57,13 +57,6 @@
                     <em>Over jou</em>
                     <div class="paragraph">
                         <div class="field">
-                            <!--<?php
-                                print <<<EOT
-                                    <form action={$_SERVER['PHP_SELF']}" method="post">
-                                        Voornaam: <input type="text" name="firstname" placeholder="Voornaam" />
-                                    </form>
-                                EOT;
-                            ?>-->
                             <div class="ques">Voornaam:</div>
                             <div class="ans">
                                 <input type="text" name="firstname" placeholder="Voornaam" /></div>
