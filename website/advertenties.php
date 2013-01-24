@@ -247,11 +247,11 @@
 	INNER JOIN course_id ci ON cc.course_id = ci.course_id 
 	INNER JOIN course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
 	
-	WHERE ci.course_name LIKE '%". $course ."%' 
+	WHERE ci.course_name LIKE '%".$course."%' 
 	AND 
-	ad.city LIKE '%". $city ."%' 
+	ad.city LIKE '%".$city."%' 
 	AND 
-	cd.difficulty_name LIKE '%". $level ."%'";
+	cd.difficulty_name LIKE '%".$level."%'";
 	
 	echo $db -> Query;
 	
