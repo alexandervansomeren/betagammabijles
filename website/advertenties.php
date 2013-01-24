@@ -248,9 +248,9 @@
 		INNER JOIN course_id ci ON cc.course_id = ci.course_id 
 		INNER JOIN course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
 		
-		WHERE ci.course_name LIKE '%Bio%' 
+		WHERE ci.course_name LIKE '%". $course ."%' 
 		AND 
-		ad.city LIKE '%Ams%' 
+		ad.city LIKE '%". $course ."%' 
 		AND 
 		cd.difficulty_name LIKE '%Basic%'
 	";
