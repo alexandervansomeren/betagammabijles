@@ -235,6 +235,7 @@
 	// Making query
 	$db -> Query = 
 	"
+		USE webdb13BG2
 		SELECT 
 		ad.user_id AS user_id, 
 		ad.city AS user_city, 
@@ -250,9 +251,9 @@
 		
 		WHERE ci.course_name LIKE '%". $course ."%' 
 		AND 
-		ad.city LIKE '%". $course ."%' 
+		ad.city LIKE '%". $city ."%' 
 		AND 
-		cd.difficulty_name LIKE '%Basic%'
+		cd.difficulty_name LIKE '%". $level ."%'
 	";
 	
 	echo $db -> Query, "<br>";
