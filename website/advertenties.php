@@ -235,7 +235,7 @@
 	//$connectionObject = new ConnectorClass;
 	
 	$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
-	$dv -> Query = "SELECT * FROM webdb13BG2.course_difficulty";
+	$db -> Query = "SELECT * FROM webdb13BG2.course_difficulty";
 	print_r( $db -> Querying() );	
 	
 	

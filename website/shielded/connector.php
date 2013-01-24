@@ -25,6 +25,7 @@ class ConnectorClass
         settype( $this -> ConnectionIniObject, "object" );
         settype( $this -> ConnectionIniArray, "array" );
         settype( $this -> databaseserver, "string" );
+	settype( $this -> databaseName, "string" ); // for PDO, the database name is required
         settype( $this -> username, "string" );
         settype( $this -> password, "string" );
         settype( $this -> Query, "string" );
@@ -39,7 +40,8 @@ class ConnectorClass
         $this -> ConnectionIniArray = (get_object_vars( $this -> ConnectionIniObject )); 
                                                // Sanitize filtering variables.
         $this -> databaseserver = filter_var( $this -> ConnectionIniArray[ "servername" ], FILTER_SANITIZE_URL ) .
-                                   ':' . filter_var( $this -> ConnectionIniArray[ "serverport" ], FILTER_SANITIZE_NUMBER_INT ); 
+                                   ':' . filter_var( $this -> ConnectionIniArray[ "serverport" ], FILTER_SANITIZE_NUMBER_INT );
+	$this -> databaseName = filter_var( $this -> ConnectionIniArray["databasename"], FILTER_SANITIZE_STRING );
         $this -> password = filter_var( $this -> ConnectionIniArray["password"], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_AMP );
         $this -> username = filter_var( $this -> ConnectionIniArray["loginname"], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_AMP );
                                                // The database connection grows up here:
@@ -48,7 +50,7 @@ class ConnectorClass
                                                // When using the new style PDO manner isn't errorfree yet,
                                                // So the combination of classes, objects and the old PHP mysql_connect() function is used.
 
-        //try{ $databaseConnection = new PDO( $this -> databaseserver, $this -> username. $this -> password );
+        //{ $databaseConnection = new PDO( "mysql:host=$this -> databaseserver;dbname=$this -> databasename; charset=UTF-8", $this -> username, $this -> password );
         // } //catch( PDOExeption $e ){ echo( 'Connection failed: '. $e -> getMessage());    }
       
          return;     
