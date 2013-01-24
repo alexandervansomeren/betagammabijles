@@ -234,7 +234,7 @@
 	//include 'connectortest.php';
 	//$connectionObject = new ConnectorClass;
 	
-	$db = new PDO("mysql:host=localhost,dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
+	$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
 	
 	
 	
