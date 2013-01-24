@@ -231,12 +231,10 @@
 	
 	//Connecting to the database
 	
-	include 'connectortest.php';
+	include 'shielded/connector2.php';
 	//$connectionObject = new ConnectorClass;
 	
 	$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
-	$db -> Query = "SELECT * FROM webdb13BG2.course_difficulty";
-	print_r( $db -> Querying() );	
 	
 	
 	
