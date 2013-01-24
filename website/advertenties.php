@@ -182,15 +182,15 @@
         	<form class="selection" method="get" action="<? echo $_SERVER['PHP_SELF'];?>">
                     <div class="part">
                         <div class="text"> Vak: </div>
-                        <input class="inputfield" name="vak" type="text" placeholder="bijv. Natuurkunde"/>
+                        <input class="inputfield" type="text" name="course" placeholder="bijv. Natuurkunde"/>
                     </div>
                     <div class="part">
                         <div class="text"> Stad: </div>
-                        <input class="inputfield" type="text" placeholder="bijv. Amsterdam" autocomplete="on" />
+                        <input class="inputfield" type="text" name="city" placeholder="bijv. Amsterdam"/>
                     </div>
                     <div class="part">
                         <div class="text"> Niveau: </div>
-                        <input class="inputfield" type="text" placeholder="bijv. havo"/>
+                        <input class="inputfield" type="text" name="level"placeholder="bijv. havo"/>
                     </div>
                     <div class="selectpart" style="width:140px"> 
                         <label class="ques">Man <input type="checkbox" name="male", checked="checked">	</label>
@@ -200,21 +200,42 @@
             </form>
         </div>
     <?php
-	if ($_GET['vak']!=null)
+	
+	
+	// Initializing variables
+	if (isset($_GET['course']))
 	{
-		echo "Jee, niet null <br>";	
-		if ($_GET['vak']=="Natuurkunde")
-		{
-			echo "Jee, ";
-			echo $_GET['vak'];
-			echo".";
-		}
-		else
-		{
-			echo "dan maar ";
-			echo $_GET['vak'], ".";
-		}
+		$course = $_GET['course'];
 	}
+	else $course=null;
+	if (isset($_GET['city']))
+	{
+		$city = $_GET['city'];
+	}
+	else $city=null;
+	if (isset($_GET['level']))
+	{
+		$level = $_GET['level'];
+	}
+	else $level=null;
+	if (isset($_GET['male']))
+	{
+		$male="on";
+	}
+	else $male="off";
+	if (isset($_GET['female']))
+	{
+		$female="on";
+	}
+	else $female="off";
+	echo $course;
+	
+	// Connecting to the database
+	
+	include '/shielded/connector.php'
+	
+	
+	
 	
 
 	?>
@@ -241,138 +262,8 @@
                   </div>
             </object>
         </a>
-        <a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    	<img src="img/pasfoto.jpg" height="200" width="150" />
-                    </div>
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Alexander Rafaël van Someren</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Natuurkunde, Wiskunde, Economie, M & O, Russisch.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam</p>
-                    	</div>
-                  	</div>
-              	</div>
-                </object>
-        </a>
-        <a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" height="200" width="150" />
-                    </div>
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Laura Helgering</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam</p>
-                    	</div>
-                  	</div>
-              	</div>
-            </object>
-        </a>
-        <a href="details.html">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    	<img src="img/bas.jpg" height="200" width="150" />
-                    </div>
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Bastiaan Nachtegaal</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Natuurkunde, Wiskunde, C.K.V.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam, Rijswijk</p>
-                    	</div>
-                  	</div>
-              	</div>
-            </object>
-        </a>
-        <a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" height="200" width="150"/>
-                    </div>
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Laura Helgering</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam</p>
-                    	</div>
-                  	</div>
-              	</div>
-            </object>
-        </a>
-        <a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" height="200" width="150" />
-                    </div>
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Laura Helgering</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam</p>
-                    	</div>
-                  	</div>
-              	</div>
-            </object>
-        </a>
-        <a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    	<img src="img/pasfoto2.jpg" height="200" width="150" />
-                    </div>
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Laura Helgering</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Informatica, Frans, Economie, M & O, Turks.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam</p>
-                    	</div>
-                  	</div>
-              	</div>
-            </object>
-        </a>
+        
+        
         <div class="prevnexbuttons">
             <div class="prevnexbuttonsCenter">
                 <a href="#">
