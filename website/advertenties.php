@@ -228,11 +228,11 @@
 		$female="on";
 	}
 	else $female="off";
-	echo $course;
 	
-	// Connecting to the database
+	//Connecting to the database
 	
-	include '/shielded/connector.php'
+	include 'connectortest.php';
+	$connectionObject = new ConnectorClass;
 	
 	
 	
