@@ -10,6 +10,4 @@ print_r( $connectionObject -> Querying() );
 echo('</pre>');
 // Disconnecting function directed:
 $connectionObject -> Disconnect();
-
-
 ?>
