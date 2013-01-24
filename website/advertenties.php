@@ -235,7 +235,7 @@
 	// Making query
 	$db -> Query = 
 	"
-		SELECT DISTINCT
+		SELECT
 		ad.user_id AS user_id
 		
 		FROM webdb13BG2.adress_data ad 
