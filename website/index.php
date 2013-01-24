@@ -3,13 +3,13 @@ $page = '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>webdb13BG2</title>
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		
-		<style>
+		<style type="text/css">
 		.content .buttons
 		{
 		        width: inherit; height: 350px;
@@ -89,8 +89,8 @@ $page = '<?xml version="1.0" encoding="UTF-8"?>
                 <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
             
 	        <div class="populair">
-            	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
-                <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
+            	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
+                <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
                 <a href="details.php?id=1" class="docent">
                    <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
