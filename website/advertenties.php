@@ -202,20 +202,20 @@
     <?php
 	
 	
-	// Initializing variables
+	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['course']))
 	{
-		$course = $_GET['course'];
+		$course = mysql_real_escape_string($_GET['course']);
 	}
 	else $course="";
 	if (isset($_GET['city']))
 	{
-		$city = $_GET['city'];
+		$city = mysql_real_escape_string($_GET['city']);
 	}
 	else $city="";
 	if (isset($_GET['level']))
 	{
-		$level = $_GET['level'];
+		$level = mysql_real_escape_string($_GET['level']);
 	}
 	else $level="";
 	if (isset($_GET['male']))
