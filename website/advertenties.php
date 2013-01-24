@@ -230,11 +230,21 @@
 	else $female="off";
 	
 	//Connecting to the database
+	include 'shielded/connector.php';
+	$connectionObject = new ConnectorClass;
 	
-	//include 'shielded/connector2.php';
+	$connectionObject -> Query = "SELECT * FROM webdb13BG2.course_difficulty";
+	
+	$queryResultsArray = $connectionObject -> Querying();
+	
+	$connectionObject -> Disconnect();
+	
+	
 	//$connectionObject = new ConnectorClass;
 	
-	$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
+	//$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
+	
+	//$db -> 
 	
 	
 	
