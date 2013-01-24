@@ -229,19 +229,21 @@
 	}
 	else $female="off";
 	
-	//Connecting to the database
+	// Connect to the database
 	include 'shielded/connector.php';
-	$connectionObject = new ConnectorClass;
+	$db = new ConnectorClass;
 	
-	$connectionObject -> Query = "SELECT * FROM webdb13BG2.course_difficulty";
+	$db -> Query = 
+	"SELECT * 
+	FROM webdb13BG2.course_difficulty
+	";
 	
-	$queryResultsArray = $connectionObject -> Querying();
+	$queryResultsArray = $db -> Querying();
 	
-	$connectionObject -> Disconnect();
 	
-	echo('<pre>');
-	print_r($queryResultsArray);
-	echo('</pre>');
+	// Disconnect from the database
+	$db -> Disconnect();
+	
 	
 	//$connectionObject = new ConnectorClass;
 	
