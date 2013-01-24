@@ -61,7 +61,7 @@ $page = '<?xml version="1.0"?>
                     }
                 ?>
             </div>
-                <form> /*action="{$_SERVER['PHP_SELF']}" method="post"*/
+                <!-- <form> /*action="{$_SERVER['PHP_SELF']}" method="post"*/ -->
                     <?php 
                         if(!(3 == 2))
                         {
@@ -195,7 +195,7 @@ $page = '<?xml version="1.0"?>
                             print "Hello";
                         }
                     ?>
-                </form>
+                <!-- </form> -->
 		    </div>
 	    
 	    <div class="footer">
