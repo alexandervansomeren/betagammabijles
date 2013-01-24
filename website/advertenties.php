@@ -235,7 +235,8 @@
 	// Making query
 	$db -> Query = 
 	"
-		USE webdb13BG2
+		USE webdb13BG2;
+		
 		SELECT 
 		ad.user_id AS user_id, 
 		ad.city AS user_city, 
