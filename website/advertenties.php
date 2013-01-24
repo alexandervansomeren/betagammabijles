@@ -233,7 +233,7 @@
 	else $female="off";
 	
 	// Making query
-	$db -> Query = "Select * from webdb13BG2.course_difficulty";
+	$db -> Query = "SELECT * FROM webdb13BG2.course_difficulty;";
 	/*"
 		USE webdb13BG2;
 		
