@@ -233,8 +233,8 @@
 	else $female="off";
 	
 	// Making query
-	$db -> Query = "SELECT * FROM webdb13BG2.course_difficulty;";
-	/*"
+	$db -> Query = 
+	"
 		USE webdb13BG2;
 		
 		SELECT 
@@ -255,7 +255,7 @@
 		ad.city LIKE '%". $city ."%' 
 		AND 
 		cd.difficulty_name LIKE '%". $level ."%'
-	";*/	
+	;";
 	echo $db -> Query, "<br>";
 	
 	$queryResultsArray = $db -> Querying();
