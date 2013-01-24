@@ -239,8 +239,9 @@
 	
 	$connectionObject -> Disconnect();
 	
+	echo('<pre>');
 	print_r($queryResultsArray);
-	
+	echo('</pre>');
 	
 	//$connectionObject = new ConnectorClass;
 	
