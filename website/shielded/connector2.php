@@ -52,7 +52,7 @@ class ConnectorClass
                                                // So the combination of classes, objects and the old PHP mysql_connect() function is used.
 
        	try { 
-			$databaseConnection = new PDO( "mysql:host=$this -> servername;dbname=$this -> databasename; charset=UTF-8", $this -> username, $this -> password );
+			$databaseConnection = new PDO( "mysql:host="$this -> servername";dbname="$this -> databasename"; charset=UTF-8", $this -> username, $this -> password );
        	} 
 		catch( PDOExeption $e ){ echo( 'Connection failed: '. $e -> getMessage());    }
       
