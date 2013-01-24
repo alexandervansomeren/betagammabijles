@@ -242,7 +242,7 @@
 		ci.course_name AS course_name, 
 		cd.difficulty_name AS course_difficulty 
 		
-		FROM adress_data ad 
+		FROM webdb13BG2.adress_data ad 
 		INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
 		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
 		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
