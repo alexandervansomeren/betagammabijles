@@ -236,23 +236,23 @@
 	$db -> Query = 
 	"
 		SELECT 
-		ad.user_id AS webdb13BG2.user_id, 
-		ad.city AS webdb13BG2.user_city, 
-		cu.course_code AS webdb13BG2.course_id, 
-		ci.course_name AS webdb13BG2.course_name, 
-		cd.difficulty_name AS webdb13BG2.course_difficulty 
+		ad.webdb13BG2.user_id AS webdb13BG2.user_id, 
+		ad.webdb13BG2.city AS webdb13BG2.user_city, 
+		cu.webdb13BG2.course_code AS webdb13BG2.course_id, 
+		ci.webdb13BG2.course_name AS webdb13BG2.course_name, 
+		cd.webdb13BG2.difficulty_name AS webdb13BG2.course_difficulty 
 		
 		FROM adress_data ad 
-		INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
-		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
-		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
+		INNER JOIN webdb13BG2.course_user cu ON cu.webdb13BG2.user_id = ad.webdb13BG2.user_id 
+		INNER JOIN webdb13BG2.course_code cc ON cc.webdb13BG2.course_code = cu.webdb13BG2.course_code 
+		INNER JOIN webdb13BG2.course_id ci ON cc.webdb13BG2.course_id = ci.webdb13BG2.course_id 
+		INNER JOIN webdb13BG2.course_difficulty cd ON cd.webdb13BG2.difficulty_id = cc.webdb13BG2.course_difficulty 
 		
-		WHERE ci.course_name LIKE '%". $course ."%' 
+		WHERE ci.webdb13BG2.course_name LIKE '%". $course ."%' 
 		AND 
-		ad.city LIKE '%". $city ."%' 
+		ad.webdb13BG2.city LIKE '%". $city ."%' 
 		AND 
-		cd.difficulty_name LIKE '%". $level ."%'
+		cd.webdb13BG2.difficulty_name LIKE '%". $level ."%'
 	;";
 	echo $db -> Query, "<br>";
 	
