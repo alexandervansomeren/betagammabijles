@@ -202,22 +202,22 @@
     <?php
 	
 	
-	// Initializing variables
+	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['course']))
 	{
-		$course = $_GET['course'];
+		$course = mysql_real_escape_string($_GET['course']);
 	}
-	else $course=null;
+	else $course="";
 	if (isset($_GET['city']))
 	{
-		$city = $_GET['city'];
+		$city = mysql_real_escape_string($_GET['city']);
 	}
-	else $city=null;
+	else $city="";
 	if (isset($_GET['level']))
 	{
-		$level = $_GET['level'];
+		$level = mysql_real_escape_string($_GET['level']);
 	}
-	else $level=null;
+	else $level="";
 	if (isset($_GET['male']))
 	{
 		$male="on";
@@ -234,22 +234,38 @@
 	$db = new ConnectorClass;
 	
 	$db -> Query = 
-	"SELECT * 
-	FROM webdb13BG2.course_difficulty
+	"
+		SELECT 
+		ad.user_id AS user_id, 
+		ad.city AS user_city, 
+		cu.course_code AS course_id, 
+		ci.course_name AS course_name, 
+		cd.difficulty_name AS course_difficulty 
+		
+		FROM adress_data ad 
+		INNER JOIN course_user cu ON cu.user_id = ad.user_id 
+		INNER JOIN course_code cc ON cc.course_code = cu.course_code 
+		INNER JOIN course_id ci ON cc.course_id = ci.course_id 
+		INNER JOIN course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
+		
+		WHERE ci.course_name LIKE '%Bio%' 
+		AND 
+		ad.city LIKE '%Ams%' 
+		AND 
+		cd.difficulty_name LIKE '%Basic%'
 	";
+	
+	echo $db -> Query, "<br>";
 	
 	$queryResultsArray = $db -> Querying();
 	
+	echo('<pre>');
+	print_r( $queryResultsArray );
+	echo('</pre>');
 	
 	// Disconnect from the database
 	$db -> Disconnect();
 	
-	
-	//$connectionObject = new ConnectorClass;
-	
-	//$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
-	
-	//$db -> 
 	
 	
 	
