@@ -221,28 +221,34 @@
 		$level = mysql_real_escape_string($_GET['level']);
 	}
 	else $level="";
+	//
 	if (isset($_GET['male']))
 	{
-		$gender="1";
+		$male="1";
 	}
-	else $male=null;
+	else $male="0";
 	if (isset($_GET['female']))
 	{
-		$gender="0";
+		$female="0";
 	}
-	else $gender=null;
+	else $female="0";
 	
-	if ($gender=null)
+	
+	if ($male="1" && $female="1")
 	{
 		$genderQuery = "";
 	}
-	else if ($gender="1")
+	else if ($male="1")
 	{
 		$genderQuery = "AND up.gender=1";
 	}
-	else if ($gender="0")
+	else if ($female="1")
 	{
 		$genderQuery = "AND up.gender=0";
+	}
+	else
+	{
+		showNoResults();
 	}
 	
 	// Making query
