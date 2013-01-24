@@ -65,7 +65,7 @@
                             <?php
                                 if(empty($_POST["firstname"])
                                 {
-                                    print "Hallo"
+                                    print "Hallo";
                                 }
                             ?>
                             <div class="ques">Achternaam:</div>
