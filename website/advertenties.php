@@ -234,24 +234,26 @@
 	$db = new ConnectorClass;
 	
 	$db -> Query = 
-	"SELECT 
-	ad.user_id AS user_id, 
-	ad.city AS user_city, 
-	cu.course_code AS course_id, 
-	ci.course_name AS course_name, 
-	cd.difficulty_name AS course_difficulty 
-	
-	FROM adress_data ad 
-	INNER JOIN course_user cu ON cu.user_id = ad.user_id 
-	INNER JOIN course_code cc ON cc.course_code = cu.course_code 
-	INNER JOIN course_id ci ON cc.course_id = ci.course_id 
-	INNER JOIN course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
-	
-	WHERE ci.course_name LIKE '%bio%' 
-	AND 
-	ad.city LIKE '%Ams%' 
-	AND 
-	cd.difficulty_name LIKE '%Basic%'";
+	"
+		SELECT 
+		ad.user_id AS user_id, 
+		ad.city AS user_city, 
+		cu.course_code AS course_id, 
+		ci.course_name AS course_name, 
+		cd.difficulty_name AS course_difficulty 
+		
+		FROM adress_data ad 
+		INNER JOIN course_user cu ON cu.user_id = ad.user_id 
+		INNER JOIN course_code cc ON cc.course_code = cu.course_code 
+		INNER JOIN course_id ci ON cc.course_id = ci.course_id 
+		INNER JOIN course_difficulty cd ON cd.difficulty_id = cc.course_difficulty 
+		
+		WHERE ci.course_name LIKE '%Bio%' 
+		AND 
+		ad.city LIKE '%Ams%' 
+		AND 
+		cd.difficulty_name LIKE '%Basic%'
+	";
 	
 	echo $db -> Query, "<br>";
 	
@@ -264,12 +266,6 @@
 	// Disconnect from the database
 	$db -> Disconnect();
 	
-	
-	//$connectionObject = new ConnectorClass;
-	
-	//$db = new PDO("mysql:host=localhost;dbname=webdb13BG2;charset=UTF-8","webdb13BG2","frerenaz");
-	
-	//$db -> 
 	
 	
 	
