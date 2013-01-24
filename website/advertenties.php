@@ -201,6 +201,9 @@
         </div>
     <?php
 	
+	// Connect to the database
+	include 'shielded/connector.php';
+	$db = new ConnectorClass;
 	
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['course']))
@@ -229,10 +232,7 @@
 	}
 	else $female="off";
 	
-	// Connect to the database
-	include 'shielded/connector.php';
-	$db = new ConnectorClass;
-	
+	// Making query
 	$db -> Query = 
 	"
 		SELECT 
