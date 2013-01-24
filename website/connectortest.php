@@ -7,8 +7,8 @@ $connectionObject = new ConnectorClass;
 $connectionObject -> Query = "SELECT * FROM webdb13BG2.course_difficulty";
 $page = 'Result of the Query ('.$connectionObject -> Query . ') :';
 $page.='<pre>';
-$page .= print_r( $connectionObject -> Querying(), TRUE )
-$page.='</pre>'
+$page .= print_r( $connectionObject -> Querying(), TRUE );
+$page.='</pre>';
 // Disconnecting function directed:
 $connectionObject -> Disconnect();
 $length = strval( strlen ( $page ) );
