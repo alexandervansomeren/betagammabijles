@@ -61,7 +61,13 @@
                             <div class="ans">
                                 <input type="text" name="firstname" placeholder="Voornaam" /></div>
                         </div>
-                        <div class="field"> 
+                        <div class="field">
+                            <?php
+                                if(empty($_POST["firstname"])
+                                {
+                                    print "Hallo"
+                                }
+                            ?>
                             <div class="ques">Achternaam:</div>
                             <div class="ans">
                                 <input type="text" name="middlename" placeholder="Bijv. van" style="width:58px;" />
