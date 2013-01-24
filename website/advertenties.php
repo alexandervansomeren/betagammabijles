@@ -265,6 +265,7 @@
 	
 	// Disconnect from the database
 	$db -> Disconnect();
+	echo "Disconnected";
 	
 	
 	
