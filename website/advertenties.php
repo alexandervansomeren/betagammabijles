@@ -253,6 +253,8 @@
 	AND
 	cd.difficulty_name LIKE '%". $level ."%'";
 	
+	echo $db -> Query;
+	
 	$queryResultsArray = $db -> Querying();
 	
 	echo('<pre>');
