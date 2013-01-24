@@ -253,7 +253,7 @@
 	AND 
 	cd.difficulty_name LIKE '%".$level."%'";
 	
-	echo $db -> Query;
+	echo $db -> Query, "<br>";
 	
 	$queryResultsArray = $db -> Querying();
 	
