@@ -63,7 +63,7 @@
                         </div>
                         <div class="field">
                             <?php
-                                if(empty($_POST["firstname"])
+                                if(empty($_POST["firstname"]))
                                 {
                                     print "Hallo";
                                 }
