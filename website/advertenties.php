@@ -235,12 +235,8 @@
 	// Making query
 	$db -> Query = 
 	"
-		SELECT 
-		ad.user_id AS user_id, 
-		ad.city AS user_city, 
-		cu.course_code AS course_id, 
-		ci.course_name AS course_name, 
-		cd.difficulty_name AS course_difficulty 
+		SELECT DISTINCT
+		ad.user_id AS user_id
 		
 		FROM webdb13BG2.adress_data ad 
 		INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
