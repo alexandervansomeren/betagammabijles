@@ -265,7 +265,7 @@
 	// Making query
 	function makeQuery()
 	{
-		$db -> Query = 
+		$GLOBALS['db'] -> Query = 
 		"
 			SELECT DISTINCT
 			ad.user_id AS user_id
