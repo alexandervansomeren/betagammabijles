@@ -221,7 +221,8 @@
 		$level = mysql_real_escape_string($_GET['level']);
 	}
 	else $level="";
-	//
+	
+	/*
 	if (isset($_GET['male']))
 	{
 		$male="1";
@@ -252,7 +253,7 @@
 	}
 	
 	echo '<br> '.$genderQuery .' <br>';
-	
+	*/
 	// Making query
 	$db -> Query = 
 	"
