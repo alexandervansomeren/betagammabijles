@@ -13,53 +13,52 @@ $page = '<?xml version="1.0"?>
 		.content .details
 		{
 		    width: inherit;
-			position: relative;
+                    position: relative;
 		    margin: 0px 0px 20px 0px;
 		}
 		.content .details .image 
 		{
-			width: 356px; height: 496px; float: left;
-			border: 2px solid #FF7F00;
+		    width: 356px; height: 496px; float: left;
+		    border: 2px solid #FF7F00;
 		}
 		.content .details .information
 		{
-			width: 530px; height: 500px; float: right;
+		    width: 530px; height: 500px; float: right;
 		}
 		.content .details .buttons
 		{
-			width: inherit; height: 100px; float: left;
-			margin: 25px 0px 25px 0px;
-			background-color: red;			
+		    width: inherit; height: 100px; float: left;
+		    margin: 25px 0px 25px 0px;
+		    background-color: red;			
 		}
 		
 		
 		.content .details .information .category { width: inherit; height: 40px; float: left; line-height: 40px; font-weight:600; }
 		.content .details .information .label { width: 45%; height: 30px; float: left; line-height:30px;  }
 		.content .details .information .content { width: 55%; height: 30px; float: left; line-height:30px; }
-		</style>
-		
-		
+		</style>	
 	</head>
 
 	<body>
 		<div class="header">
-            <div class="center">
+                <div class="center">
                 <div class="left"></div>
                 <div class="middle"></div>
-                <div class="right">
-                	<div class="label">Voor leden geef je gegevens en log in</div>
-                    <div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord" /><button type="submit">Login</button></div>
+                <div class="right">';
+//$page.='        <div class="label">Voor leden geef je gegevens en log in</div>';                $page.='<div class="login"><input value="Gebruikersnaam" /> 
+                <input value="Wachtwoord" /><button type="submit">Login</button></div>'; 
+// TODO  include an login file. Switch case cookie, sshkey.; Validate loginstatus.
+
+$page.='
             	</div>
     		</div>
 		</div>		
 
 		<div class="content">		
-
-		  <div class="details">
-          	<div class="image"><img src="img/student_1.jpg" width="100%" height="100%" /></div>
-            
-            
-            
+		<div class="details">
+          	<div class="image">
+                    <img src="img/student_1.jpg" width="100%" height="100%" />
+                </div>            
             <div class="information">
             <div class="category">Contactgegevens</div>
             <div class="label">Naam:</div><div class="content">Emma Boumans</div>
@@ -72,8 +71,7 @@ $page = '<?xml version="1.0"?>
             <div class="label">Maatschappijwetenschappen</div><div class="content">HAVO 2</div>
             <div class="category">Over mij</div>
             <div class="txt">Ik ben een lorum ipsum die enorm houdt van lorum ipsum. In mijn vrije tijd doe ik ongeveer de helft van de tijd lorum en de andere helft van de tijd ipsum.</div> 
-            <div class="category">Google Maps Locatie</div>
-            
+            <div class="category">Google Maps Locatie</div>           
             </div>
             <div class="buttons">
             	<a href="#"></a>
@@ -84,21 +82,20 @@ $page = '<?xml version="1.0"?>
           	<div class="clear"></div>
           </div>          
             
-          <div class="main_title">Soortgelijke docenten:</div>
-            
-		    <div class="populair">
+          <div class="main_title">Soortgelijke docenten:</div>          
+		<div class="populair">
             	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
                 <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
                 <a href="Details.html?id=1" class="docent">
-                    <span class="name">Emma</span>
-                    <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
-                    <img src="img/student_1.jpg" alt="student_1" /> 
+                <span class="name">Emma</span>
+                <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
+                <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
             	<a href="details.php" class="docent">
-                    <span class="name">Jan-roelof</span>
-                    <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
-                    <img src="img/student_1.jpg" alt="student_1" /> 
+                <span class="name">Jan-roelof</span>
+                <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
+                <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
             	<a href="details.php" class="docent">
@@ -118,18 +115,16 @@ $page = '<?xml version="1.0"?>
                     <span class="vak">Natuurkunde, KI, Wiskunde</span>
                     <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
-		    </div> 		    
+		</div> 		    
 		</div>
 		
 		<div class="footer">
 	        <a href="about.php">Wie zijn wij?</a>
-            <a href="registratieformulier.php">Meld aan als docent</a>	
+                <a href="registratieformulier.php">Meld aan als docent</a>	
 	        <a href="advertenties.php">Meld aan als student</a>		
-            <a href="" class="last">Contact</a>			
+                <a href="" class="last">Contact</a>			
 		</div>
-		
-		<div class="bottom"></div>
-		
+		<div class="bottom"></div>	
   </body>
 </html>';
 $length = strval( strlen( $page ) );
