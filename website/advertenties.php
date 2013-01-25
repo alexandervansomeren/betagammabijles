@@ -306,7 +306,7 @@
 	$db -> Disconnect();
 	echo "Disconnected";
 	
-	echo $queryResultsArray[1];
+	echo $queryResultsArray[0];
 	
 	// function that displays that there are no results for the query
 	function showNoResults() 
