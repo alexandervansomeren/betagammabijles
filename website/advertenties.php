@@ -251,6 +251,8 @@
 		showNoResults();
 	}
 	
+	//". $genderQuery ."
+	
 	// Making query
 	$db -> Query = 
 	"
@@ -268,9 +270,8 @@
 		AND 
 		ad.city LIKE '%". $city ."%' 
 		AND 
-		cd.difficulty_name LIKE '%". $level ."%'
-		". $genderQuery ."
-	;";
+		cd.difficulty_name LIKE '%". $level ."%';
+		";
 	echo $db -> Query, "<br>";
 	
 	$queryResultsArray = $db -> Querying();
