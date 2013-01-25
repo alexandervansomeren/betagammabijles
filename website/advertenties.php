@@ -233,6 +233,7 @@
 	}
 	else $female="0";
 	
+	echo $male , $female;
 	
 	if ($male="1" && $female="1")
 	{
@@ -303,7 +304,7 @@
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $course .' geven in '. $city .' </h1>
 		</div>
 		';
 	}
