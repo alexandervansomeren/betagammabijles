@@ -255,7 +255,7 @@
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+			<h1> Selecteer tenminste één geslacht. </h1>
 		</div>
 		';
 	}
@@ -306,13 +306,15 @@
 	$db -> Disconnect();
 	echo "Disconnected";
 	
+	echo $queryResultsArray[1];
+	
 	// function that displays that there are no results for the query
 	function showNoResults() 
 	{
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .' </h1>
+			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .'. </h1>
 		</div>
 		';
 	}
