@@ -287,7 +287,7 @@
 	
 	//echo $db -> Query, "<br>";
 	
-	$queryResultsArray = $db -> Querying();
+	$queryResultsArray = $GLOBALS['db'] -> Querying();
 	}
 	
 	echo('<pre>');
