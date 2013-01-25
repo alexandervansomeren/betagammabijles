@@ -229,7 +229,7 @@
 	else $male="0";
 	if (isset($_GET['female']))
 	{
-		$female="0";
+		$female="1";
 	}
 	else $female="0";
 	
