@@ -165,6 +165,12 @@ a:hover { text-decoration: underline; }
         min-height: 30px;		    
     }
 
+    .footer .centerwrapper
+    {
+        margin: auto;
+        min-width: 302pt;
+     }
+
     .footer a
     {
         margin-right: 1%;
@@ -175,6 +181,7 @@ a:hover { text-decoration: underline; }
 		display: block; 
 		text-align: center;
     }
+    
 	.footer .last { margin-right: 0%; }
 /*Opmaak voor FOOTER */
 

@@ -110,8 +110,8 @@
                         </div>
                         <div class="field">
                             <div class="ques">Selecteer geslacht:</div>
-                            <div class="ans"><input type="radio" name="gender" value="0" />Man</div>
-                            <div class="ans"><input type="radio" name="gender" value="1" />Vrouw</div>
+                            <div class="ans"><input type="radio" name="gender" value="1" />Man</div>
+                            <div class="ans"><input type="radio" name="gender" value="0" />Vrouw</div>
                         </div>
                    </div>
                    <em><br />Hamvraag</em>
@@ -170,7 +170,7 @@
                         <div class="field">
                             <input type="submit" value="Registreer" style="background-color:orange;" />
                             <?php
-                                if(empty($_POST["firstname"]))
+                                if(!(empty($_POST["firstname"])))
                                 {
                                     print "Hier komt submit code";
                                 }
