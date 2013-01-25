@@ -45,8 +45,8 @@ $page = '<?xml version="1.0"?>
                 <div class="left"></div>
                 <div class="middle"></div>
                 <div class="right">';
-//$page.='        <div class="label">Voor leden geef je gegevens en log in</div>';                $page.='<div class="login"><input value="Gebruikersnaam" /> 
-                <input value="Wachtwoord" /><button type="submit">Login</button></div>'; 
+//$page.='        <div class="label">Voor leden geef je gegevens en log in</div>';
+//$page.='<div class="login"><input value="Gebruikersnaam" /> <input value="Wachtwoord" /><button type="submit">Login</button></div>'; 
 // TODO  include an login file. Switch case cookie, sshkey.; Validate loginstatus.
 
 $page.='
