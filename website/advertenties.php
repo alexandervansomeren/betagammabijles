@@ -248,7 +248,12 @@
 	}
 	else
 	{
-		showNoResults();
+		echo 
+		'
+		<div class="page-field"> 
+			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+		</div>
+		';
 	}
 	
 	echo '<br> '.$genderQuery .' <br>';
