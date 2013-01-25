@@ -303,17 +303,19 @@
 		showNoResults();
 	}
 	
-	// Disconnect from the database
-	$db -> Disconnect();
-	echo "Disconnected";
-	
-	
 	for($i=1;$i<=sizeof($queryResultsArray); $i++)
 	{
 		echo '<br>';
 		echo $queryResultsArray[$i][0];
 		
 	}
+	
+	// Disconnect from the database
+	$db -> Disconnect();
+	echo "Disconnected";
+	
+	
+	
 	echo $queryResultsArray[1][0];
 	
 	// function that displays that there are no results for the query
