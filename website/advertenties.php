@@ -221,8 +221,7 @@
 		$level = mysql_real_escape_string($_GET['level']);
 	}
 	else $level="";
-	
-	/*
+	// Genderstuf
 	if (isset($_GET['male']))
 	{
 		$male="1";
@@ -253,7 +252,7 @@
 	}
 	
 	echo '<br> '.$genderQuery .' <br>';
-	*/
+	
 	// Making query
 	$db -> Query = 
 	"
@@ -265,14 +264,14 @@
 		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
 		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
 		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
-		INNER JOIN webdb13BG2.user_personal_data up ON up.user_id = ad.user_id 
+		INNER JOIN webdb13BG2.user_personal_data up ON up.user_id = cu.user_id 
 		
 		WHERE ci.course_name LIKE '%". $course ."%' 
 		AND 
 		ad.city LIKE '%". $city ."%' 
 		AND 
 		cd.difficulty_name LIKE '%". $level ."%'
-		/*". $genderQuery ."*/;
+		". $genderQuery .";
 		";
 	echo $db -> Query, "<br>";
 	
