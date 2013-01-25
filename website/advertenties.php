@@ -238,17 +238,17 @@
 	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
-		makeQuery();
+		$queryResultsArray = makeQuery();
 	}
 	else if ($male=="1")
 	{
 		$genderQuery = "AND up.gender=1";
-		makeQuery();
+		$queryResultsArray = makeQuery();
 	}
 	else if ($female=="1")
 	{
 		$genderQuery = "AND up.gender=0";
-		makeQuery();
+		$queryResultsArray = makeQuery();
 	}
 	else
 	{
@@ -287,7 +287,8 @@
 	
 	//echo $db -> Query, "<br>";
 	
-	static $queryResultsArray = $GLOBALS['db'] -> Querying();
+	$queryResultsArray = $GLOBALS['db'] -> Querying();
+	return $queryResultsArray;
 	}
 	
 	echo('<pre>');
