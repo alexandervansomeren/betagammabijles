@@ -235,16 +235,15 @@
 	
 	echo $male , $female;
 	
-	if ($male="1" && $female="1")
+	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
-		echo "test";
 	}
-	else if ($male="1")
+	else if ($male=="1")
 	{
 		$genderQuery = "AND up.gender=1";
 	}
-	else if ($female="1")
+	else if ($female=="1")
 	{
 		$genderQuery = "AND up.gender=0";
 	}
