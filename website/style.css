@@ -30,7 +30,7 @@ a:hover { text-decoration: underline; }
 	    margin-bottom:25px;
 		
 	    background-image:url(img/header2.png);
-	    background-color:orange;
+	    background-color:#FF7F00;
 	    background-repeat:repeat-x;
 		background-size: cover;
 	    background-position:center;
@@ -83,7 +83,7 @@ a:hover { text-decoration: underline; }
     /* Opmaak voor het eerste blok boven */
 	.content .page-intro
 	{
-		background-color:orange;
+		background-color:#FF7F00;
 		min-height:50px;
 		line-height:30px;
 		border-radius:10px;
@@ -93,7 +93,7 @@ a:hover { text-decoration: underline; }
     /* Opmaak voor een blok van 100%vullend content en lengte afhankelijk van inhoud */
 	.content .page-field
 	{
-		background-color: orange;
+		background-color: #FF7F00;
 		min-height: 100px;
 		border-radius: 10px;
 		margin-bottom: 10px;
