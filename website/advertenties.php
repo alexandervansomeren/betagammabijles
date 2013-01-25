@@ -205,6 +205,8 @@
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
 	
+	$queryResultsArray = null; 
+	
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['course']))
 	{
@@ -238,17 +240,17 @@
 	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
-		$queryResultsArray = makeQuery();
+		makeQuery();
 	}
 	else if ($male=="1")
 	{
 		$genderQuery = "AND up.gender=1";
-		$queryResultsArray = makeQuery();
+		makeQuery();
 	}
 	else if ($female=="1")
 	{
 		$genderQuery = "AND up.gender=0";
-		$queryResultsArray = makeQuery();
+		makeQuery();
 	}
 	else
 	{
@@ -287,8 +289,7 @@
 	
 	//echo $db -> Query, "<br>";
 	
-	$queryResultsArray = $GLOBALS['db'] -> Querying();
-	return $queryResultsArray;
+	$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 	}
 	
 	echo('<pre>');
