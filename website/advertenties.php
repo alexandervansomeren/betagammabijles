@@ -238,6 +238,7 @@
 	if ($male="1" && $female="1")
 	{
 		$genderQuery = "";
+		echo "test";
 	}
 	else if ($male="1")
 	{
