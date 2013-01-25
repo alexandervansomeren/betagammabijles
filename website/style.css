@@ -169,6 +169,7 @@ a:hover { text-decoration: underline; }
     {
         margin: auto;
         min-width: 302pt;
+        /*dubbelchecken moet nog gebeuren*/
      }
 
     .footer a
