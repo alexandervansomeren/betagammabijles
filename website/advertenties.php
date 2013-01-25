@@ -270,7 +270,11 @@
 		$GLOBALS['db'] -> Query = 
 		"
 			SELECT DISTINCT
-			ad.user_id AS user_id
+			ad.user_id AS user_id,
+			ad.city AS user_city,
+			cu.course_code AS course_id, 
+			ci.course_name AS course_name,
+			cd.difficulty_name AS course_difficulty
 			
 			FROM webdb13BG2.adress_data ad 
 			INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
@@ -313,10 +317,6 @@
 	// Disconnect from the database
 	$db -> Disconnect();
 	echo "Disconnected";
-	
-	
-	
-	echo $queryResultsArray[1][0];
 	
 	// function that displays that there are no results for the query
 	function showNoResults() 
