@@ -1,5 +1,7 @@
 TO DO
 
+!!! FOTO'S UPLOADEN !!!
+
 REGISTRATIEFORM
 - margin-bottom paragraph zodat <br> wegkan
 - Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc

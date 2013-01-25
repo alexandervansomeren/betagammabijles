@@ -229,22 +229,26 @@
 	else $male="0";
 	if (isset($_GET['female']))
 	{
-		$female="0";
+		$female="1";
 	}
 	else $female="0";
 	
+	echo $male , $female;
 	
-	if ($male="1" && $female="1")
+	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
+		$queryResultsArray = makeQuery();
 	}
-	else if ($male="1")
+	else if ($male=="1")
 	{
 		$genderQuery = "AND up.gender=1";
+		$queryResultsArray = makeQuery();
 	}
-	else if ($female="1")
+	else if ($female=="1")
 	{
 		$genderQuery = "AND up.gender=0";
+		$queryResultsArray = makeQuery();
 	}
 	else
 	{
@@ -259,34 +263,44 @@
 	echo '<br> '.$genderQuery .' <br>';
 	
 	// Making query
-	$db -> Query = 
-	"
-		SELECT DISTINCT
-		ad.user_id AS user_id
-		
-		FROM webdb13BG2.adress_data ad 
-		INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
-		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
-		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
-		INNER JOIN webdb13BG2.user_personal_data up ON up.user_id = cu.user_id 
-		
-		WHERE ci.course_name LIKE '%". $course ."%' 
-		AND 
-		ad.city LIKE '%". $city ."%' 
-		AND 
-		cd.difficulty_name LIKE '%". $level ."%'
-		". $genderQuery .";
-		";
-	echo $db -> Query, "<br>";
+	function makeQuery()
+	{
+		$db -> Query = 
+		"
+			SELECT DISTINCT
+			ad.user_id AS user_id
+			
+			FROM webdb13BG2.adress_data ad 
+			INNER JOIN webdb13BG2.course_user cu ON cu.user_id = ad.user_id 
+			INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
+			INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
+			INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
+			INNER JOIN webdb13BG2.user_personal_data up ON up.user_id = cu.user_id 
+			
+			WHERE ci.course_name LIKE '%". $GLOBALS['course'] ."%' 
+			AND 
+			ad.city LIKE '%". $GLOBALS['city'] ."%' 
+			AND 
+			cd.difficulty_name LIKE '%". $GLOBALS['level'] ."%'
+			". $GLOBALS['genderQuery'] .";
+			";
 	
-	$queryResultsArray = $db -> Querying();
+	//echo $db -> Query, "<br>";
+	
+	$queryResultsArray = $GLOBALS['db'] -> Querying();
+	return $queryResultsArray;
+	}
 	
 	echo('<pre>');
 	print_r( $queryResultsArray );
 	echo('</pre>');
 	
 	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
+	
+	if (sizeOf( $queryResultsArray ) ==0)
+	{
+		showNoResults();
+	}
 	
 	// Disconnect from the database
 	$db -> Disconnect();
@@ -298,7 +312,7 @@
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $course .' geven in '. $city .' </h1>
 		</div>
 		';
 	}
@@ -308,10 +322,6 @@
 	
 
 	?>
-    <div class="page-field"> 
-			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
-	</div>
-    
     <div class="page-field">
        	<a href="#">
             <object class="card">
