@@ -184,6 +184,158 @@
                     </div>
                 </div>
             </form>
+            
+            <?php
+                // Connect to the database
+                include 'shielded/connector.php';
+                $db = new ConnectorClass;
+
+                // Initializing variables and secure that they are not mysql-injections
+                // "Over jou"
+                    // "naam en leeftijd"
+                    if (isset($_POST['firstname']))
+                    {
+	                    $fname = mysql_real_escape_string($_POST['firstname']);
+                    }
+                    else $fname="";
+                    if (isset($_POST['middlename']))
+                    {
+	                    $mname = mysql_real_escape_string($_POST['middlename']);
+                    }
+                    else $mname="";
+                    if (isset($_POST['lastname']))
+                    {
+	                    $lname = mysql_real_escape_string($_POST['lastname']);
+                    }
+                    else $lname="";
+                    if (isset($_POST['date_of_birth']))
+                    {
+	                    $dob = mysql_real_escape_string($_POST['date_of_birth']);
+                    }
+                    else $dob=""; 
+                    
+                    //"contactgegevens"
+                    if (isset($_POST['emailadress']))
+                    {
+	                    $email = mysql_real_escape_string($_POST['emailadress']);
+                    }
+                    else $email="";
+                    if (isset($_POST['phone_1']))
+                    {
+	                    $p1 = mysql_real_escape_string($_POST['phone_1']);
+                    }
+                    else $p1="";
+                    if (isset($_POST['phone_2']))
+                    {
+	                    $p2 = mysql_real_escape_string($_POST['phone_2']);
+                    }
+                    else $p2="";
+
+                    //"adres"
+                    if (isset($_POST['street']))
+                    {
+	                    $street = mysql_real_escape_string($_POST['street']);
+                    }
+                    else $street="";
+                    if (isset($_POST['streetnumber']))
+                    {
+	                    $streetnumber = mysql_real_escape_string($_POST['streetnumber']);
+                    }
+                    else $streetnumber="";
+                    if (isset($_POST['postal']))
+                    {
+	                    $postal = mysql_real_escape_string($_POST['postal']);
+                    }
+                    else $postal="";
+                    if (isset($_POST['postal_extra']))
+                    {
+	                    $postal2 = mysql_real_escape_string($_POST['postal_extra']);
+                    }
+                    else $postal2="";
+                    if (isset($_POST['city']))
+                    {
+	                    $city = mysql_real_escape_string($_POST['city']);
+                    }
+                    else $city="";
+                    
+                //"Profiel"
+                    //Username Password
+                    if (isset($_POST['username']))
+                    {
+	                    $username = mysql_real_escape_string($_POST['username']);
+                    }
+                    else $username="";
+                    if (isset($_POST['password']))
+                    {
+	                    $password = mysql_real_escape_string($_POST['password']);
+                    }
+                    else $password="";
+    
+                    //Gender
+                    if (isset($_POST['gender']))
+                    {
+                        $male="1";
+                    }
+                    else $male="0";
+                    if (isset($_POST['gender']))
+                    {
+                        $female="1";
+                    }
+                    else $female="0";
+                    //Dit genderstuk klopt sowieso niet
+
+                    $queryResultsArray = makeQuery();
+
+                // Making query
+                function makeQuery()
+                {
+	                $GLOBALS['db'] -> Query = 
+	                "
+	                    INSERT INTO user_data (username, password, user_type) VALUES (<username>, <password>, <user_type>);
+	                    SELECT user_id FROM user_data WHERE username=<username>;
+	                    DECLARE u_i = user_data.user_id;
+	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) VALUES (<firstname>, <middlename>, <lastname>, <date_of_birth>, <gender>, <emailadress>, <phone_1>, <phone_2>, <about_me>, <u_i>);
+	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) VALUES (<city>, <street>, <streetnumber>, <postal>, <postal_extra>);
+	                ";
+	                //dit klopt nog niet helemaal
+
+                    $queryResultsArray = $GLOBALS['db'] -> Querying();
+                    return $queryResultsArray;
+                }
+
+                echo('<pre>');
+                print_r( $queryResultsArray );
+                echo('</pre>');
+
+                if (/*Hier komt iets over wanneer een formulier fout is*/)
+                {
+	                wrongEntry();
+                }
+                else
+                {
+                    echo
+                    '
+                    <div class="page-fiel">
+                        Bedankt voor het invullen!
+                    </div>
+                    ';
+                }
+
+                // Disconnect from the database
+                $db -> Disconnect();
+                echo "Disconnected";
+
+                // function that displays that there are no results for the query
+                function wrongEntry() 
+                {
+	                echo 
+	                '
+	                <div class="page-field"> 
+		                Er is iets misgegaan met het invullen van je registratieformulier. Probeer opnieuw!
+	                </div>
+	                ';
+                }
+            ?>
 	    </div>
 	    
 	    <div class="footer">
