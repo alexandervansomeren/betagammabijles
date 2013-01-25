@@ -307,7 +307,7 @@
                 print_r( $queryResultsArray );
                 echo('</pre>');
 
-                if (/*Hier komt iets over wanneer een formulier fout is*/)
+                if (true) /*Hier komt iets over wanneer een formulier fout is*/
                 {
 	                wrongEntry();
                 }
