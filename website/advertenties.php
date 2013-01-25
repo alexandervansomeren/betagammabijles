@@ -310,6 +310,7 @@
 	
 	for($i=1;$i<=sizeof($queryResultsArray); $i++)
 	{
+		echo '<br>';
 		echo $queryResultsArray[$i][0];
 		
 	}
