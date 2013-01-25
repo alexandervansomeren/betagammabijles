@@ -308,7 +308,7 @@
 	echo "Disconnected";
 	
 	
-	for($i=0;$i<=sizeof($queryResultsArray); $i++)
+	for($i=1;$i<=sizeof($queryResultsArray); $i++)
 	{
 		echo $queryResultsArray[$i][0];
 		
