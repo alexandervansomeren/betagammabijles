@@ -285,6 +285,17 @@
 	$db -> Disconnect();
 	echo "Disconnected";
 	
+	// function that displays that there are no results for the query
+	function showNoResults() 
+	{
+		echo 
+		'
+		<div class="page-field"> 
+			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+		</div>
+		';
+	}
+	
 	
 	
 	
