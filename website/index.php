@@ -76,7 +76,7 @@ $page = '<?xml version="1.0" encoding="UTF-8"?>
            <div class="content">	
               <div class="main_title">Welkom op <i>onze naam</i>.nl</div>
 		 <div class="buttons">
-	            <a href="registratieformulier.php" class="left">
+	            <a href="registratieformulier.php?course=&city=&level=&male=on&female=on" class="left">
                        <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
 	               <span class="title">Ik geef bijles</span>
                     </a>
