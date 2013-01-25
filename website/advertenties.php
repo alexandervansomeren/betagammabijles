@@ -307,7 +307,7 @@
 	$db -> Disconnect();
 	echo "Disconnected";
 	
-	for($i=1;sizeOf( $queryResultsArray );$i++)
+	for($i=0;sizeOf( $queryResultsArray );$i++)
 	{
 		echo $queryResultsArray[$i][0];
 	}
