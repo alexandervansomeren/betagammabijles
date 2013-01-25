@@ -303,6 +303,10 @@
 	
 
 	?>
+    <div class="page-field"> 
+			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+	</div>
+    
     <div class="page-field">
        	<a href="#">
             <object class="card">
