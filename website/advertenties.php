@@ -201,6 +201,11 @@
         </div>
     <?php
 	
+	public $course;
+	public $city;
+	public $level;
+	public $genderQuery;
+	
 	// Connect to the database
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
@@ -277,12 +282,12 @@
 			INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
 			INNER JOIN webdb13BG2.user_personal_data up ON up.user_id = cu.user_id 
 			
-			WHERE ci.course_name LIKE '%". $course ."%' 
+			WHERE ci.course_name LIKE '%". $GLOBALS['course'] ."%' 
 			AND 
-			ad.city LIKE '%". $city ."%' 
+			ad.city LIKE '%". $GLOBALS['city'] ."%' 
 			AND 
-			cd.difficulty_name LIKE '%". $level ."%'
-			". $genderQuery .";
+			cd.difficulty_name LIKE '%". $GLOBALS['level'] ."%'
+			". $GLOBALS['genderQuery'] .";
 			";
 	
 	//echo $db -> Query, "<br>";
