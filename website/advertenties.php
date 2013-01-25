@@ -205,6 +205,8 @@
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
 	
+	$queryResultsArray = null; 
+	
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['course']))
 	{
@@ -238,24 +240,24 @@
 	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
-		$queryResultsArray = makeQuery();
+		makeQuery();
 	}
 	else if ($male=="1")
 	{
 		$genderQuery = "AND up.gender=1";
-		$queryResultsArray = makeQuery();
+		makeQuery();
 	}
 	else if ($female=="1")
 	{
 		$genderQuery = "AND up.gender=0";
-		$queryResultsArray = makeQuery();
+		makeQuery();
 	}
 	else
 	{
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
+			<h1> Selecteer tenminste één geslacht. </h1>
 		</div>
 		';
 	}
@@ -287,8 +289,7 @@
 	
 	//echo $db -> Query, "<br>";
 	
-	$queryResultsArray = $GLOBALS['db'] -> Querying();
-	return $queryResultsArray;
+	$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 	}
 	
 	echo('<pre>');
@@ -306,13 +307,19 @@
 	$db -> Disconnect();
 	echo "Disconnected";
 	
+	for($i=1;sizeOf( $queryResultsArray );$i++)
+	{
+		echo $queryResultsArray[$i][0];
+	}
+	echo $queryResultsArray[1][0];
+	
 	// function that displays that there are no results for the query
 	function showNoResults() 
 	{
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .' </h1>
+			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .'. </h1>
 		</div>
 		';
 	}
