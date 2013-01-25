@@ -312,7 +312,7 @@
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $course .' geven in '. $city .' </h1>
+			<h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .' </h1>
 		</div>
 		';
 	}
