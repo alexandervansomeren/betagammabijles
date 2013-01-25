@@ -201,11 +201,6 @@
         </div>
     <?php
 	
-	public $course;
-	public $city;
-	public $level;
-	public $genderQuery;
-	
 	// Connect to the database
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
