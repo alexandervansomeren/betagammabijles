@@ -288,6 +288,11 @@
 	
 	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
 	
+	if (sizeOf( $queryResultsArray ) ==0)
+	{
+		showNoResults();
+	}
+	
 	// Disconnect from the database
 	$db -> Disconnect();
 	echo "Disconnected";
@@ -308,10 +313,6 @@
 	
 
 	?>
-    <div class="page-field"> 
-			<h1> Uw zoekopdracht heeft geleid tot geen resultaten. </h1>
-	</div>
-    
     <div class="page-field">
        	<a href="#">
             <object class="card">
