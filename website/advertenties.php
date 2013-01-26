@@ -323,7 +323,7 @@
 			FROM webdb13BG2.course_user 
 			INNER JOIN webdb13BG2.course_code ON webdb13BG2.course_code.course_code=webdb13BG2.course_user.course_code 
 			INNER JOIN webdb13BG2.course_id on webdb13BG2.course_code.course_id=webdb13BG2.course_id.course_id 
-			WHERE ".$usersQuery.";
+			WHERE ".$usersQuery."
 		;";
 		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
