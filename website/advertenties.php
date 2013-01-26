@@ -314,7 +314,7 @@
 	{
 		echo '<br>';
 		echo $GLOBALS['queryResultsArray'][$i][0];
-		$users[$i]=$queryResultsArray[$i][0];
+		$users[$i]=$GLOBALS['queryResultsArray'][$i][0];
 		
 	}
 	}
