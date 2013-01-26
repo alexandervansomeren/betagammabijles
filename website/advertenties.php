@@ -310,10 +310,10 @@
 	
 	function makeSecondQuery()
 	{
-	for($i=1;$i<=sizeof($queryResultsArray); $i++)
+	for($i=1;$i<=sizeof($GLOBALS['queryResultsArray']); $i++)
 	{
 		echo '<br>';
-		echo $queryResultsArray[$i][0];
+		echo $GLOBALS['queryResultsArray'][$i][0];
 		$users[$i]=$queryResultsArray[$i][0];
 		
 	}
