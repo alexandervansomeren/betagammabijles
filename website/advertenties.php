@@ -314,7 +314,7 @@
 	{
 		$users[$i]="webdb13BG2.course_user.user_id=" . $GLOBALS['queryResultsArray'][$i][0];
 	}
-	$usersCommaSaperated=implode("OR", $users);
+	$usersCommaSaperated=implode(" OR ", $users);
 	echo $usersCommaSaperated;
 	
 	}
