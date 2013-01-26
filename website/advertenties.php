@@ -312,11 +312,11 @@
 	{
 	for($i=1;$i<=sizeof($GLOBALS['queryResultsArray']); $i++)
 	{
-		echo '<br>';
-		echo $GLOBALS['queryResultsArray'][$i][0];
 		$users[$i]=$GLOBALS['queryResultsArray'][$i][0];
-		
 	}
+	$usersCommaSaperated=implode(",", $users);
+	echo $usersCommaSaperated;
+	
 	}
 	// Disconnect from the database
 	$db -> Disconnect();
