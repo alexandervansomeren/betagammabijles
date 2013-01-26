@@ -299,7 +299,7 @@
 		{
 			showNoResults();
 		}
-		//else makeSecondQuery();
+		else makeSecondQuery();
 	}
 	
 	echo('<pre>');
@@ -314,6 +314,7 @@
 	{
 		echo '<br>';
 		echo $queryResultsArray[$i][0];
+		$users[$i]=$queryResultsArray[$i][0];
 		
 	}
 	}
