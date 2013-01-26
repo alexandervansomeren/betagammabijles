@@ -327,6 +327,8 @@
 		;";
 		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
+		echo $GLOBALS['db'] -> Query;
+		
 		echo('<pre>');
 		echo $courseNamesArray;
 		echo('</pre>');
