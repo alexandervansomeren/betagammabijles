@@ -312,9 +312,9 @@
 	{
 	for($i=1;$i<=sizeof($GLOBALS['queryResultsArray']); $i++)
 	{
-		$users[$i]=$GLOBALS['queryResultsArray'][$i][0];
+		$users[$i]="webdb13BG2.course_user.user_id=" . $GLOBALS['queryResultsArray'][$i][0];
 	}
-	$usersCommaSaperated=implode(",", $users);
+	$usersCommaSaperated=implode("OR", $users);
 	echo $usersCommaSaperated;
 	
 	}
