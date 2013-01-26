@@ -295,7 +295,7 @@
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 		
 		// checking whether any results where found, if found, call a function to find the courses and locations from the user_id
-		if (sizeOf( $$GLOBALS['queryResultsArray'] ) ==0)
+		if (sizeOf( $GLOBALS['queryResultsArray'] ) ==0)
 		{
 			showNoResults();
 		}
