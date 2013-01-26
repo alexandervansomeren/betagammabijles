@@ -310,12 +310,24 @@
 	
 	function makeSecondQuery()
 	{
-	for($i=1;$i<=sizeof($GLOBALS['queryResultsArray']); $i++)
-	{
-		$users[$i]="webdb13BG2.course_user.user_id=" . $GLOBALS['queryResultsArray'][$i][0];
-	}
-	$usersCommaSaperated=implode(" OR ", $users);
-	echo $usersCommaSaperated;
+		for($i=1;$i<=sizeof($GLOBALS['queryResultsArray']); $i++)
+		{
+			$users[$i]="webdb13BG2.course_user.user_id=" . $GLOBALS['queryResultsArray'][$i][0];
+		}
+		$usersQuery=implode(" OR ", $users);
+		echo $usersQuery;
+		
+		$GLOBALS['db'] -> Query = 
+		"
+			SELECT course_user.user_id, course_name  
+			FROM webdb13BG2.course_user 
+			INNER JOIN webdb13BG2.course_code ON webdb13BG2.course_code.course_code=webdb13BG2.course_user.course_code 
+			INNER JOIN webdb13BG2.course_id on webdb13BG2.course_code.course_id=webdb13BG2.course_id.course_id 
+			WHERE ".$usersQuery.";
+		;";
+		$courseNamesArray = $GLOBALS['db'] -> Querying();
+		
+		echo $courseNamesArray;
 	
 	}
 	// Disconnect from the database
