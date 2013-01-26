@@ -223,7 +223,7 @@
 		$level = mysql_real_escape_string($_GET['level']);
 	}
 	else $level="";
-	// Genderstuf
+	
 	if (isset($_GET['male']))
 	{
 		$male="1";
@@ -240,17 +240,17 @@
 	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
-		makeQuery();
+		makeFirstQuery();
 	}
 	else if ($male=="1")
 	{
 		$genderQuery = "AND up.gender=1";
-		makeQuery();
+		makeFirstQuery();
 	}
 	else if ($female=="1")
 	{
 		$genderQuery = "AND up.gender=0";
-		makeQuery();
+		makeFirstQuery();
 	}
 	else
 	{
@@ -264,8 +264,8 @@
 	
 	echo '<br> '.$genderQuery .' <br>';
 	
-	// Making query
-	function makeQuery()
+	// Making first query to find user_id's from submitted inputform
+	function makeFirstQuery()
 	{
 		$GLOBALS['db'] -> Query = 
 		"
@@ -289,11 +289,17 @@
 			AND 
 			cd.difficulty_name LIKE '%". $GLOBALS['level'] ."%'
 			". $GLOBALS['genderQuery'] .";
-			";
+		";
 	
-	//echo $db -> Query, "<br>";
 	
-	$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+		
+		// checking whether any results where found, if found, call a function to find the courses and locations from the user_id
+		if (sizeOf( $$GLOBALS['queryResultsArray'] ) ==0)
+		{
+			showNoResults();
+		}
+		//else makeSecondQuery();
 	}
 	
 	echo('<pre>');
@@ -302,18 +308,15 @@
 	
 	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
 	
-	if (sizeOf( $queryResultsArray ) ==0)
+	function makeSecondQuery()
 	{
-		showNoResults();
-	}
-	
 	for($i=1;$i<=sizeof($queryResultsArray); $i++)
 	{
 		echo '<br>';
 		echo $queryResultsArray[$i][0];
 		
 	}
-	
+	}
 	// Disconnect from the database
 	$db -> Disconnect();
 	echo "Disconnected";
@@ -330,7 +333,11 @@
 	}
 	
 	
+	// query for getting course_names from a user_id
+	// select course_name  from course_user left join course_code on course_code.course_code=course_user.course_code inner join course_id on course_code.course_id=course_id.course_id where user_id=2;
 	
+	// query for getting city from a user_id
+	// select distinct city from course_user left join adress_data on course_user.user_id=adress_data.user_id where course_user.user_id=2;
 	
 
 	?>
