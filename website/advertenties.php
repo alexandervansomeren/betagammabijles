@@ -302,9 +302,9 @@
 		else makeSecondQuery();
 	}
 	
-	echo('<pre>');
-	print_r( $queryResultsArray );
-	echo('</pre>');
+	//echo('<pre>');
+	//print_r( $queryResultsArray );
+	//echo('</pre>');
 	
 	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
 	
@@ -327,7 +327,9 @@
 		;";
 		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
+		echo('<pre>');
 		echo $courseNamesArray;
+		echo('</pre>');
 	
 	}
 	// Disconnect from the database
