@@ -370,11 +370,13 @@
 		
 		// Create an array with user_ids as keys and an array with course_names as values
 		$coursesPerUser=array();
+		$coursesPerUser[$key]=array();
 		for($i=0;$i<sizeof($user); $i++)
 		{
 			for($j=1;$j<=sizeof($courseNamesArray); $j++)
 			if ($courseNamesArray[$j][0]==$user[$i])
 			{
+				$coursesPerUser[$user[$i]]=array();
 				array_push($coursesPerUser[$user[$i]], $courseNamesArray[$j][1]);
 			}
 		}
