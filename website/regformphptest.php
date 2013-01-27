@@ -315,7 +315,7 @@
                 {
                     echo
                     '
-                    <div class="page-fiel">
+                    <div class="page-field">
                         Bedankt voor het invullen!
                     </div>
                     ';
@@ -323,7 +323,6 @@
 
                 // Disconnect from the database
                 $db -> Disconnect();
-                echo "Disconnected";
 
                 // function that displays that there are no results for the query
                 function wrongEntry() 
@@ -340,8 +339,9 @@
 	    
 	    <div class="footer">
 	        <div class="centerwrapper">
-                <a href="index.html">Welkom</a>
-                <a href="about.html">Wie zijn wij?</a>
+                <a href="index.php">Terug</a>
+                <a href="about.php">Wie zijn wij?</a>
+                <a href="advertenties.php">Bekijk andere bijlesgevers!</a>
             </div>
 		</div>	
         <div class="bottom"></div>	     
