@@ -80,7 +80,7 @@
 	width:150px;
 	height:200px;
 	float:left;
-	background:green;
+	background-image:url(img/bijlesdocent.png);
 }
 .card .frame .infoframe
 {
@@ -346,11 +346,10 @@
 		echo('</pre>');
 		
 		
-		
+		// Disconnect from the database
+		$GLOBALS['db']  -> Disconnect();
 	
 	}
-	// Disconnect from the database
-		$GLOBALS['db']  -> Disconnect();
 	// function that displays that there are no results for the query
 	function showNoResults() 
 	{
