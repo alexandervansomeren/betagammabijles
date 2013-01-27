@@ -379,6 +379,10 @@
 			}
 		}
 		
+		echo('<pre>');
+		print_r( $coursesPerUser );
+		echo('</pre>'); 
+		
 		//foreach( $courseNamesArray as )
 		//{
 			
