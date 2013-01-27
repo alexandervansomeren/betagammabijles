@@ -334,6 +334,8 @@
 		print_r( $courseNamesArray );
 		echo('</pre>');
 		
+		$GLOBALS['db'] -> QueryResult = null;
+		
 		$GLOBALS['db'] -> Query = 
 		"
 			SELECT DISTINCT course_user.user_id, first_name, middle_name, last_name, city  
