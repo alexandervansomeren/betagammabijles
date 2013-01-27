@@ -80,7 +80,8 @@
 	width:150px;
 	height:200px;
 	float:left;
-	background-image:url(img/bijlesdocent.png);
+	background:url(img/bijlesdocent.png);
+	background-size:200px, 150px;
 }
 .card .frame .infoframe
 {
