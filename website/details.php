@@ -1,5 +1,6 @@
 <?php
-
+	echo "<br /><br />Testversie 1.0<br /><br />";
+	
 	// Connect to the database
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
@@ -18,11 +19,9 @@
 	function QueryOnId()
 	{
 		$GLOBALS['db'] -> Query = 
-		"
-			SELECT *
+		"	SELECT *
 			FROM webdb13BG2.user_personal_data AS upd
-			WHERE upd.user_id = ". $userID ." 			
-		";
+			WHERE upd.user_id = " + $userID;
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
