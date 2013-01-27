@@ -349,6 +349,9 @@
 		$nameCityArray = $GLOBALS['db'] -> Querying();
 		echo $GLOBALS['db'] -> Query;
 		
+		// Disconnect from the database
+		$GLOBALS['db']  -> Disconnect();
+		
 		echo('<pre>');
 		print_r( $nameCityArray );
 		echo('</pre>');
@@ -356,9 +359,19 @@
 		echo "lengte array:";
 		echo sizeOf( $nameCityArray );
 		
-		// Disconnect from the database
-		$GLOBALS['db']  -> Disconnect();
+		for($i=1;$i<=sizeof($nameCityArray); $i++)
+		{
+			$user[$i-1]=$currentUser=$nameCityArray[$i][0];
+		}
+		$user=array_unique($user);
+		print_r($user);
 		
+		//foreach( $courseNamesArray as )
+		//{
+			
+		//}
+		
+		/*
 		for($i=1;$i<=sizeof($nameCityArray); $i++)
 		{
 			printVisitCard(
@@ -366,10 +379,13 @@
 				$nameCityArray[$i][1],
 				$nameCityArray[$i][2],
 				$nameCityArray[$i][3],
-				$nameCityArray[$i][4]);
+				$nameCityArray[$i][4]
+				);
 		}
-	
+		
+		*/
 	}
+	
 	// function that displays that there are no results for the query
 	function showNoResults() 
 	{
