@@ -369,8 +369,6 @@
 		print_r($user);
 		
 		// Create an array with user_ids as keys and an array with course_names as values
-		$coursesPerUser=array();
-		$coursesPerUser[$key]=array();
 		for($i=0;$i<sizeof($user); $i++)
 		{
 			for($j=1;$j<=sizeof($courseNamesArray); $j++)
