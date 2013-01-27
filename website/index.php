@@ -98,7 +98,7 @@ $page = '<?xml version="1.0" encoding="UTF-8"?>
                 </a>
                 
             	<a href="details.php" class="docent">
-                   <span class="name">Jan-roelof</span>
+                   <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
@@ -110,13 +110,13 @@ $page = '<?xml version="1.0" encoding="UTF-8"?>
                 </a>
                 
             	<a href="details.php" class="docent">
-                   <span class="name">Berend</span>
-                   <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
+                   <span class="name">Emma</span>
+                   <span class="vak">Natuurkunde, KI, Wiskunde, Vriendelijk</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
                 
             	<a href="details.php" class="docent last">
-                   <span class="name">Henk</span>
+                   <span class="name">Emma</span>
                    <span class="vak">Natuurkunde, KI, Wiskunde</span>
                    <img src="img/student_1.jpg" alt="student_1" /> 
                 </a>
