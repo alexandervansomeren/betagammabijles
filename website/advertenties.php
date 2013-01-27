@@ -319,6 +319,8 @@
 		}
 		$usersQuery=implode(" OR ", $users);
 		
+		echo "Start making Second Query";
+		echo "<br>";
 		
 		$db = new ConnectorClass;
 
