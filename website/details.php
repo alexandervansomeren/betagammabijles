@@ -1,5 +1,5 @@
 <?php
-	echo "<br /><br />Testversie 1.0<br /><br />";
+	echo "<br /><br />Testversie 2.1<br /><br />";
 	
 	// Connect to the database
 	include 'shielded/connector.php';
@@ -21,7 +21,7 @@
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data AS upd
-			WHERE upd.user_id = " + $userID;
+			WHERE upd.user_id = 2";
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
