@@ -327,6 +327,7 @@
 			INNER JOIN webdb13BG2.course_code ON webdb13BG2.course_code.course_code=webdb13BG2.course_user.course_code 
 			INNER JOIN webdb13BG2.course_id on webdb13BG2.course_code.course_id=webdb13BG2.course_id.course_id 
 			WHERE ".$usersQuery."
+			ORDER BY course_user.user_id
 		;";
 		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
@@ -355,9 +356,18 @@
 		echo "lengte array:";
 		echo sizeOf( $nameCityArray );
 		
-		
 		// Disconnect from the database
 		$GLOBALS['db']  -> Disconnect();
+		
+		for($i=1;$i<=sizeof($nameCityArray); $i++)
+		{
+			printVisitCard(
+				$currentUser=$nameCityArray[$i][0],
+				$nameCityArray[$i][1],
+				$nameCityArray[$i][2],
+				$nameCityArray[$i][3],
+				$nameCityArray[$i][4]);
+		}
 	
 	}
 	// function that displays that there are no results for the query
@@ -370,7 +380,6 @@
 		</div>
 		';
 	}
-	
 	
 	// query for getting course_names from a user_id
 	// select course_name  from course_user left join course_code on course_code.course_code=course_user.course_code inner join course_id on course_code.course_id=course_id.course_id where user_id=2;
