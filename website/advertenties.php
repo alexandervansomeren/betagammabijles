@@ -375,7 +375,6 @@
             <object class="card">
                 <div class="frame">
                     <div class="photoframe">
-                    	<img src="img/pasfoto3.jpg" height="200" width="150" />
                     </div>	
                     <div class="infoframe">
                     	<div class = "name">
