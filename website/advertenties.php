@@ -329,11 +329,22 @@
 		;";
 		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
+		$GLOBALS['db'] -> Query = 
+		"
+			SELECT DISTINCT course_user.user_id, first_name, last_name, city  
+			FROM course_user 
+			INNER JOIN adress_data on course_user.user_id=adress_data.user_id 
+			INNER JOIN user_personal_data on course_user.user_id=user_personal_data.user_id
+			WHERE ".$usersQuery."
+		;";
+		
+		$nameCityArray = $GLOBALS['db'] -> Querying();
 		echo $GLOBALS['db'] -> Query;
 		
 		echo('<pre>');
-		print_r( $courseNamesArray);
+		print_r( $nameCityArray );
 		echo('</pre>');
+		
 		
 		
 	
@@ -355,8 +366,8 @@
 	// query for getting course_names from a user_id
 	// select course_name  from course_user left join course_code on course_code.course_code=course_user.course_code inner join course_id on course_code.course_id=course_id.course_id where user_id=2;
 	
-	// query for getting city from a user_id
-	// select distinct city from course_user left join adress_data on course_user.user_id=adress_data.user_id where course_user.user_id=2;
+	// query for getting names and city from a user_id
+	// select distinct course_user.user_id, first_name, last_name, city  from course_user inner join adress_data on course_user.user_id=adress_data.user_id inner join user_personal_data on course_user.user_id=user_personal_data.user_id where course_user.user_id=2;
 	
 
 	?>
