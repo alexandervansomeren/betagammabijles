@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>webdb13BG2</title>
+<title>Aanbod</title>
 
 <!-- Link van wat ik een mooi inlog ding vind: http://www.freebiesgallery.com/login-page-design-psd-template/ -->
 
@@ -315,7 +315,6 @@
 			$users[$i]="webdb13BG2.course_user.user_id=" . $GLOBALS['queryResultsArray'][$i][0];
 		}
 		$usersQuery=implode(" OR ", $users);
-		echo $usersQuery;
 		
 		$GLOBALS['db'] -> Query = 
 		"
