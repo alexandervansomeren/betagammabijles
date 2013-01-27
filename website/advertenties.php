@@ -197,7 +197,7 @@
                         <label class="ques">Man <input type="checkbox" name="male", checked="checked">	</label>
                         <label class="ques">Vrouw <input type="checkbox" name="female", checked="checked">	</label>
                     </div> 
-                    <input class="text" style="margin-top:auto; margin-bottom:auto;" type="submit" value="Zoeken"/>
+                    <input class="text" style="margin-top:10px;;" type="submit" value="Zoeken"/>
             </form>
         </div>
     <?php
