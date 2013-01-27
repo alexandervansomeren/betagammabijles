@@ -336,9 +336,13 @@
 		
 		echo $db -> Query;
 		
+		$db -> Disconnect();
+		
 		echo('<pre>');
-		echo $courseNamesArray;
+		print_r $courseNamesArray;
 		echo('</pre>');
+		
+		
 	
 	}
 	// Disconnect from the database
