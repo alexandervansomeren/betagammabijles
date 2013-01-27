@@ -368,6 +368,8 @@
 		$user=array_unique($user);
 		print_r($user);
 		
+		echo "sizeof($courseNamesArray)", sizeof($courseNamesArray);
+		
 		// Create an array with user_ids as keys and an array with course_names as values
 		for($i=0;$i<sizeof($user); $i++)
 		{
