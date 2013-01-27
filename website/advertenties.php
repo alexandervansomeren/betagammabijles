@@ -346,7 +346,8 @@
 		print_r( $nameCityArray );
 		echo('</pre>');
 		
-		echo "einde";
+		echo "lengte array:";
+		echo sizeOf( $nameCityArray );
 		
 		
 		// Disconnect from the database
