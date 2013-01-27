@@ -339,7 +339,7 @@
 		$db -> Disconnect();
 		
 		echo('<pre>');
-		print_r $courseNamesArray;
+		print_r( $courseNamesArray);
 		echo('</pre>');
 		
 		
