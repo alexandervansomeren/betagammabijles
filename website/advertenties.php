@@ -346,6 +346,8 @@
 		print_r( $nameCityArray );
 		echo('</pre>');
 		
+		echo "einde";
+		
 		
 		// Disconnect from the database
 		$GLOBALS['db']  -> Disconnect();
