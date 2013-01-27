@@ -1,4 +1,4 @@
-<?
+<?php
 
 	// Connect to the database
 	include 'shielded/connector.php';
