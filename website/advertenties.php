@@ -81,7 +81,7 @@
 	height:200px;
 	float:left;
 	background:url(img/bijlesdocent.png);
-	background-size:200px, 150px;
+	background-size:150px, 200px;
 }
 .card .frame .infoframe
 {
