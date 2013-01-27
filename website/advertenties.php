@@ -332,9 +332,9 @@
 		$GLOBALS['db'] -> Query = 
 		"
 			SELECT DISTINCT course_user.user_id, first_name, last_name, city  
-			FROM course_user 
-			INNER JOIN adress_data on course_user.user_id=adress_data.user_id 
-			INNER JOIN user_personal_data on course_user.user_id=user_personal_data.user_id
+			FROM webdb13BG2.course_user 
+			INNER JOIN webdb13BG2.adress_data on webdb13BG2.course_user.user_id=webdb13BG2.adress_data.user_id 
+			INNER JOIN webdb13BG2.user_personal_data on webdb13BG2.course_user.user_id=webdb13BG2.user_personal_data.user_id
 			WHERE ".$usersQuery."
 		;";
 		
