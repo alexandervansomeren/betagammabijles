@@ -294,9 +294,6 @@
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 		
-		// Disconnect from the database
-		$GLOBALS['db']  -> Disconnect();
-		
 		// checking whether any results where found, if found, call a function to find the courses and locations from the user_id
 		if (sizeOf( $GLOBALS['queryResultsArray'] ) ==0)
 		{
@@ -321,10 +318,8 @@
 		
 		echo "Start making Second Query";
 		echo "<br>";
-		
-		$db = new ConnectorClass;
 
-		$db -> Query = 
+		$GLOBALS['db'] -> Query = 
 		"
 			SELECT course_user.user_id, course_name  
 			FROM webdb13BG2.course_user 
@@ -332,11 +327,9 @@
 			INNER JOIN webdb13BG2.course_id on webdb13BG2.course_code.course_id=webdb13BG2.course_id.course_id 
 			WHERE ".$usersQuery."
 		;";
-		$courseNamesArray = $db -> Querying();
+		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
-		echo $db -> Query;
-		
-		$db -> Disconnect();
+		echo $GLOBALS['db'] -> Query;
 		
 		echo('<pre>');
 		print_r( $courseNamesArray);
@@ -346,7 +339,7 @@
 	
 	}
 	// Disconnect from the database
-	
+		$GLOBALS['db']  -> Disconnect();
 	// function that displays that there are no results for the query
 	function showNoResults() 
 	{
