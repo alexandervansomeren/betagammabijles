@@ -2,8 +2,10 @@ TO DO
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!			   !!!
-!!!      FOTO'S UPLOADEN   !!!
+!!!      ?FOTO'S UPLOADEN  !!!
 !!!      INLOGGEN          !!!
+!!! 	 Registratiefrom.  !!!
+!!!      course_code vullen!!!
 !!!			   !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
