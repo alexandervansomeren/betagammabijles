@@ -236,8 +236,6 @@
 	}
 	else $female="0";
 	
-	echo $male , $female;
-	
 	if ($male=="1" && $female=="1")
 	{
 		$genderQuery = "";
