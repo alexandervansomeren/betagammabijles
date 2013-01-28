@@ -435,11 +435,12 @@
 							{
 								echo '<h1>Vakken:</h1>';
 								echo '<p>';
-								for($i=0; $i<sizeOf( $CoursesArray ); $i++)
+								echo $CoursesArray[0];
+								for($i=1; $i<sizeOf( $CoursesArray ); $i++)
 								{
-									echo $CoursesArray[$i], ', ';
+									echo ', ', $CoursesArray[$i];
 								}
-								echo '</p>';
+								echo '.</p>';
 							}
 							echo '
 							</div>
