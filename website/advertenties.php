@@ -415,9 +415,9 @@
 				<object class="card">
 					<div class="frame">
 						<div class="photoframe">';
-						if ( file_exists( "/user_img/'.$user_id.'.jpg" )
+						if ( file_exists( 'user_img/'.$user_id.'.jpg' ))
 						{
-						echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" />';
+							echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" />';
 						}
 						echo '</div>
 						<div class="infoframe">
