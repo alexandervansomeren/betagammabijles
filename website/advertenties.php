@@ -419,7 +419,7 @@
 				<object class="card">
 					<div class="frame">
 						<div class="photoframe">';
-						echo ;
+						//echo ;
 						echo '</div>
 						<div class="infoframe">
 							<div class = "name">
@@ -447,14 +447,14 @@
 							</div>
 							<div class="attributes">
 								<h1>Locatie:</h1>
-								<p>'
+								<p>';
 								echo $City;
-								echo'</p>
+								echo '</p>
 							</div>
 						 </div>
 					  </div>
 				</object>
-        	</a>'
+        	</a>';
 	}
 	
 
