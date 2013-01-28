@@ -290,13 +290,13 @@
                 function makeQuery()
                 {
                     // Once you have a valid DB object named $db...
-                    $alldata = array($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
-                    $sth = $db->prepare('INSERT INTO userdata  (username, password, user_type) VALUES (?, ?, ?)');
-                    $db->executeMultiple($sth, $alldata);
+                    //$alldata = array($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
+                    //$sth = $db->prepare('INSERT INTO userdata  (username, password, user_type) VALUES (?, ?, ?)');
+                    //$db->executeMultiple($sth, $alldata);
 
 	                $GLOBALS['db'] -> Query = 
-//	                    INSERT INTO user_data(username, password, user_type) VALUES ($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
-	                "   SELECT user_id FROM user_data WHERE username=<username>;
+	                "   INSERT INTO user_data(username, password, user_type) VALUES ($username, $password, $user_type);
+	                    SELECT user_id FROM user_data WHERE username=<username>;
 	                    DECLARE u_i = user_data.user_id;
 	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) VALUES (<firstname>, <middlename>, <lastname>, <date_of_birth>, <gender>, <emailadress>, <phone_1>, <phone_2>, <about_me>, <u_i>);
 	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) VALUES (<city>, <street>, <streetnumber>, <postal>, <postal_extra>);
