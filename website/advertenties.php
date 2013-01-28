@@ -424,7 +424,7 @@
 						<div class="infoframe">
 							<div class = "name">
 								<h1>'; 
-									echo ucfirst( $FirstName), $MiddleName, ucfirst( $LastName );
+									echo ucfirst( $FirstName ),' ' , $MiddleName,' ' , ucfirst( $LastName );
 								echo '</h1>
 							</div>
 							<div class="attributes">';
