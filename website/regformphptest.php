@@ -291,9 +291,15 @@
                 {
                 //Parse error: syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /datastore/webdb13BG2/htdocs/betagammabijles/website/regformphptest.php on line 294 
                 //Volgensmij kloppen die Globals niet...
-                    $db.user_data = new DataObjects_Person;
-                    $db.user_data->name=$GLOBALS['username'];
-                    $id = $person->insert();
+                 //   $db.user_data = new DataObjects_Person;
+                   // $db.user_data->name=$GLOBALS['username'];
+                    //$id = $person->insert();
+                    
+                    //Andere mogelijkheid
+                    // Once you have a valid DB object named $db...
+                    $alldata = array($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
+                    $sth = $db->prepare('INSERT INTO userdata  (username, password, user_type) VALUES (?, ?, ?)');
+                    $db->executeMultiple($sth, $alldata);
 
 	                $GLOBALS['db'] -> Query = 
 //	                    INSERT INTO user_data(username, password, user_type) VALUES ($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
