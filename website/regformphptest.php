@@ -263,8 +263,10 @@
                     if (isset($_POST['username']))
                     {
 	                    $username = mysql_real_escape_string($_POST['username']);
+	                    echo "ik ben hier gekomen";
                     }
                     else $username="";
+                        echo "er is een probleempje";
                     if (isset($_POST['password']))
                     {
 	                    $password = mysql_real_escape_string($_POST['password']);
