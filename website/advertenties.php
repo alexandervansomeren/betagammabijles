@@ -459,10 +459,10 @@
 	?>
    
         
-        <!--
+        
         <div class="prevnexbuttons">
             <div class="prevnexbuttonsCenter">
-                <a href="#">
+                <!--<a href="#">
                     <object class="previousbutton">
                     Vorige
                     </object>
@@ -471,9 +471,9 @@
                     <object class="nextbutton">
                     Volgende
                     </object>
-                </a>
+                </a>-->
             </div>
-        </div> -->
+        </div> 
         <div class="clear"></div>
     </div>
     <div class="clear"></div>
