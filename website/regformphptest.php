@@ -290,11 +290,14 @@
                 function makeQuery()
                 {
                 //Parse error: syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /datastore/webdb13BG2/htdocs/betagammabijles/website/regformphptest.php on line 294 
-                //Volgensmij kloppen die GLobals neit...
+                //Volgensmij kloppen die Globals niet...
+                    $db.user_data = new DataObjects_Person;
+                    $db.user_data->name=$GLOBALS['username'];
+                    $id = $person->insert();
+
 	                $GLOBALS['db'] -> Query = 
-	                "
-	                    INSERT INTO user_data(username, password, user_type) VALUES ($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
-	                    SELECT user_id FROM user_data WHERE username=<username>;
+//	                    INSERT INTO user_data(username, password, user_type) VALUES ($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
+	                "   SELECT user_id FROM user_data WHERE username=<username>;
 	                    DECLARE u_i = user_data.user_id;
 	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) VALUES (<firstname>, <middlename>, <lastname>, <date_of_birth>, <gender>, <emailadress>, <phone_1>, <phone_2>, <about_me>, <u_i>);
 	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) VALUES (<city>, <street>, <streetnumber>, <postal>, <postal_extra>);
