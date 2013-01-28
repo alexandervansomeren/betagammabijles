@@ -297,23 +297,41 @@
                     //$db->executeMultiple($sth, $alldata);
 
 	                $GLOBALS['db'] -> Query = 
-	                "   INSERT INTO user_data(username, password, user_type) VALUES ($username, $password, $user_type);
-	                    SELECT user_id FROM user_data WHERE username=<username>;
-	                    DECLARE u_i = user_data.user_id;
-	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) VALUES (<firstname>, <middlename>, <lastname>, <date_of_birth>, <gender>, <emailadress>, <phone_1>, <phone_2>, <about_me>, <u_i>);
-	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) VALUES (<city>, <street>, <streetnumber>, <postal>, <postal_extra>);
-	                ";
+	                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
+						VALUES (".$GLOBALS['username'].", ".$GLOBALS['password'].", ".$GLOBALS['user_type'].");
+						SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
+						
+					$currentUserArray = $GLOBALS['db'] -> Querying();
+					$currentUserId = $currentUserArray[1][0];
+	                
+					
+					// Resetting db's variables
+					$GLOBALS['db'] -> Query = null;
+					$GLOBALS['db'] -> QueryResult = null;
+					
+					$GLOBALS['db'] -> Query =     
+						"
+	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
+						VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
+						".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['u_i'].");
+	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) 
+						VALUES (".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
+	                	";
 	                //dit klopt nog niet helemaal
 
                     $queryResultsArray = $GLOBALS['db'] -> Querying();
-                    return $queryResultsArray;
+                    
+					
+					// Disconnect from the database
+                	$db -> Disconnect();
+					return $queryResultsArray;
                 }
 
                 echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
 
-                if (true) /*Hier komt iets over wanneer een formulier fout is*/
+                if (false) /*Hier komt iets over wanneer een formulier fout is*/
                 {
 	                wrongEntry();
                 }
