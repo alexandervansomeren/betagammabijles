@@ -459,7 +459,7 @@
 	?>
    
         
-        
+        <!--
         <div class="prevnexbuttons">
             <div class="prevnexbuttonsCenter">
                 <a href="#">
@@ -473,7 +473,7 @@
                     </object>
                 </a>
             </div>
-        </div>
+        </div> -->
         <div class="clear"></div>
     </div>
     <div class="clear"></div>
