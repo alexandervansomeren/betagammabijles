@@ -330,9 +330,9 @@
 		;";
 		$courseNamesArray = $GLOBALS['db'] -> Querying();
 		
-		echo('<pre>');
-		print_r( $courseNamesArray );
-		echo('</pre>');
+		//echo('<pre>');
+		//print_r( $courseNamesArray );
+		//echo('</pre>');
 		
 		$GLOBALS['db'] -> QueryResult = null;
 		
@@ -351,12 +351,12 @@
 		// Disconnect from the database
 		$GLOBALS['db']  -> Disconnect();
 		
-		echo('<pre>');
-		print_r( $nameCityArray );
-		echo('</pre>');
+		//echo('<pre>');
+		//print_r( $nameCityArray );
+		//echo('</pre>');
 		
-		echo "lengte array:";
-		echo sizeOf( $nameCityArray );
+		//echo "lengte array:";
+		//echo sizeOf( $nameCityArray );
 		
 		
 		// Create an array with unique user_id's from selection
@@ -365,9 +365,9 @@
 			$user[$i-1]=$currentUser=$nameCityArray[$i][0];
 		}
 		$user=array_unique($user);
-		print_r($user);
+		//print_r($user);
 		
-		echo "sizeof($courseNamesArray)", sizeof($courseNamesArray);
+		//echo "sizeof($courseNamesArray)", sizeof($courseNamesArray);
 		
 		// Create an array with user_ids as keys and an array with course_names as values
 		for($i=0;$i<sizeof($user); $i++)
@@ -380,9 +380,7 @@
 			}
 		}
 		
-		echo('<pre>');
-		print_r( $coursesPerUser );
-		echo('</pre>'); 
+		echo '<div class="page-field">';
 		
 		
 		for($i=1;$i<=sizeof($nameCityArray); $i++)
@@ -413,8 +411,8 @@
 	// Function that creates a "visitcard" from given parameters
 	function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
 	{
-		echo  
-		'<div class="page-field">
+		
+		echo '
 			<a href="#">
 				<object class="card">
 					<div class="frame">
