@@ -272,6 +272,8 @@
 	                    $password = mysql_real_escape_string($_POST['password']);
                     }
                     else $password="";
+                    // User type MOET NOG WORDEN BEHANDELD
+                    $user_type = 1;
     
                     //Gender
                     if (isset($_POST['gender']))
