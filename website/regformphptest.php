@@ -324,7 +324,7 @@
                     
 					
 					// Disconnect from the database
-                	$db -> Disconnect();
+                	$GLOBALS['db'] -> Disconnect();
 					return $queryResultsArray;
                 }
 
@@ -345,9 +345,6 @@
                     </div>
                     ';
                 }
-
-                // Disconnect from the database
-                $db -> Disconnect();
 
                 // function that displays that there are no results for the query
                 function wrongEntry() 
