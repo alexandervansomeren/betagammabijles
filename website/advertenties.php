@@ -415,7 +415,10 @@
 				<object class="card">
 					<div class="frame">
 						<div class="photoframe">';
-						echo '<img src="user_img/',$user_id,'.jpg" width="120" height="150" />';
+						if ( file_exists( "/user_img/'.$user_id.'.jpg" )
+						{
+						echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" />';
+						}
 						echo '</div>
 						<div class="infoframe">
 							<div class = "name">
