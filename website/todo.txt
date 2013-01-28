@@ -1,6 +1,11 @@
 TO DO
 
-!!! FOTO'S UPLOADEN !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!			   !!!
+!!!      FOTO'S UPLOADEN   !!!
+!!!      INLOGGEN          !!!
+!!!			   !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 REGISTRATIEFORM
 - margin-bottom paragraph zodat <br> wegkan

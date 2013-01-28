@@ -415,7 +415,7 @@
 				<object class="card">
 					<div class="frame">
 						<div class="photoframe">';
-						//echo ;
+						echo '<img src="user_img/',$user_id,'.jpg" width="120" height="150" />';
 						echo '</div>
 						<div class="infoframe">
 							<div class = "name">
@@ -471,10 +471,10 @@
                     Volgende
                     </object>
                 </a>-->
-            </div>
-        </div> 
+          </div>
+      </div> 
         <div class="clear"></div>
-    </div>
+</div>
     <div class="clear"></div>
     </div>
     
