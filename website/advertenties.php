@@ -316,8 +316,8 @@
 		}
 		$usersQuery=implode(" OR ", $users);
 		
-		echo "Start making Second Query";
-		echo "<br>";
+		//echo "Start making Second Query";
+		//echo "<br>";
 
 		$GLOBALS['db'] -> Query = 
 		"
@@ -346,7 +346,7 @@
 		;";
 		
 		$nameCityArray = $GLOBALS['db'] -> Querying();
-		echo $GLOBALS['db'] -> Query;
+		//echo $GLOBALS['db'] -> Query;
 		
 		// Disconnect from the database
 		$GLOBALS['db']  -> Disconnect();
