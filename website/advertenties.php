@@ -258,7 +258,7 @@
 		echo 
 		'
 		<div class="page-field"> 
-			<h1> Selecteer tenminste één geslacht. </h1>
+			<h1> Er zijn geen bijlesgevers gevonden in onze database die voldoen aan de door u opgegeven criterea </h1>
 		</div>
 		';
 	}
@@ -307,7 +307,6 @@
 	//print_r( $queryResultsArray );
 	//echo('</pre>');
 	
-	echo "Aantal resultaten: ", sizeOf( $queryResultsArray );
 	
 	function makeSecondQuery()
 	{
@@ -385,24 +384,19 @@
 		print_r( $coursesPerUser );
 		echo('</pre>'); 
 		
-		//foreach( $courseNamesArray as )
-		//{
-			
-		//}
 		
-		/*
 		for($i=1;$i<=sizeof($nameCityArray); $i++)
 		{
 			printVisitCard(
-				$currentUser=$nameCityArray[$i][0],
+				$nameCityArray[$i][0],
 				$nameCityArray[$i][1],
 				$nameCityArray[$i][2],
 				$nameCityArray[$i][3],
-				$nameCityArray[$i][4]
+				$nameCityArray[$i][4],
+				$coursesPerUser[$nameCityArray[$i][0]]
 				);
 		}
 		
-		*/
 	}
 	
 	// function that displays that there are no results for the query
@@ -416,36 +410,56 @@
 		';
 	}
 	
-	// query for getting course_names from a user_id
-	// select course_name  from course_user left join course_code on course_code.course_code=course_user.course_code inner join course_id on course_code.course_id=course_id.course_id where user_id=2;
-	
-	// query for getting names and city from a user_id
-	// select distinct course_user.user_id, first_name, last_name, city  from course_user inner join adress_data on course_user.user_id=adress_data.user_id inner join user_personal_data on course_user.user_id=user_personal_data.user_id where course_user.user_id=2;
+	// Function that creates a "visitcard" from given parameters
+	function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
+	{
+		echo  
+		'<div class="page-field">
+			<a href="#">
+				<object class="card">
+					<div class="frame">
+						<div class="photoframe">';
+						echo ;
+						echo '</div>
+						<div class="infoframe">
+							<div class = "name">
+								<h1>'; 
+									echo '$FirstName $MiddleName $LastName';
+								echo '</h1>
+							</div>
+							<div class="attributes">';
+							if( sizeOf( $CoursesArray )==1 )
+							{
+								echo '<h1>Vak:</h1>';
+								echo '<p>', $CoursesArray[0], '</p>';
+							}
+							else if( sizeOf( $CoursesArray )>1 )
+							{
+								echo '<h1>Vakken:</h1>';
+								echo '<p>';
+								for($i=0; $i<sizeOf( $CoursesArray ); $i++)
+								{
+									echo $CoursesArray[$i], ', ';
+								}
+								echo '</p>';
+							}
+							echo '
+							</div>
+							<div class="attributes">
+								<h1>Locatie:</h1>
+								<p>'
+								echo $City;
+								echo'</p>
+							</div>
+						 </div>
+					  </div>
+				</object>
+        	</a>'
+	}
 	
 
 	?>
-    <div class="page-field">
-       	<a href="#">
-            <object class="card">
-                <div class="frame">
-                    <div class="photoframe">
-                    </div>	
-                    <div class="infoframe">
-                    	<div class = "name">
-                            <h1>Emma Boumans</h1>
-                        </div>
-                        <div class="attributes">
-                            <h1>Vakken:</h1>
-                            <p>Natuurkunde, Wiskunde, Economie, Turks, Russisch.</p>
-                        </div>
-                        <div class="attributes">
-                        	<h1>Locatie:</h1>
-                            <p>Amsterdam</p>
-                        </div>
-                     </div>
-                  </div>
-            </object>
-        </a>
+   
         
         
         <div class="prevnexbuttons">
