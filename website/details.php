@@ -43,6 +43,15 @@
                         $GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
                         $GLOBALS['docent_vakken'] = '';
                         	
+                        if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
+                        {
+                            $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" />';
+                        }
+                        else
+                        {
+                            $GLOBALS['docent_img'] = '<img src="img/student_1.jpg" width="100%" height="400px" ></img>';
+                        }                        
+                        
                         $GLOBALS['db'] -> Query = 
                        'SELECT *
 			FROM webdb13BG2.course_user cu
@@ -178,8 +187,8 @@
           <div class="details">
               <div class="imgbtn"> 
                   <div class="image">
-                      <div class="info">Dit ben ik!</div>           
-                      <img src="img/student_1.jpg" width="100%" height="400px" ></img>                     
+                      <div class="info">Dit ben ik!</div>
+                      <?php echo($GLOBALS['docent_img']); ?>                     
                   </div>
                   
                   <a class="button">Klik hier om contact op te nemen</a>              
