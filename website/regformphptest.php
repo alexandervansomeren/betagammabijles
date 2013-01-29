@@ -352,7 +352,6 @@
                     ";
                 //dit klopt nog niet helemaal
 */
-                $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 
 
                 //Disconnect from the database
