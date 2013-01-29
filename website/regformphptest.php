@@ -203,7 +203,7 @@
                     </div>
                     <div class="paragraph">
                         <div class="field">
-                            <input type="submit" value="Registreer" style="background-color:orange;" />
+                            <input type="submit" value="Registreer" style="background-color:orange;" name="submit" />
                             <?php
                                 if(!(empty($_POST["firstname"])))
                                 {
@@ -321,7 +321,7 @@
                     else $female="0";
                     //Dit genderstuk klopt sowieso niet
                     
-        	if(isset($_POST['username']) && isset($_POST['password']))
+        	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']))
         	{
         		makeQuery();
 			}
