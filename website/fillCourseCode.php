@@ -20,8 +20,7 @@
 				INSERT INTO webdb13BG2.course_code (course_code, course_id, course_difficulty)
 				VALUES (".$k.",".$i.".".$j.")
 			;";
-			$db->Querying();
-			$db->Query=null;
+			echo $db-Query;
 		}
 	}
 	
