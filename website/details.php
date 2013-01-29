@@ -57,11 +57,18 @@
 			INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
 			INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
 			INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
-			WHERE up.user_id = '. $GLOBALS['userID'] .';';
+			WHERE cu.user_id = '. $GLOBALS['userID'] .';';
                 
                         $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
                         
                         print_r($GLOBALS['queryResultsArray']);
+                        
+                        foreach ($GLOBALS['queryResultsArray'] as $value)
+                        {
+                            echo "A array value!";
+                        }
+                        }
+                        
                 }
 	}
 	
