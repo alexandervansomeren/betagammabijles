@@ -1,5 +1,5 @@
 <?php
-	echo "<br /><br />Testversie 2.4<br /><br />";
+	echo "<br /><br />Testversie 2.5<br /><br />";
 	
 	// Connect to the database
 	include 'shielded/connector.php';
@@ -37,9 +37,9 @@
 			
 			print_r($GLOBALS['queryResultsArray']);
 			echo "<br /><br /><br />";
-			print($GLOBALS['queryResultsArray'][0]);
+			print($GLOBALS['queryResultsArray'][1][0]);
 			echo "<br /><br /><br />";
-			print($GLOBALS['queryResultsArray']['user_id']);
+			print($GLOBALS['queryResultsArray'][1]['user_id']);
 				
 		}
 	}
