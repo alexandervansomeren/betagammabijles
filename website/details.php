@@ -1,6 +1,4 @@
 <?php
-	echo '<br /><br />Testversie 3.0<br /><br />';
-	
 	// Connect to the database
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
@@ -11,9 +9,7 @@
 	if (isset($_GET['id']))
 	{
 		$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
-                echo 'De global waarde is: '. $GLOBALS['userID'] .'  <br />';
-        }
-        
+        }       
 	
 	QueryOnId();
 	
@@ -34,10 +30,6 @@
 		}
 		else
 		{
-			// succes!
-			echo "Gegevens succesvol opgehaald!<br /><br />";
-						
-			// Start storing variabelen
 			$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
 						  $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
 						  $GLOBALS['queryResultsArray'][1]['last_name'];
@@ -60,12 +52,18 @@
 			WHERE cu.user_id = '. $GLOBALS['userID'] .';';
                 
                         $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
-                        
-                        foreach ($GLOBALS['queryResultsArray'] as $vakRow)
-                        {
-                            print_r($vakRow);
-                            $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
+                        if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
+                        {			
+                            foreach ($GLOBALS['queryResultsArray'] as $vakRow)
+                            {
+                                $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
+                            }
                         }
+                        else
+                        {
+                            $GLOBALS['docent_vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
+                        }
+                        
                 }
 	}
 	
@@ -113,12 +111,8 @@
         var mapOptions = {
           zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP
-        }       
-        
-        
-       
+        }
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        
       }
 
       
@@ -144,8 +138,8 @@
 	{
 		width: inherit; height: 400px;            
 	}
-	.content .details .image .buttons { width: inherit;    }
-	.content .details .image .buttons a { background-color: red; }
+	.content .details .imgbtn .button { width: inherit; text-indent: 25px; height: 25px; line-height: 25px; margin-top: 10px; display: block; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
+        .content .details .imgbtn .button:hover { opacity: 1; }
 	
 	.content .details .information
 	{
@@ -188,10 +182,7 @@
                       <img src="img/student_1.jpg" width="100%" height="400px" ></img>                     
                   </div>
                   
-                  <div class="buttons">
-                      <a href="#">Contact</a>
-                      <a href="#">Vragen</a>                      
-                  </div>              
+                  <a class="button">Klik hier om contact op te nemen</a>              
               </div>            
             
             
@@ -202,7 +193,7 @@
                 <div class="label">E-mail:</div><div class="content"><?php echo($GLOBALS['docent_email']); ?></div>
                 <div class="category">Studiegegevens</div>
                 <?php echo($GLOBALS['docent_vakken']); ?>
-                <div class="category"><?php echo($GLOBALS['docent_over']); ?></div>
+                <div class="category">Over mij</div>
                 <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>          
             </div>
             
