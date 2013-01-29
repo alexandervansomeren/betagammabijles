@@ -1,17 +1,13 @@
 <?php
-	echo "<br /><br />Testversie 2.5<br /><br />";
+	echo "<br /><br />Testversie 2.6<br /><br />";
 	
 	// Connect to the database
 	include 'shielded/connector.php';
-	$db = new ConnectorClass;
-	
-	$queryResultsArray = null; 
 	
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['id']))
 	{
-		$userID = mysql_real_escape_string($_GET['id']);
-		global $userID;
+		$GLOBALS['userID'] = mysql_real_escape_string($_GET['id']);
 	}
 	
 	QueryOnId();
@@ -23,7 +19,7 @@
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = " + $userID;
+			WHERE up.user_id = " + $GLOBALS['userID'];
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
