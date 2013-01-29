@@ -1,4 +1,105 @@
+<?php
 
+include 'shielded/connector.php';
+$db = new ConnectorClass;
+	
+
+$GLOBALS['db'] -> Query = 
+'	SELECT *
+        FROM webdb13BG2.user_personal_data up
+        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id';
+
+$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+
+$GLOBALS['fiveResults'] = '';
+
+if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
+{
+  $x = 0;
+  foreach ($GLOBALS['queryResultsArray'] as $vakRow)
+  {
+      while($x > 5)
+        {
+            // Get vakken die docent geeft
+            $GLOBALS['db'] -> Query = 
+            'SELECT *
+            FROM webdb13BG2.course_user cu
+            INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
+            INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
+            INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
+            WHERE cu.user_id = '. vakRow['userID'] .';';
+            
+            $vakken = $GLOBALS['db'] -> Querying();
+            $GLOBALS['vakken'] = "";
+            
+            if (sizeOf( $vakken ) >= 1)
+            {			
+              foreach ($vakken as $vakRow)
+              {
+                  $GLOBALS['vakken'] .= $vakRow['course_name'] .' ';
+              }
+            }
+            else
+            {
+              $GLOBALS['vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
+            }
+          
+            if ( file_exists( 'user_img/'.$vakRow['userID'].'.jpg' ))
+            {
+              $GLOBALS['docent_img'] = '<img src="user_img/'. $vakRow['userID'] .'.jpg" width="100%" height="400px" />';
+            }
+            else
+            {
+              $GLOBALS['docent_img'] = '<img src="img/student_1.jpg" width="100%" height="400px" ></img>';
+            }                        
+            
+            // Create a div for each of 5         
+            $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $vakRow['user_id'] .'" class="docent last"><span class="name">'. $vakRow['first_name'] .'</span><span class="vak">
+                                       '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
+      }
+  }
+}
+
+
+
+$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
+                        $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
+                        $GLOBALS['queryResultsArray'][1]['last_name'];
+
+$GLOBALS['docent_locatie'] = $GLOBALS['queryResultsArray'][1]['city'] . ', ' . 
+                           $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
+                           $GLOBALS['queryResultsArray'][1]['streetnumber'];	
+
+$GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
+$GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
+$GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
+$GLOBALS['docent_vakken'] = '';
+
+if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
+{
+  $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" />';
+}
+else
+{
+  $GLOBALS['docent_img'] = '<img src="img/student_1.jpg" width="100%" height="400px" ></img>';
+}                        
+
+
+
+}
+}
+	
+$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+		
+
+
+
+
+
+
+
+
+?>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -107,35 +208,9 @@
 	        <div class="populair">
             	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
                 <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
-                <a href="details.php?id=1" class="docent">
-                   <span class="name">Emma</span>
-                   <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
-                   <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
+                <?php echo($GLOBALS['fiveResults']); ?>
                 
-            	<a href="details.php" class="docent">
-                   <span class="name">Emma</span>
-                   <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
-                   <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-                
-            	<a href="details.php" class="docent">
-                   <span class="name">Emma</span>
-                   <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
-                   <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-                
-            	<a href="details.php" class="docent">
-                   <span class="name">Emma</span>
-                   <span class="vak">Natuurkunde, KI, Wiskunde, Vriendelijk</span>
-                   <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-                
-            	<a href="details.php" class="docent last">
-                   <span class="name">Emma</span>
-                   <span class="vak">Natuurkunde, KI, Wiskunde</span>
-                   <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
+            	
 	     </div>		    
          </div>
 		
