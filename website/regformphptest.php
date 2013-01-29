@@ -117,8 +117,8 @@
                         </div>
                         <div class="field"> 
                             <div class="ques">Postcode:</div>
-                            <div class="ans"><input type="text" name="postal" placeholder="Bijv. 1234" style="width:52px;" /></div>
-                            <div class="ans"><input type="text" name="postal_extra" placeholder="AB" style="width:20px;" /></div>  
+                            <div class="ans"><input type="text" name="postal" placeholder="Bijv. 1234" style="width:53px;" /></div>
+                            <div class="ans"><input type="text" name="postal_extra" placeholder="AB" style="width:19px;" /></div>  
                         </div>
                         <div class="field"> 
                             <div class="ques">Woonplaats:</div>
