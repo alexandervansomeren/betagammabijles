@@ -18,11 +18,12 @@
 	// Making first query to find user_id's from submitted inputform
 	function QueryOnId()
 	{
+                $testvariabele = 2;
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = 2";
+			WHERE up.user_id = " . $testvariabele . ";";
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
