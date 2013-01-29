@@ -9,7 +9,6 @@
 	if (isset($_GET['id']))
 	{
 		$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
-                echo 'De global waarde is: '. $GLOBALS['userID'] .'  <br />';
         }       
 	
 	QueryOnId();
@@ -62,7 +61,7 @@
                         }
                         else
                         {
-                            $GLOBALS['docent_vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content">/div>';
+                            $GLOBALS['docent_vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
                         }
                         
                 }
