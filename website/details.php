@@ -49,7 +49,7 @@
                         $GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
                         $GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
                         $GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
-                        $GLOBALS['docent_vakken'] = '<div class="label">Scheikunde</div><div class="content">VWO 3</div>';
+                        
                         	
                         $GLOBALS['db'] -> Query = 
                        'SELECT *
@@ -63,9 +63,9 @@
                         
                         print_r($GLOBALS['queryResultsArray']);
                         
-                        foreach ($GLOBALS['queryResultsArray'] as $value)
+                        foreach ($GLOBALS['queryResultsArray'] as $vakRow)
                         {
-                            echo "A array value!";
+                            $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">VWO 3</div>';
                         }
                 }
 	}
