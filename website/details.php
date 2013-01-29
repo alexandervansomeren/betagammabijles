@@ -10,20 +10,21 @@
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['id']))
 	{
-		$userID = mysql_real_escape_string($_GET['id']);
-	}
+		$GLOBALS['userID'] = mysql_real_escape_string($_GET['id']);
+                $GLOBALS['userID'] = 2;                
+        }
+        
 	
 	QueryOnId();
 	
 	// Making first query to find user_id's from submitted inputform
 	function QueryOnId()
 	{
-                $testvariabele = 2;
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = " . $testvariabele . ";";
+			WHERE up.user_id = " . $GLOBALS['userID'] . ";";
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
