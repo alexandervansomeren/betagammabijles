@@ -60,45 +60,6 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
   }
 }
 
-
-
-$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
-                        $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
-                        $GLOBALS['queryResultsArray'][1]['last_name'];
-
-$GLOBALS['docent_locatie'] = $GLOBALS['queryResultsArray'][1]['city'] . ', ' . 
-                           $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
-                           $GLOBALS['queryResultsArray'][1]['streetnumber'];	
-
-$GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
-$GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
-$GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
-$GLOBALS['docent_vakken'] = '';
-
-if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
-{
-  $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" />';
-}
-else
-{
-  $GLOBALS['docent_img'] = '<img src="img/student_1.jpg" width="100%" height="400px" ></img>';
-}                        
-
-
-
-}
-}
-	
-$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
-		
-
-
-
-
-
-
-
-
 ?>
 
 
