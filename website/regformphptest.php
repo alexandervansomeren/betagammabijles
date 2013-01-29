@@ -357,7 +357,7 @@
                 
             }
             	echo('<pre>');
-                print_r( $queryResultsArray );
+                print_r($GLOBALS['queryResultsArray']);
                 echo('</pre>');
                 
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
