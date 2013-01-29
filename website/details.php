@@ -39,18 +39,15 @@
 			echo "Gegevens succesvol opgehaald!<br /><br />";
 						
 			// Start storing variabelen
-			$docent_naam = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
-						   $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
-						   $GLOBALS['queryResultsArray'][1]['last_name'];
+			$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
+						  $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
+						  $GLOBALS['queryResultsArray'][1]['last_name'];
 			
-			$docent_locatie = $GLOBALS['queryResultsArray'][1]['city'] . ', ' . 
-                                          $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
-                                          $GLOBALS['queryResultsArray'][1]['streetnumber'];	
+			$GLOBALS['docent_locatie'] = $GLOBALS['queryResultsArray'][1]['city'] . ', ' . 
+                                                     $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
+                                                     $GLOBALS['queryResultsArray'][1]['streetnumber'];	
                         
-                        global $docent_naam;
-                        global $docent_locatie;
-                        
-			print('Naam docent= ' . $docent_naam .' '. $docent_locatie .'..<br /><br /><br />');
+                        echo 'Naam docent= '. $GLOBALS['docent_naam'] .' '. $GLOBALS['docent_locatie'] .'..<br /><br /><br />';
 			
 			print_r($GLOBALS['queryResultsArray']);
 
@@ -78,7 +75,7 @@
       var geocoder;
       var map;
       function initialize() {      
-        var address = "<?php echo($docent_locatie); ?>"
+        var address = "<?php echo($GLOBALS['docent_locatie']); ?>"
         
         var image = new google.maps.MarkerImage("img/student_1.jpg",
         // This marker is 20 pixels wide by 32 pixels tall.

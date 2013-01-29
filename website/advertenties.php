@@ -181,10 +181,11 @@
     </div>
     
     <?php
+	echo "Try to set coockie";
 	setcookie("user", "test", time()+3600);
 	if (isset($_COOKIE["user"]))
 	{
-		echo "<h1>Hallo, veel plezier met je coockie :) </p>";
+		echo "<h1>Hallo, veel plezier met je coockie :) </h1>";
 	}
 	?>
 
