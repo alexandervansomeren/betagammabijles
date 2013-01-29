@@ -20,7 +20,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
   {
       while($x < 5)
         {
-            echo "hier kwam ik nog";
+            echo "hier kwam ik nog!! <br />";
             // Get vakken die docent geeft
             $GLOBALS['db'] -> Query = 
             'SELECT *
