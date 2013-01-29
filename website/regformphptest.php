@@ -87,7 +87,7 @@
                     print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
                 ?>
             </div>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return $queryResultsArray;">
                 <div class="page-field">
                     <em>Profiel</em>
                     <div class="paragraph">
@@ -327,11 +327,6 @@
                 // Making query
                 function makeQuery()
                 {
-                    // Once you have a valid DB object named $db...
-                    //$alldata = array($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
-                    //$sth = $db->prepare('INSERT INTO userdata  (username, password, user_type) VALUES (?, ?, ?)');
-                    //$db->executeMultiple($sth, $alldata);
-
 	                $GLOBALS['db'] -> Query = 
 	                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
 						VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
