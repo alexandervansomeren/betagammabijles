@@ -335,8 +335,8 @@
 
 	                $GLOBALS['db'] -> Query = 
 	                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
-						VALUES ("".$GLOBALS['username']."", "".$GLOBALS['password']."", "".$GLOBALS['user_type']."");
-						SELECT user_id FROM webdb13BG2.user_data WHERE username="".$GLOBALS['username']."";";
+						VALUES (".$GLOBALS['username'].", ".$GLOBALS['password'].", ".$GLOBALS['user_type'].");
+						SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
 					echo $GLOBALS['db'] -> Query;
 					echo ',<br>';	
 					$currentUserArray = $GLOBALS['db'] -> Querying();
