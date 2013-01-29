@@ -1,5 +1,5 @@
 <?php
-	echo "<br /><br />Testversie 2.5<br /><br />";
+	echo "<br /><br />Testversie 2.6<br /><br />";
 	
 	// Connect to the database
 	include 'shielded/connector.php';
@@ -11,6 +11,7 @@
 	if (isset($_GET['id']))
 	{
 		$GLOBALS['userID'] = 2;// mysql_real_escape_string($_GET['id']);
+                echo "De global waarde is: " + $GLOBALS['userID'] + "  <br />";
         }
         
 	
