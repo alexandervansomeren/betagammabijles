@@ -1,6 +1,4 @@
 <?php
-	echo '<br /><br />Testversie 3.0<br /><br />';
-	
 	// Connect to the database
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
@@ -12,8 +10,7 @@
 	{
 		$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
                 echo 'De global waarde is: '. $GLOBALS['userID'] .'  <br />';
-        }
-        
+        }       
 	
 	QueryOnId();
 	
@@ -34,10 +31,6 @@
 		}
 		else
 		{
-			// succes!
-			echo "Gegevens succesvol opgehaald!<br /><br />";
-						
-			// Start storing variabelen
 			$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
 						  $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
 						  $GLOBALS['queryResultsArray'][1]['last_name'];
@@ -63,7 +56,6 @@
                         
                         foreach ($GLOBALS['queryResultsArray'] as $vakRow)
                         {
-                            print_r($vakRow);
                             $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
                         }
                 }
@@ -202,7 +194,7 @@
                 <div class="label">E-mail:</div><div class="content"><?php echo($GLOBALS['docent_email']); ?></div>
                 <div class="category">Studiegegevens</div>
                 <?php echo($GLOBALS['docent_vakken']); ?>
-                <div class="category"><?php echo($GLOBALS['docent_over']); ?></div>
+                <div class="category">Over mij</div>
                 <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>          
             </div>
             
