@@ -30,16 +30,16 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
             WHERE cu.user_id = '. $vakRow['user_id'] .';';
             
-            $vakken = $GLOBALS['db'] -> Querying();
+            $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
             $GLOBALS['vakken'] = "";
             
-            print_r($vakken);
+            print_r($GLOBALS['queryResultsArray']);
             
             echo "<br /><br />";
             
-            if (sizeOf( $vakken ) >= 1)
+            if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             {			
-              foreach ($vakken as $vakRow)
+              foreach ($GLOBALS['queryResultsArray'] as $vakRow)
               {
                   $GLOBALS['vakken'] .= $vakRow['course_name'] .' ';
               }
