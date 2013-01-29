@@ -380,7 +380,7 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
-                    return .$GLOBALS['queryResultsArray'].;
+                    return $GLOBALS['queryResultsArray'];
                 }
 
                 // function that displays that there are no results for the query
