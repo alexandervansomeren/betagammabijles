@@ -11,6 +11,7 @@
 	if (isset($_GET['id']))
 	{
 		$userID = mysql_real_escape_string($_GET['id']);
+		global $userID;
 	}
 	
 	QueryOnId();
@@ -18,7 +19,6 @@
 	// Making first query to find user_id's from submitted inputform
 	function QueryOnId()
 	{
-		$userID = 2;
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
@@ -36,8 +36,7 @@
 		{
 			// succes!
 			echo "Gegevens succesvol opgehaald!<br /><br />";
-			
-			
+						
 			// Start storing variabelen
 			$docent_naam = $GLOBALS['queryResultsArray'][1]['first_name'] + " " + 
 						   $GLOBALS['queryResultsArray'][1]['middle_name'] + " " + 
