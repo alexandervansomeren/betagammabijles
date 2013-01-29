@@ -131,14 +131,14 @@
 	}
 	
 	.content .details .imgbtn { width: 305px; float: left; }
-	.content .details .imgbtn .image { position: relative; width: inherit; border: 2px solid #FF7F00; overflow:hidden; }
+	.content .details .imgbtn .image { position: relative; width: 100%; border: 2px solid #FF7F00; overflow:hidden; }
 	.content .details .imgbtn .image:hover .info { visibility: hidden }
 	.content .details .imgbtn .image .info { position: absolute; bottom: 0px; width: 305px; padding: 5px; height: 25px; background-color: #FF7F00; opacity: 0.85; }
 	.content .details .imgbtn .image
 	{
-		width: inherit; height: 400px;            
+		width: 100%; height: 400px;            
 	}
-	.content .details .imgbtn .button { width: inherit; text-indent: 25px; height: 25px; line-height: 25px; margin-top: 10px; display: block; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
+	.content .details .imgbtn .button { width: 100%; text-indent: 25px; height: 30px; cursor:pointer; line-height: 30px; margin-top: 25px; display: block; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
         .content .details .imgbtn .button:hover { opacity: 1; }
 	
 	.content .details .information
