@@ -8,7 +8,7 @@
 <?php
 
 echo "hallo";
-echo sha1(hallo);
+echo sha1("hallo");
 
 ?>
 </body>
