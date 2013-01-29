@@ -61,12 +61,10 @@
                 
                         $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
                         
-                        print_r($GLOBALS['queryResultsArray']);
-                        
                         foreach ($GLOBALS['queryResultsArray'] as $vakRow)
                         {
                             print_r($vakRow);
-                            $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">VWO 3</div>';
+                            $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
                         }
                 }
 	}
@@ -204,7 +202,7 @@
                 <div class="label">E-mail:</div><div class="content"><?php echo($GLOBALS['docent_email']); ?></div>
                 <div class="category">Studiegegevens</div>
                 <?php echo($GLOBALS['docent_vakken']); ?>
-                <div class="category">Over mij</div>
+                <div class="category"><?php echo($GLOBALS['docent_over']); ?></div>
                 <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>          
             </div>
             
