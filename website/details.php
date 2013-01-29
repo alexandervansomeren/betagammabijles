@@ -18,11 +18,12 @@
 	// Making first query to find user_id's from submitted inputform
 	function QueryOnId()
 	{
+		$userID = 2;
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = 2";
+			WHERE up.user_id = " + $userID;
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
@@ -44,14 +45,12 @@
 			
 			$docent_locatie = $GLOBALS['queryResultsArray'][1]['city'] + ", " + 
 						      $GLOBALS['queryResultsArray'][1]['street'] + " " + 
-						      $GLOBALS['queryResultsArray'][1]['streetnumber'];		   
-			echo "Naam docent= " + $docent_naam + " " + $docent_locatie + "..<br /><br /><br />";
+						      $GLOBALS['queryResultsArray'][1]['streetnumber'];	
+							  	   
+			print("Naam docent= " + $docent_naam + " " + $docent_locatie + "..<br /><br /><br />");
 			
 			print_r($GLOBALS['queryResultsArray']);
-			echo "<br /><br /><br />";
-			print($GLOBALS['queryResultsArray'][1][0]);
-			echo "<br /><br /><br />";
-			print($GLOBALS['queryResultsArray'][1]['user_id']);
+
 				
 		}
 	}
