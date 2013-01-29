@@ -49,7 +49,7 @@
                         $GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
                         $GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
                         $GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
-                        
+                        $GLOBALS['docent_vakken'] = '';
                         	
                         $GLOBALS['db'] -> Query = 
                        'SELECT *
