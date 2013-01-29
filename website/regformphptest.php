@@ -55,6 +55,32 @@
             </div>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="page-field">
+                    <em><br />Profiel</em>
+                    <div class="paragraph">
+                        <div class="field">
+                           <div class="ques">Gebruikersnaam:</div>
+                           <div class="ans"><input type="text" name="username" /></div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Wachtwoord:</div>
+                            <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Selecteer geslacht:</div>
+                            <div class="ans"><input type="radio" name="gender" value="1" />Man</div>
+                            <div class="ans"><input type="radio" name="gender" value="0" />Vrouw</div>
+                        </div>
+                   </div>
+                   <em><br />Hamvraag</em>
+                   <div class="paragraph">
+                        <div class="field">
+                           Wil je bijles geven of een profiel aanmaken?
+                        </div>
+                        <div class="field">
+                            <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
+                            <div class="ques"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
+                        </div>
+                    </div>
                     <em>Over jou</em>
                     <div class="paragraph">
                         <div class="field">
@@ -97,32 +123,6 @@
                         <div class="field"> 
                             <div class="ques">Woonplaats:</div>
                             <div class="ans"><input type="text" name="city" /></div>
-                        </div>
-                    </div>
-                    <em><br />Profiel</em>
-                    <div class="paragraph">
-                        <div class="field">
-                           <div class="ques">Gebruikersnaam:</div>
-                           <div class="ans"><input type="text" name="username" /></div>
-                        </div>
-                        <div class="field">
-                            <div class="ques">Wachtwoord:</div>
-                            <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
-                        </div>
-                        <div class="field">
-                            <div class="ques">Selecteer geslacht:</div>
-                            <div class="ans"><input type="radio" name="gender" value="1" />Man</div>
-                            <div class="ans"><input type="radio" name="gender" value="0" />Vrouw</div>
-                        </div>
-                   </div>
-                   <em><br />Hamvraag</em>
-                   <div class="paragraph">
-                        <div class="field">
-                           Wil je bijles geven of een profiel aanmaken?
-                        </div>
-                        <div class="field">
-                            <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
-                            <div class="ques"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
                         </div>
                     </div>
                     <em><br />De bijles</em>
