@@ -7,6 +7,25 @@
 
 <?php
 
+	include 'shielded/connector.php';
+	$db = new ConnectorClass;
+	
+	for( $i=1; $i<27; $i++)
+	{
+		for( $j=1; $j<11; $j++)
+		{
+			$k=100*$i+$j;
+			$db -> Query = 
+			"
+				INSERT INTO webdb13BG2.course_code (course_code, course_id, course_difficulty)
+				VALUES (".$k.",".$i.".".$j.")
+			;";
+		}
+	}
+	echo '<pre>';
+	echo $db -> Query;
+	echo '</pre>';
+
 ?>
 
 <body>
