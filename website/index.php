@@ -23,11 +23,10 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             echo "hier kwam ik nog!! echt:". $x ." <br />";
             // Get vakken die docent geeft
             $GLOBALS['db'] -> Query = 
-            'SELECT *
+            'SELECT ci.course_name
             FROM webdb13BG2.course_user cu
             INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
             INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-            INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
             WHERE cu.user_id = '. $vakRow['user_id'] .';';
             
             $GLOBALS['queryResultsArray1'] = $GLOBALS['db'] -> Querying();
