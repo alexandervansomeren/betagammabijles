@@ -105,7 +105,7 @@
                             <div class="ans"><input type="radio" name="gender" value="0" />Vrouw</div>
                         </div>
                    </div>
-                   <em><br />Hamvraag</em>
+                   <em><br />Hamvraag</em>  
                    <div class="paragraph">
                         <div class="field">
                            Wil je bijles geven of een profiel aanmaken?
@@ -337,11 +337,11 @@
 						VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
 						SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
 					echo $GLOBALS['db'] -> Query;
-					echo ',<br>';	
+					echo '<br />';	
 					$currentUserArray = $GLOBALS['db'] -> Querying();
 					$currentUserId = $currentUserArray[1][0];
 	                
-					
+					/*
 					// Resetting db's variables
 					$GLOBALS['db'] -> Query = null;
 					$GLOBALS['db'] -> QueryResult = null;
@@ -362,12 +362,15 @@
 					// Disconnect from the database
                 	$GLOBALS['db'] -> Disconnect();
 					return $queryResultsArray;
+                     */
                 }
-
+/*
                 echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
-
+*
+ * 
+ */
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
                 {
 	                wrongEntry();
