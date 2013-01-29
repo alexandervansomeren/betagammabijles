@@ -11,7 +11,7 @@
 	if (isset($_GET['id']))
 	{
 		$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
-                echo "De global waarde is: " + $GLOBALS['userID'] + "  <br />";
+                echo("De global waarde is: " . $GLOBALS['userID'] . "  <br />");
         }
         
 	
