@@ -299,13 +299,12 @@
                     {
 	                    $username = mysql_real_escape_string($_POST['username']);
                     }
-                    else $username="";
-                        echo "er is een probleempje";
+                    //else $username="";
                     if (isset($_POST['password']))
                     {
 	                    $password = mysql_real_escape_string($_POST['password']);
                     }
-                    else $password="";
+                    //else $password="";
                     // User type MOET NOG WORDEN BEHANDELD
                     $user_type = 1;
     
@@ -322,8 +321,11 @@
                     else $female="0";
                     //Dit genderstuk klopt sowieso niet
                     
-        	makeQuery();
-
+        	if(isset($_POST['username']) && isset($_POST['password']))
+        	{
+        		makeQuery();
+			}
+			
             // Making query
             /*salt nog toevoegen aan INSERT INTO*/
             function makeQuery()
