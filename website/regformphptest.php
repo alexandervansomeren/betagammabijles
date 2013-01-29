@@ -34,9 +34,43 @@
             maar hiermee zouden we de breedte voor de velden kunnen veranderen */
         
         </style>
+        
+        <script type="text/javascript">
+            //<![CDATA[
+            //klasse "verplichtevelden", stelt de verplichte velden op een formulier voor.
+            //Er is 1 methode: check
+            //Deze geeft een waarschuwing als er een verplicht veld leeg is
+            function verplichtevelden(veldenArray) {
+                //constructor van de klasse
+                this.veldenArray = veldenArray; //alleen de verplichte velden
+                this.check = verplichtevelden_check; 
+            }
+            function verplichtevelden_check() {
+                //controleer de verplichte velden
+                var foutlijst="";
+                for (var i=0; i<this.veldenArray.length; i++) {
+                    if (document.getElementById(this.veldenArray[i]).value=="") {
+                        foutlijst += this.veldenArray[i]+", ";
+                    }
+                }
+                if (foutlijst=="") {
+                    return true;
+                }
+                else {
+                    window.alert('Verplichte veld(en) niet ingevuld: '+foutlijst+' probeer het nog een keer.');
+                    return false;
+                }
+            }
+            //het formulier initialiseren
+            function bijLaden() {
+                var verplicht=new Array('username');				 
+                mijnVV = new verplichtevelden(verplicht); //mijnVV moet globaal zijn, dus geen var ervoor.
+            }
+            //]]>
+        </script>
 	</head>
 
-	<body>
+	<body onload="bijLaden();">
 		<div class="header">
 		    <div class="center">
         		<div class="left"><a href="index.html" class="left">Openbijles</a></div>
