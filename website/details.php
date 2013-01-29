@@ -138,8 +138,8 @@
 	{
 		width: inherit; height: 400px;            
 	}
-	.content .details .image .button { width: inherit; margin-top: 10px; display: block; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
-        .content .details .image .button:hover { opacity: 1; }
+	.content .details .button { width: inherit; margin-top: 10px; display: block; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
+        .content .details .button:hover { opacity: 1; }
 	
 	.content .details .information
 	{
