@@ -40,6 +40,7 @@
             //klasse "verplichtevelden", stelt de verplichte velden op een formulier voor.
             //Er is 1 methode: check
             //Deze geeft een waarschuwing als er een verplicht veld leeg is
+     /*
             function verplichtevelden(veldenArray) {
                 //constructor van de klasse
                 this.veldenArray = veldenArray; //alleen de verplichte velden
@@ -66,6 +67,7 @@
                 var verplicht=new Array('username');				 
                 mijnVV = new verplichtevelden(verplicht); //mijnVV moet globaal zijn, dus geen var ervoor.
             }
+	 */
             //]]>
         </script>
 	</head>
@@ -87,7 +89,7 @@
                     print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
                 ?>
             </div>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return bijSubmitten();">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="page-field">
                     <em>Profiel</em>
                     <div class="paragraph">
@@ -204,12 +206,6 @@
                     <div class="paragraph">
                         <div class="field">
                             <input type="submit" value="Registreer" style="background-color:orange;" name="submit" />
-                            <?php
-                                if(!(empty($_POST["firstname"])))
-                                {
-                                    print "Hier komt submit code";
-                                }
-                            ?>
                         </div>
                         <div class="field">
                             <a href="http://validator.w3.org/check?uri=referer">
@@ -330,15 +326,10 @@
             /*salt nog toevoegen aan INSERT INTO*/
             function makeQuery()
             {
-            	echo 'username: ';
-            	echo $GLOBALS['username'];
-            	echo 'password: ';
-            	echo $GLOBALS['password'];
                 $GLOBALS['db'] -> Query = 
                 "INSERT INTO webdb13BG2.user_data(username, password, user_type) 
                 VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
                 ";
-                //SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';";
                 echo $GLOBALS['db'] -> Query;
                 echo '<br />';	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
@@ -347,13 +338,14 @@
                 echo '</pre>';
                 $currentUserId = $currentUserArray[1][0];
 
-                /*
                 // Resetting db's variables
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
 
                 $GLOBALS['db'] -> Query =     
                     "
+                    SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';";
+                    /*
                     INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
                     VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
                     ".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['u_i'].");
@@ -362,7 +354,6 @@
                     ";
                 //dit klopt nog niet helemaal
 */
-
 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
