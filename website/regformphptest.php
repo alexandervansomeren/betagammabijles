@@ -66,12 +66,6 @@
                 var verplicht=new Array('username');				 
                 mijnVV = new verplichtevelden(verplicht); //mijnVV moet globaal zijn, dus geen var ervoor.
             }
-            //het formulier submitten
-            function bijSubmitten(){
-                <? php
-        	        $queryResultsArray = makeQuery();
-                ?>
-            }
             //]]>
         </script>
 	</head>
@@ -93,7 +87,7 @@
                     print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
                 ?>
             </div>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return bijSubmitten();">
                 <div class="page-field">
                     <em>Profiel</em>
                     <div class="paragraph">
