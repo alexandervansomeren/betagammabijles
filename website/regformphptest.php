@@ -336,6 +336,7 @@
                 echo '<pre>';
                 print_r($currentUserArray);
                 echo '</pre>';
+                // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
                 $currentUserId = $currentUserArray[1][0];
 
                 // Resetting db's variables
@@ -344,23 +345,32 @@
 
                 $GLOBALS['db'] -> Query =     
                     "
-                    SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';";
-                    /*
-                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
-                    VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
-                    ".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['u_i'].");
-                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) 
-                    VALUES (".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
+                    SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';
                     ";
-                //dit klopt nog niet helemaal
-*/
+
 				echo $GLOBALS['db'] -> Query;
                 echo '<br />';	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
+            	$GLOBALS['user_id'] = $currentUserArray[1];
                 echo '<pre>';
                 print_r($currentUserArray);
+    			echo $GLOBALS['user_id'];
                 echo '</pre>';
-
+                
+                // Resetting db's variables
+                $GLOBALS['db'] -> Query = null;
+                $GLOBALS['db'] -> QueryResult = null;
+                
+                $GLOBALS['db'] -> Query =     
+                	"
+                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
+                    VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
+                    ".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['user_id'].");
+                    INSERT INTO adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
+                    VALUES (".$GLOBALS['user_id'].", ".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
+                    ";
+                //dit klopt nog niet helemaal
+                
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
                 
