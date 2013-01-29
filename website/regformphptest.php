@@ -329,12 +329,6 @@
                 "INSERT INTO webdb13BG2.user_data(username, password, user_type) 
                 VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
                 ";
-                echo $GLOBALS['db'] -> Query;
-                echo '<br />';	
-                $currentUserArray = $GLOBALS['db'] -> Querying();
-                echo '<pre>';
-                print_r($currentUserArray);
-                echo '</pre>';
                 // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
                 $currentUserId = $currentUserArray[1][0];
 
@@ -346,15 +340,9 @@
                     "
                     SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';
                     ";
-
-				echo $GLOBALS['db'] -> Query;
-                echo '<br />';	
+	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
             	$GLOBALS['user_id'] = $currentUserArray[1];
-                echo '<pre>';
-                print_r($currentUserArray);
-    			echo $GLOBALS['user_id'];
-                echo '</pre>';
                 
                 // Resetting db's variables
                 $GLOBALS['db'] -> Query = null;
@@ -368,7 +356,12 @@
                     INSERT INTO adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
                     VALUES (".$GLOBALS['user_id'].", ".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
                     ";
-                //dit klopt nog niet helemaal
+                echo $GLOBALS['db'] -> Query;
+                echo '<br />';	
+                $currentUserArray = $GLOBALS['db'] -> Querying();
+                echo '<pre>';
+                print_r($currentUserArray);
+                echo '</pre>';
                 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
