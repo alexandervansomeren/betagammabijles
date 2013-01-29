@@ -14,7 +14,7 @@
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		
-		<style>
+		
 		.content .buttons
 		{
 		    width: inherit; height: 350px;
@@ -22,10 +22,11 @@
 		    margin: 0px 0px 20px 0px;
 		.content .buttons
 		{
-		        width: inherit; height: 350px;
+	        width: inherit; height: 350px;
 			position: relative;
-         	        margin: 0px 0px 20px 0px;
+ 	        margin: 0px 0px 20px 0px;
 		}
+	
 		.content .buttons .left,
 		.content .buttons .right
 		{
