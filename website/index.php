@@ -27,7 +27,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
             INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
             INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
-            WHERE cu.user_id = '. vakRow['userID'] .';';
+            WHERE cu.user_id = '. $vakRow['user_id'] .';';
             
             $vakken = $GLOBALS['db'] -> Querying();
             $GLOBALS['vakken'] = "";
