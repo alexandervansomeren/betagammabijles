@@ -10,8 +10,7 @@
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['id']))
 	{
-		$GLOBALS['userID'] = mysql_real_escape_string($_GET['id']);
-                $GLOBALS['userID'] = 2;                
+		$GLOBALS['userID'] = 2;// mysql_real_escape_string($_GET['id']);
         }
         
 	
