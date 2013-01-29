@@ -17,7 +17,8 @@
 
 $username = 'alexsomer';
 $password = 'w8woord';
-$pwSaltarray = createPasswordSalt( $password );
+$shaPassword = sha1( $password );
+$pwSaltarray = createPasswordSalt( $shaPassword );
 $DBpassword = $passwordArray['password']; // this is the actual password value suited for the database
 $DBsalt = $passwordArray['salt']; // this is the actual salt value suited for the database
 
@@ -30,6 +31,13 @@ $db -> Query =
 		(username, password, salt)
 		VALUES ('".$username."','".$DBpassword."' ,'".$DBsalt."' );
 	";
+echo $db -> Query;
+echo '<br />';	
+$db -> Querying();	
+$db -> Disconnect();
+echo '<br />';
+echo login( $username, $shaPassword );
+
 
 
 function createPasswordSalt( $shaPassword )

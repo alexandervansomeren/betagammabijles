@@ -343,7 +343,8 @@
 	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
             	$GLOBALS['user_id'] = $currentUserArray[1];
-                
+            	echo $GLOBALS['user_id'];
+            	                
                 // Resetting db's variables
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
