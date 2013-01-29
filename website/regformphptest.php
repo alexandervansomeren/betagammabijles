@@ -69,7 +69,7 @@
             //het formulier submitten
             function bijSubmitten(){
                 <? php
-                $queryResultsArray = makeQuery();
+        	        $queryResultsArray = makeQuery();
                 ?>
             }
             //]]>
@@ -380,7 +380,7 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
-                    return $queryResultsArray;
+                    return ".$GLOBALS['queryResultsArray'].";
                 }
 
                 // function that displays that there are no results for the query
