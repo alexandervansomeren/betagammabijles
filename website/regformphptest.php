@@ -93,7 +93,7 @@
                     <div class="paragraph">
                         <div class="field">
                            <div class="ques">Gebruikersnaam:</div>
-                           <div class="ans"><input type="text" name="username" /></div>
+                           <div class="ans"><input type="text" name="username" id="username" /></div>
                         </div>
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
@@ -298,7 +298,6 @@
                     if (isset($_POST['username']))
                     {
 	                    $username = mysql_real_escape_string($_POST['username']);
-	                    //echo "ik ben hier gekomen";
                     }
                     else $username="";
                         echo "er is een probleempje";
