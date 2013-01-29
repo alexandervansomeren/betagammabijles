@@ -328,6 +328,10 @@
             /*salt nog toevoegen aan INSERT INTO*/
             function makeQuery()
             {
+            	echo 'username: ';
+            	echo $GLOBALS['username'];
+            	echo 'password: ';
+            	echo $GLOBALS['password'];
                 $GLOBALS['db'] -> Query = 
                 "INSERT INTO webdb13BG2.user_data(username, password, user_type) 
                 VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
@@ -335,6 +339,9 @@
                 echo $GLOBALS['db'] -> Query;
                 echo '<br />';	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
+                echo '<pre>';
+                echo $currentUserArray;
+                echo '</pre>';
                 $currentUserId = $currentUserArray[1][0];
 
                 /*
