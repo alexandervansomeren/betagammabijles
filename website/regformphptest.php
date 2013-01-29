@@ -340,7 +340,7 @@
                 echo '<br />';	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
                 echo '<pre>';
-                echo $currentUserArray;
+                print_r($currentUserArray);
                 echo '</pre>';
                 $currentUserId = $currentUserArray[1][0];
 
