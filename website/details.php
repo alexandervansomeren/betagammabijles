@@ -53,11 +53,18 @@
 			WHERE cu.user_id = '. $GLOBALS['userID'] .';';
                 
                         $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
-                        
-                        foreach ($GLOBALS['queryResultsArray'] as $vakRow)
-                        {
-                            $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
+                        if (sizeOf( $GLOBALS['queryResultsArray'] ) != 1)
+                        {			
+                            foreach ($GLOBALS['queryResultsArray'] as $vakRow)
+                            {
+                                $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
+                            }
                         }
+                        else
+                        {
+                            $GLOBALS['docent_vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content">/div>';
+                        }
+                        
                 }
 	}
 	
