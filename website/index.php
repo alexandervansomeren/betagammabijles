@@ -18,8 +18,9 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
   $x = 0;
   foreach ($GLOBALS['queryResultsArray'] as $vakRow)
   {
-      while($x > 5)
+      while($x < 5)
         {
+            echo "hier kwam ik nog";
             // Get vakken die docent geeft
             $GLOBALS['db'] -> Query = 
             'SELECT *
@@ -29,12 +30,16 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
             WHERE cu.user_id = '. $vakRow['user_id'] .';';
             
-            $vakken = $GLOBALS['db'] -> Querying();
+            $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
             $GLOBALS['vakken'] = "";
             
-            if (sizeOf( $vakken ) >= 1)
+            print_r($GLOBALS['queryResultsArray']);
+            
+            echo "<br /><br />";
+            
+            if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             {			
-              foreach ($vakken as $vakRow)
+              foreach ($GLOBALS['queryResultsArray'] as $vakRow)
               {
                   $GLOBALS['vakken'] .= $vakRow['course_name'] .' ';
               }
@@ -56,7 +61,9 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             // Create a div for each of 5         
             $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $vakRow['user_id'] .'" class="docent last"><span class="name">'. $vakRow['first_name'] .'</span><span class="vak">
                                        '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
-      }
+      
+            $x++;
+        }
   }
 }
 
