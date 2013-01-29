@@ -355,7 +355,7 @@
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
                 
-                }
+            }
             	echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
@@ -372,8 +372,6 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
-                    ec
-                    return $GLOBALS['queryResultsArray'];
                 }
 
                 // function that displays that there are no results for the query
