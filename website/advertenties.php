@@ -419,10 +419,9 @@
 	
 	// Function that creates a "visitcard" from given parameters
 	function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
-	{
-		
+	{		
 		echo '
-			<a href="#">
+			<a href="Details.php?id=$user_id">
 				<object class="card">
 					<div class="frame">
 						<div class="photoframe">';
