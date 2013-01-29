@@ -143,7 +143,7 @@
 	
 	.content .details .information
 	{
-		width: 555px; height: 500px; float: right;
+		width: 555px; float: right;
 	}
 	.content .details .geo
 	{
@@ -173,7 +173,7 @@
     		</div>
 		</div>		
 
-		<div class="content">        
+        <div class="content">        
 
           <div class="details">
               <div class="imgbtn"> 
@@ -183,6 +183,7 @@
                   </div>
                   
                   <a class="button">Klik hier om contact op te nemen</a>              
+                  <div class="clear"></div>
               </div>            
             
             
@@ -194,7 +195,8 @@
                 <div class="category">Studiegegevens</div>
                 <?php echo($GLOBALS['docent_vakken']); ?>
                 <div class="category">Over mij</div>
-                <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>          
+                <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>
+                <div class="clear"></div>
             </div>
             
            
