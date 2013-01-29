@@ -50,7 +50,7 @@
                         global $docent_naam;
                         global $docent_locatie;
                         
-			print('Naam docent= ' . $docent_naam .' '. $docent_locatie .'..<br /><br /><br />');
+			echo 'Naam docent= '. $docent_naam .' '. $docent_locatie .'..<br /><br /><br />';
 			
 			print_r($GLOBALS['queryResultsArray']);
 
