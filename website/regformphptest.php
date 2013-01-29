@@ -330,8 +330,8 @@
                 VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
                 ";
                 // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
-                $currentUserId = $currentUserArray[1][0];
-
+				$GLOBALS['db'] -> Querying();
+				
                 // Resetting db's variables
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
@@ -342,7 +342,7 @@
                     ";
 	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
-            	$GLOBALS['user_id'] = $currentUserArray[1];
+            	$GLOBALS['user_id'] = $currentUserArray[1][0];
             	echo $GLOBALS['user_id'];
             	                
                 // Resetting db's variables
