@@ -421,7 +421,7 @@
 	function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
 	{		
 		echo '
-			<a href="Details.php?id=$user_id">
+			<a href="Details.php?id='.$user_id.'">
 				<object class="card">
 					<div class="frame">
 						<div class="photoframe">';
