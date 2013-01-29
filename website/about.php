@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?php 
+$page = '<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -96,8 +97,8 @@
 				    <div class="input"><input /></div>
 				    </div>
                     
-                    <div class="half">
-				    <div class="label">Uw bericht aan ons</div>
+                        <div class="half">
+  				    <div class="label">Uw bericht aan ons</div>
 				    <div class="input"><textarea style="resize:vertical;" type="text" rows="9" cols="25" placeholder="Typ hier uw bericht"></textarea></div>
 			        </div>
 			    </div>
@@ -115,15 +116,23 @@
 		</div>
 		
 		<div class="footer">
-            <a href="about.html">Wie zijn wij?</a>
-            <a href="index.html">Welkom</a>
-            <a href="about.html">Meld je aan</a>
-		    <a href="registratieformulier.html">Registratieformulier</a>
+            <a href="about.php"ll>Wie zijn wij?</a>
+            <a href="index.php">Welkom</a>
+            <a href="about.php">Meld je aan</a>
+	    <a href="registratieformulier.php">Registratieformulier</a>
         </div>        
         
         <div class="bottom"></div>
         
   	</body>
-</html>
+</html>';
+$length = strval( strlen( $page ) );
+$md5sum = md5( $page );
+header( 'Content-Language: nl' );
+header( 'Content-MD5:' . $md5sum );
+header( 'Content-Length:' . $length );
+echo( $page );
+?>
+
 
 

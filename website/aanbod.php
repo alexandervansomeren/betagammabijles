@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$page = "<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -203,4 +204,14 @@
 <div class="bottom">
 </div>
 </body>
-</html>
+</html>";
+
+$length = strval( strlen( $page ) );
+$md5sum = md5( $page );
+header( 'Content-Language: nl' );
+header( 'Content-MD5:' . $md5sum );
+header( 'Content-Length:' . $length );
+echo( $page );
+?>
+
+

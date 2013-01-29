@@ -1,5 +1,14 @@
 TO DO
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!			   !!!
+!!!      ?FOTO'S UPLOADEN  !!!
+!!!      INLOGGEN          !!!
+!!! 	 Registratiefrom.  !!!
+!!!      course_code vullen!!!
+!!!			   !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 REGISTRATIEFORM
 - margin-bottom paragraph zodat <br> wegkan
 - Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc
@@ -7,8 +16,6 @@ REGISTRATIEFORM
 
 HOME
 - tekst in orange field netter
-
-ADVERTENTIES
 
 ALGEMENE NICE TO HAVES
  - Achtergrond afbeelding op IP
@@ -34,3 +41,9 @@ NIVEAUS:
 -HAVO Bovenbouw
 -VWO Onderbouw
 -VWO Bovenbouw
+
+BEHEERDER:
+-rijen/kolommen weg kunnen gooien. 
+-VEREIST?!
+
+SESSIES!

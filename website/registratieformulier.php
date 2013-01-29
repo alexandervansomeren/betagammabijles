@@ -49,7 +49,7 @@
 		<div class="content">
             <div class="page-intro">
                 <?php 
-                    print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
+                    print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in! Dit is een tijdelijke pagina, de queries werken nog niet helemaal.";
                 ?>
             </div>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -263,17 +263,13 @@
                     if (isset($_POST['username']))
                     {
 	                    $username = mysql_real_escape_string($_POST['username']);
-	                    echo "ik ben hier gekomen";
                     }
                     else $username="";
-                        echo "er is een probleempje";
                     if (isset($_POST['password']))
                     {
 	                    $password = mysql_real_escape_string($_POST['password']);
                     }
                     else $password="";
-                    // User type MOET NOG WORDEN BEHANDELD
-                    $user_type = 1;
     
                     //Gender
                     if (isset($_POST['gender']))
@@ -293,48 +289,25 @@
                 // Making query
                 function makeQuery()
                 {
-                    // Once you have a valid DB object named $db...
-                    //$alldata = array($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
-                    //$sth = $db->prepare('INSERT INTO userdata  (username, password, user_type) VALUES (?, ?, ?)');
-                    //$db->executeMultiple($sth, $alldata);
-
 	                $GLOBALS['db'] -> Query = 
-	                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
-						VALUES (".$GLOBALS['username'].", ".$GLOBALS['password'].", ".$GLOBALS['user_type'].");
-						SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
-					echo $GLOBALS['db'] -> Query;
-					echo ',<br>';	
-					$currentUserArray = $GLOBALS['db'] -> Querying();
-					$currentUserId = $currentUserArray[1][0];
-	                
-					
-					// Resetting db's variables
-					$GLOBALS['db'] -> Query = null;
-					$GLOBALS['db'] -> QueryResult = null;
-					
-					$GLOBALS['db'] -> Query =     
-						"
-	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
-						VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
-						".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['u_i'].");
-	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) 
-						VALUES (".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
-	                	";
+	                "
+	                    INSERT INTO user_data (username, password, user_type) VALUES (<username>, <password>, <user_type>);
+	                    SELECT user_id FROM user_data WHERE username=<username>;
+	                    DECLARE u_i = user_data.user_id;
+	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) VALUES (<firstname>, <middlename>, <lastname>, <date_of_birth>, <gender>, <emailadress>, <phone_1>, <phone_2>, <about_me>, <u_i>);
+	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) VALUES (<city>, <street>, <streetnumber>, <postal>, <postal_extra>);
+	                ";
 	                //dit klopt nog niet helemaal
 
                     $queryResultsArray = $GLOBALS['db'] -> Querying();
-                    
-					
-					// Disconnect from the database
-                	$GLOBALS['db'] -> Disconnect();
-					return $queryResultsArray;
+                    return $queryResultsArray;
                 }
 
                 echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
 
-                if (false) /*Hier komt iets over wanneer een formulier fout is*/
+                if (true) /*Hier komt iets over wanneer een formulier fout is*/
                 {
 	                wrongEntry();
                 }
@@ -342,11 +315,15 @@
                 {
                     echo
                     '
-                    <div class="page-field">
+                    <div class="page-fiel">
                         Bedankt voor het invullen!
                     </div>
                     ';
                 }
+
+                // Disconnect from the database
+                $db -> Disconnect();
+                echo "Disconnected";
 
                 // function that displays that there are no results for the query
                 function wrongEntry() 
@@ -363,9 +340,8 @@
 	    
 	    <div class="footer">
 	        <div class="centerwrapper">
-                <a href="index.php">Terug</a>
-                <a href="about.php">Wie zijn wij?</a>
-                <a href="advertenties.php">Bekijk andere bijlesgevers!</a>
+                <a href="index.html">Welkom</a>
+                <a href="about.html">Wie zijn wij?</a>
             </div>
 		</div>	
         <div class="bottom"></div>	     
