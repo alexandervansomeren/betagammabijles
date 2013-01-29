@@ -356,13 +356,10 @@
                 $GLOBALS['db'] -> Disconnect();
                 
                 }
-/*
             	echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
-*
- * 
- */
+                
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
                 {
 	                wrongEntry();
@@ -375,6 +372,7 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
+                    ec
                     return $GLOBALS['queryResultsArray'];
                 }
 
