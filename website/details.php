@@ -8,6 +8,7 @@
 	if (isset($_GET['id']))
 	{
 		$GLOBALS['userID'] = mysql_real_escape_string($_GET['id']);
+                $GLOBALS['userID'] = 2;
 	}
 	
 	QueryOnId();
@@ -19,7 +20,7 @@
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = " + $GLOBALS['userID'];
+			WHERE up.user_id = " . $GLOBALS['userID'];
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
