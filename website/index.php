@@ -14,7 +14,7 @@
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		
-		
+		<style type="text/css">
 		.content .buttons
 		{
 		    width: inherit; height: 350px;
@@ -35,10 +35,10 @@
 		    float: left;		    
 		    width: 436px;
 		    height: 346px;
-            float: left;		    
-	        width: 436px;
-	        height: 346px;
-			box-shadow: 0px 0px 5px 0px #FF7F00;
+        	    float: left;		    
+	            width: 436px;
+	            height: 346px;
+                    box-shadow: 0px 0px 5px 0px #FF7F00;
 		}
 		
 		.content .buttons a .title
