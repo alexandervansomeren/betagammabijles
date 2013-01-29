@@ -111,12 +111,8 @@
         var mapOptions = {
           zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP
-        }       
-        
-        
-       
+        }
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        
       }
 
       
@@ -142,8 +138,8 @@
 	{
 		width: inherit; height: 400px;            
 	}
-	.content .details .image .buttons { width: inherit;    }
-	.content .details .image .buttons a { background-color: red; }
+	.content .details .image .button { width: inherit; margin-top: 10px; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
+        .content .details .image .button:hover { opacity: 1; }
 	
 	.content .details .information
 	{
@@ -186,10 +182,7 @@
                       <img src="img/student_1.jpg" width="100%" height="400px" ></img>                     
                   </div>
                   
-                  <div class="buttons">
-                      <a href="#">Contact</a>
-                      <a href="#">Vragen</a>                      
-                  </div>              
+                  <a class="button">Klik hier om contact op te nemen</a>              
               </div>            
             
             
