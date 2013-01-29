@@ -16,7 +16,7 @@ a { text-decoration: none; color: black; }
 a img { border: none; }
 a:hover { text-decoration: underline; }
 
-.clear { clear: both; }
+.clear { clear: both; float: none; }
 
 /* Opmaak voor HEADER begint hier */
     .header
