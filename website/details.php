@@ -77,7 +77,7 @@
       var geocoder;
       var map;
       function initialize() {      
-        var address = "<? echo($docent_locatie); ?>"
+        var address = "<?php echo($docent_locatie); ?>"
         
         var image = new google.maps.MarkerImage("img/student_1.jpg",
         // This marker is 20 pixels wide by 32 pixels tall.
