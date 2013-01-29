@@ -18,8 +18,9 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
   $x = 0;
   foreach ($GLOBALS['queryResultsArray'] as $vakRow)
   {
-      while($x > 5)
+      while($x < 5)
         {
+            echo "hier kwam ik nog";
             // Get vakken die docent geeft
             $GLOBALS['db'] -> Query = 
             'SELECT *
@@ -56,7 +57,9 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             // Create a div for each of 5         
             $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $vakRow['user_id'] .'" class="docent last"><span class="name">'. $vakRow['first_name'] .'</span><span class="vak">
                                        '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
-      }
+      
+            $x++;
+        }
   }
 }
 
