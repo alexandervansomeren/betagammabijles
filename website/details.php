@@ -52,7 +52,7 @@
 			WHERE cu.user_id = '. $GLOBALS['userID'] .';';
                 
                         $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
-                        if (sizeOf( $GLOBALS['queryResultsArray'] ) != 1)
+                        if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
                         {			
                             foreach ($GLOBALS['queryResultsArray'] as $vakRow)
                             {
