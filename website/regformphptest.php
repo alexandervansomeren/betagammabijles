@@ -66,6 +66,12 @@
                 var verplicht=new Array('username');				 
                 mijnVV = new verplichtevelden(verplicht); //mijnVV moet globaal zijn, dus geen var ervoor.
             }
+            //het formulier submitten
+            function bijSubmitten(){
+                <? php
+                $queryResultsArray = makeQuery();
+                ?>
+            }
             //]]>
         </script>
 	</head>
@@ -322,50 +328,41 @@
                     else $female="0";
                     //Dit genderstuk klopt sowieso niet
 
-                    $queryResultsArray = makeQuery();
+            // Making query
+            function makeQuery()
+            {
+                $GLOBALS['db'] -> Query = 
+                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
+                VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
+                SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
+                echo $GLOBALS['db'] -> Query;
+                echo '<br />';	
+                $currentUserArray = $GLOBALS['db'] -> Querying();
+                $currentUserId = $currentUserArray[1][0];
 
-                // Making query
-                function makeQuery()
-                {
-                    // Once you have a valid DB object named $db...
-                    //$alldata = array($GLOBALS['username'], $GLOBALS['password'], $GLOBALS['user_type']);
-                    //$sth = $db->prepare('INSERT INTO userdata  (username, password, user_type) VALUES (?, ?, ?)');
-                    //$db->executeMultiple($sth, $alldata);
+                /*
+                // Resetting db's variables
+                $GLOBALS['db'] -> Query = null;
+                $GLOBALS['db'] -> QueryResult = null;
 
-	                $GLOBALS['db'] -> Query = 
-	                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
-						VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
-						SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
-					echo $GLOBALS['db'] -> Query;
-					echo '<br />';	
-					$currentUserArray = $GLOBALS['db'] -> Querying();
-					$currentUserId = $currentUserArray[1][0];
-	                
-					/*
-					// Resetting db's variables
-					$GLOBALS['db'] -> Query = null;
-					$GLOBALS['db'] -> QueryResult = null;
-					
-					$GLOBALS['db'] -> Query =     
-						"
-	                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
-						VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
-						".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['u_i'].");
-	                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) 
-						VALUES (".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
-	                	";
-	                //dit klopt nog niet helemaal
+                $GLOBALS['db'] -> Query =     
+                    "
+                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
+                    VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
+                    ".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['u_i'].");
+                    INSERT INTO adress_data (city, street, streetnumber, postal, postal_extra) 
+                    VALUES (".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
+                    ";
+                //dit klopt nog niet helemaal
 
-                    $queryResultsArray = $GLOBALS['db'] -> Querying();
-                    
-					
-					// Disconnect from the database
-                	$GLOBALS['db'] -> Disconnect();
-					return $queryResultsArray;
-                     */
+                $queryResultsArray = $GLOBALS['db'] -> Querying();
+*/
+
+                //Disconnect from the database
+                $GLOBALS['db'] -> Disconnect();
                 }
 /*
-                echo('<pre>');
+                  echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
 *
@@ -383,6 +380,7 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
+                    return $queryResultsArray;
                 }
 
                 // function that displays that there are no results for the query
