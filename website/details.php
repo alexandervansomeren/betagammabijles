@@ -25,8 +25,7 @@
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
 			WHERE up.user_id = '. $GLOBALS['userID'] .';';
-		
-		// Getting results from query
+                
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 		
 		if (sizeOf( $GLOBALS['queryResultsArray'] ) != 1)
@@ -48,13 +47,22 @@
                                                      $GLOBALS['queryResultsArray'][1]['streetnumber'];	
                         
                         $GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
+                        $GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
+                        $GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
+                        $GLOBALS['docent_vakken'] = '<div class="label">Scheikunde</div><div class="content">VWO 3</div>';
+                        	
+                        $GLOBALS['db'] -> Query = 
+                       'SELECT *
+			FROM webdb13BG2.course_user cu
+			INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
+			INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
+			INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
+			WHERE up.user_id = '. $GLOBALS['userID'] .';';
+                
+                        $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
                         
-                        echo 'Naam docent= '. $GLOBALS['docent_naam'] .' '. $GLOBALS['docent_locatie'] .'..<br /><br /><br />';
-			
-			print_r($GLOBALS['queryResultsArray']);
-
-				
-		}
+                        print_r($GLOBALS['queryResultsArray']);
+                }
 	}
 	
 	function detailsNotFound()
@@ -187,14 +195,11 @@
                 <div class="category">Contactgegevens</div>
                 <div class="label">Naam:</div><div class="content"><?php echo($GLOBALS['docent_naam']); ?></div>
                 <div class="label">Woonplaats:</div><div class="content"><?php echo($GLOBALS['docent_locatie']); ?></div>
-                <div class="label">E-mail:</div><div class="content">henk123@hotmail.com</div>
+                <div class="label">E-mail:</div><div class="content"><?php echo($GLOBALS['docent_email']); ?></div>
                 <div class="category">Studiegegevens</div>
-                <div class="label">Natuurkunde</div><div class="content">VWO 4</div>
-                <div class="label">Scheikunde</div><div class="content">VWO 3</div>
-                <div class="label">Biologie</div><div class="content">VWO 5</div>
-                <div class="label">Maatschappijwetenschappen</div><div class="content">HAVO 2</div>
+                <?php echo($GLOBALS['docent_vakken']); ?>
                 <div class="category">Over mij</div>
-                <div class="txt">Ik ben een lorum ipsum die enorm houdt van lorum ipsum. In mijn vrije tijd doe ik ongeveer de helft van de tijd lorum en de andere helft van de tijd ipsum.</div>          
+                <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>          
             </div>
             
            
@@ -256,4 +261,4 @@
 
 		<div class="bottom"></div>	
   </body>
-</html>§
+</html>
