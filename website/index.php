@@ -18,7 +18,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
   $x = 0;
   foreach ($GLOBALS['queryResultsArray'] as $vakRow)
   {
-      while($x < 5)
+      if($x < 5)
         {
             echo "hier kwam ik nog!! <br />";
             // Get vakken die docent geeft
