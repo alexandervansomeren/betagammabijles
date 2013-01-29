@@ -47,6 +47,8 @@
                                                      $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
                                                      $GLOBALS['queryResultsArray'][1]['streetnumber'];	
                         
+                        $GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
+                        
                         echo 'Naam docent= '. $GLOBALS['docent_naam'] .' '. $GLOBALS['docent_locatie'] .'..<br /><br /><br />';
 			
 			print_r($GLOBALS['queryResultsArray']);
@@ -89,7 +91,7 @@
                 map: map,
                 //icon: image,
                 position: results[0].geometry.location,
-                title:"Tim Leunissen"
+                title:"<?php echo($GLOBALS['docent_naam']); ?>"
             });
           } else {
             alert("Geocode was not successful for the following reason: " + status);
@@ -183,8 +185,8 @@
             
             <div class="information">
                 <div class="category">Contactgegevens</div>
-                <div class="label">Naam:</div><div class="content">Emma Boumans</div>
-                <div class="label">Woonplaats:</div><div class="content">Amsterdam, Diemen</div>
+                <div class="label">Naam:</div><div class="content"><?php echo($GLOBALS['docent_naam']); ?></div>
+                <div class="label">Woonplaats:</div><div class="content"><?php echo($GLOBALS['docent_locatie']); ?></div>
                 <div class="label">E-mail:</div><div class="content">henk123@hotmail.com</div>
                 <div class="category">Studiegegevens</div>
                 <div class="label">Natuurkunde</div><div class="content">VWO 4</div>
@@ -199,7 +201,7 @@
             
             <div class="geo">
                  <div id="map_canvas" style="width:100%; height:174px"></div>
-                 <div class="info">Twee koningskinderenstraat 17 HS </div>            
+                 <div class="info"><?php echo($GLOBALS['docent_locatie']); ?></div>            
             </div>
               <div class="clear"></div>
           </div>          
