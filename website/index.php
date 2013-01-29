@@ -33,6 +33,10 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             $vakken = $GLOBALS['db'] -> Querying();
             $GLOBALS['vakken'] = "";
             
+            print_r($vakken);
+            
+            echo "<br /><br />";
+            
             if (sizeOf( $vakken ) >= 1)
             {			
               foreach ($vakken as $vakRow)
