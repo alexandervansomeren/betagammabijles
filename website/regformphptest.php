@@ -354,6 +354,12 @@
                     ";
                 //dit klopt nog niet helemaal
 */
+				echo $GLOBALS['db'] -> Query;
+                echo '<br />';	
+                $currentUserArray = $GLOBALS['db'] -> Querying();
+                echo '<pre>';
+                print_r($currentUserArray);
+                echo '</pre>';
 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
