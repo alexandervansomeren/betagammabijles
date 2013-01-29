@@ -67,8 +67,6 @@
                         {
                             echo "A array value!";
                         }
-                        }
-                        
                 }
 	}
 	
