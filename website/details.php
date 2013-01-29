@@ -47,9 +47,10 @@
                                           $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
                                           $GLOBALS['queryResultsArray'][1]['streetnumber'];	
                         
-                        global $docent_naam, $docent_locatie;
+                        global $docent_naam;
+                        global $docent_locatie;
                         
-			print('Naam docent= ' . $docent_naam .' '. $docent_locatie . '..<br /><br /><br />');
+			print('Naam docent= ' . $docent_naam .' '. $docent_locatie .'..<br /><br /><br />');
 			
 			print_r($GLOBALS['queryResultsArray']);
 
