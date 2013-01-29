@@ -21,6 +21,7 @@
 				VALUES (".$k.",".$i.".".$j.")
 			;";
 			echo $db->Query;
+			$db=null->Query
 		}
 	}
 	
