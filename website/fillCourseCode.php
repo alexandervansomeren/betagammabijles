@@ -25,6 +25,8 @@
 	echo '<pre>';
 	echo $db -> Query;
 	echo '</pre>';
+	
+	$db->Disconnect();
 
 ?>
 
