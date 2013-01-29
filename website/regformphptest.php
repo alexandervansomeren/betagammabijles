@@ -66,6 +66,12 @@
                 var verplicht=new Array('username');				 
                 mijnVV = new verplichtevelden(verplicht); //mijnVV moet globaal zijn, dus geen var ervoor.
             }
+            //het formulier submitten
+            function bijSubmitten(){
+                <? php
+                $queryResultsArray = makeQuery();
+                ?>
+            }
             //]]>
         </script>
 	</head>
@@ -354,7 +360,6 @@
 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
-                return $queryResultsArray;
                 }
 /*
                   echo('<pre>');
@@ -375,6 +380,7 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
+                    return $queryResultsArray;
                 }
 
                 // function that displays that there are no results for the query
