@@ -1,5 +1,5 @@
 <?php
-	echo "<br /><br />Testversie 2.2<br /><br />";
+	echo "<br /><br />Testversie 2.5<br /><br />";
 	
 	// Connect to the database
 	include 'shielded/connector.php';
