@@ -7,27 +7,46 @@
 <body>
 <?php
 
-
-
-// use this for password generation:
+// // use this for password generation:
 // include 'shielded/login.php';
 // $passwordsha=sha1($password);  // $password is the password that the user chose
-// passwordArray=createPasswordSalt($passwordsha);
-// $DBpassword=passwordArray[0]; // this is the actual password value suited for the database
-// $DBsalt=passwordArray[1]; // this is the actual salt value suited for the database
+// $passwordArray = createPasswordSalt($passwordsha);
+// $DBpassword = $passwordArray['password']; // this is the actual password value suited for the database
+// $DBsalt = $passwordArray['salt']; // this is the actual salt value suited for the database
 
 
-$pwForDatabase = sha1($salted.$SHApw.$salt);
+$username = 'alexsomer';
+$password = 'w8woord';
+$pwSaltarray = createPasswordSalt( $password );
+$DBpassword = $passwordArray['password']; // this is the actual password value suited for the database
+$DBsalt = $passwordArray['salt']; // this is the actual salt value suited for the database
 
-function createPasswordSalt($shaPassword)
+include 'connector.php';
+$db = new ConnectorClass;
+
+$db -> Query = 
+	"
+		INSERT INTO webdb13BG2.user_data
+		(username, password, salt)
+		VALUES ('".$username."','".$DBpassword."' ,'".$DBsalt."' );
+	";
+
+
+function createPasswordSalt( $shaPassword )
 {
-	$salt= md5(uniqid(rand(), true));
-	$salted = sha1($salt);
+	$salt = md5( uniqid(rand(), true) );
+	$salted = sha1( $salt );
+	$pwForDatabase = sha1( $salted.$shaPassword.$salt );
+	$PwSaltArray = array(
+		'passsword'  => $pwForDatabase,
+		'salt' => $salt 
+		);
+	return( $PwSaltArray );
 }
 
-function login($username, $shaPassword)
+function login( $username, $shaPassword )
 {
-	include 'shielded/connector.php';
+	include 'connector.php';
 	$db = new ConnectorClass;
 	$db -> Query = 
 		"
@@ -36,8 +55,18 @@ function login($username, $shaPassword)
 			FROM webdb13BG2.user_data
 			WHERE webdb13BG2.user_data.=".$username.";
 		";
+	$queryResultArray = $db -> Querying();
+	$db -> Disconnect();
+	$pw = $queryResultArray['password'];
+	$salt = $queryResultArray['salt'];
+	$salted = sha1( $salt );
+	$tryPW = sha1( $salted.$shaPassword.$salt );
+	if ( $pw== $tryPW )
+	{
+		return ( true );
+	}
+	else return ( false );
 }
-
 ?>
 </body>
 </html>
