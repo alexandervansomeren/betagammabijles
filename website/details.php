@@ -1,5 +1,5 @@
 <?php
-	echo "<br /><br />Testversie 2.6<br /><br />";
+	echo '<br /><br />Testversie 2.6<br /><br />';
 	
 	// Connect to the database
 	include 'shielded/connector.php';
@@ -43,11 +43,11 @@
 						   $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
 						   $GLOBALS['queryResultsArray'][1]['last_name'];
 			
-			$docent_locatie = $GLOBALS['queryResultsArray'][1]['city'] + ", " + 
-						      $GLOBALS['queryResultsArray'][1]['street'] + " " + 
-						      $GLOBALS['queryResultsArray'][1]['streetnumber'];	
+			//$docent_locatie = $GLOBALS['queryResultsArray'][1]['city'] + ", " + 
+			//			      $GLOBALS['queryResultsArray'][1]['street'] + " " + 
+			//			      $GLOBALS['queryResultsArray'][1]['streetnumber'];	
 							  	   
-			print("Naam docent= " + $docent_naam + " " + $docent_locatie + "..<br /><br /><br />");
+			print('Naam docent= ' . $docent_naam .' '. $docent_locatie . '..<br /><br /><br />');
 			
 			print_r($GLOBALS['queryResultsArray']);
 
