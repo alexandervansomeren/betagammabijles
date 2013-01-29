@@ -321,6 +321,8 @@
                     }
                     else $female="0";
                     //Dit genderstuk klopt sowieso niet
+                    
+        	makeQuery();
 
             // Making query
             function makeQuery()
