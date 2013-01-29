@@ -326,7 +326,7 @@
             function makeQuery()
             {
                 $GLOBALS['db'] -> Query = 
-                "   INSERT INTO webdb13BG2.user_data(username, password, user_type) 
+                "INSERT INTO webdb13BG2.user_data(username, password, user_type, salt) 
                 VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
                 SELECT user_id FROM webdb13BG2.user_data WHERE username=".$GLOBALS['username'].";";
                 echo $GLOBALS['db'] -> Query;
@@ -356,13 +356,10 @@
                 $GLOBALS['db'] -> Disconnect();
                 
                 }
-/*
             	echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
-*
- * 
- */
+                
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
                 {
 	                wrongEntry();
@@ -375,6 +372,7 @@
                         Bedankt voor het invullen!
                     </div>
                     ';
+                    ec
                     return $GLOBALS['queryResultsArray'];
                 }
 
