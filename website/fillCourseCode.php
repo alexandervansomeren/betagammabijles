@@ -10,9 +10,9 @@
 	include 'shielded/connector.php';
 	$db = new ConnectorClass;
 	
-	for( $i=1; $i<27; $i++)
+	for( $i=1; $i<=27; $i++)
 	{
-		for( $j=1; $j<11; $j++)
+		for( $j=1; $j<=11; $j++)
 		{
 			$k=100*$i+$j;
 			$db -> Query = 
