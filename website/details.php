@@ -20,8 +20,9 @@
 	{
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
-			FROM webdb13BG2.user_personal_data AS upd
-			WHERE upd.user_id = 2";
+			FROM webdb13BG2.user_personal_data up
+			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
+			WHERE up.user_id = 2";
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
@@ -34,6 +35,14 @@
 		{
 			// succes!
 			echo "Gegevens succesvol opgehaald!";
+			
+			
+			// Start storing variabelen
+			$docent_naam = $GLOBALS['queryResultsArray'][1]['first_name'] + " " + 
+						   $GLOBALS['queryResultsArray'][1]['middle_name'] + " " + 
+						   $GLOBALS['queryResultsArray'][1]['last_name'];
+						   
+			echo $docent_naam + "<br /><br /><br />";
 			
 			print_r($GLOBALS['queryResultsArray']);
 			echo "<br /><br /><br />";
