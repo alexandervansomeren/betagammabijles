@@ -226,41 +226,41 @@
                     // "naam en leeftijd"
                     if (isset($_POST['firstname']))
                     {
-	                    $fname = mysql_real_escape_string($_POST['firstname']);
+	                    $firstname = mysql_real_escape_string($_POST['firstname']);
                     }
-                    else $fname="";
+                    else $firstname="";
                     if (isset($_POST['middlename']))
                     {
-	                    $mname = mysql_real_escape_string($_POST['middlename']);
+	                    $middlename = mysql_real_escape_string($_POST['middlename']);
                     }
-                    else $mname="";
+                    else $middlename="";
                     if (isset($_POST['lastname']))
                     {
-	                    $lname = mysql_real_escape_string($_POST['lastname']);
+	                    $lastname = mysql_real_escape_string($_POST['lastname']);
                     }
-                    else $lname="";
+                    else $lastname="";
                     if (isset($_POST['date_of_birth']))
                     {
-	                    $dob = mysql_real_escape_string($_POST['date_of_birth']);
+	                    $date_of_birth = mysql_real_escape_string($_POST['date_of_birth']);
                     }
-                    else $dob=""; 
+                    else $date_of_birth=""; 
                     
                     //"contactgegevens"
                     if (isset($_POST['emailadress']))
                     {
-	                    $email = mysql_real_escape_string($_POST['emailadress']);
+	                    $emailadress = mysql_real_escape_string($_POST['emailadress']);
                     }
-                    else $email="";
+                    else $emailadress="";
                     if (isset($_POST['phone_1']))
                     {
-	                    $p1 = mysql_real_escape_string($_POST['phone_1']);
+	                    $phone_1 = mysql_real_escape_string($_POST['phone_1']);
                     }
-                    else $p1="";
+                    else $phone_1="";
                     if (isset($_POST['phone_2']))
                     {
-	                    $p2 = mysql_real_escape_string($_POST['phone_2']);
+	                    $phone_2 = mysql_real_escape_string($_POST['phone_2']);
                     }
-                    else $p2="";
+                    else $phone_2="";
 
                     //"adres"
                     if (isset($_POST['street']))
@@ -280,9 +280,9 @@
                     else $postal="";
                     if (isset($_POST['postal_extra']))
                     {
-	                    $postal2 = mysql_real_escape_string($_POST['postal_extra']);
+	                    $postal_extra = mysql_real_escape_string($_POST['postal_extra']);
                     }
-                    else $postal2="";
+                    else $postal_extra="";
                     if (isset($_POST['city']))
                     {
 	                    $city = mysql_real_escape_string($_POST['city']);
@@ -301,20 +301,19 @@
 	                    $password = mysql_real_escape_string($_POST['password']);
                     }
                     //else $password="";
+                    
                     // User type MOET NOG WORDEN BEHANDELD
                     $user_type = 1;
-    
+                    
+                    // About me MOET NOG WORDEN BEHANDELD
+                    $about_me = "Default tekst";
+                       
                     //Gender
                     if (isset($_POST['gender']))
                     {
-                        $male="1";
+                        $gender="1";
                     }
-                    else $male="0";
-                    if (isset($_POST['gender']))
-                    {
-                        $female="1";
-                    }
-                    else $female="0";
+                    else $gender="0";
                     //Dit genderstuk klopt sowieso niet
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']))
