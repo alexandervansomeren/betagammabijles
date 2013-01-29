@@ -181,6 +181,7 @@
     </div>
     
     <?php
+	echo "Try to set coockie";
 	setcookie("user", "test", time()+3600);
 	if (isset($_COOKIE["user"]))
 	{
