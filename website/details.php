@@ -34,15 +34,18 @@
 		else
 		{
 			// succes!
-			echo "Gegevens succesvol opgehaald!";
+			echo "Gegevens succesvol opgehaald!<br /><br />";
 			
 			
 			// Start storing variabelen
 			$docent_naam = $GLOBALS['queryResultsArray'][1]['first_name'] + " " + 
 						   $GLOBALS['queryResultsArray'][1]['middle_name'] + " " + 
 						   $GLOBALS['queryResultsArray'][1]['last_name'];
-						   
-			echo $docent_naam + "<br /><br /><br />";
+			
+			$docent_locatie = $GLOBALS['queryResultsArray'][1]['city'] + ", " + 
+						      $GLOBALS['queryResultsArray'][1]['street'] + " " + 
+						      $GLOBALS['queryResultsArray'][1]['streetnumber'];		   
+			echo "Naam docent= " + $docent_naam + " " + $docent_locatie + "..<br /><br /><br />";
 			
 			print_r($GLOBALS['queryResultsArray']);
 			echo "<br /><br /><br />";
