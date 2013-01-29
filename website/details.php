@@ -35,6 +35,10 @@
 			// succes!
 			echo "Gegevens succesvol opgehaald!";
 			
+			print_r($GLOBALS['queryResultsArray']);
+			echo "<br /><br /><br />";
+			print($GLOBALS['queryResultsArray'][0]);
+			echo "<br /><br /><br />";
 			print($GLOBALS['queryResultsArray']['user_id']);
 				
 		}
