@@ -354,15 +354,16 @@
                     VALUES (".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
                     ";
                 //dit klopt nog niet helemaal
-
-                $queryResultsArray = $GLOBALS['db'] -> Querying();
 */
+                $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+
 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
+                
                 }
 /*
-                  echo('<pre>');
+            	echo('<pre>');
                 print_r( $queryResultsArray );
                 echo('</pre>');
 *
