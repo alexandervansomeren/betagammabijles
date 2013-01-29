@@ -179,6 +179,14 @@
             </div>
         </div>
     </div>
+    
+    <?php
+	setcookie("user", "test", time()+3600);
+	if (isset($_COOKIE["user"]))
+	{
+		echo "<h1>Hallo, veel plezier met je coockie :) </p>";
+	}
+	?>
 
     <div class="content">
 	    <div class="page-intro">
