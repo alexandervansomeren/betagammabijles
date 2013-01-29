@@ -55,7 +55,7 @@
             </div>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="page-field">
-                    <em><br />Profiel</em>
+                    <em>Profiel</em>
                     <div class="paragraph">
                         <div class="field">
                            <div class="ques">Gebruikersnaam:</div>
@@ -81,7 +81,7 @@
                             <div class="ques"><input type="radio" name="user_type" value="1" />Ik wil graag bijles geven!</div>
                         </div>
                     </div>
-                    <em>Over jou</em>
+                    <em><br />Over jou</em>
                     <div class="paragraph">
                         <div class="field">
                             <div class="ques">Voornaam:</div>
