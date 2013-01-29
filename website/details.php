@@ -21,10 +21,10 @@
 	function QueryOnId()
 	{
 		$GLOBALS['db'] -> Query = 
-		"	SELECT *
+		'	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = " . $GLOBALS['userID'] . ";";
+			WHERE up.user_id = '. $GLOBALS['userID'] .';';
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
@@ -39,8 +39,8 @@
 			echo "Gegevens succesvol opgehaald!<br /><br />";
 						
 			// Start storing variabelen
-			$docent_naam = $GLOBALS['queryResultsArray'][1]['first_name'] + " " + 
-						   $GLOBALS['queryResultsArray'][1]['middle_name'] + " " + 
+			$docent_naam = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
+						   $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
 						   $GLOBALS['queryResultsArray'][1]['last_name'];
 			
 			$docent_locatie = $GLOBALS['queryResultsArray'][1]['city'] + ", " + 
