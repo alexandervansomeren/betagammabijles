@@ -1,5 +1,5 @@
 <?php
-	echo '<br /><br />Testversie 2.6<br /><br />';
+	echo '<br /><br />Testversie 3.0<br /><br />';
 	
 	// Connect to the database
 	include 'shielded/connector.php';
@@ -65,6 +65,7 @@
                         
                         foreach ($GLOBALS['queryResultsArray'] as $vakRow)
                         {
+                            print_r($vakRow);
                             $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">VWO 3</div>';
                         }
                 }
