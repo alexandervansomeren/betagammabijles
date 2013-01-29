@@ -1,14 +1,16 @@
 <?php
-	echo "<br /><br />Testversie 2.6<br /><br />";
+	echo "<br /><br />Testversie 2.5<br /><br />";
 	
 	// Connect to the database
 	include 'shielded/connector.php';
+	$db = new ConnectorClass;
+	
+	$queryResultsArray = null; 
 	
 	// Initializing variables and secure that they are not mysql-injections
 	if (isset($_GET['id']))
 	{
-		$GLOBALS['userID'] = mysql_real_escape_string($_GET['id']);
-                $GLOBALS['userID'] = 2;
+		$userID = mysql_real_escape_string($_GET['id']);
 	}
 	
 	QueryOnId();
@@ -16,12 +18,11 @@
 	// Making first query to find user_id's from submitted inputform
 	function QueryOnId()
 	{
-            $testVar = 5;
 		$GLOBALS['db'] -> Query = 
 		"	SELECT *
 			FROM webdb13BG2.user_personal_data up
 			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = '" . $testVar . "'";
+			WHERE up.user_id = 2";
 		
 		// Getting results from query
 		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
