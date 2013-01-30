@@ -41,13 +41,14 @@
         </div>
     </div>
     <?php
-	include 'advertentiesZONDERHEADER.php'; 
+		include 'advertentiesZONDERHEADER.php';
+		// include $_GET[page].'.php';  
 	?>
     <div class="footer">
         <div class="centerwrapper">
-            <a href="about.php">Wie zijn wij?</a>
-            <a href="index.php">Welkom</a>
-            <a href="registratieformulier.php">Meld je aan</a>
+            <a href="index2.php?page=about">Wie zijn wij?</a>
+            <a href="index2.php?page=index">Welkom</a>
+            <a href="index2.php?page=registratieformulier">Meld je aan</a>
             <a href="registratieformulier.php">Registratieformulier</a>
         </div>
     </div>
