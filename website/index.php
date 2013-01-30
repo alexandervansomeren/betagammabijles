@@ -38,7 +38,7 @@
                     }
                     if(isset( $_POST['logout']))
                     {                        
-                    
+                        session_destroy();
                     }
                     
                     if ( isset($_SESSION['user_type']) )
