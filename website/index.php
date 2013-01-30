@@ -19,7 +19,8 @@
                     
                     if(isset( $_POST['logout']))
                     {                        
-                        session_destroy();
+                        session_unset();
+                        session_destroy();                        
                     }
                     
                     if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
