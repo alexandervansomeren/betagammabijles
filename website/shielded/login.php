@@ -14,7 +14,7 @@
 // $DBpassword = $passwordArray['password']; // this is the actual password value suited for the database
 // $DBsalt = $passwordArray['salt']; // this is the actual salt value suited for the database
 
-
+/*
 $username = 'alexsomer';
 $password = 'w8woord';
 $shaPassword = sha1( $password );
@@ -37,7 +37,7 @@ $db -> Querying();
 $db -> Disconnect();
 echo '<br />';
 echo login( $username, $shaPassword );
-
+*/
 
 
 function createPasswordSalt( $shaPassword )
