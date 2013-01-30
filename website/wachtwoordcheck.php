@@ -11,7 +11,7 @@
     SELECT user_name FROM webdb13BG2.user_data WHERE username='".$usern."';
     ";
     $userSame = $GLOBALS['db'] -> Querying();
-    if( isset($userSame[1][0] )
+    if( isset($userSame[1][0] ))
     {
        echo "Deze username bestaat al!";
     }
