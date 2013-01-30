@@ -56,7 +56,7 @@
                         <div class="text"> Niveau: </div>
                         <input class="inputfield" type="text" name="level"placeholder="bijv. havo"/>
                     </div>
-                    <div class="selectpart" style="width:140px"> 
+                    <div class="selectpart" style="width:150px"> 
                         <label class="ques">Man <input type="checkbox" name="male", checked="checked">	</label>
                         <label class="ques">Vrouw <input type="checkbox" name="female", checked="checked">	</label>
                     </div> 
