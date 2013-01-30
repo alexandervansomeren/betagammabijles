@@ -219,6 +219,7 @@
             <?php
                 // Connect to the database
                 include 'shielded/connector.php';
+                include 'shielded/login.php';
                 $db = new ConnectorClass;
 
                 // Initializing variables and secure that they are not mysql-injections or include tags
@@ -231,9 +232,12 @@
                     //else $username="";
                     if (isset($_POST['password']))
                     {
-	                    $password = strip_tags(mysql_real_escape_string($_POST['password']));
+	                    $password = $_POST['password'];
+	                    $SHApassword = sha1($password);
+	                    $PwSaltArray = createPasswordSalt( $SHApassword );
+	                    $DBpassword = $PwSaltArray[0];
+	                    $DBsalt = $PwSaltArray[1];	                    
                     }
-                    //let op < dit soort tekens worden verwijdert uit het wachtwoord. Foutmelding?
                     if (isset($_POST['user_type']))
                     {
                         $user_type=$_POST['user_type'];
@@ -369,8 +373,8 @@
             {
                 //user_id wordt geinitialiseerd via user_data
                 $GLOBALS['db'] -> Query = 
-                "INSERT INTO webdb13BG2.user_data(username, password, user_type) 
-                VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
+                "INSERT INTO webdb13BG2.user_data(username, password, user_type, salt) 
+                VALUES ('".$GLOBALS['username']."', '".$GLOBALS['DBpassword']."', ".$GLOBALS['user_type'].", '".$GLOBALS['DBsalt']."');
                 ";
                 // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
 				$GLOBALS['db'] -> Querying();
