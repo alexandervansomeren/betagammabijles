@@ -77,7 +77,7 @@ function login( $username, $shaPassword )
 	{
 		return ( $user_type );
 	}
-	else return ( 0 );
+	else return ( 'no user' );
 }
 ?>
 </body>
