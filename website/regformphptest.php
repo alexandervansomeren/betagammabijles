@@ -8,7 +8,7 @@
             function pwstrength()
             {
                 id = document.getElementById("password");
-                fb = document.getElementById("fb");
+                feedback = document.getElementById("fb");
                 strength = "bad";
                 if (id.value.length > 3)
                 {
@@ -18,7 +18,13 @@
                 {
                     strength= "good";
                 }
-                fb.innerHTML = "Password strength: " + strength;
+                feedback.innerHTML = "Password strength: " + strength;
+            }
+            
+            function feedbackGone()
+            {
+                feedback = document.getElementById("fb");
+                feedback.innerHTML = "";
             }
         </script>
 	</head>
@@ -50,7 +56,7 @@
                         </div>
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
-                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()" id="password" /></div>
+                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()" id="password" onblur="feedbackGone()" /></div>
                             <p id="fb"> </p>
                         </div>
                    </div>
