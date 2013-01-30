@@ -169,35 +169,35 @@
                         <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" />Aardrijkskunde</label>
                         <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" />Biologie</label>
                         <label class="ques"><input type="checkbox" value="3" name="bijlesvak[]" /> Scheikunde</label>
-                        <label class="ques"><input type="checkbox" value="Engels" name="bijlesvak[]" />Engels</label>
-                        <label class="ques"><input type="checkbox" value="Nederlands" name="bijlesvak[]" />Nederlands</label>
-                        <label class="ques"><input type="checkbox" value="Wiskunde A" name="bijlesvak[]" />Wiskunde A</label>
-                        <label class="ques"><input type="checkbox" value="Wiskunde B" name="bijlesvak[]" />Wiskunde B</label>
-                        <label class="ques"><input type="checkbox" value="Wiskunde C" name="bijlesvak[]" />Wiskunde C</label>
-                        <label class="ques"><input type="checkbox" value="Wiskunde D" name="bijlesvak[]" />Wiskunde D</label>
-                        <label class="ques"><input type="checkbox" value="Frans" name="bijlesvak[]" />Frans</label>
-                        <label class="ques"><input type="checkbox" value="Duits" name="bijlesvak[]" />Duits</label>
-                        <label class="ques"><input type="checkbox" value="Economie" name="bijlesvak[]" />Economie</label>
-                        <label class="ques"><input type="checkbox" value="Latijn" name="bijlesvak[]" />Latijn</label>
-                        <label class="ques"><input type="checkbox" value="Grieks" name="bijlesvak[]" />Grieks</label>                            
-                        <label class="ques" title="Management &amp; Organisatie"><input type="checkbox" value="Management &amp; Organisatie" name="bijlesvak[]" />M &amp; O</label>
-                        <label class="ques" title="Maatschappijleer"><input type="checkbox" value="Maatschappijleer" name="bijlesvak[]" />MaL</label>
-                        <label class="ques"><input type="checkbox" value="Muziek" name="bijlesvak[]" /> Muziek</label>
-                        <label class="ques"><input type="checkbox" value="Natuurkunde" name="bijlesvak[]" />Natuurkunde</label>
-                        <label class="ques" title="Algemene Natuurwetenschappen"><input type="checkbox" value="ANW" name="bijlesvak[]" />ANW</label>
-                        <label class="ques"><input type="checkbox" value="Fries" name="bijlesvak[]" />Fries</label>
-                        <label class="ques"><input type="checkbox" value="Spaans" name="bijlesvak[]" />Spaans</label>
-                        <label class="ques"><input type="checkbox" value="Italiaans" name="bijlesvak[]" />Italiaans</label>
-                        <label class="ques"><input type="checkbox" value="Russisch" name="bijlesvak[]" />Russisch</label>
-                        <label class="ques"><input type="checkbox" value="Turks" name="bijlesvak[]" />Turks</label>
-                        <label class="ques"><input type="checkbox" value="Arabisch" name="bijlesvak[]" />Arabisch</label>
-                        <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="Natuur, leven &amp; techniek" name="bijlesvak[]" />N, L &amp; T</label >
-                        <label class="ques" title="Awesome!"><input type="checkbox" value="Informatica" name="bijlesvak[]" />Informatica</label>
-                        <label class="ques"><input type="checkbox" value="Geschiedenis" name="bijlesvak[]" />Geschiedenis</label>
-                        <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="Maatschappijwetenschappen" name="bijlesvak[]" />MaW</label>
-                        <label class="ques"><input type="checkbox" value="Filosofie" name="bijlesvak[]" />Filosofie</label>
-                        <label class="ques"><input type="checkbox" value="Kunst Algemeen" name="bijlesvak[]" />Kunst Alg.</label>
-                        <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="CKV" name="bijlesvak[]" />CKV</label >
+                        <label class="ques"><input type="checkbox" value="4" name="bijlesvak[]" />Engels</label>
+                        <label class="ques"><input type="checkbox" value="5" name="bijlesvak[]" />Nederlands</label>
+                        <label class="ques"><input type="checkbox" value="6" name="bijlesvak[]" />Wiskunde A</label>
+                        <label class="ques"><input type="checkbox" value="7" name="bijlesvak[]" />Wiskunde B</label>
+                        <label class="ques"><input type="checkbox" value="8" name="bijlesvak[]" />Wiskunde C</label>
+                        <label class="ques"><input type="checkbox" value="9" name="bijlesvak[]" />Wiskunde D</label>
+                        <label class="ques"><input type="checkbox" value="10" name="bijlesvak[]" />Frans</label>
+                        <label class="ques"><input type="checkbox" value="11" name="bijlesvak[]" />Duits</label>
+                        <label class="ques"><input type="checkbox" value="12" name="bijlesvak[]" />Economie</label>
+                        <label class="ques"><input type="checkbox" value="13" name="bijlesvak[]" />Latijn</label>
+                        <label class="ques"><input type="checkbox" value="14" name="bijlesvak[]" />Grieks</label>                            
+                        <label class="ques" title="Management &amp; Organisatie"><input type="checkbox" value="15" name="bijlesvak[]" />M &amp; O</label>
+                        <label class="ques" title="Maatschappijleer"><input type="checkbox" value="16" name="bijlesvak[]" />MaL</label>
+                        <label class="ques"><input type="checkbox" value="17" name="bijlesvak[]" /> Muziek</label>
+                        <label class="ques"><input type="checkbox" value="18" name="bijlesvak[]" />Natuurkunde</label>
+                        <label class="ques" title="Algemene Natuurwetenschappen"><input type="checkbox" value="19" name="bijlesvak[]" />ANW</label>
+                        <label class="ques"><input type="checkbox" value="20" name="bijlesvak[]" />Fries</label>
+                        <label class="ques"><input type="checkbox" value="21" name="bijlesvak[]" />Spaans</label>
+                        <label class="ques"><input type="checkbox" value="22" name="bijlesvak[]" />Italiaans</label>
+                        <label class="ques"><input type="checkbox" value="23" name="bijlesvak[]" />Russisch</label>
+                        <label class="ques"><input type="checkbox" value="24" name="bijlesvak[]" />Turks</label>
+                        <label class="ques"><input type="checkbox" value="25" name="bijlesvak[]" />Arabisch</label>
+                        <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="26" name="bijlesvak[]" />N, L &amp; T</label >
+                        <label class="ques" title="Awesome!"><input type="checkbox" value="27" name="bijlesvak[]" />Informatica</label>
+                        <label class="ques"><input type="checkbox" value="28" name="bijlesvak[]" />Geschiedenis</label>
+                        <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak[]" />MaW</label>
+                        <label class="ques"><input type="checkbox" value="30" name="bijlesvak[]" />Filosofie</label>
+                        <label class="ques"><input type="checkbox" value="31" name="bijlesvak[]" />Kunst Alg.</label>
+                        <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32 name="bijlesvak[]" />CKV</label >
                         <div class="field">Heb je ervaring met bijles geven?</div>
                         <div class="field">
                             <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
@@ -314,6 +314,12 @@
                     }
                     else $city="";
                     
+                //Bijlesvoorkeur
+                    if (isset($_POST['bijlesvak[]']))
+                    {
+                        $course_code = $_POST['bijlesvak[]']*100 + 11;
+                    }
+                    
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
         		makeQuery();
@@ -366,6 +372,18 @@
                     "
                     INSERT INTO webdb13BG2.adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
                     VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
+                    ";
+                $GLOBALS['db'] -> Querying();
+                
+                // Bijlesvoorkeur wordt doorgegeven
+                $GLOBALS['db'] -> Query = null;
+                $GLOBALS['db'] -> QueryResult = null;
+                
+                //de adress_data van de user wordt toegevoegd
+                $GLOBALS['db'] -> Query =   
+                    "
+                    INSERT INTO webdb13BG2.course_user (course_code, user_id) 
+                    VALUES (".$GLOBALS['course_code'].", ".$GLOBALS['user_id'].");
                     ";
                 $GLOBALS['db'] -> Querying();
                 
