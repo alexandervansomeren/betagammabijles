@@ -175,8 +175,13 @@
             <div class="middle"></div>
             <div class="right">
             	<form method="post" action="logincheck.php">
-                <div class="label">Voor leden geef je gegevens en log in</div>
-                <div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord"/><button type="submit">Login</button></div>
+                    <div class="label">Voor leden geef je gegevens en log in
+                    </div>
+                    <div class="login">
+                    	<input type="text" placeholder="Gebruikersnaam" name="username"/> 
+                        <input type="password" placeholder="Wachtwoord" name="password"/>
+                        <button type="submit">Login</button>
+                   	</div>
                 </form>
             </div>
         </div>
