@@ -41,8 +41,8 @@
         </div>
     </div>
     <?php
-		include 'advertentiesZONDERHEADER.php';
-		// include $_GET[page].'.php';  
+		// include 'advertentiesZONDERHEADER.php';
+		include $_GET[page].'.php';  
 	?>
     <div class="footer">
         <div class="centerwrapper">
