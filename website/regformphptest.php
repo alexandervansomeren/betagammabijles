@@ -314,12 +314,13 @@
                     }
                     else $city="";
                     
+                    echo $_POST['bijlesvak[]'];
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
                     {
                         $course_array = $_POST['bijlesvak[]'];
                         $size = sizeof($course_array);
-                        echo "Vlak voor de for-loop";
+                        echo "Vlak voor de for-loop";s
                         for($i=0; $i < $size; $i++)
                         {
                             echo "Hallo ik ben in de for-loop";
