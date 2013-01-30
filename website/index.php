@@ -12,8 +12,30 @@
         	<div class="left"> <a href="index.html" class="left"> Waarbijles1 </a> </div>
             <div class="middle"></div>
             <div class="right">
-            	<?php 
+            	<?php
                     session_start();
+
+                    if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
+                    {
+                            $username = $_POST['username'] ;
+                            $shaPassword = sha1( $_POST['password'] );
+
+                            include 'shielded/login.php';
+                            $userType =  (login ($username, $shaPassword));
+                            if ( is_int( $userType ) )
+                            {
+                                    $_SESSION['user_type']= $userType;
+                                    $_SESSION['user_name']= $username;
+                                    echo "inloggen gelukt :D";
+                            }
+                            else
+                            {
+                                    echo "Inloggen mislukt";
+                                    session_start();
+                                    session_destroy();
+                            }
+                    }
+                    
                     if ( isset($_SESSION['user_type']) )
                             {
                             if ( is_int( $_SESSION['user_type'] ) )
@@ -24,7 +46,7 @@
                             }
                     }
                     else echo 
-                    '<form method="post" action="logincheck.php">
+                    '<form method="post" action="">
                             <div class="label">Voor leden geef je gegevens en log in
                             </div>
                             <div class="login">
