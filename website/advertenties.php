@@ -24,7 +24,6 @@
 <?php
 
     // Connect to the database
-    include 'shielded/connector.php';
     $db = new ConnectorClass;
 
     $queryResultsArray = null; 
