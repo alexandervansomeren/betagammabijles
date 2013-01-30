@@ -21,8 +21,8 @@ include 'shielded/login.php';
 $passwordArray = createPasswordSalt( $shaPassword );
 echo '<pre>'.$passwordArray.'</pre>';
 
-$DBpassword = $passwordArray['password']; // this is the actual password value suited for the database
-$DBsalt = $passwordArray['salt']; // this is the actual salt value suited for the databased
+$DBpassword = $passwordArray[0]; // this is the actual password value suited for the database
+$DBsalt = $passwordArray[1]; // this is the actual salt value suited for the databased
 
 echo 'DB-password: '.$DBpassword.'<br />';
 echo 'Salt: '.$DBsalt.'<br />';
