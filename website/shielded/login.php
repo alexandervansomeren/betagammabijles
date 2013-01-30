@@ -64,7 +64,7 @@ function login( $username, $shaPassword )
 		";
 	echo $dbLOGIN -> Query;
 	$queryResultArray = $dbLOGIN -> Querying();
-	echo '<pre>'. print_r($queryResultArray).'</pre>';
+	echo '<pre>.print_r('.$queryResultArray.')</pre>';
 	$dbLOGIN -> Disconnect();
 	$pw = $queryResultArray['password'];
 	$salt = $queryResultArray['salt'];
