@@ -319,9 +319,27 @@
                     echo $_POST['bijlesvak'];
                     echo "</pre>";
                 //Bijlesvoorkeur
+                
+                $courseTest = $_POST['bijlesvak'];
+                if(empty($bijlesvak))
+                {
+                    echo("Je hebt geen vak gekozen. ");
+                }
+                else
+                {
+                    $N = count($bijlesvak);
+                    echo("Je hebt $N vakken gekozen ");
+                    for($i=0; $i < $N; $i++)
+                    {
+                        echo($aDoor[$i] . " ");
+                    }
+                }
+                
+                /*
                     if (isset($_POST['bijlesvak']))
                     {
-                        $course_array = $_POST['bijlesvak'];
+                        
+                        $course_array = array_fill_keys($keys, $_POST['bijlesvak']);
                         $size = sizeof($course_array);
                         echo "Vlak voor de for-loop";
                         global $course_code;
@@ -336,6 +354,7 @@
                         echo $course_code[0];
                         //$newarray = implode(", ", $myarray);
                     }
+                */
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
