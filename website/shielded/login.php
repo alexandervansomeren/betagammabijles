@@ -81,7 +81,7 @@ function login( $username, $shaPassword )
                         $setLastLogin -> Query = 
                                 
                                 "	UPDATE
-        webdb13BG2.user_personal_data SET last_login = '1234' WHERE user_id = '3';
+        webdb13BG2.user_personal_data SET last_login = '1234' WHERE user_id = '3'";
                                 
                         echo $setLastLogin -> Query;
                         $resultOfQ = $setLastLogin -> Querying();
