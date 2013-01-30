@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>webdb13BG2</title>
+		
 		<!-- stylesheetreference -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>        
+        
+        <!-- formvalidaties en formfeedback in javascript -->
         <script type="text/javascript">
-            function pwstrength()
+            function pwStrength()
             {
                 id = document.getElementById("password");
-                feedback = document.getElementById("fb");
+                feedback = document.getElementById("fbp");
                 strength = "bad";
                 if (id.value.length > 3)
                 {
@@ -23,8 +26,19 @@
             
             function feedbackGone()
             {
-                feedback = document.getElementById("fb");
+                feedback = document.getElementById("fbp");
                 feedback.innerHTML = "";
+            }
+            
+            function unCheck()
+            {
+                //id = document.getElementById("username");
+                feedback = document.getElementById("fbu");
+                feedback.innerHTML = "Gebruikersnaam bestaat al.";
+                /*if (id.value.length < 4)
+                {
+                    feedback.innerHTML = "Kies alsjeblieft een gebruikersnaam van ten minste 4 tekens";
+                }*/
             }
         </script>
 	</head>
@@ -52,12 +66,29 @@
                     <div class="paragraph">
                         <div class="field">
                            <div class="ques">Gebruikersnaam:</div>
-                           <div class="ans"><input type="text" name="username" id="username" /></div>
+                           <div class="ans"><input type="text" name="username" id="username" onkeyup="unCheck()"/></div>
+                           <?php
+                               // Connect to the database
+                               include 'shielded/connector.php';
+                               $db = new ConnectorClass;
+                               $usern = mysql_real_escape_string($_POST['username']);
+                               $GLOBALS['db'] -> Query =   
+                               "
+                               SELECT user_name FROM webdb13BG2.user_data WHERE username='".$usern."';
+                               ";
+                               $userSame = $GLOBALS['db'] -> Querying();
+                               if(!(empty($userSame)))
+                               {
+                                   unCheck();
+                               }
+                               $GLOBALS['db'] -> Disconnect(); 
+                           ?>
+                           <p id="fbu"> </p>
                         </div>
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
-                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()" id="password" onblur="feedbackGone()" /></div>
-                            <p id="fb"> </p>
+                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwStrength()" id="password" onblur="feedbackGone()" /></div>
+                            <p id="fbp"> </p>
                         </div>
                    </div>
                    <em><br />Hamvraag</em>  
