@@ -50,8 +50,9 @@ function createPasswordSalt( $shaPassword )
 		'passsword'  => $pwForDatabase,
 		'salt' => $salt 
 		);
-	return( $PwSaltArray );
 	echo '<pre>'.$PwSaltArray.'</pre>';
+	return( $PwSaltArray );
+	
 }
 
 function login( $username, $shaPassword )
