@@ -7,7 +7,28 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>        
         
         <!-- formvalidaties en formfeedback in javascript -->
-        <script type="text/javascript">
+        <script language="javascript" type="text/javascript">
+            var xmlhttp;
+
+            function GetXMLHTTPObject()
+            {
+                var xmlhttp = null;
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                return xmlhttp;
+            }
+            function stateChanged(str)
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
+                    document.getElementById("fbu").innerHTML = xmlhttp.responseText;
+                }
+            }
+            
             function pwStrength()
             {
                 id = document.getElementById("password");
@@ -28,6 +49,24 @@
             {
                 feedback = document.getElementById("fbp");
                 feedback.innerHTML = "";
+            }
+            
+            function unAvailable()
+            { 
+                xmlhttp = GetXMLHTTPObject();
+                if (xmlhttp == null){
+                    alert ("Your browser does not support HTTP requests");
+                    return;
+                }
+              
+                var url="queryResult.php";
+                str = str.replace(/\n/g, " ");
+                url = url + "?q=" + str;
+                url = url + "&sid=" + Math.random();
+
+                xmlhttp.onreadystatechange = stateChanged;
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send(null);
             }
             
             function unCheck()
@@ -67,22 +106,6 @@
                         <div class="field">
                            <div class="ques">Gebruikersnaam:</div>
                            <div class="ans"><input type="text" name="username" id="username" onkeyup="unCheck()"/></div>
-                           <?php
-                               // Connect to the database
-                               include 'shielded/connector.php';
-                               $db = new ConnectorClass;
-                               $usern = mysql_real_escape_string($_POST['username']);
-                               $GLOBALS['db'] -> Query =   
-                               "
-                               SELECT user_name FROM webdb13BG2.user_data WHERE username='".$usern."';
-                               ";
-                               $userSame = $GLOBALS['db'] -> Querying();
-                               if(!(empty($userSame)))
-                               {
-                                   unCheck();
-                               }
-                               $GLOBALS['db'] -> Disconnect(); 
-                           ?>
                            <p id="fbu"> </p>
                         </div>
                         <div class="field">
