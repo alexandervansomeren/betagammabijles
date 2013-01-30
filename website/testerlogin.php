@@ -43,6 +43,7 @@ $db -> Querying();
 $db -> Disconnect();
 echo '<br />';
 */
+include 'shielded/login.php';
 $user_type = login( $username, $shaPassword );
 echo 'userType: ';
 echo $user_type;
