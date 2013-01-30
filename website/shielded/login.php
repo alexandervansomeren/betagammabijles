@@ -39,10 +39,7 @@ echo '<br />';
 echo login( $username, $shaPassword );
 */
 
-if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
-{
-	loginFromPost();
-}
+
 function createPasswordSalt( $shaPassword )
 {
 	$salt = md5( uniqid(rand(), true) );
@@ -57,7 +54,7 @@ function loginFromPost()
 {
 	$username = $_POST['username'] ;
 	$shaPassword = sha1( $_POST['password'] );
-	login ($username, $shaPassword);
+	return (login ($username, $shaPassword));
 }
 function login( $username, $shaPassword )
 {
@@ -83,9 +80,14 @@ function login( $username, $shaPassword )
 	$tryPW = sha1( $salted.$shaPassword.$salt );
 	if ( $pw == $tryPW )
 	{
+		echo $user_type;
 		return ( $user_type );
 	}
-	else return ( 'no user' );
+	else 
+	{
+		echo "no user";
+		return ( 'no user' );
+	}
 }
 ?>
 </body>
