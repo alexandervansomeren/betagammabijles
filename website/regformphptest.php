@@ -322,7 +322,9 @@
                         for($i=0; $i < $size; $i++)
                         {
                             $course_code[$i] = (($course_array[$i]*100) + 11);
+                            echo $course_code[$i];
                         }
+                        echo $course_code[0];
                         //$newarray = implode(", ", $myarray);
                     }
                     
