@@ -332,7 +332,7 @@
                             //= (($course_array[$i]*100) + 11);
                             echo $course_code[$i];
                         }
-                        echo "Ja: "
+                        echo "Ja: ";
                         echo $course_code[0];
                         //$newarray = implode(", ", $myarray);
                     }
