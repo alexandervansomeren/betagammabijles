@@ -1,6 +1,4 @@
 <?php
-	/*function lifeQuery( $username )
-	{*/
     // Connect to the database
     include 'shielded/connector.php';
     $db = new ConnectorClass;
@@ -8,12 +6,12 @@
     $usern = $_GET['q'];
     $GLOBALS['db'] -> Query =   
     "
-    SELECT user_name FROM webdb13BG2.user_data WHERE username='".$usern."';
+    SELECT username FROM webdb13BG2.user_data WHERE username='".$usern."';
     ";
     $userSame = $GLOBALS['db'] -> Querying();
     if( isset($userSame[1][0] ))
     {
-       echo "Deze username bestaat al!";
+       echo "Gebruikersnaam bestaat al.";
     }
     $GLOBALS['db'] -> Disconnect(); 
 ?>

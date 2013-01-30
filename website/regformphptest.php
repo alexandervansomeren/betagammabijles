@@ -34,16 +34,16 @@
             {
                 id = document.getElementById("password");
                 feedback = document.getElementById("fbp");
-                strength = "bad";
+                strength = "slecht";
                 if (id.value.length > 3)
                 {
-                    strength= "medium";
+                    strength= "redelijk";
                 }
                 if (id.value.length > 6)
                 {
-                    strength= "good";
+                    strength= "goed";
                 }
-                feedback.innerHTML = " Password strength: " + strength;
+                feedback.innerHTML = " Wachtwoordsterkte: " + strength;
             }
             
             function feedbackGone()
@@ -57,7 +57,7 @@
                 un = document.getElementById("username");
                 xmlhttp = GetXMLHTTPObject();
                 if (xmlhttp == null){
-                    alert ("Your browser does not support HTTP requests");
+                    alert ("Je browser ondersteunt geen HTTP requests");
                     return;
                 }
 
@@ -69,17 +69,6 @@
                 xmlhttp.onreadystatechange = stateChanged;
                 xmlhttp.open("GET", url, true);
                 xmlhttp.send(null);
-            }
-            
-            function unCheck()
-            {
-                //id = document.getElementById("username");
-                feedback = document.getElementById("fbu");
-                feedback.innerHTML = " Gebruikersnaam bestaat al.";
-                /*if (id.value.length < 4)
-                {
-                    feedback.innerHTML = "Kies alsjeblieft een gebruikersnaam van ten minste 4 tekens";
-                }*/
             }
         </script>
 	</head>
