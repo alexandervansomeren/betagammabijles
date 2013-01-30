@@ -349,6 +349,39 @@
         	    }
 			}
 			
+			function enterCourseCode($course_code)
+			{
+                    $GLOBALS['db'] -> Query =
+                        "
+                        INSERT INTO webdb13BG2.course_user (course_code, user_id) 
+                        VALUES ("$course_code", ".$GLOBALS['user_id'].");
+                        ";
+                    $GLOBALS['db'] -> Querying();
+                    
+                    $GLOBALS['db'] -> Query = null;
+                    $GLOBALS['db'] -> QueryResult = null;
+                /*
+                    if (isset($_POST['bijlesvak']))
+                    {
+                        
+                        $course_array = array_fill_keys($keys, $_POST['bijlesvak']);
+                        $size = sizeof($course_array);
+                        echo "Vlak voor de for-loop";
+                        global $course_code;
+                        for($i=0; $i < $size; $i++)
+                        {
+                            echo "Hallo ik ben in de for-loop";
+                            $course_code[$i] = $course_array[$i];
+                            //= (($course_array[$i]*100) + 11);
+                            echo $course_code[$i];
+                        }
+                        echo "Ja: ";
+                        echo $course_code[0];
+                        //$newarray = implode(", ", $myarray);
+                    }
+                */
+            }
+			
             // Making query
             /*salt nog toevoegen aan INSERT INTO*/
             function makeQuery()
@@ -410,37 +443,9 @@
                 for($i=0; $i < $N; $i++)
                 {
                     echo($localCourse[$i] . " ");
-                    $course_code = $localCourse[$i]
-                    $GLOBALS['db'] -> Query =
-                        "
-                        INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                        VALUES ("$course_code", ".$GLOBALS['user_id'].");
-                        ";
-                    $GLOBALS['db'] -> Querying();
-                    
-                    $GLOBALS['db'] -> Query = null;
-                    $GLOBALS['db'] -> QueryResult = null;
+			        $course_code = $localCourse[$i];
+                    enterCourseCode($course_code);
                 }       
-                /*
-                    if (isset($_POST['bijlesvak']))
-                    {
-                        
-                        $course_array = array_fill_keys($keys, $_POST['bijlesvak']);
-                        $size = sizeof($course_array);
-                        echo "Vlak voor de for-loop";
-                        global $course_code;
-                        for($i=0; $i < $size; $i++)
-                        {
-                            echo "Hallo ik ben in de for-loop";
-                            $course_code[$i] = $course_array[$i];
-                            //= (($course_array[$i]*100) + 11);
-                            echo $course_code[$i];
-                        }
-                        echo "Ja: ";
-                        echo $course_code[0];
-                        //$newarray = implode(", ", $myarray);
-                    }
-                */
                 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
