@@ -310,7 +310,7 @@
                     // About me MOET NOG WORDEN BEHANDELD
                     if (isset($_POST['ervaring']))
                     {
-                        $about_me = mysql_real_escape_string($_POST['ervaring']);
+                        $about_me = strip_tags(mysql_real_escape_string($_POST['ervaring']));
                     } else $about_me = "Nog geen tekst ingevuld";
                        
                     //Gender
