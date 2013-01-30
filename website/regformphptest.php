@@ -8,7 +8,7 @@
         
         <!-- formvalidaties en formfeedback in javascript -->
         <script language="javascript" type="text/javascript">
-            var xmlhttp;
+/*            var xmlhttp;
 
             function GetXMLHTTPObject()
             {
@@ -22,13 +22,14 @@
                 }
                 return xmlhttp;
             }
+            
             function stateChanged(str)
             {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
                     document.getElementById("fbu").innerHTML = xmlhttp.responseText;
                 }
             }
-            
+*/            
             function pwStrength()
             {
                 id = document.getElementById("password");
@@ -53,13 +54,14 @@
             
             function unAvailable(str)
             { 
+                un = document.getElementById("username");
                 xmlhttp = GetXMLHTTPObject();
                 if (xmlhttp == null){
                     alert ("Your browser does not support HTTP requests");
                     return;
                 }
-              
-                var url="queryResult.php";
+
+                var url="wachtwoordcheck.php";
                 str = str.replace(/\n/g, " ");
                 url = url + "?q=" + str;
                 url = url + "&sid=" + Math.random();
