@@ -1,4 +1,5 @@
-    <div class="page-intro">
+    <div class="content">
+	    <div class="page-intro">
         	<form class="selection" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="part">
                         <div class="text"> Vak: </div>
@@ -273,4 +274,21 @@
         	</a>';
 	}
 	?>
-	</div>
+        <div class="prevnexbuttons">
+            <div class="prevnexbuttonsCenter">
+                <!--<a href="#">
+                    <object class="previousbutton">
+                    Vorige
+                    </object>
+                </a>
+                <a href="#">
+                    <object class="nextbutton">
+                    Volgende
+                    </object>
+                </a>-->
+          </div>
+      </div> 
+        <div class="clear"></div>
+</div>
+    <div class="clear"></div>
+    </div>

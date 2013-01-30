@@ -40,10 +40,9 @@
             </div>
         </div>
     </div>
-	
-    <div class="content">
-    <? include 'advertentiesZONDERHEADER.php'; ?>
-    </div>
+    <?php
+	include 'advertentiesZONDERHEADER.php'; 
+	?>
     <div class="footer">
         <div class="centerwrapper">
             <a href="about.php">Wie zijn wij?</a>
