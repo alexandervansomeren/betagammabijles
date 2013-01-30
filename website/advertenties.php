@@ -187,6 +187,7 @@
         </div>
     </div>
 	<?php 
+	echo 'user type als sessie werkt: ';
 	if ( isset( $_SESSION['userType'] ) )
 	{
 		echo "Je bent ingelogt als".$_SESSION['userType'];
@@ -274,8 +275,6 @@
 		</div>
 		';
 	}
-	
-	echo '<br> '.$genderQuery .' <br>';
 	
 	// Making first query to find user_id's from submitted inputform
 	function makeFirstQuery()
