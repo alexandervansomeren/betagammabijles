@@ -166,9 +166,9 @@
                         <div class="field">
                             In welk vak wil je bijles geven?
                         </div>
-                        <label class="ques"><input type="checkbox" value="Aardrijkskunde" name="bijlesvak[]" />Aardrijkskunde</label>
-                        <label class="ques"><input type="checkbox" value="Biologie" name="bijlesvak[]" />Biologie</label>
-                        <label class="ques"><input type="checkbox" value="Scheikunde" name="bijlesvak[]" /> Scheikunde</label>
+                        <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" />Aardrijkskunde</label>
+                        <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" />Biologie</label>
+                        <label class="ques"><input type="checkbox" value="3" name="bijlesvak[]" /> Scheikunde</label>
                         <label class="ques"><input type="checkbox" value="Engels" name="bijlesvak[]" />Engels</label>
                         <label class="ques"><input type="checkbox" value="Nederlands" name="bijlesvak[]" />Nederlands</label>
                         <label class="ques"><input type="checkbox" value="Wiskunde A" name="bijlesvak[]" />Wiskunde A</label>
