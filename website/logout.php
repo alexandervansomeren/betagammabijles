@@ -7,6 +7,7 @@
 
 <body>
 <?php
+	session_start();
 	session_destroy();
 ?>
 <h1> U bent uitgelogt :) Tot ziens <br /></h1>
