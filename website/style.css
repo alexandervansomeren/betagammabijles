@@ -381,3 +381,61 @@ a:hover { text-decoration: underline; }
         /*k weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
             maar hiermee zouden we de breedte voor de velden kunnen veranderen */
 /*einde regform*/
+ 
+ 
+/* index opmaak */
+.content .buttons
+		{
+		    width: inherit; height: 350px;
+			position: relative;
+		    margin: 0px 0px 20px 0px;
+		}
+		.content .buttons
+		{
+	        width: inherit; height: 350px;
+			position: relative;
+ 	        margin: 0px 0px 20px 0px;
+		}
+	
+		.content .buttons .left,
+		.content .buttons .right
+		{
+			border: 2px solid #FF7F00;		
+			display: block;
+		    float: left;		    
+		    width: 436px;
+		    height: 346px;
+            float: left;		    
+	        width: 436px;
+            height: 346px;
+            box-shadow: 0px 0px 5px 0px #FF7F00;
+		}
+		
+		.content .buttons a .title
+		{
+			width: inherit; height: 60px; line-height: 60px;
+			text-indent: 10px;
+			position: absolute;
+			bottom: 0px;
+			display:block;
+			background-color: #FF7F00;
+			font-size: 38px;
+			opacity: 0.80;
+		}
+		
+		.content .buttons .left { margin-right: 20px; }
+		.content .buttons .right { }
+		
+		.content .buttons > a:hover { box-shadow: 0px 0px 10px 2px #FF7F00; }
+	    .content .buttons > a:hover .title { text-decoration: underline; }
+        .content .buttons > a:hover .title { text-decoration: underline; }
+		
+		.main_title
+		{
+			width: inherit;
+			height: 25px;
+			margin-bottom: 25px;	
+			
+			font-size: 24px;
+		}
+/* einde index opmaak */
