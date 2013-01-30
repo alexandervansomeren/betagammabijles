@@ -40,12 +40,17 @@
     <?php
                 if( isset($_GET['p']))
                 {
-                    echo "I found the P <br />";
-                    include($_GET['p'].'.php'); 
+                    if(file_exists($_GET['p'].'.php'))
+                    {
+                        include($_GET['p'].'.php'); 
+                    }
+                    else
+                    {
+                        include('home.php');
+                    }    
                 }
                 else
                 {
-                    echo "I couldn't find P<br />";
                     include('home.php');
                 }
 	?>
