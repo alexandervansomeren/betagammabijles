@@ -10,6 +10,7 @@
 
 if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 {
+	echo 'hallo';
 	$username = $_POST['username'] ;
 	$shaPassword = sha1( $_POST['password'] );
 	
