@@ -101,11 +101,6 @@
                             <div class="ques">Wachtwoord:</div>
                             <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
                         </div>
-                        <div class="field">
-                            <div class="ques">Selecteer geslacht:</div>
-                            <div class="ans"><input type="radio" name="gender" value="1" />Man</div>
-                            <div class="ans"><input type="radio" name="gender" value="0" />Vrouw</div>
-                        </div>
                    </div>
                    <em><br />Hamvraag</em>  
                    <div class="paragraph">
@@ -132,6 +127,11 @@
                             <div class="ans">
                                 <input type="text" name="lastname" size="24" placeholder="Achternaam" style="width:93px;" />
                             </div>
+                        </div>
+                        <div class="field">
+                            <div class="ques">Selecteer geslacht:</div>
+                            <div class="ans"><input type="radio" name="gender" value="1" />Man</div>
+                            <div class="ans"><input type="radio" name="gender" value="0" />Vrouw</div>
                         </div>
                         <div class="field"> 
                             <div class="ques">Geboortedatum:</div>
@@ -221,9 +221,26 @@
                 include 'shielded/connector.php';
                 $db = new ConnectorClass;
 
-                // Initializing variables and secure that they are not mysql-injections
-                // "Over jou"
-                    // "naam en leeftijd"
+                // Initializing variables and secure that they are not mysql-injections or include tags
+                //"Profiel: user_data"
+                    //Username Password
+                    if (isset($_POST['username']))
+                    {
+	                    $username = strip_tags(mysql_real_escape_string($_POST['username']));
+                    }
+                    //else $username="";
+                    if (isset($_POST['password']))
+                    {
+	                    $password = strip_tags(mysql_real_escape_string($_POST['password']));
+                    }
+                    //let op < dit soort tekens worden verwijdert uit het wachtwoord. Foutmelding?
+                    if (isset($_POST['user_type']))
+                    {
+                        $user_type=$_POST['user_type'];
+                    }
+                
+                //"User_personal_data"
+                    //"Over jou"
                     if (isset($_POST['firstname']))
                     {
 	                    $first_name = strip_tags(mysql_real_escape_string($_POST['firstname']));
@@ -244,8 +261,16 @@
 	                    $date_of_birth = strip_tags(mysql_real_escape_string($_POST['date_of_birth']));
                     }
                     else $date_of_birth=""; 
-                    
-                    //"contactgegevens"
+                    if (isset($_POST['gender']))
+                    {
+                        $gender=$_POST['gender'];
+                    }
+                    // About me
+                    if (isset($_POST['ervaring']))
+                    {
+                        $about_me = strip_tags(mysql_real_escape_string($_POST['ervaring']));
+                    } else $about_me = "Nog geen tekst ingevuld";
+                    //"Contactgegevens"
                     if (isset($_POST['emailadress']))
                     {
 	                    $emailadress = strip_tags(mysql_real_escape_string($_POST['emailadress']));
@@ -262,7 +287,7 @@
                     }
                     else $phone_2=null;
 
-                    //"adres"
+                    //"Adres: adress_data"
                     if (isset($_POST['street']))
                     {
 	                    $street = strip_tags(mysql_real_escape_string($_POST['street']));
@@ -288,36 +313,6 @@
 	                    $city = strip_tags(mysql_real_escape_string($_POST['city']));
                     }
                     else $city="";
-                    
-                //"Profiel"
-                    //Username Password
-                    if (isset($_POST['username']))
-                    {
-	                    $username = strip_tags(mysql_real_escape_string($_POST['username']));
-                    }
-                    //else $username="";
-                    if (isset($_POST['password']))
-                    {
-	                    $password = strip_tags(mysql_real_escape_string($_POST['password']));
-                    }
-                    //else $password="";
-                    
-                    if (isset($_POST['user_type']))
-                    {
-                        $user_type=$_POST['user_type'];
-                    }
-                    
-                    // About me MOET NOG WORDEN BEHANDELD
-                    if (isset($_POST['ervaring']))
-                    {
-                        $about_me = strip_tags(mysql_real_escape_string($_POST['ervaring']));
-                    } else $about_me = "Nog geen tekst ingevuld";
-                       
-                    //Gender
-                    if (isset($_POST['gender']))
-                    {
-                        $gender=$_POST['gender'];
-                    }
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
