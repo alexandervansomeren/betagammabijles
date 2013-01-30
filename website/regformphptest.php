@@ -320,7 +320,7 @@
                     {
                         $course_array = $_POST['bijlesvak[]'];
                         $size = sizeof($course_array);
-                        echo "Vlak voor de for-loop";s
+                        echo "Vlak voor de for-loop";
                         for($i=0; $i < $size; $i++)
                         {
                             echo "Hallo ik ben in de for-loop";
