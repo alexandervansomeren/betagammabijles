@@ -321,10 +321,11 @@
                         $course_array = $_POST['bijlesvak[]'];
                         $size = sizeof($course_array);
                         echo "Vlak voor de for-loop";
+                        global $course_code;
                         for($i=0; $i < $size; $i++)
                         {
                             echo "Hallo ik ben in de for-loop";
-                            global $course_code[$i] = $course_array[$i];
+                            $course_code[$i] = $course_array[$i];
                             //= (($course_array[$i]*100) + 11);
                             echo $course_code[$i];
                         }
