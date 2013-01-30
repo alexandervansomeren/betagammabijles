@@ -197,7 +197,7 @@
                         <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak[]" />MaW</label>
                         <label class="ques"><input type="checkbox" value="30" name="bijlesvak[]" />Filosofie</label>
                         <label class="ques"><input type="checkbox" value="31" name="bijlesvak[]" />Kunst Alg.</label>
-                        <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32 name="bijlesvak[]" />CKV</label >
+                        <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak[]" />CKV</label >
                         <div class="field">Heb je ervaring met bijles geven?</div>
                         <div class="field">
                             <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
@@ -317,8 +317,8 @@
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
                     {
-                        {$course_array}[] = $_POST['bijlesvak[]'];
-                        $size = sizeof({$course_array}[]);
+                        $course_array = $_POST['bijlesvak[]'];
+                        $size = sizeof($course_array);
                         for(int $i=0; $i < $size; $i++)
                         {
                             $course_code[$i] = (($course_array[$i]*100) + 11);
