@@ -1,6 +1,6 @@
 <div class="content">
         <div class="page-intro">
-            <form class="selection" method="get" action="index.php?p=advertenties">
+            <form class="selection" method="get" action="<?php echo($_SERVER['PHP_SELF']); ?>">
                 <div class="part">
                     <div class="text"> Vak: </div>
                     <input class="inputfield" type="text" name="course" placeholder="bijv. Natuurkunde"/>
@@ -14,9 +14,10 @@
                     <input class="inputfield" type="text" name="level"placeholder="bijv. havo"/>
                 </div>
                 <div class="selectpart" style="width:152px"> 
-                    <label >Man <input type="checkbox" name="male", checked="checked">	</label>
-                    <label >Vrouw <input type="checkbox" name="female", checked="checked">	</label>
+                    <label >Man <input type="checkbox" name="male"  checked="checked" />	</label>
+                    <label >Vrouw <input type="checkbox" name="female" checked="checked" />	</label>
                 </div> 
+                <input class="inputfield" type="hidden" name="p" value="advertenties" />
                 <input class="part" style="width:60px; height:25px; margin-left:10px;" type="submit" value="Zoeken"/>
         </form>
     </div>
