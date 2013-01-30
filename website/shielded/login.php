@@ -53,7 +53,9 @@ function createPasswordSalt( $shaPassword )
 function login( $username, $shaPassword )
 {
 	include 'connector.php';
+        echo "dit gaat goed";
 	$dbLOGIN = new ConnectorClass;
+        echo "en dit dus ook";
 	$dbLOGIN -> Query = 
 		"
 			SELECT 
