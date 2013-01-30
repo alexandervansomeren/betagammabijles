@@ -1,47 +1,41 @@
 <?php
 
 include 'shielded/connector.php';
-$db = new ConnectorClass;
+$bijlesDocent = new ConnectorClass;
 	
-
-$GLOBALS['db'] -> Query = 
+$GLOBALS['bijlesDocent'] -> Query = 
 '	SELECT *
         FROM webdb13BG2.user_personal_data up
         INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id';
 
-$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+$GLOBALS['queryResultsArray'] = $GLOBALS['bijlesDocent'] -> Querying();
 
 $GLOBALS['fiveResults'] = '';
 
 if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
 {
   $x = 0;
-  foreach ($GLOBALS['queryResultsArray'] as $vakRow)
+  foreach ($GLOBALS['queryResultsArray'] as $docentRow)
   {
       if($x < 5)
         {
-            $db123 = new ConnectorClass;
-            echo "hier kwam ik nog!! echt:". $x ." <br />";
+            $vakkenConnect = new ConnectorClass;
             // Get vakken die docent geeft
-            $GLOBALS['db123'] -> Query = 
+            $GLOBALS['vakkenConnect'] -> Query = 
             'SELECT ci.course_name
             FROM webdb13BG2.course_user cu
             INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
             INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-            WHERE cu.user_id = '. $vakRow['user_id'] .';';
+            WHERE cu.user_id = '. $docentRow['user_id'] .';';
             
-            $GLOBALS['queryResultsArray1'] = $GLOBALS['db123'] -> Querying();
+            $GLOBALS['vakkenArray'] = $GLOBALS['vakkenConnect'] -> Querying();
             $GLOBALS['vakken'] = "";
             
-            print_r($GLOBALS['queryResultsArray1']);
-            
-            echo "<br /><br />";
-            
-            if (sizeOf( $GLOBALS['queryResultsArray1'] ) >= 1)
+            if (sizeOf( $GLOBALS['vakkenArray'] ) >= 1)
             {			
-              foreach ($GLOBALS['queryResultsArray1'] as $vakRow1)
+              foreach ($GLOBALS['vakkenArray'] as $vakRow)
               {
-                  $GLOBALS['vakken'] .= $vakRow1['course_name'] .' ';
+                  $GLOBALS['vakken'] .= $vakRow['course_name'] .' ';
               }
             }
             else
@@ -49,9 +43,9 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
               $GLOBALS['vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
             }
           
-            if ( file_exists( 'user_img/'.$vakRow['user_id'].'.jpg' ))
+            if ( file_exists( 'user_img/'.$docentRow['user_id'].'.jpg' ))
             {
-              $GLOBALS['docent_img'] = '<img src="user_img/'. $vakRow['user_id'] .'.jpg" width="100%" height="400px" />';
+              $GLOBALS['docent_img'] = '<img src="user_img/'. $docentRow['user_id'] .'.jpg" width="100%" height="400px" />';
             }
             else
             {
@@ -59,7 +53,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             }
             
             // Create a div for each of 5         
-            $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $vakRow['user_id'] .'" class="docent last"><span class="name">'. $vakRow['first_name'] .'</span><span class="vak">
+            $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
                                        '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
       
             $x++;
