@@ -24,6 +24,20 @@ function deleteUser()
 	echo 'verwijder een gebruiker';
 }
 ?>
+<script>
+function deleteUser()
+{
+	<?php deleteUser(); ?>
+}
+function add()
+{
+	<?php deleteUser(); ?>
+}
+function logout()
+{
+	<?php header: 'logout.php'; ?>
+}
+</script>
 
 <h1> Welkom op de beheerderspagina. </h1>
 <h2> Maak een keuze: </h2>
