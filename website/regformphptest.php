@@ -318,7 +318,7 @@
                     if (isset($_POST['bijlesvak[]']))
                     {
                         $course_array[] = $_POST['bijlesvak[]'];
-                        for(int $i=0; $i < sizeof($_POST['bijlesvak[]']); $i++)
+                        for(int $i=0; $i < sizeof($course_array[]); $i++)
                         {
                             $course_code[$i] = (($course_array[$i]*100) + 11);
                         }
