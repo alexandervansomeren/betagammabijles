@@ -81,10 +81,10 @@ function login( $username, $shaPassword )
                         $setLastLogin -> Query = 
                 	 "
                         INSERT INTO webdb13BG2.user_personal_data (last_login) 
-                        VALUES (". Date(U) .");
+                        VALUES (". Date('U') .");
                         ";
-                        echo $dbLOGIN -> Query;
-                        $resultOfQ = $dbLOGIN -> Querying();
+                        echo $setLastLogin -> Query;
+                        $resultOfQ = $setLastLogin -> Querying();
                         
                         print_r($resultOfQ);
 			$user_typeINT = intval( $user_type );
