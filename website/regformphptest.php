@@ -343,7 +343,6 @@
 	
                 $currentUserArray = $GLOBALS['db'] -> Querying();
             	$GLOBALS['user_id'] = $currentUserArray[1][0];
-            	echo $GLOBALS['user_id'];
             	                
                 // Resetting db's variables
                 $GLOBALS['db'] -> Query = null;
@@ -358,11 +357,10 @@
                     VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
                     ";
                 echo $GLOBALS['db'] -> Query;
-                echo '<br />';	
-                $currentUserArray = $GLOBALS['db'] -> Querying();
-                echo '<pre>';
-                print_r($currentUserArray);
-                echo '</pre>';
+                $GLOBALS['db'] -> Querying();
+                //echo '<pre>';
+                //print_r($currentUserArray);
+                //echo '</pre>';
                 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
