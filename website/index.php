@@ -20,6 +20,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
   {
       if($x < 5)
         {
+            $db123 = new ConnectorClass;
             echo "hier kwam ik nog!! echt:". $x ." <br />";
             // Get vakken die docent geeft
             $GLOBALS['db123'] -> Query = 
