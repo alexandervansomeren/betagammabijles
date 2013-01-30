@@ -325,6 +325,7 @@
             /*salt nog toevoegen aan INSERT INTO*/
             function makeQuery()
             {
+                //user_id wordt geinitialiseerd via user_data
                 $GLOBALS['db'] -> Query = 
                 "INSERT INTO webdb13BG2.user_data(username, password, user_type) 
                 VALUES ('".$GLOBALS['username']."', '".$GLOBALS['password']."', ".$GLOBALS['user_type'].");
@@ -336,6 +337,7 @@
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
 
+                //de geinitialiseerde user_id wordt opgehaald en opgeslagen in een variabele
                 $GLOBALS['db'] -> Query =     
                     "
                     SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';
@@ -348,27 +350,25 @@
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
                 
+                //de user_personal_data wordt toegevoegd
                 $GLOBALS['db'] -> Query =     
                 	"
                     INSERT INTO webdb13BG2.user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
                     VALUES ('".$GLOBALS['first_name']."', '".$GLOBALS['middle_name']."', '".$GLOBALS['last_name']."', '".$GLOBALS['date_of_birth']."', ".$GLOBALS['gender'].", 
                     '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
                     ";
-                echo '<br />';
-                echo $GLOBALS['db'] -> Query;
                 $GLOBALS['db'] -> Querying();
                             	                
                 // Resetting db's variables
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
                 
+                //de adress_data van de user wordt toegevoegd
                 $GLOBALS['db'] -> Query =   
                     "
                     INSERT INTO webdb13BG2.adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
                     VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
                     ";
-                echo '<br />';
-                echo $GLOBALS['db'] -> Query;
                 $GLOBALS['db'] -> Querying();
                 
                 //Disconnect from the database
