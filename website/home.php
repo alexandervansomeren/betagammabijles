@@ -1,6 +1,7 @@
 <?php
 $bijlesDocent = new ConnectorClass;
-	
+
+
 $GLOBALS['bijlesDocent'] -> Query = 
 '	SELECT *
         FROM webdb13BG2.user_personal_data up
