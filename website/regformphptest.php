@@ -302,11 +302,13 @@
                     }
                     //else $password="";
                     
-                    // User type MOET NOG WORDEN BEHANDELD
-                    $user_type = 1;
+                    if (isset($_POST['user_type']))
+                    {
+                        $user_type=$_POST['user_type'];
+                    }
                     
                     // About me MOET NOG WORDEN BEHANDELD
-                    $about_me = "Voorbeeld tekst";
+                    $about_me = "Nog geen tekst ingevuld";
                        
                     //Gender
                     if (isset($_POST['gender']))
@@ -314,7 +316,7 @@
                         $gender=$_POST['gender'];
                     }
                     
-        	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']))
+        	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
         		makeQuery();
 			}
