@@ -52,7 +52,6 @@ function createPasswordSalt( $shaPassword )
 }
 function login( $username, $shaPassword )
 {
-	include 'connector.php';
 	$dbLOGIN = new ConnectorClass;
 	$dbLOGIN -> Query = 
 		"
@@ -67,6 +66,7 @@ function login( $username, $shaPassword )
 	//print_r($queryResultArray);
 	//echo'</pre>';
 	$dbLOGIN -> Disconnect();
+        unset($dbLOGIN); 
 	if ( isset($queryResultArray[1][0]) && isset($queryResultArray[1][1]) && isset($queryResultArray[1][2]))
 		{
 		$pw = $queryResultArray[1][0];
@@ -79,11 +79,11 @@ function login( $username, $shaPassword )
 		{
 			echo $user_type;
 			$user_typeINT = intval( $user_type );
-			return ( $user_typeINT );
-		}
+                        return ( $user_typeINT );
+                }
 	}
 	else 
-	{		
+	{	
 		return ( 'no user' );
 	}
 }
