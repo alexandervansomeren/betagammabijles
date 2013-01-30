@@ -23,7 +23,8 @@ if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 	{
 		session_start();
 		$_SESSION['user_type']= $userType;
-		header( 'advertenties.php' );
+		echo "inloggen gelukt :D";
+		header( 'Location: /advertenties.php' );
 	}
 	else
 	{
