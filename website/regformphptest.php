@@ -62,7 +62,7 @@
                 }
 
                 var url="wachtwoordcheck.php";
-                str = str.replace(/\n/g, " ");
+                /*str = str.replace(/\n/g, " ");*/
                 url = url + "?q=" + str;
                 url = url + "&sid=" + Math.random();
 
