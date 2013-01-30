@@ -76,14 +76,11 @@ function login( $username, $shaPassword )
 		$tryPW = sha1( $salted.$shaPassword.$salt );
 		if ( $pw == $tryPW )
 		{
-			echo $user_type;
 			return ( $user_type );
 		}
 	}
 	else 
-	{
-		echo "no user";
-		return ( 'no user' );
+	{		return ( 'no user' );
 	}
 }
 ?>

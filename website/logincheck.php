@@ -18,7 +18,17 @@ if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 	$shaPassword = sha1( $_POST['password'] );
 	
 	include 'shielded/login.php';
-	echo (login ($username, $shaPassword));
+	$userType =  (login ($username, $shaPassword));
+	if ( is_int( $userType ) )
+	{
+		session_start();
+		$_SESSION['user_type']= $userType;
+		header( 'advertenties.php' );
+	}
+	else
+	{
+		echo "Inloggen mislukt";
+	}
 }
 ?>
 </body>
