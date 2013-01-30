@@ -7,7 +7,7 @@
 
 <body>
 <?php
-$username = 'alexsomer2';
+$username = 'alexsomer3';
 $password = 'geheimpje';
 echo 'Username: '.$username.'<br />';
 echo 'Password: '.$password.'<br />';

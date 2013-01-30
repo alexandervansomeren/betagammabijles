@@ -54,16 +54,16 @@ function createPasswordSalt( $shaPassword )
 function login( $username, $shaPassword )
 {
 	include 'connector.php';
-	$db = new ConnectorClass;
-	$db -> Query = 
+	$dbLOGIN = new ConnectorClass;
+	$dbLOGIN -> Query = 
 		"
 			SELECT 
 			password, salt, user_type
 			FROM webdb13BG2.user_data
 			WHERE webdb13BG2.user_data.=".$username.";
 		";
-	$queryResultArray = $db -> Querying();
-	$db -> Disconnect();
+	$queryResultArray = $dbLOGIN -> Querying();
+	$dbLOGIN -> Disconnect();
 	$pw = $queryResultArray['password'];
 	$salt = $queryResultArray['salt'];
 	$user_type = $queryResultArray['user_type'];
