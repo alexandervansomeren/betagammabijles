@@ -28,8 +28,8 @@ function deleteUser()
 
 <h1> Welkom op de beheerderspagina. </h1>
 <h2> Maak een keuze: </h2>
-<button onclick="Admin/deleteUser.php"> <h3> Verwijder een gebruiker. </h3> </button> <br />
-<button onclick="Admin/addAdmin.php"> <h3> Voeg een beheerder toe </h3> </button> <br />
-<button onclick="logout.php"> <h3> Uitloggen </h3> </button> <br />
+<a href="Admin/deleteUser.php"> <h3> Verwijder een gebruiker. </h3> </a> <br />
+<a href="Admin/addAdmin.php"> <h3> Voeg een beheerder toe </h3> </a> <br />
+<a href="logout.php"> <h3> Uitloggen </h3> </a> <br />
 </body>
 </html>
