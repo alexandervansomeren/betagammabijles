@@ -30,16 +30,15 @@
             width: 155px;
             display: block;
         }
-        /* Ik weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
-            maar hiermee zouden we de breedte voor de velden kunnen veranderen */
-        
+        <!-- Ik weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
+            maar hiermee zouden we de breedte voor de velden kunnen veranderen -->
         </style>
         
         <script type="text/javascript">
             function pwstrength()
             {
-                id = document.getElementById("password");
-                count = document.getElementById("count");
+                id = document.getElementByName("password");
+                fb = document.getElementById("fb");
                 strength = "bad";
                 if (id.value.length > 3)
                 {
@@ -81,7 +80,7 @@
                         </div>
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
-                            <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
+                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()"/></div>
                             <p id="fb"></p>
                         </div>
                    </div>
