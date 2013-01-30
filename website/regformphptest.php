@@ -8,7 +8,7 @@
         
         <!-- formvalidaties en formfeedback in javascript -->
         <script language="javascript" type="text/javascript">
-/*            var xmlhttp;
+            var xmlhttp;
 
             function GetXMLHTTPObject()
             {
@@ -29,7 +29,7 @@
                     document.getElementById("fbu").innerHTML = xmlhttp.responseText;
                 }
             }
-*/            
+            
             function pwStrength()
             {
                 id = document.getElementById("password");
@@ -62,7 +62,7 @@
                 }
 
                 var url="wachtwoordcheck.php";
-                str = str.replace(/\n/g, " ");
+                /*str = str.replace(/\n/g, " ");*/
                 url = url + "?q=" + str;
                 url = url + "&sid=" + Math.random();
 
