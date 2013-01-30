@@ -10,6 +10,7 @@
 if ( isset($_SESSION['user_type']) )
 if ( $_SESSION['user_type']==3 )
 {
+	
 	echo '
 		<h1> Welkom op de beheerderspagina. </h1>
 		<h2> Maak een keuze: </h2>
@@ -18,14 +19,30 @@ if ( $_SESSION['user_type']==3 )
 		<h3> Uitloggen </h3>
 	';
 }
+function deleteUser()
+{
+	echo 'verwijder een gebruiker';
+}
 ?>
+<script>
+function deleteUser()
+{
+	<?php deleteUser(); ?>
+}
+function add()
+{
+	<?php deleteUser(); ?>
+}
+function logout()
+{
+	<?php header: 'logout.php'; ?>
+}
+</script>
 
 <h1> Welkom op de beheerderspagina. </h1>
 <h2> Maak een keuze: </h2>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <input type="button" name="delete" value="Verwijder een gebruiker"/><br /><br />
-    <input type="button" name="add" value="Voeg een beheerder toe"/><br /><br />
-    <input type="button" name="logout" value="Uitloggen"/><br /><br />
-</form>       
+<button onclick="deleteUser()"> <h3> Verwijder een gebruiker. </h3> </button> <br />
+<button onclick="add()"> <h3> Voeg een beheerder toe </h3> </button> <br />
+<button onclick="logout()"> <h3> Uitloggen </h3> </button> <br />
 </body>
 </html>
