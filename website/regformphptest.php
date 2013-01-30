@@ -411,10 +411,12 @@
                 $GLOBALS['db'] -> Querying();
                 */
                 $N = count($GLOBALS['courseTest']);
+                $localCourse = array();
+                $localCourse = $GLOBALS['courseTest'];
                 echo("Je hebt $N vakken gekozen ");
                 for($i=0; $i < $N; $i++)
                 {
-                    echo($GLOBALS['courseTest[$i]'] . " ");
+                    echo($localCourse[$i] . " ");
                 }       
                 /*
                     if (isset($_POST['bijlesvak']))
