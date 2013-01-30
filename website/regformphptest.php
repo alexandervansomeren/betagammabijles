@@ -226,19 +226,19 @@
                     // "naam en leeftijd"
                     if (isset($_POST['firstname']))
                     {
-	                    $firstname = mysql_real_escape_string($_POST['firstname']);
+	                    $first_name = mysql_real_escape_string($_POST['firstname']);
                     }
-                    else $firstname="";
+                    else $first_name="";
                     if (isset($_POST['middlename']))
                     {
-	                    $middlename = mysql_real_escape_string($_POST['middlename']);
+	                    $middle_name = mysql_real_escape_string($_POST['middlename']);
                     }
-                    else $middlename="";
+                    else $middle_name="";
                     if (isset($_POST['lastname']))
                     {
-	                    $lastname = mysql_real_escape_string($_POST['lastname']);
+	                    $last_name = mysql_real_escape_string($_POST['lastname']);
                     }
-                    else $lastname="";
+                    else $last_name="";
                     if (isset($_POST['date_of_birth']))
                     {
 	                    $date_of_birth = mysql_real_escape_string($_POST['date_of_birth']);
@@ -306,7 +306,7 @@
                     $user_type = 1;
                     
                     // About me MOET NOG WORDEN BEHANDELD
-                    $about_me = "Default tekst";
+                    $about_me = "Voorbeeld tekst";
                        
                     //Gender
                     if (isset($_POST['gender']))
@@ -351,11 +351,11 @@
                 
                 $GLOBALS['db'] -> Query =     
                 	"
-                    INSERT INTO user_personal_data (firstname, middlename, lastname, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
-                    VALUES (".$GLOBALS['firstname'].", ".$GLOBALS['middlename'].", ".$GLOBALS['lastname'].", ".$GLOBALS['date_of_birth'].", ".$GLOBALS['gender'].", 
-                    ".$GLOBALS['emailadress'].", ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", ".$GLOBALS['about_me'].", ".$GLOBALS['user_id'].");
+                    INSERT INTO user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
+                    VALUES ('".$GLOBALS['first_name']."', '".$GLOBALS['middle_name']."', '".$GLOBALS['last_name']."', '".$GLOBALS['date_of_birth']."', ".$GLOBALS['gender'].", 
+                    '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
                     INSERT INTO adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
-                    VALUES (".$GLOBALS['user_id'].", ".$GLOBALS['city'].", ".$GLOBALS['street'].", ".$GLOBALS['streetnumber'].", ".$GLOBALS['postal'].", ".$GLOBALS['postal_extra'].");
+                    VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
                     ";
                 echo $GLOBALS['db'] -> Query;
                 echo '<br />';	
