@@ -414,7 +414,7 @@
                 echo("Je hebt $N vakken gekozen ");
                 for($i=0; $i < $N; $i++)
                 {
-                    echo($courseTest[$i] . " ");
+                    echo($GLOBALS['courseTest[$i]'] . " ");
                 }       
                 /*
                     if (isset($_POST['bijlesvak']))
