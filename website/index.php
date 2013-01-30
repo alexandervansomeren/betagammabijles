@@ -27,14 +27,13 @@
                             {
                                     $_SESSION['user_type']= $userType;
                                     $_SESSION['user_name']= $username;
-                                    echo "inloggen gelukt :D";
                             }
                             else
                             {
-                                    echo "Inloggen mislukt";
                                     session_start();
                                     session_destroy();
                             }
+                            Disconnect();
                     }
                     
                     if ( isset($_SESSION['user_type']) )
