@@ -7,6 +7,7 @@
 
 <body>
 <?php
+
 $username = 'alexsomer3';
 $password = 'geheimpje';
 echo 'Username: '.$username.'<br />';
@@ -14,6 +15,7 @@ echo 'Password: '.$password.'<br />';
 
 $shaPassword = sha1( $password );
 echo 'SHA-password: '.$shaPassword.'<br />';
+/*
 
 include 'shielded/login.php';
 $passwordArray = createPasswordSalt( $shaPassword );
@@ -40,7 +42,9 @@ echo '<br />';
 $db -> Querying();	
 $db -> Disconnect();
 echo '<br />';
+*/
 $user_type = login( $username, $shaPassword );
+echo 'userType: ';
 echo $user_type;
 
 ?>
