@@ -36,6 +36,10 @@
                                     session_destroy();
                             }                            
                     }
+                    if(isset( $_POST['logout']))
+                    {                        
+                    
+                    }
                     
                     if ( isset($_SESSION['user_type']) )
                             {
@@ -43,7 +47,7 @@
                             {
                                     echo '<div class="text"><p> Je bent ingelogt als '.$_SESSION['user_type'];
                                     echo '</p>';
-                                    echo '<p><a href="logout.php">Uitloggen</a></p></div>';
+                                    echo '<p><form method="post"><input type="hidden" name="logout"/><button type="submit">Logout</button></form></p></div>';
                             }
                     }
                     else echo 
