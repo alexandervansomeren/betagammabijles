@@ -9,7 +9,7 @@
 <?php
 
 $username = 'alexsomer2';
-$password = 'geheimpje';
+$password = 'geheimpjes';
 echo 'Username: '.$username.'<br />';
 echo 'Password: '.$password.'<br />';
 
