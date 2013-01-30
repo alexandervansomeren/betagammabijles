@@ -173,7 +173,7 @@
                         </div>
                         <div class="field">
                             <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
-                            <div class="ques"><input type="radio" name="user_type" value="1" onclick="document.getElementById("BLgeven").style.visibilty="visible"" />Ik wil graag bijles geven!</div>
+                            <div class="ques"><input type="radio" name="user_type" value="1" onclick="document.getElementById("blgeven").style.visibilty="visible"" />Ik wil graag bijles geven!</div>
                         </div>
                     </div>
                     <script>
@@ -182,7 +182,7 @@
 						document.getElementById("BLgeven").style.visibilty="visible";
 					}
 					</script>
-                    <div id="BLgeven" style="visibility:hidden">
+                    <div id="blgeven" style="visibility:hidden">
                         <em><br />De bijles</em>
                         <div class="paragraph">
                             <div class="field">
