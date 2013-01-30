@@ -41,10 +41,12 @@
 		// include 'advertentiesZONDERHEADER.php';
                 if($_GET['p'])
                 {
+                    echo "I found the P <br />";
                     include $_GET['p'].'.php'; 
                 }
                 else
                 {
+                    echo "I couldn't find P<br />";
                     include 'home.php';
                 }
 	?>
