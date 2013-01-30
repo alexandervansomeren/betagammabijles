@@ -174,30 +174,32 @@
         	<div class="left"> <a href=/index.html" class="left"> Waarbijles </a> </div>
             <div class="middle"></div>
             <div class="right">
-            	<form method="post" action="logincheck.php">
-                    <div class="label">Voor leden geef je gegevens en log in
-                    </div>
-                    <div class="login">
-                    	<input type="text" placeholder="Gebruikersnaam" name="username"/> 
-                        <input type="password" placeholder="Wachtwoord" name="password"/>
-                        <button type="submit">Login</button>
-                   	</div>
-                </form>
+            	<?php 
+				session_start();
+				echo 'user type als sessie werkt: <br />';
+				if ( isset($_SESSION['user_type']) )
+					{
+					if ( is_int( $_SESSION['user_type'] ) )
+					{
+						echo "Je bent ingelogt als ".$_SESSION['user_type'];
+					}
+				}
+				else echo 
+				'<form method="post" action="logincheck.php">
+					<div class="label">Voor leden geef je gegevens en log in
+					</div>
+					<div class="login">
+						<input type="text" placeholder="Gebruikersnaam" name="username"/> 
+						<input type="password" placeholder="Wachtwoord" name="password"/>
+						<button type="submit">Login</button>
+					</div>
+				</form>';
+				?>
+            	
             </div>
         </div>
     </div>
-	<?php 
-	session_start();
-	echo 'user type als sessie werkt: <br />';
-	if ( isset($_SESSION['user_type']) )
-		{
-		if ( is_int( $_SESSION['user_type'] ) )
-		{
-			echo "Je bent ingelogt als ".$_SESSION['user_type'];
-		}
-	}
-	else echo "niet ingelogd";
-	?>
+	
     <div class="content">
 	    <div class="page-intro">
         	<form class="selection" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
