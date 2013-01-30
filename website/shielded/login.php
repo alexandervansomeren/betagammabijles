@@ -42,6 +42,7 @@ echo login( $username, $shaPassword );
 
 function createPasswordSalt( $shaPassword )
 {
+	echo 'creating password';
 	$salt = md5( uniqid(rand(), true) );
 	$salted = sha1( $salt );
 	$pwForDatabase = sha1( $salted.$shaPassword.$salt );
