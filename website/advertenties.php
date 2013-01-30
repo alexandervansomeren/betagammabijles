@@ -1,6 +1,6 @@
 <div class="content">
         <div class="page-intro">
-            <form class="selection" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <form class="selection" method="get" action="index.php?p=advertenties">
                 <div class="part">
                     <div class="text"> Vak: </div>
                     <input class="inputfield" type="text" name="course" placeholder="bijv. Natuurkunde"/>
