@@ -1,6 +1,4 @@
 <?php
-	/*function lifeQuery( $username )
-	{*/
     // Connect to the database
     include 'shielded/connector.php';
     $db = new ConnectorClass;

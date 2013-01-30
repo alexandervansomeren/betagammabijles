@@ -71,16 +71,6 @@
                 xmlhttp.send(null);
             }
             
-            function unCheck()
-            {
-                //id = document.getElementById("username");
-                feedback = document.getElementById("fbu");
-                feedback.innerHTML = " Gebruikersnaam bestaat al.";
-                /*if (id.value.length < 4)
-                {
-                    feedback.innerHTML = "Kies alsjeblieft een gebruikersnaam van ten minste 4 tekens";
-                }*/
-            }
         </script>
 	</head>
 
