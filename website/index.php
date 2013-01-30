@@ -49,7 +49,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
               $GLOBALS['vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
             }
           
-            if ( file_exists( 'user_img/'.$vakRow['userID'].'.jpg' ))
+            if ( file_exists( 'user_img/'.$vakRow['user_id'].'.jpg' ))
             {
               $GLOBALS['docent_img'] = '<img src="user_img/'. $vakRow['userID'] .'.jpg" width="100%" height="400px" />';
             }
