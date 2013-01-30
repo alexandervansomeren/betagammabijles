@@ -7,7 +7,7 @@
 
 <body>
 <?php
-$username = 'alexsomer';
+$username = 'alexsomer2';
 $password = 'geheimpje';
 echo 'Username: '.$username.'<br />';
 echo 'Password: '.$password.'<br />';
@@ -40,7 +40,8 @@ echo '<br />';
 $db -> Querying();	
 $db -> Disconnect();
 echo '<br />';
-echo login( $username, $shaPassword );
+$user_type = login( $username, $shaPassword );
+echo $user_type;
 
 ?>
 
