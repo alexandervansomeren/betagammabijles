@@ -19,7 +19,7 @@ if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 	
 	include 'shielded/login.php';
 	$userType =  (login ($username, $shaPassword));
-	if ( is_int( $userType ) )
+	if ( isset( $userType ) )
 	{
 		session_start();
 		$_SESSION['user_type']= $userType;
