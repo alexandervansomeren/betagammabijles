@@ -77,7 +77,8 @@ function login( $username, $shaPassword )
 		if ( $pw == $tryPW )
 		{
 			echo $user_type;
-			return ( $user_type );
+			$user_typeINT = intval( $user_type );
+			return ( $user_typeINT );
 		}
 	}
 	else 
