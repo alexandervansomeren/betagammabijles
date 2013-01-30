@@ -194,10 +194,10 @@
                         <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="26" name="bijlesvak[]" />N, L &amp; T</label >
                         <label class="ques" title="Awesome!"><input type="checkbox" value="27" name="bijlesvak[]" />Informatica</label>
                         <label class="ques"><input type="checkbox" value="28" name="bijlesvak[]" />Geschiedenis</label>
-                        <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak[]" />MaW</label>
-                        <label class="ques"><input type="checkbox" value="30" name="bijlesvak[]" />Filosofie</label>
-                        <label class="ques"><input type="checkbox" value="31" name="bijlesvak[]" />Kunst Alg.</label>
-                        <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak[]" />CKV</label >
+                        <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak" />MaW</label>
+                        <label class="ques"><input type="checkbox" value="30" name="bijlesvak" />Filosofie</label>
+                        <label class="ques"><input type="checkbox" value="31" name="bijlesvak" />Kunst Alg.</label>
+                        <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak" />CKV</label >
                         <div class="field">Heb je ervaring met bijles geven?</div>
                         <div class="field">
                             <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
@@ -314,7 +314,7 @@
                     }
                     else $city="";
                     
-                    echo $_POST['bijlesvak[]'];
+                    echo $_POST['bijlesvak'];
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
                     {
