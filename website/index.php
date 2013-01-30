@@ -17,6 +17,10 @@
                     session_start();
                     include 'shielded/connector.php'; 
                     
+                    if(isset( $_POST['logout']))
+                    {                        
+                        session_destroy();
+                    }
                     
                     if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
                     {
@@ -36,11 +40,7 @@
                                     session_destroy();
                             }                            
                     }
-                    if(isset( $_POST['logout']))
-                    {                        
-                        session_destroy();
-                    }
-                    
+                                        
                     if ( isset($_SESSION['user_type']) )
                             {
                             if ( is_int( $_SESSION['user_type'] ) )
