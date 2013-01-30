@@ -80,9 +80,8 @@ function login( $username, $shaPassword )
                         $setLastLogin = new ConnectorClass;
                         $setLastLogin -> Query = 
                                 
-                                '	SELECT *
-        FROM webdb13BG2.user_personal_data up
-        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id';
+                                '	UPDATE
+        webdb13BG2.user_personal_data SET last_login = 2013-03-03 WHERE user_id = 3';
                                 
                         echo $setLastLogin -> Query;
                         $resultOfQ = $setLastLogin -> Querying();
