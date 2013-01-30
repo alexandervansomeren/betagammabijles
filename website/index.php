@@ -1,129 +1,62 @@
-<?php
-
-include 'shielded/connector.php';
-$bijlesDocent = new ConnectorClass;
-	
-$GLOBALS['bijlesDocent'] -> Query = 
-'	SELECT *
-        FROM webdb13BG2.user_personal_data up
-        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id';
-
-$GLOBALS['queryResultsArray'] = $GLOBALS['bijlesDocent'] -> Querying();
-
-$GLOBALS['fiveResults'] = '';
-
-if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
-{
-  $x = 0;
-  foreach ($GLOBALS['queryResultsArray'] as $docentRow)
-  {
-      if($x < 5)
-        {
-            $vakkenConnect = new ConnectorClass;
-            // Get vakken die docent geeft
-            $GLOBALS['vakkenConnect'] -> Query = 
-            'SELECT ci.course_name
-            FROM webdb13BG2.course_user cu
-            INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
-            INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-            WHERE cu.user_id = '. $docentRow['user_id'] .';';
-            
-            $GLOBALS['vakkenArray'] = $GLOBALS['vakkenConnect'] -> Querying();
-            $GLOBALS['vakken'] = "";
-            
-            if (sizeOf( $GLOBALS['vakkenArray'] ) >= 1)
-            {			
-              foreach ($GLOBALS['vakkenArray'] as $vakRow)
-              {
-                  $GLOBALS['vakken'] .= $vakRow['course_name'] .' ';
-              }
-            }
-            else
-            {
-              $GLOBALS['vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
-            }
-          
-            if ( file_exists( 'user_img/'.$docentRow['user_id'].'.jpg' ))
-            {
-              $GLOBALS['docent_img'] = '<img src="user_img/'. $docentRow['user_id'] .'.jpg" width="100%" height="400px" />';
-            }
-            else
-            {
-              $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" ></img>';
-            }
-            
-            // Create a div for each of 5         
-            $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
-                                       '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
-      
-            $x++;
-        }
-  }
-}
-
-?>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html>
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>webdb13BG2</title>
-		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
-		<link rel="stylesheet" type="text/css" href="style.css"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Openbijles.nl</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-	<body>
-		<div class="header">
-              <div class="center">
-                 <div class="left"></div>
-                 <div class="middle"></div>
-                 <div class="right">
-                    <div class="label">Voor leden geef je gegevens en log in</div>
-                    <div class="login"><input value="Gebruikersnaam" />
-                       <input value="Wachtwoord" />
-                       <button type="submit">Login</button>
-                    </div>
-                 </div>
-    	      </div>
-           </div>		
-
-         <div class="content">	
-              <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
-		 <div class="buttons">
-	            <a href="registratieformulier.php" class="left">
-                       <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
-	               <span class="title">Ik geef bijles</span>
-                    </a>
-	            <a href="advertenties.php?course=&city=&level=&male=on&female=on" class="right">	                
-                       <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
-                       <span class="title">Ik wil bijles</span>
-	            </a>
-		</div>
-		    
-                <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
-            
-	        <div class="populair">
-            	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
-                <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
-                <?php echo($GLOBALS['fiveResults']); ?>
-                
-            	
-	     </div>		    
-         </div>
-		
-	 <div class="footer">
-	    <a href="about.php">Wie zijn wij?</a>
-            <a href="registratieformulier.php">Meld aan als docent</a>	
-	    <a href="registratieformulier.php">Meld aan als student</a>		
-            <a href="" class="last">Contact</a>			
-	 </div>
-		
-	 <div class="bottom"></div>
-		
-     </body>
+<body>
+    <div class="header">
+	    <div class="center">
+        	<div class="left"> <a href="index.html" class="left"> Waarbijles </a> </div>
+            <div class="middle"></div>
+            <div class="right">
+            	<?php 
+				session_start();
+				if ( isset($_SESSION['user_type']) )
+					{
+					if ( is_int( $_SESSION['user_type'] ) )
+					{
+						echo '<div class="text"><p> Je bent ingelogt als '.$_SESSION['user_type'];
+						echo '</p>';
+						echo '<p><a href="logout.php">Uitloggen</a></p></div>';
+					}
+				}
+				else echo 
+				'<form method="post" action="logincheck.php">
+					<div class="label">Voor leden geef je gegevens en log in
+					</div>
+					<div class="login">
+						<input type="text" placeholder="Gebruikersnaam" name="username"/> 
+						<input type="password" placeholder="Wachtwoord" name="password"/>
+						<button type="submit">Login</button>
+					</div>
+				</form>';
+				?>
+            </div>
+        </div>
+    </div>
+    <?php
+		// include 'advertentiesZONDERHEADER.php';
+                if($_GET['p'])
+                {
+                    include $_GET['p'].'.php'; 
+                }
+                else
+                {
+                    include 'home.php';
+                }
+	?>
+    <div class="footer">
+        <div class="centerwrapper">
+            <a href="index2.php?page=about">Wie zijn wij?</a>
+            <a href="index2.php?page=indexZ">Welkom</a>
+            <a href="index2.php?page=registratieformulier">Meld je aan</a>
+            <a href="registratieformulier.php">Registratieformulier</a>
+        </div>
+    </div>
+    
+    <div class="bottom"></div>
+</body>
 </html>

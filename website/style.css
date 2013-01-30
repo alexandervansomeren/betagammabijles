@@ -203,21 +203,17 @@ a:hover { text-decoration: underline; }
 
 
 /* Opmaak van Advertenties-pagina */
-.content .page-intro .test
-{
-	height:50px;
-}
 .selection
 {
 	margin-top:10px;
 }
 .selection .part
 {
-	margin-left:25px;
+	margin-left:20px;
 	float:left;
 	margin-top:10px;
 	height:30px;
-	width:193px;
+	width:195px;
 }
 .selection .part .text
 {
