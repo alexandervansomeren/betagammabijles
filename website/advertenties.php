@@ -181,7 +181,6 @@
 					if ( is_int( $_SESSION['user_type'] ) )
 					{
 						echo "Je bent ingelogt als ".$_SESSION['user_type'];
-						echo "<br />";
 						echo '<a href="logout.php">Uitloggen</a>';
 					}
 				}
