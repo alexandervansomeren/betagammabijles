@@ -24,25 +24,12 @@ function deleteUser()
 	echo 'verwijder een gebruiker';
 }
 ?>
-<script>
-function deleteUser()
-{
-	<?php deleteUser(); ?>
-}
-function add()
-{
-	<?php deleteUser(); ?>
-}
-function logout()
-{
-	<?php header: 'logout.php'; ?>
-}
-</script>
+
 
 <h1> Welkom op de beheerderspagina. </h1>
 <h2> Maak een keuze: </h2>
-<button onclick="deleteUser()"> <h3> Verwijder een gebruiker. </h3> </button> <br />
-<button onclick="add()"> <h3> Voeg een beheerder toe </h3> </button> <br />
-<button onclick="logout()"> <h3> Uitloggen </h3> </button> <br />
+<a href="Admin/deleteUser.php"> <h3> Verwijder een gebruiker. </h3> </a> <br />
+<a href="Admin/addAdmin.php"> <h3> Voeg een beheerder toe </h3> </a> <br />
+<a href="logout.php"> <h3> Uitloggen </h3> </a> <br />
 </body>
 </html>
