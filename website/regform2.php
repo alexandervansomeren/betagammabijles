@@ -173,12 +173,13 @@
                         </div>
                         <div class="field">
                             <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
-                            <div class="ques"><input type="radio" name="user_type" value="1" onclick="alert('hee')" />Ik wil graag bijles geven!</div>
+                            <div class="ques"><input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil graag bijles geven!</div>
                         </div>
                     </div>
                     <script>
 					function makeVisible()
 					{
+						alert("hee");
 						document.getElementById("BLgeven").style.visibilty="visible";
 					}
 					</script>
