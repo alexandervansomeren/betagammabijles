@@ -135,7 +135,7 @@
                         </div>
                         <div class="field"> 
                             <div class="ques">Geboortedatum:</div>
-                            <div class="ans"> <input type="text" name="date_of_birth" placeholder="Bijv. 01-01-2000" /></div>
+                            <div class="ans"> <input type="text" name="date_of_birth" placeholder="Bijv. 2000-01-01" /></div>
                         </div>
                         <div class="field"> 
                             <div class="ques">Email:</div>
@@ -233,7 +233,7 @@
                     {
 	                    $middle_name = mysql_real_escape_string($_POST['middlename']);
                     }
-                    else $middle_name="";
+                    else $middle_name=null;
                     if (isset($_POST['lastname']))
                     {
 	                    $last_name = mysql_real_escape_string($_POST['lastname']);
@@ -253,14 +253,14 @@
                     else $emailadress="";
                     if (isset($_POST['phone_1']))
                     {
-	                    $phone_1 = mysql_real_escape_string($_POST['phone_1']);
+	                    $phone_1 = 'mysql_real_escape_string($_POST['phone_1'])';
                     }
-                    else $phone_1="";
+                    else $phone_1=null;
                     if (isset($_POST['phone_2']))
                     {
-	                    $phone_2 = mysql_real_escape_string($_POST['phone_2']);
+	                    $phone_2 = 'mysql_real_escape_string($_POST['phone_2'])';
                     }
-                    else $phone_2="";
+                    else $phone_2=null;
 
                     //"adres"
                     if (isset($_POST['street']))
@@ -350,10 +350,10 @@
                 
                 $GLOBALS['db'] -> Query =     
                 	"
-                    INSERT INTO user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
+                    INSERT INTO webdb13BG2.user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
                     VALUES ('".$GLOBALS['first_name']."', '".$GLOBALS['middle_name']."', '".$GLOBALS['last_name']."', '".$GLOBALS['date_of_birth']."', ".$GLOBALS['gender'].", 
-                    '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
-                    INSERT INTO adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
+                    '".$GLOBALS['emailadress']."', ".$GLOBALS['phone_1'].", ".$GLOBALS['phone_2'].", '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
+                    INSERT INTO webdb13BG2.adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
                     VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
                     ";
                 echo $GLOBALS['db'] -> Query;
