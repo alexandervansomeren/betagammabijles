@@ -354,7 +354,7 @@
                     $GLOBALS['db'] -> Query =
                         "
                         INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                        VALUES ("$course_code", ".$GLOBALS['user_id'].");
+                        VALUES (".$course_code.", ".$GLOBALS['user_id'].");
                         ";
                     $GLOBALS['db'] -> Querying();
                     
