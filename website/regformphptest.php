@@ -311,7 +311,7 @@
                     //Gender
                     if (isset($_POST['gender']))
                     {
-                        $gender=$_POST['gender']
+                        $gender=$_POST['gender'];
                     }
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']))
