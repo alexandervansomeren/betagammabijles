@@ -317,7 +317,12 @@
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
                     {
-                        $course_code = $_POST['bijlesvak[]']*100 + 11;
+                        $course_array[] = $_POST['bijlesvak[]'];
+                        for(int $i=0; $i < sizeof($_POST['bijlesvak[]']); $i++)
+                        {
+                            $course_code[$i] = (($course_array[$i]*100) + 11);
+                        }
+                        //$newarray = implode(", ", $myarray);
                     }
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
@@ -383,7 +388,7 @@
                 $GLOBALS['db'] -> Query =   
                     "
                     INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                    VALUES (".$GLOBALS['course_code'].", ".$GLOBALS['user_id'].");
+                    VALUES (".$GLOBALS['course_code[0]'].", ".$GLOBALS['user_id'].");
                     ";
                 $GLOBALS['db'] -> Querying();
                 
