@@ -32,8 +32,7 @@
                             {
                                     session_start();
                                     session_destroy();
-                            }
-                            Disconnect();
+                            }                            
                     }
                     
                     if ( isset($_SESSION['user_type']) )

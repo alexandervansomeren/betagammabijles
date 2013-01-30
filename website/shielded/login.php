@@ -79,12 +79,15 @@ function login( $username, $shaPassword )
 		{
 			echo $user_type;
 			$user_typeINT = intval( $user_type );
-			return ( $user_typeINT );
-		}
+			Disconnect();
+                        return ( $user_typeINT );
+                }
 	}
 	else 
-	{		
+	{	
+                Disconnect();
 		return ( 'no user' );
+                
 	}
 }
 ?>
