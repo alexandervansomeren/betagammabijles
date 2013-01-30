@@ -8,7 +8,7 @@
     $usern = $_GET['q'];
     $GLOBALS['db'] -> Query =   
     "
-    SELECT user_name FROM webdb13BG2.user_data WHERE username='".$usern."';
+    SELECT username FROM webdb13BG2.user_data WHERE username='".$usern."';
     ";
     $userSame = $GLOBALS['db'] -> Querying();
     if( isset($userSame[1][0] ))
