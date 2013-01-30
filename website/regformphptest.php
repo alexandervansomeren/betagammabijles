@@ -42,7 +42,7 @@
                 {
                     strength= "good";
                 }
-                feedback.innerHTML = "Password strength: " + strength;
+                feedback.innerHTML = " Password strength: " + strength;
             }
             
             function feedbackGone()
@@ -51,7 +51,7 @@
                 feedback.innerHTML = "";
             }
             
-            function unAvailable()
+            function unAvailable(str)
             { 
                 xmlhttp = GetXMLHTTPObject();
                 if (xmlhttp == null){
@@ -73,7 +73,7 @@
             {
                 //id = document.getElementById("username");
                 feedback = document.getElementById("fbu");
-                feedback.innerHTML = "Gebruikersnaam bestaat al.";
+                feedback.innerHTML = " Gebruikersnaam bestaat al.";
                 /*if (id.value.length < 4)
                 {
                     feedback.innerHTML = "Kies alsjeblieft een gebruikersnaam van ten minste 4 tekens";
@@ -105,7 +105,7 @@
                     <div class="paragraph">
                         <div class="field">
                            <div class="ques">Gebruikersnaam:</div>
-                           <div class="ans"><input type="text" name="username" id="username" onkeyup="unCheck()"/></div>
+                           <div class="ans"><input type="text" name="username" id="username" onkeyup="unAvailable(this.value)"/></div>
                            <p id="fbu"> </p>
                         </div>
                         <div class="field">
