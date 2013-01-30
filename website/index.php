@@ -76,66 +76,6 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
 		<title>webdb13BG2</title>
 		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		
-		<style type="text/css">
-		.content .buttons
-		{
-		    width: inherit; height: 350px;
-			position: relative;
-		    margin: 0px 0px 20px 0px;
-		}
-		.content .buttons
-		{
-	        width: inherit; height: 350px;
-			position: relative;
- 	        margin: 0px 0px 20px 0px;
-		}
-	
-		.content .buttons .left,
-		.content .buttons .right
-		{
-			border: 2px solid #FF7F00;		
-			display: block;
-		    float: left;		    
-		    width: 436px;
-		    height: 346px;
-            float: left;		    
-	        width: 436px;
-            height: 346px;
-            box-shadow: 0px 0px 5px 0px #FF7F00;
-		}
-		
-		.content .buttons a .title
-		{
-			width: inherit; height: 60px; line-height: 60px;
-			text-indent: 10px;
-			position: absolute;
-			bottom: 0px;
-			display:block;
-			background-color: #FF7F00;
-			font-size: 38px;
-			opacity: 0.80;
-		}
-		
-		.content .buttons .left { margin-right: 20px; }
-		.content .buttons .right { }
-		
-		.content .buttons > a:hover { box-shadow: 0px 0px 10px 2px #FF7F00; }
-	    .content .buttons > a:hover .title { text-decoration: underline; }
-        .content .buttons > a:hover .title { text-decoration: underline; }
-		
-		.main_title
-		{
-			width: inherit;
-			height: 25px;
-			margin-bottom: 25px;	
-			
-			font-size: 24px;
-		}
-		</style>
-		
-		
-	</head>
 
 	<body>
 		<div class="header">
@@ -152,7 +92,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
     	      </div>
            </div>		
 
-           <div class="content">	
+         <div class="content">	
               <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
 		 <div class="buttons">
 	            <a href="registratieformulier.php" class="left">
