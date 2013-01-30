@@ -8,7 +8,7 @@
         
         <!-- formvalidaties en formfeedback in javascript -->
         <script language="javascript" type="text/javascript">
-/*            var xmlhttp;
+            var xmlhttp;
 
             function GetXMLHTTPObject()
             {
@@ -29,7 +29,7 @@
                     document.getElementById("fbu").innerHTML = xmlhttp.responseText;
                 }
             }
-*/            
+            
             function pwStrength()
             {
                 id = document.getElementById("password");
