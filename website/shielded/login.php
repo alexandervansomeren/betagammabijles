@@ -50,6 +50,7 @@ function createPasswordSalt( $shaPassword )
 		'salt' => $salt 
 		);
 	return( $PwSaltArray );
+	echo '<pre>'.$PwSaltArray.'</pre>';
 }
 
 function login( $username, $shaPassword )
