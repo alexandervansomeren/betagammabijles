@@ -187,10 +187,11 @@
         </div>
     </div>
 	<?php 
-	echo 'user type als sessie werkt: ';
-	if ( isset( $_SESSION['userType'] ) )
+	session_start();
+	echo 'user type als sessie werkt: <br />';
+	if ( isset( $_SESSION['user_type'] ) )
 	{
-		echo "Je bent ingelogt als".$_SESSION['userType'];
+		echo "Je bent ingelogt als ".$_SESSION['user_type'];
 	}
 	?>
     <div class="content">
