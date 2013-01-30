@@ -7,19 +7,15 @@
 
 <body>
 <?php
-echo 'check <br />';
-echo $_POST['username'];
-echo $_POST['password'];
 
 if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 {
-	echo 'hallo';
 	$username = $_POST['username'] ;
 	$shaPassword = sha1( $_POST['password'] );
 	
 	include 'shielded/login.php';
 	$userType =  (login ($username, $shaPassword));
-	if ( isset( $userType ) )
+	if ( is_int( $userType ) )
 	{
 		session_start();
 		$_SESSION['user_type']= $userType;

@@ -61,11 +61,11 @@ function login( $username, $shaPassword )
 			FROM webdb13BG2.user_data
 			WHERE webdb13BG2.user_data.username='".$username."';
 		";
-	echo $dbLOGIN -> Query;
+	//echo $dbLOGIN -> Query;
 	$queryResultArray = $dbLOGIN -> Querying();
-	echo '<pre>';
-	print_r($queryResultArray);
-	echo'</pre>';
+	//echo '<pre>';
+	//print_r($queryResultArray);
+	//echo'</pre>';
 	$dbLOGIN -> Disconnect();
 	if ( isset($queryResultArray[1][0]) && isset($queryResultArray[1][1]) && isset($queryResultArray[1][2]))
 		{
