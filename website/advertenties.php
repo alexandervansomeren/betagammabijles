@@ -27,7 +27,7 @@
 	float:left;
 	margin-top:10px;
 	height:30px;
-	width:190px;
+	width:193px;
 }
 .selection .part .text
 {
@@ -51,7 +51,7 @@
 	height:20px;
 	width:120px;
 	float:left;
-	margin-left:10px;
+	margin-left:8px;
 }
 .selection .selectpart .selectiondrop
 {
