@@ -51,12 +51,12 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
           
             if ( file_exists( 'user_img/'.$vakRow['user_id'].'.jpg' ))
             {
-              $GLOBALS['docent_img'] = '<img src="user_img/'. $vakRow['userID'] .'.jpg" width="100%" height="400px" />';
+              $GLOBALS['docent_img'] = '<img src="user_img/'. $vakRow['user_id'] .'.jpg" width="100%" height="400px" />';
             }
             else
             {
-              $GLOBALS['docent_img'] = '<img src="img/student_1.jpg" width="100%" height="400px" ></img>';
-            }                        
+              $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" ></img>';
+            }
             
             // Create a div for each of 5         
             $GLOBALS['fiveResults'] .= '<a href="details.php?id='. $vakRow['user_id'] .'" class="docent last"><span class="name">'. $vakRow['first_name'] .'</span><span class="vak">
