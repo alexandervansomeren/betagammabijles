@@ -40,11 +40,9 @@
             </div>
         </div>
     </div>
-	
-    <div class="content">
-	    <div class="page-intro">
-        </div>
-    </div>
+    <?php
+	include 'advertentiesZONDERHEADER.php'; 
+	?>
     <div class="footer">
         <div class="centerwrapper">
             <a href="about.php">Wie zijn wij?</a>
