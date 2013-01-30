@@ -15,10 +15,12 @@
             <div class="right">
             	<?php
                     session_start();
-                    include 'shielded/login.php';   
-                                        
+                    include 'connector.php'; 
+                    
+                    
                     if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
                     {
+                            include 'login.php'; 
                             $username = $_POST['username'] ;
                             $shaPassword = sha1( $_POST['password'] );
                             
