@@ -38,6 +38,27 @@ $db -> Disconnect();
 echo '<br />';
 echo login( $username, $shaPassword );
 */
+
+if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
+{
+	loginFromPost();
+}
+function createPasswordSalt( $shaPassword )
+{
+	$salt = md5( uniqid(rand(), true) );
+	$salted = sha1( $salt );
+	$pwForDatabase = sha1( $salted.$shaPassword.$salt );
+	$PwSaltArray = array();
+	$PwSaltArray[0] = $pwForDatabase;
+	$PwSaltArray[1] = $salt;
+	return( $PwSaltArray );
+}
+function loginFromPost()
+{
+	$username = $_POST['username'] ;
+	$shaPassword = sha1( $_POST['password'] );
+	login ($username, $shaPassword);
+}
 function login( $username, $shaPassword )
 {
 	include 'connector.php';
