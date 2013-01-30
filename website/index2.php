@@ -2,16 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Bijles aanbod</title>
-    <!-- A google font to use on the webpage -->
-    <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'/>
+    <title>Openbijles.nl</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
     <div class="header">
 	    <div class="center">
-        	<div class="left"> <a href=/index.html" class="left"> Waarbijles </a> </div>
+        	<div class="left"> <a href="index.html" class="left"> Waarbijles </a> </div>
             <div class="middle"></div>
             <div class="right">
             	<?php 
@@ -41,7 +39,7 @@
     </div>
     <?php
 		// include 'advertentiesZONDERHEADER.php';
-		include $_GET['page'].'.php';  
+		include $_GET['p'].'.php';  
 	?>
     <div class="footer">
         <div class="centerwrapper">

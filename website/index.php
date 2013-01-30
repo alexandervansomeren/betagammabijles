@@ -63,67 +63,24 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
 
 ?>
 
+<div class="content">	
+     <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
+        <div class="buttons">
+           <a href="registratieformulier.php" class="left">
+              <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
+              <span class="title">Ik geef bijles</span>
+           </a>
+           <a href="advertenties.php?course=&city=&level=&male=on&female=on" class="right">	                
+              <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
+              <span class="title">Ik wil bijles</span>
+           </a>
+       </div>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+       <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
 
-<html>
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>webdb13BG2</title>
-		<!-- Hieronder een verwijzing naar de algemene stylesheet -->
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-
-	<body>
-		<div class="header">
-              <div class="center">
-                 <div class="left"></div>
-                 <div class="middle"></div>
-                 <div class="right">
-                    <div class="label">Voor leden geef je gegevens en log in</div>
-                    <div class="login"><input value="Gebruikersnaam" />
-                       <input value="Wachtwoord" />
-                       <button type="submit">Login</button>
-                    </div>
-                 </div>
-    	      </div>
-           </div>		
-
-         <div class="content">	
-              <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
-		 <div class="buttons">
-	            <a href="registratieformulier.php" class="left">
-                       <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
-	               <span class="title">Ik geef bijles</span>
-                    </a>
-	            <a href="advertenties.php?course=&city=&level=&male=on&female=on" class="right">	                
-                       <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
-                       <span class="title">Ik wil bijles</span>
-	            </a>
-		</div>
-		    
-                <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
-            
-	        <div class="populair">
-            	<a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
-                <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
-                <?php echo($GLOBALS['fiveResults']); ?>
-                
-            	
-	     </div>		    
-         </div>
-		
-	 <div class="footer">
-	    <a href="about.php">Wie zijn wij?</a>
-            <a href="registratieformulier.php">Meld aan als docent</a>	
-	    <a href="registratieformulier.php">Meld aan als student</a>		
-            <a href="" class="last">Contact</a>			
-	 </div>
-		
-	 <div class="bottom"></div>
-		
-     </body>
-</html>
+       <div class="populair">
+       <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
+       <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
+       <?php echo($GLOBALS['fiveResults']); ?>
+    </div>		    
+</div>
