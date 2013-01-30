@@ -361,10 +361,12 @@
                         //$newarray = implode(", ", $myarray);
                     }
                 */
+                
+                $courseTest = array();
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
-        	    global $courseTest = $_POST['bijlesvak'];
+        	    $GLOBALS['courseTest'] = $_POST['bijlesvak'];
                 if(empty($courseTest))
                 {
                     echo("Je hebt geen vak gekozen. ");
