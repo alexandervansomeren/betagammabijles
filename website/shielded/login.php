@@ -67,15 +67,18 @@ function login( $username, $shaPassword )
 	print_r($queryResultArray);
 	echo'</pre>';
 	$dbLOGIN -> Disconnect();
-	$pw = $queryResultArray[1][0];
-	$salt = $queryResultArray[1][1];
-	$user_type = $queryResultArray[1][2];
-	$salted = sha1( $salt );
-	$tryPW = sha1( $salted.$shaPassword.$salt );
-	if ( $pw == $tryPW )
-	{
-		echo $user_type;
-		return ( $user_type );
+	if ( isset($queryResultArray[1][0]) && isset($queryResultArray[1][1]) && isset($queryResultArray[1][2]))
+		{
+		$pw = $queryResultArray[1][0];
+		$salt = $queryResultArray[1][1];
+		$user_type = $queryResultArray[1][2];
+		$salted = sha1( $salt );
+		$tryPW = sha1( $salted.$shaPassword.$salt );
+		if ( $pw == $tryPW )
+		{
+			echo $user_type;
+			return ( $user_type );
+		}
 	}
 	else 
 	{
