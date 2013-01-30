@@ -36,39 +36,21 @@
         </style>
         
         <script type="text/javascript">
-            //<![CDATA[
-            //klasse "verplichtevelden", stelt de verplichte velden op een formulier voor.
-            //Er is 1 methode: check
-            //Deze geeft een waarschuwing als er een verplicht veld leeg is
-     /*
-            function verplichtevelden(veldenArray) {
-                //constructor van de klasse
-                this.veldenArray = veldenArray; //alleen de verplichte velden
-                this.check = verplichtevelden_check; 
-            }
-            function verplichtevelden_check() {
-                //controleer de verplichte velden
-                var foutlijst="";
-                for (var i=0; i<this.veldenArray.length; i++) {
-                    if (document.getElementById(this.veldenArray[i]).value=="") {
-                        foutlijst += this.veldenArray[i]+", ";
-                    }
+            function pwstrength()
+            {
+                id = document.getElementById("password");
+                count = document.getElementById("count");
+                strength = "bad";
+                if (id.value.length > 3)
+                {
+                    strength= "medium";
                 }
-                if (foutlijst=="") {
-                    return true;
+                if (id.value.length > 6)
+                {
+                    strength= "good";
                 }
-                else {
-                    window.alert('Verplichte veld(en) niet ingevuld: '+foutlijst+' probeer het nog een keer.');
-                    return false;
-                }
+                fb.innerHTML = "Password strength: " + strength;
             }
-            //het formulier initialiseren
-            function bijLaden() {
-                var verplicht=new Array('username');				 
-                mijnVV = new verplichtevelden(verplicht); //mijnVV moet globaal zijn, dus geen var ervoor.
-            }
-	 */
-            //]]>
         </script>
 	</head>
 
@@ -100,6 +82,7 @@
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
                             <div class="ans"><input type="password" name="password" style="width:155px;" /></div>
+                            <p id="fb"></p>
                         </div>
                    </div>
                    <em><br />Hamvraag</em>  
