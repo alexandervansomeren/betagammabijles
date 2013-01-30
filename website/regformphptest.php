@@ -318,14 +318,7 @@
                     }
                     else $city="";
                 
-                /*
-                    echo "bijlesvak: ";
-                    echo "<pre>";
-                    echo $_POST['bijlesvak'];
-                    echo "</pre>";
-                */
-                //Bijlesvoorkeur
-                
+                /*Bijlesvoorkeur          
                 $courseTest = $_POST['bijlesvak'];
                 if(empty($courseTest))
                 {
@@ -340,28 +333,7 @@
                         echo($courseTest[$i] . " ");
                     }
                 }
-                
-                /*
-                    if (isset($_POST['bijlesvak']))
-                    {
-                        
-                        $course_array = array_fill_keys($keys, $_POST['bijlesvak']);
-                        $size = sizeof($course_array);
-                        echo "Vlak voor de for-loop";
-                        global $course_code;
-                        for($i=0; $i < $size; $i++)
-                        {
-                            echo "Hallo ik ben in de for-loop";
-                            $course_code[$i] = $course_array[$i];
-                            //= (($course_array[$i]*100) + 11);
-                            echo $course_code[$i];
-                        }
-                        echo "Ja: ";
-                        echo $course_code[0];
-                        //$newarray = implode(", ", $myarray);
-                    }
                 */
-                
                 $courseTest = array();
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
@@ -443,7 +415,27 @@
                 for($i=0; $i < $N; $i++)
                 {
                     echo($courseTest[$i] . " ");
-                }
+                }       
+                /*
+                    if (isset($_POST['bijlesvak']))
+                    {
+                        
+                        $course_array = array_fill_keys($keys, $_POST['bijlesvak']);
+                        $size = sizeof($course_array);
+                        echo "Vlak voor de for-loop";
+                        global $course_code;
+                        for($i=0; $i < $size; $i++)
+                        {
+                            echo "Hallo ik ben in de for-loop";
+                            $course_code[$i] = $course_array[$i];
+                            //= (($course_array[$i]*100) + 11);
+                            echo $course_code[$i];
+                        }
+                        echo "Ja: ";
+                        echo $course_code[0];
+                        //$newarray = implode(", ", $myarray);
+                    }
+                */
                 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
