@@ -351,6 +351,7 @@
 			
 			function enterCourseCode($course_code)
 			{
+                    $course_code = $course_code*100 + 11;
                     $GLOBALS['db'] -> Query =
                         "
                         INSERT INTO webdb13BG2.course_user (course_code, user_id) 
