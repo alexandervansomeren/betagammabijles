@@ -324,7 +324,8 @@
                         for($i=0; $i < $size; $i++)
                         {
                             echo "Hallo ik ben in de for-loop";
-                            global $course_code[$i] = (($course_array[$i]*100) + 11);
+                            global $course_code[$i] = $course_array[$i];
+                            //= (($course_array[$i]*100) + 11);
                             echo $course_code[$i];
                         }
                         echo $course_code[0];
