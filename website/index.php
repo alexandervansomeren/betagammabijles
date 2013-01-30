@@ -39,7 +39,14 @@
     </div>
     <?php
 		// include 'advertentiesZONDERHEADER.php';
-		include $_GET['p'].'.php';  
+                if($_GET['p'])
+                {
+                    include $_GET['p'].'.php'; 
+                }
+                else
+                {
+                    include 'home.php';
+                }
 	?>
     <div class="footer">
         <div class="centerwrapper">
