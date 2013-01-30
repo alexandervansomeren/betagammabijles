@@ -7,7 +7,7 @@
 
 <body>
 <?php
-
+echo 'check <br />';
 if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 {
 	echo 'hallo';
