@@ -410,10 +410,11 @@
                 for($i=0; $i < $N; $i++)
                 {
                     echo($localCourse[$i] . " ");
+                    $course_code = $localCourse[$i]
                     $GLOBALS['db'] -> Query =
                         "
                         INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                        VALUES ("$localCourse[$i]", ".$GLOBALS['user_id'].");
+                        VALUES ("$course_code", ".$GLOBALS['user_id'].");
                         ";
                     $GLOBALS['db'] -> Querying();
                     
