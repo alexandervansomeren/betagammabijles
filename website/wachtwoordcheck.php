@@ -11,7 +11,7 @@
     $userSame = $GLOBALS['db'] -> Querying();
     if( isset($userSame[1][0] ))
     {
-       echo "Deze username bestaat al!";
+       echo "Gebruikersnaam bestaat al.";
     }
     $GLOBALS['db'] -> Disconnect(); 
 ?>
