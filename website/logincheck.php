@@ -8,6 +8,9 @@
 <body>
 <?php
 echo 'check <br />';
+echo $_POST['username'];
+echo $_POST['password'];
+
 if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
 {
 	echo 'hallo';
