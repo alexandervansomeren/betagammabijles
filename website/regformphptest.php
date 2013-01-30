@@ -226,66 +226,66 @@
                     // "naam en leeftijd"
                     if (isset($_POST['firstname']))
                     {
-	                    $first_name = mysql_real_escape_string($_POST['firstname']);
+	                    $first_name = strip_tags(mysql_real_escape_string($_POST['firstname']));
                     }
                     else $first_name="";
                     if (isset($_POST['middlename']))
                     {
-	                    $middle_name = mysql_real_escape_string($_POST['middlename']);
+	                    $middle_name = strip_tags(mysql_real_escape_string($_POST['middlename']));
                     }
                     else $middle_name=null;
                     if (isset($_POST['lastname']))
                     {
-	                    $last_name = mysql_real_escape_string($_POST['lastname']);
+	                    $last_name = strip_tags(mysql_real_escape_string($_POST['lastname']));
                     }
                     else $last_name="";
                     if (isset($_POST['date_of_birth']))
                     {
-	                    $date_of_birth = mysql_real_escape_string($_POST['date_of_birth']);
+	                    $date_of_birth = strip_tags(mysql_real_escape_string($_POST['date_of_birth']));
                     }
                     else $date_of_birth=""; 
                     
                     //"contactgegevens"
                     if (isset($_POST['emailadress']))
                     {
-	                    $emailadress = mysql_real_escape_string($_POST['emailadress']);
+	                    $emailadress = strip_tags(mysql_real_escape_string($_POST['emailadress']));
                     }
                     else $emailadress="";
                     if (isset($_POST['phone_1']))
                     {
-	                    $phone_1 = mysql_real_escape_string($_POST['phone_1']);
+	                    $phone_1 = strip_tags(mysql_real_escape_string($_POST['phone_1']));
                     }
                     else $phone_1=null;
                     if (isset($_POST['phone_2']))
                     {
-	                    $phone_2 = mysql_real_escape_string($_POST['phone_2']);
+	                    $phone_2 = strip_tags(mysql_real_escape_string($_POST['phone_2']));
                     }
                     else $phone_2=null;
 
                     //"adres"
                     if (isset($_POST['street']))
                     {
-	                    $street = mysql_real_escape_string($_POST['street']);
+	                    $street = strip_tags(mysql_real_escape_string($_POST['street']));
                     }
                     else $street="";
                     if (isset($_POST['streetnumber']))
                     {
-	                    $streetnumber = mysql_real_escape_string($_POST['streetnumber']);
+	                    $streetnumber = strip_tags(mysql_real_escape_string($_POST['streetnumber']));
                     }
                     else $streetnumber="";
                     if (isset($_POST['postal']))
                     {
-	                    $postal = mysql_real_escape_string($_POST['postal']);
+	                    $postal = strip_tags(mysql_real_escape_string($_POST['postal']));
                     }
                     else $postal="";
                     if (isset($_POST['postal_extra']))
                     {
-	                    $postal_extra = mysql_real_escape_string($_POST['postal_extra']);
+	                    $postal_extra = strip_tags(mysql_real_escape_string($_POST['postal_extra']));
                     }
                     else $postal_extra="";
                     if (isset($_POST['city']))
                     {
-	                    $city = mysql_real_escape_string($_POST['city']);
+	                    $city = strip_tags(mysql_real_escape_string($_POST['city']));
                     }
                     else $city="";
                     
@@ -293,12 +293,12 @@
                     //Username Password
                     if (isset($_POST['username']))
                     {
-	                    $username = mysql_real_escape_string($_POST['username']);
+	                    $username = strip_tags(mysql_real_escape_string($_POST['username']));
                     }
                     //else $username="";
                     if (isset($_POST['password']))
                     {
-	                    $password = mysql_real_escape_string($_POST['password']);
+	                    $password = strip_tags(mysql_real_escape_string($_POST['password']));
                     }
                     //else $password="";
                     
