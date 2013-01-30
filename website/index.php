@@ -92,7 +92,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
     	      </div>
            </div>		
 
-           <div class="content">	
+         <div class="content">	
               <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
 		 <div class="buttons">
 	            <a href="registratieformulier.php" class="left">
