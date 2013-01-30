@@ -77,7 +77,16 @@ function login( $username, $shaPassword )
 		$tryPW = sha1( $salted.$shaPassword.$salt );
 		if ( $pw == $tryPW )
 		{
-			echo $user_type;
+                        $setLastLogin = new ConnectorClass;
+                        $setLastLogin -> Query = 
+                	 "
+                        INSERT INTO webdb13BG2.user_personal_data (last_login) 
+                        VALUES (". Date(U) .");
+                        ";
+                        echo $dbLOGIN -> Query;
+                        $resultOfQ = $dbLOGIN -> Querying();
+                        
+                        print_r($resultOfQ);
 			$user_typeINT = intval( $user_type );
                         return ( $user_typeINT );
                 }
