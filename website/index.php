@@ -10,7 +10,7 @@
 <body onload="initialize()">
     <div class="header">
 	    <div class="center">
-        	<div class="left"> <a href="index.html" class="left"> <img src="img/logo.png"  /> </a> </div>
+        	<div class="left"> <a href="index.html" class="left"> Waarbijles1 </a> </div>
             <div class="middle"></div>
             <div class="right">
             	<?php 
