@@ -57,7 +57,7 @@ function login( $username, $shaPassword )
 	$dbLOGIN -> Query = 
 		"
 			SELECT 
-			password, salt, user_type
+			password, salt, user_type, user_id
 			FROM webdb13BG2.user_data
 			WHERE webdb13BG2.user_data.username='".$username."';
 		";
@@ -72,6 +72,7 @@ function login( $username, $shaPassword )
 		$pw = $queryResultArray[1][0];
 		$salt = $queryResultArray[1][1];
 		$user_type = $queryResultArray[1][2];
+		// $user_id = $queryResultArray[1][3];  // For giving user_id to 
 		$salted = sha1( $salt );
 		$tryPW = sha1( $salted.$shaPassword.$salt );
 		if ( $pw == $tryPW )

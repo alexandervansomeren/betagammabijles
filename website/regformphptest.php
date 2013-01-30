@@ -361,10 +361,12 @@
                         //$newarray = implode(", ", $myarray);
                     }
                 */
+                
+                $courseTest = array();
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
-        	    global $courseTest = $_POST['bijlesvak'];
+        	    $GLOBALS['courseTest'] = $_POST['bijlesvak'];
                 if(empty($courseTest))
                 {
                     echo("Je hebt geen vak gekozen. ");
@@ -429,14 +431,13 @@
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
                 
-                //de adress_data van de user wordt toegevoegd
-                $GLOBALS['db'] -> Query =   
+                /*$GLOBALS['db'] -> Query =   
                     "
                     INSERT INTO webdb13BG2.course_user (course_code, user_id) 
                     VALUES (".$GLOBALS['course_code[0]'].", ".$GLOBALS['user_id'].");
                     ";
                 $GLOBALS['db'] -> Querying();
-                
+                */
                 $N = count($GLOBALS['courseTest']);
                 echo("Je hebt $N vakken gekozen ");
                 for($i=0; $i < $N; $i++)
