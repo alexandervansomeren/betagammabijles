@@ -181,6 +181,7 @@
 					if ( is_int( $_SESSION['user_type'] ) )
 					{
 						echo "Je bent ingelogt als ".$_SESSION['user_type'];
+						echo '<a href="logout.php">Uitloggen</a>';
 					}
 				}
 				else echo 
@@ -499,10 +500,10 @@
     
     <div class="footer">
         <div class="centerwrapper">
-            <a href="about.html">Wie zijn wij?</a>
-            <a href="index.html">Welkom</a>
-            <a href="about.html">Meld je aan</a>
-            <a href="registratieformulier.html">Registratieformulier</a>
+            <a href="about.php">Wie zijn wij?</a>
+            <a href="index.php">Welkom</a>
+            <a href="registratieformulier.php">Meld je aan</a>
+            <a href="registratieformulier.php">Registratieformulier</a>
         </div>
     </div>
     
