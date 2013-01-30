@@ -1,5 +1,4 @@
-<div class="content">
-	    <div class="page-intro">
+    <div class="page-intro">
         	<form class="selection" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="part">
                         <div class="text"> Vak: </div>
@@ -274,3 +273,4 @@
         	</a>';
 	}
 	?>
+	</div>
