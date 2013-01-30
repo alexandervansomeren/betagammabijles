@@ -1,21 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Aanbod</title>
-
-<script type="text/javascript" src="">
-
-</script>
-
-<!-- A google font to use on the webpage -->
-<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'/>
-<link rel="stylesheet" type="text/css" href="style.css" />
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bijles aanbod</title>
+    <!-- A google font to use on the webpage -->
+    <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-
     <div class="header">
 	    <div class="center">
         	<div class="left"> <a href=/index.html" class="left"> Waarbijles </a> </div>
@@ -324,9 +317,6 @@
         	</a>';
 	}
 	?>
-   
-        
-        
         <div class="prevnexbuttons">
             <div class="prevnexbuttonsCenter">
                 <!--<a href="#">
