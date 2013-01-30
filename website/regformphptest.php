@@ -443,7 +443,7 @@
                 for($i=0; $i < $N; $i++)
                 {
                     echo($localCourse[$i] . " ");
-			        $course_code = $localCourse[$i]
+			        $course_code = $localCourse[$i];
                     enterCourseCode($course_code);
                 }       
                 
