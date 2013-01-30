@@ -179,8 +179,8 @@
                     <script>
 					function makeVisible()
 					{
-						alert("hee");
-						document.getElementById("BLgeven").style.visibilty="visible";
+						alert("	");
+						document.getElementById("blgeven").style.visibilty="visible";
 					}
 					</script>
                     <div id="blgeven" style="visibility:hidden">
