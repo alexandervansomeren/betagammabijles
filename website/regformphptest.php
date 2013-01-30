@@ -191,9 +191,9 @@
                         <label class="ques"><input type="checkbox" value="23" name="bijlesvak[]" />Russisch</label>
                         <label class="ques"><input type="checkbox" value="24" name="bijlesvak[]" />Turks</label>
                         <label class="ques"><input type="checkbox" value="25" name="bijlesvak[]" />Arabisch</label>
-                        <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="26" name="bijlesvak[]" />N, L &amp; T</label >
-                        <label class="ques" title="Awesome!"><input type="checkbox" value="27" name="bijlesvak[]" />Informatica</label>
-                        <label class="ques"><input type="checkbox" value="28" name="bijlesvak[]" />Geschiedenis</label>
+                        <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="26" name="bijlesvak" />N, L &amp; T</label >
+                        <label class="ques" title="Awesome!"><input type="checkbox" value="27" name="bijlesvak" />Informatica</label>
+                        <label class="ques"><input type="checkbox" value="28" name="bijlesvak" />Geschiedenis</label>
                         <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak" />MaW</label>
                         <label class="ques"><input type="checkbox" value="30" name="bijlesvak" />Filosofie</label>
                         <label class="ques"><input type="checkbox" value="31" name="bijlesvak" />Kunst Alg.</label>
