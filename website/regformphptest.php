@@ -3,37 +3,7 @@
 	<head>
 		<title>webdb13BG2</title>
 		<!-- stylesheetreference -->
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<style type="text/css">
-		.content .ques {
-            min-width: 155px;
-            float: left;
-            height: 30px;
-            line-height: 30px;
-        }
-        
-        .content .ans {
-            min-width: 1px;
-            float: left;
-            height: 30px;
-            line-height: 30px;
-        }
-        
-        .content .paragraph {
-            margin-left: 8px;
-            margin-top: 8px;
-            margin-bottom: 8px;
-            <!-- de margin-bottom werkt niet waardoor er nog <br> nodig zijn :(-->
-        }
-        
-        .content .field .ans input[type="text"] {
-            width: 155px;
-            display: block;
-        }
-        <!-- Ik weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
-            maar hiermee zouden we de breedte voor de velden kunnen veranderen -->
-        </style>
-        
+		<link rel="stylesheet" type="text/css" href="style.css"/>        
         <script type="text/javascript">
             function pwstrength()
             {
