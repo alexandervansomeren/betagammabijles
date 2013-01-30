@@ -308,7 +308,10 @@
                     }
                     
                     // About me MOET NOG WORDEN BEHANDELD
-                    $about_me = "Nog geen tekst ingevuld";
+                    if (isset($_POST['ervaring']))
+                    {
+                        $about_me = mysql_real_escape_string($_POST['ervaring']);
+                    } else $about_me = "Nog geen tekst ingevuld";
                        
                     //Gender
                     if (isset($_POST['gender']))
