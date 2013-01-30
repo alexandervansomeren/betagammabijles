@@ -66,11 +66,11 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
 <div class="content">	
      <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
         <div class="buttons">
-           <a href="registratieformulier.php" class="left">
+           <a href="index.php?p=registratieformulier" class="left">
               <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
               <span class="title">Ik geef bijles</span>
            </a>
-           <a href="advertenties.php?p=advertenties" class="right">	                
+           <a href="index.php?p=advertenties" class="right">	                
               <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
               <span class="title">Ik wil bijles</span>
            </a>
