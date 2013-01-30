@@ -16,5 +16,4 @@
        echo "Deze username bestaat al!";
     }
     $GLOBALS['db'] -> Disconnect(); 
-    }
 ?>
