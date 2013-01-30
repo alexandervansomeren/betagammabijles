@@ -14,8 +14,8 @@
                         <input class="inputfield" type="text" name="level"placeholder="bijv. havo"/>
                     </div>
                     <div class="selectpart" style="width:140px"> 
-                        <label class="ques">Man <input type="checkbox" name="male", checked="checked">	</label>
-                        <label class="ques">Vrouw <input type="checkbox" name="female", checked="checked">	</label>
+                        <label>Man <input type="checkbox" name="male", checked="checked">	</label>
+                        <label>Vrouw <input type="checkbox" name="female", checked="checked">	</label>
                     </div> 
                     <input class="part" style="width:60px; margin-left:10px;" type="submit" value="Zoeken"/>
             </form>

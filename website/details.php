@@ -170,101 +170,79 @@
 </style>	
 </head>
 
-	<body onload="initialize()">
-		<div class="header">
-                <div class="center">
-                <div class="left"></div>
-                <div class="middle"></div>
-                <div class="right">
-                <div class="label">Voor leden geef je gegevens en log in</div>
-                <div class="login"><input value="Gebruikersnaam" /> <input value="Wachtwoord" /><button type="submit">Login</button></div>
-            	</div>
-    		</div>
-		</div>		
+	
+<div class="content">        
 
-        <div class="content">        
+  <div class="details">
+      <div class="imgbtn"> 
+          <div class="image">
+              <div class="info">Dit ben ik!</div>
+              <?php echo($GLOBALS['docent_img']); ?>                     
+          </div>
 
-          <div class="details">
-              <div class="imgbtn"> 
-                  <div class="image">
-                      <div class="info">Dit ben ik!</div>
-                      <?php echo($GLOBALS['docent_img']); ?>                     
-                  </div>
-                  
-                  <a class="button">Klik hier om contact op te nemen</a>              
-                  <div class="clear"></div>
-              </div>            
-            
-            
-            <div class="information">
-                <div class="category">Contactgegevens</div>
-                <div class="label">Naam:</div><div class="content"><?php echo($GLOBALS['docent_naam']); ?></div>
-                <div class="label">Woonplaats:</div><div class="content"><?php echo($GLOBALS['docent_locatie']); ?></div>
-                <div class="label">E-mail:</div><div class="content"><?php echo($GLOBALS['docent_email']); ?></div>
-                <div class="category">Studiegegevens</div>
-                <?php echo($GLOBALS['docent_vakken']); ?>
-                <div class="category">Over mij</div>
-                <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>
-                <div class="clear"></div>
-            </div>
-            
-           
-            
-            <div class="geo">
-                 <div id="map_canvas" style="width:100%; height:174px"></div>
-                 <div class="info"><?php echo($GLOBALS['docent_locatie']); ?></div>            
-            </div>
-              <div class="clear"></div>
-          </div>          
-            
-          <div class="main_title">Soortgelijke docenten:</div>
+          <a class="button">Klik hier om contact op te nemen</a>              
+          <div class="clear"></div>
+      </div>            
 
-            
-            <div class="populair">
-                <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
-                <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
-                <a href="details.php?id=1" class="docent">
-                    <span class="name">Emma</span>
-                    <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
-                    <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
 
-                
-                <a href="details.php" class="docent">
-                    <span class="name">Jan-roelof</span>
-                    <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
-                    <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-                
-                <a href="details.php" class="docent">
-                    <span class="name">Emma</span>
-                    <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
+    <div class="information">
+        <div class="category">Contactgegevens</div>
+        <div class="label">Naam:</div><div class="content"><?php echo($GLOBALS['docent_naam']); ?></div>
+        <div class="label">Woonplaats:</div><div class="content"><?php echo($GLOBALS['docent_locatie']); ?></div>
+        <div class="label">E-mail:</div><div class="content"><?php echo($GLOBALS['docent_email']); ?></div>
+        <div class="category">Studiegegevens</div>
+        <?php echo($GLOBALS['docent_vakken']); ?>
+        <div class="category">Over mij</div>
+        <div class="txt"><?php echo($GLOBALS['docent_over']); ?></div>
+        <div class="clear"></div>
+    </div>
 
-                    <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-                
-                <a href="details.php" class="docent">
-                    <span class="name">Berend</span>
-                    <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
-                    <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-                
-                <a href="details.php" class="docent last">
-                    <span class="name">Henk</span>
 
-                    <span class="vak">Natuurkunde, KI, Wiskunde</span>
-                    <img src="img/student_1.jpg" alt="student_1" /> 
-                </a>
-            </div>             
-        </div>
-        
-        <div class="footer">
-            <a href="About.html">Wie zijn wij?</a>
-            <a href="Aanmeld.html">Meld aan als docent</a>    
-            <a href="Advertenties.html">Meld aan als student</a>        
-            <a href="Aanmeld.html" class="last">Contact</a>            
-        </div>
 
-		<div class="bottom"></div>	
-  </body>
-</html>
+    <div class="geo">
+         <div id="map_canvas" style="width:100%; height:174px"></div>
+         <div class="info"><?php echo($GLOBALS['docent_locatie']); ?></div>            
+    </div>
+      <div class="clear"></div>
+  </div>          
+
+  <div class="main_title">Soortgelijke docenten:</div>
+
+
+    <div class="populair">
+        <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
+        <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
+        <a href="details.php?id=1" class="docent">
+            <span class="name">Emma</span>
+            <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
+            <img src="img/student_1.jpg" alt="student_1" /> 
+        </a>
+
+
+        <a href="details.php" class="docent">
+            <span class="name">Jan-roelof</span>
+            <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
+            <img src="img/student_1.jpg" alt="student_1" /> 
+        </a>
+
+        <a href="details.php" class="docent">
+            <span class="name">Emma</span>
+            <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
+
+            <img src="img/student_1.jpg" alt="student_1" /> 
+        </a>
+
+        <a href="details.php" class="docent">
+            <span class="name">Berend</span>
+            <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
+            <img src="img/student_1.jpg" alt="student_1" /> 
+        </a>
+
+        <a href="details.php" class="docent last">
+            <span class="name">Henk</span>
+
+            <span class="vak">Natuurkunde, KI, Wiskunde</span>
+            <img src="img/student_1.jpg" alt="student_1" /> 
+        </a>
+    </div>             
+</div>

@@ -6,54 +6,60 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body>
+<body onload="initialize()">
     <div class="header">
 	    <div class="center">
-        	<div class="left"> <a href="index.html" class="left"> Waarbijles </a> </div>
+        	<div class="left"> <a href="index.html" class="left"> Waarbijles1 </a> </div>
             <div class="middle"></div>
             <div class="right">
             	<?php 
-				session_start();
-				if ( isset($_SESSION['user_type']) )
-					{
-					if ( is_int( $_SESSION['user_type'] ) )
-					{
-						echo '<div class="text"><p> Je bent ingelogt als '.$_SESSION['user_type'];
-						echo '</p>';
-						echo '<p><a href="logout.php">Uitloggen</a></p></div>';
-					}
-				}
-				else echo 
-				'<form method="post" action="logincheck.php">
-					<div class="label">Voor leden geef je gegevens en log in
-					</div>
-					<div class="login">
-						<input type="text" placeholder="Gebruikersnaam" name="username"/> 
-						<input type="password" placeholder="Wachtwoord" name="password"/>
-						<button type="submit">Login</button>
-					</div>
-				</form>';
-				?>
+                    session_start();
+                    if ( isset($_SESSION['user_type']) )
+                            {
+                            if ( is_int( $_SESSION['user_type'] ) )
+                            {
+                                    echo '<div class="text"><p> Je bent ingelogt als '.$_SESSION['user_type'];
+                                    echo '</p>';
+                                    echo '<p><a href="logout.php">Uitloggen</a></p></div>';
+                            }
+                    }
+                    else echo 
+                    '<form method="post" action="logincheck.php">
+                            <div class="label">Voor leden geef je gegevens en log in
+                            </div>
+                            <div class="login">
+                                    <input type="text" placeholder="Gebruikersnaam" name="username"/> 
+                                    <input type="password" placeholder="Wachtwoord" name="password"/>
+                                    <button type="submit">Login</button>
+                            </div>
+                    </form>';
+                ?>
             </div>
         </div>
     </div>
     <?php
-		// include 'advertentiesZONDERHEADER.php';
-                if($_GET['p'])
+                if( isset($_GET['p']))
                 {
-                    include $_GET['p'].'.php'; 
+                    if(file_exists($_GET['p'].'.php'))
+                    {
+                        include($_GET['p'].'.php'); 
+                    }
+                    else
+                    {
+                        include('home.php');
+                    }    
                 }
                 else
                 {
-                    include 'home.php';
+                    include('home.php');
                 }
 	?>
     <div class="footer">
         <div class="centerwrapper">
-            <a href="index2.php?page=about">Wie zijn wij?</a>
-            <a href="index2.php?page=indexZ">Welkom</a>
-            <a href="index2.php?page=registratieformulier">Meld je aan</a>
-            <a href="registratieformulier.php">Registratieformulier</a>
+            <a href="index.php?p=about">Wie zijn wij?</a>
+            <a href="index.php?p=indexZ">Welkom</a>
+            <a href="index.php?p=registratieformulier">Meld je aan</a>
+            <a href="index.php?p=registratieformulier">Registratieformulier</a>
         </div>
     </div>
     
