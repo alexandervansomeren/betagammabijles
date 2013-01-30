@@ -317,8 +317,8 @@
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
                     {
-                        $course_array[] = $_POST['bijlesvak[]'];
-                        $size = sizeof($course_array[]);
+                        {$course_array}[] = $_POST['bijlesvak[]'];
+                        $size = sizeof({$course_array}[]);
                         for(int $i=0; $i < $size; $i++)
                         {
                             $course_code[$i] = (($course_array[$i]*100) + 11);
