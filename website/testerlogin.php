@@ -15,8 +15,6 @@ echo 'Password: '.$password.'<br />';
 $shaPassword = sha1( $password );
 echo 'SHA-password: '.$shaPassword.'<br />';
 
-
-
 include 'shielded/login.php';
 $passwordArray = createPasswordSalt( $shaPassword );
 echo '<pre>'.$passwordArray.'</pre>';
@@ -27,6 +25,22 @@ $DBsalt = $passwordArray[1]; // this is the actual salt value suited for the dat
 echo 'DB-password: '.$DBpassword.'<br />';
 echo 'Salt: '.$DBsalt.'<br />';
 
+echo '..................................................................................<br /><br />';
+
+include 'shielded/connector.php';
+$db = new ConnectorClass;
+$db -> Query = 
+	"
+		INSERT INTO webdb13BG2.user_data
+		(username, password, salt)
+		VALUES ('".$username."','".$DBpassword."' ,'".$DBsalt."' );
+	";
+echo $db -> Query;
+echo '<br />';	
+$db -> Querying();	
+$db -> Disconnect();
+echo '<br />';
+echo login( $username, $shaPassword );
 
 ?>
 

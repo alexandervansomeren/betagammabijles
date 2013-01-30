@@ -42,20 +42,13 @@ echo login( $username, $shaPassword );
 
 function createPasswordSalt( $shaPassword )
 {
-	echo 'creating password';
 	$salt = md5( uniqid(rand(), true) );
 	$salted = sha1( $salt );
 	$pwForDatabase = sha1( $salted.$shaPassword.$salt );
-	echo 'Salt: '.$salt.'<br />';
-	echo 'pwForDatabase: '.$pwForDatabase.'<br />';
 	$PwSaltArray = array();
 	$PwSaltArray[0] = $pwForDatabase;
 	$PwSaltArray[1] = $salt;
-	
-	echo 'array: <br />';
-	echo '<pre>'.$PwSaltArray.'</pre>';
 	return( $PwSaltArray );
-	
 }
 
 function login( $username, $shaPassword )
