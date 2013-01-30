@@ -68,9 +68,9 @@ function login( $username, $shaPassword )
 	print_r($queryResultArray);
 	echo'</pre>';
 	$dbLOGIN -> Disconnect();
-	$pw = $queryResultArray['password'];
-	$salt = $queryResultArray['salt'];
-	$user_type = $queryResultArray['user_type'];
+	$pw = $queryResultArray[1]['password'];
+	$salt = $queryResultArray[1]['salt'];
+	$user_type = $queryResultArray[1]['user_type'];
 	$salted = sha1( $salt );
 	$tryPW = sha1( $salted.$shaPassword.$salt );
 	if ( $pw == $tryPW )
