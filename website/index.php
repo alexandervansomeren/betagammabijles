@@ -56,10 +56,10 @@
 	?>
     <div class="footer">
         <div class="centerwrapper">
-            <a href="index2.php?page=about">Wie zijn wij?</a>
-            <a href="index2.php?page=indexZ">Welkom</a>
-            <a href="index2.php?page=registratieformulier">Meld je aan</a>
-            <a href="registratieformulier.php">Registratieformulier</a>
+            <a href="index.php?p=about">Wie zijn wij?</a>
+            <a href="index.php?p=indexZ">Welkom</a>
+            <a href="index.php?p=registratieformulier">Meld je aan</a>
+            <a href="index.php?p=registratieformulier">Registratieformulier</a>
         </div>
     </div>
     
