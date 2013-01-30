@@ -314,6 +314,7 @@
                     }
                     else $city="";
                     
+                    echo "bijlesvak: ";
                     echo $_POST['bijlesvak'];
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
