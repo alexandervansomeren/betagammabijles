@@ -49,7 +49,7 @@
                         }
                         else
                         {
-                            $GLOBALS['docent_img'] = '<img src="img/student_1.jpg" width="100%" height="400px" ></img>';
+                            $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" ></img>';
                         }                        
                         
                         $GLOBALS['db'] -> Query = 
