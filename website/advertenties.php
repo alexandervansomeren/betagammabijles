@@ -186,7 +186,12 @@
             </div>
         </div>
     </div>
-
+	<?php 
+	if ( isset( $_SESSION['userType'] ) )
+	{
+		echo "Je bent ingelogt als".$_SESSION['userType'];
+	}
+	?>
     <div class="content">
 	    <div class="page-intro">
         	<form class="selection" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
