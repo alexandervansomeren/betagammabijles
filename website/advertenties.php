@@ -176,7 +176,6 @@
             <div class="right">
             	<?php 
 				session_start();
-				echo 'user type als sessie werkt: <br />';
 				if ( isset($_SESSION['user_type']) )
 					{
 					if ( is_int( $_SESSION['user_type'] ) )
