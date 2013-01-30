@@ -364,7 +364,15 @@
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
-        		makeQuery();
+        	    global $courseTest = $_POST['bijlesvak'];
+                if(empty($courseTest))
+                {
+                    echo("Je hebt geen vak gekozen. ");
+                }
+                else
+                {
+        		    makeQuery();
+        	    }
 			}
 			
             // Making query
@@ -428,6 +436,13 @@
                     VALUES (".$GLOBALS['course_code[0]'].", ".$GLOBALS['user_id'].");
                     ";
                 $GLOBALS['db'] -> Querying();
+                
+                $N = count($GLOBALS['courseTest']);
+                echo("Je hebt $N vakken gekozen ");
+                for($i=0; $i < $N; $i++)
+                {
+                    echo($courseTest[$i] . " ");
+                }
                 
                 //Disconnect from the database
                 $GLOBALS['db'] -> Disconnect();
