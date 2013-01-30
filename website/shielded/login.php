@@ -49,8 +49,8 @@ function createPasswordSalt( $shaPassword )
 	echo 'Salt: '.$salt.'<br />';
 	echo 'pwForDatabase: '.$pwForDatabase.'<br />';
 	$PwSaltArray = array(
-		'passsword'  => $pwForDatabase,
-		'salt' => $salt 
+		"passsword"  => $pwForDatabase,
+		"salt" => $salt 
 		);
 	echo '<pre>'.$PwSaltArray.'</pre>';
 	return( $PwSaltArray );
