@@ -316,7 +316,7 @@
                     
                     echo "bijlesvak: ";
                     echo "<pre>";
-                    print_r $_POST['bijlesvak[]'];
+                    echo $_POST['bijlesvak[]'];
                     echo "</pre>";
                 //Bijlesvoorkeur
                     if (isset($_POST['bijlesvak[]']))
