@@ -53,6 +53,7 @@ a:hover { text-decoration: underline; }
     }
     .header .center .middle { width: 40%; }
     .header .center .right { width: 35%;}
+	.header .center .rigth .text {text-align:right; margin-top:0; line-height:normal;}
 
     .header .center .right div { width: 100%; font-size: 16px; float: left;}
 
