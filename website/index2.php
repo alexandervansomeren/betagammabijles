@@ -42,8 +42,7 @@
     </div>
 	
     <div class="content">
-	    <div class="page-intro">
-        </div>
+    <? include 'advertentiesZONDERHEADER.php'; ?>
     </div>
     <div class="footer">
         <div class="centerwrapper">
