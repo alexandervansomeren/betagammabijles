@@ -175,8 +175,8 @@
             <div class="middle"></div>
             <div class="right">
             	<form method="post" action="login.php">
-                    <div class="label">Voor leden geef je gegevens en log in</div>
-                    <div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord"/><button type="submit">Login</button></div>
+                <div class="label">Voor leden geef je gegevens en log in</div>
+                <div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord"/><button type="submit">Login</button></div>
                 </form>
             </div>
         </div>
