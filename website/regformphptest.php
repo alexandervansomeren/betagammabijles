@@ -403,13 +403,6 @@
                 $GLOBALS['db'] -> Query = null;
                 $GLOBALS['db'] -> QueryResult = null;
                 
-                /*$GLOBALS['db'] -> Query =   
-                    "
-                    INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                    VALUES (".$GLOBALS['course_code[0]'].", ".$GLOBALS['user_id'].");
-                    ";
-                $GLOBALS['db'] -> Querying();
-                */
                 $N = count($GLOBALS['courseTest']);
                 $localCourse = array();
                 $localCourse = $GLOBALS['courseTest'];
@@ -417,6 +410,15 @@
                 for($i=0; $i < $N; $i++)
                 {
                     echo($localCourse[$i] . " ");
+                    $GLOBALS['db'] -> Query =
+                        "
+                        INSERT INTO webdb13BG2.course_user (course_code, user_id) 
+                        VALUES ("$localCourse[$i]", ".$GLOBALS['user_id'].");
+                        ";
+                    $GLOBALS['db'] -> Querying();
+                    
+                    $GLOBALS['db'] -> Query = null;
+                    $GLOBALS['db'] -> QueryResult = null;
                 }       
                 /*
                     if (isset($_POST['bijlesvak']))
