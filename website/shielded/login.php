@@ -60,7 +60,7 @@ function login( $username, $shaPassword )
 			SELECT 
 			password, salt, user_type
 			FROM webdb13BG2.user_data
-			WHERE webdb13BG2.user_data.username=".$username.";
+			WHERE webdb13BG2.user_data.username='".$username."';
 		";
 	echo $dbLOGIN -> Query;
 	$queryResultArray = $dbLOGIN -> Querying();
