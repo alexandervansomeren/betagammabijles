@@ -44,7 +44,7 @@ a:hover { text-decoration: underline; }
 	    line-height: inherit;
 	    margin: auto;
     }
-    .header .center div { float: left; height: inherit; line-height: normal; }
+    .header .center div { float: left; height: inherit; line-height:normal; }
     .header .center .left
     { 
 	    width: 23%;
