@@ -62,7 +62,9 @@ function login( $username, $shaPassword )
 			FROM webdb13BG2.user_data
 			WHERE webdb13BG2.user_data.=".$username.";
 		";
+	echo $dbLOGIN -> Query;
 	$queryResultArray = $dbLOGIN -> Querying();
+	echo '<pre>'. print_r($queryResultArray).'</pre>';
 	$dbLOGIN -> Disconnect();
 	$pw = $queryResultArray['password'];
 	$salt = $queryResultArray['salt'];
