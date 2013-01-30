@@ -178,8 +178,8 @@
                     <div class="label">Voor leden geef je gegevens en log in
                     </div>
                     <div class="login">
-                    	<input placeholder="Gebruikersnaam" name="username"/> 
-                        <input placeholder="Wachtwoord" name="password"/>
+                    	<input type="text" placeholder="Gebruikersnaam" name="username"/> 
+                        <input type="password" placeholder="Wachtwoord" name="password"/>
                         <button type="submit">Login</button>
                    	</div>
                 </form>
