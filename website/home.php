@@ -1,6 +1,4 @@
 <?php
-
-include 'shielded/connector.php';
 $bijlesDocent = new ConnectorClass;
 	
 $GLOBALS['bijlesDocent'] -> Query = 
