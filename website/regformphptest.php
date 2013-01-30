@@ -37,7 +37,7 @@
         <script type="text/javascript">
             function pwstrength()
             {
-                id = document.getElementByName("password");
+                id = document.getElementById("password");
                 fb = document.getElementById("fb");
                 strength = "bad";
                 if (id.value.length > 3)
@@ -80,7 +80,7 @@
                         </div>
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
-                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()"/></div>
+                            <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()" id="password" /></div>
                             <p id="fb"> </p>
                         </div>
                    </div>
