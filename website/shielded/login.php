@@ -79,9 +79,7 @@ function login( $username, $shaPassword )
 		{
                         $setLastLogin = new ConnectorClass;
                         $setLastLogin -> Query = 
-                	"
-                        UPDATE webdb13BG2.user_personal_data SET last_login ='" .  Date('Y-m-d H:i:s') . "' WHERE user_personal_data.user_id = 2;
-                        ";
+                	"UPDATE webdb13BG2.user_personal_data SET last_login ='" .  Date('Y-m-d H:i:s') . "' WHERE user_personal_data.user_id = 2";
                         echo $setLastLogin -> Query;
                         $resultOfQ = $setLastLogin -> Querying();
                         
