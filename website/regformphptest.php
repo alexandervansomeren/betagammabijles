@@ -81,7 +81,7 @@
                         <div class="field">
                             <div class="ques">Wachtwoord:</div>
                             <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwstrength()"/></div>
-                            <p id="fb"></p>
+                            <p id="fb"> </p>
                         </div>
                    </div>
                    <em><br />Hamvraag</em>  
