@@ -38,16 +38,15 @@
         </div>
     </div>
     <?php
-		// include 'advertentiesZONDERHEADER.php';
-                if($_GET['p'])
+                if( isset($_GET['p']))
                 {
                     echo "I found the P <br />";
-                    include $_GET['p'].'.php'; 
+                    include($_GET['p'].'.php'); 
                 }
                 else
                 {
                     echo "I couldn't find P<br />";
-                    include 'home.php';
+                    include('home.php');
                 }
 	?>
     <div class="footer">
