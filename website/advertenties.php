@@ -174,8 +174,10 @@
         	<div class="left"> <a href=/index.html" class="left"> Waarbijles </a> </div>
             <div class="middle"></div>
             <div class="right">
+            	<form method="post" action="loginFromPost()">
                 <div class="label">Voor leden geef je gegevens en log in</div>
                 <div class="login"><input placeholder="Gebruikersnaam" /> <input placeholder="Wachtwoord"/><button type="submit">Login</button></div>
+                </form>
             </div>
         </div>
     </div>
@@ -187,6 +189,19 @@
 	{
 		echo "<h1>Hallo, veel plezier met je coockie :) </h1>";
 	}
+	
+	function loginFromPost()
+	{
+		include 'shielded/login.php';
+		if (isset( $_POST['username'] ) && isset( $_POST['password'] ) && isset( $_POST['submit'] ) )
+		{
+			$username = $_POST['username'] ;
+			$shaPassword = sha1( $_POST['password'] );
+			echo 'gelukt?';
+			echo login ($username, $shaPassword);
+		}
+	}
+	
 	?>
 
     <div class="content">

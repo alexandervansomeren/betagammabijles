@@ -50,7 +50,15 @@ function createPasswordSalt( $shaPassword )
 	$PwSaltArray[1] = $salt;
 	return( $PwSaltArray );
 }
-
+function loginFromPost()
+{
+	if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
+	{
+		$username = $_POST['username'] ;
+		$shaPassword = sha1( $_POST['password'] );
+		login ($username, $shaPassword);
+	}
+}
 function login( $username, $shaPassword )
 {
 	include 'connector.php';
