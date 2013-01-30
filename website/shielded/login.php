@@ -78,8 +78,12 @@ function login( $username, $shaPassword )
 		if ( $pw == $tryPW )
 		{
                         $setLastLogin = new ConnectorClass;
-                        $setLastLogin -> Query = "UPDATE `webdb13BG2`.`user_personal_data` SET `last_login` = \'2012-01-01 00:00:00\' WHERE `user_personal_data`.`user_id` = 3;";
-                        
+                        $setLastLogin -> Query = 
+                                
+                                '	SELECT *
+        FROM webdb13BG2.user_personal_data up
+        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id';
+                                
                         echo $setLastLogin -> Query;
                         $resultOfQ = $setLastLogin -> Querying();
                         
