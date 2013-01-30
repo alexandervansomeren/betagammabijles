@@ -311,10 +311,8 @@
                     //Gender
                     if (isset($_POST['gender']))
                     {
-                        $gender="1";
+                        $gender=$_POST['gender']
                     }
-                    else $gender="0";
-                    //Dit genderstuk klopt sowieso niet
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']))
         	{
@@ -375,9 +373,6 @@
                 $GLOBALS['db'] -> Disconnect();
                 
             }
-            	echo('<pre>');
-                print_r($GLOBALS['queryResultsArray']);
-                echo('</pre>');
                 
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
                 {
