@@ -5,22 +5,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Openbijles.nl1</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript">
+    function startJava()
+    {
+        if (document.getElementById('map_canvas'))
+        {
+            initialize();
+        }
+    }
+    </script>
 </head>
-
-<script type="text/javascript">
-function startJava()
-{
-	if (document.getElementById('map_canvas'))
-	{
-		initialize();
-	}
-}
-</script>
 
 <body onload="startJava();">
     <div class="header">
 	    <div class="center">
-        	<div class="left"> <a href="index.php?n=home" class="left"> <img src="img/logo.png"  /> </a> </div>
+        	<div class="left"> <a href="index.php?p=home" class="left"> <img src="img/logo.png" alt="Openbijles.nl" /> </a> </div>
             <div class="middle"></div>
             <div class="right">
             	<?php
@@ -96,7 +95,7 @@ function startJava()
         <div class="centerwrapper">
             <a href="index.php?p=about">Wie zijn wij?</a>
             <a href="index.php?p=indexZ">Welkom</a>
-            <a href="index.php?p=advertenties&course=&city=&level=&male=on&female=on">Advertenties</a>
+            <a href="index.php?p=advertenties&amp;course=&amp;city=&amp;level=&amp;male=on&amp;female=on">Advertenties</a>
             <a href="index.php?p=registratieformulier">Meld je aan</a>
         </div>
     </div>

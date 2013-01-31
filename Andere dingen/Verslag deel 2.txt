@@ -1,0 +1,38 @@
+#### Handleiding voor gebruik:
+
+
+## Inleiding:
+
+Openbijles.nl is een web-applicatie die geschreven is in PHP. In de volgende paragrafen zal het technische aspect van deze applicatie beschreven worden. Daarbij zal zowel worden ingegaan op de kant van de cliënt als de kant van de beheerder. De broncode zal niet voorkomen in dit document aangezien deze overzichtelijk geschreven is en duidelijk is voorzien van commentaar. Wij raden het echter ten zeerste af om de broncode te wijziging zonder van te voren deze handleiding te lezen. 
+
+In deze handleiding zal worden ingegaan op de software-vereisten aan de cliëntzijde van de applicatie. Vervolgens zal er kort iets worden gezegd over de installatie procedure van de web-applicatie. Daarna zal er worden ingegaan op structuur van de database. Ook zal de structuur van de web-applicatie aanbod komen en deze handleiding zal afsluiten met wat onderhoudsinstructies.
+
+
+## Structuur
+
+Openbijles.nl heeft een dynamische structuur; de index.php bestaat alleen uit een header (met daarin de inlog-functionaliteit) en een footer. De rest wordt dynamisch geladen via het php "include" statement. Dit is efficiënter omdat de header en footer dus niet meerdere malen geladen hoeven te worden. Voor de home-page wordt hier home.php geladen, wat voor de cliënt de eerste pagina is die hij te zijn krijgt bij het openen van de website. Op deze homepage zitten ook enkele interactieve functies. De belangrijkste functie hiervan is het inloggen. Dit zal later wat uitgebreider behandeld worden.
+
+De pagina die het registratieformulier (te bereiken via index.php?p=registratieformulier) is op zichzelf ook een dynamische pagina, waar via JavaScript inputchecks worden gedaan. Zo wordt via AJAX gecheckt of een username wellicht al gekozen is. Ook wordt via éénvoudigere JavaScript de sterkte van een password gecontroleerd. 
+
+De aanbod-pagina, waar advertenties gezocht kunnen worden, maakt gebruik van een zoekfunctie. Hier kan gecombineerd geselecteerd worden op vak, plaats en geslacht. De tekst die wordt ingevuld in de zoektermen wordt via een "LIKE" query door-gecommuniceerd naar de database en hoeft dus niet compleet te zijn. Als men bijvoorbeeld zoekt op "na" als vak, zal men zowel NAtuurkunde als frANs vinden. De pagina verwerkt de zoektermen via de PHP "GET" methode, wat betekend dat de zoektermen meegegeven worden bij de URL bij het opnieuw laden van de pagina. Hierdoor kunnen cliënten hun favoriete zoektermen eventueel bookmarken. 
+
+Het is is niet vreemd om te denken dat de functionaliteit van deze pagina eventueel in de toekomst uitgebreid zou kunnen worden. Zo zou door gebruik van AJAX voor ofwel "autocompletion" of "instant-search" kunnen worden toegevoegd. Waar bij "autocompletion" de lijst met vakken en/of steden uit de database gehaald zou kunnen worden om de input van de cliënt "life" aan te vullen met opties. Bij "instant-search" zou je "life" de input van de cliënt kunnen verwerken door meteen de lijst advertenties aan te vullen. Nu wordt de lijst pas ge-update als iemand op de "zoeken"-knop drukt. Mocht deze functionaliteit nodig zijn, is het nuttig om te snappen hoe op onze website verbinding wordt gemaakt met de database. Zie hiervoor de bijbehorende paragraaf. Verder kan gewoon gebruikt gemaakt worden van dezelfde Queries, zoals te vinden in advertenties.php.
+
+## Beveiliging 
+
+Er zijn veiligheidsmaatregelen getroffen om de gegevens van de cliënten te beschermen. Zo maakt deze web-applicatie gebruik van het HTTPS protocol om gegevens die via POST worden doorgestuurd naar andere pagina's te beschermen tegen onderschepping van hackers. Daarnaast bevindt de php-code voor zowel het verbinden met de database als het inloggen zich in een aparte map "shielded". Voor deze map kan door middel van de .htacces map bepaald worden welk type gebruiker de gegevens kan bekijken. 
+
+# Verbinding met de database
+
+De verbinding met de database komt tot stand via het "connector.php" programma. Dit is een object-georiënteerd PHP programma waarin de ConnectorClass gedefinieerd wordt. De ConnectorClass maakt verbinding met de database. Dit gebeurt tot nu toe via de verouderde mysql_connect() methode, maar met de juiste database gegevens kan dit eenvoudig worden ge-upgrade naar de modernere PDO manier. De code daarvoor is in principe al geschreven en staat als comment in de connector.php. 
+
+# Login
+
+Deze web-applicatie maakt gebruik van  password encryptie door middel van salted SHA-1 passwords worden dus niet als String opgeslagen in de database. De precieze werking van deze encryptie wordt om veiligheidsredenen niet in dit verslag beschreven. Deze kan bekeken worden in de login.php in de shielded map. 
+
+
+
+
+
+
+

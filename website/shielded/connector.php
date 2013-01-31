@@ -25,7 +25,7 @@ class ConnectorClass
         settype( $this -> ConnectionIniObject, "object" );
         settype( $this -> ConnectionIniArray, "array" );
         settype( $this -> databaseserver, "string" );
-		settype( $this -> databaseName, "string" ); // for PDO, the database name is required
+	settype( $this -> databaseName, "string" ); // for PDO, the database name is required
         settype( $this -> username, "string" );
         settype( $this -> password, "string" );
         settype( $this -> Query, "string" );
@@ -58,7 +58,6 @@ class ConnectorClass
      }
      public function Disconnect()               // Disconnecting connection function.
      {
-     
          try{ mysql_close( $this -> Connection );}
          catch( Exeption $e ) { echo( 'Disconnecting to the database failed.' ); }
      }
@@ -71,27 +70,8 @@ class ConnectorClass
          while ( $row = mysql_fetch_array( $this -> QueryHandle, MYSQL_BOTH ) ) { $counter++; $this -> QueryResult[$counter]= $row; } 
          return( $this -> QueryResult); } 
          catch( Exeption $e ) { echo( 'Querying failed.' ); }
-           
       }
 
 }
-
-// Here the class defined above is used:
-
-//////////////// $connectionObject = new ConnectorClass;
-
-// Test query's here. Should become a set of predefined query's as part of the function Querying().
-//$connectionObject -> Query = "SELECT *
-//FROM webdb13BG2.course_difficulty
-//ORDER BY webdb13BG2.course_difficulty.difficulty_id ASC
-//LIMIT 0 , 30";
-//echo('Result of the Query ('.$connectionObject -> Query.') :');
-//echo('<pre>');
-//print_r( $connectionObject -> Querying() );
-//echo('</pre>');
-// Disconnecting function directed:
-
-/////////////////$connectionObject -> Disconnect();
-
 // End of File
 ?>

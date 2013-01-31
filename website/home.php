@@ -44,15 +44,15 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
           
             if ( file_exists( 'user_img/'.$docentRow['user_id'].'.jpg' ))
             {
-              $GLOBALS['docent_img'] = '<img src="user_img/'. $docentRow['user_id'] .'.jpg" width="100%" height="400px" />';
+              $GLOBALS['docent_img'] = '<img src="user_img/'. $docentRow['user_id'] .'.jpg" width="100%" height="400px" alt="student_.'. $docentRow['user_id'].'" />';
             }
             else
             {
-              $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" ></img>';
+              $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_.'. $docentRow['user_id'].'" />';
             }
             
             // Create a div for each of 5         
-            $GLOBALS['fiveResults'] .= '<a href="index.php?p=details&id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
+            $GLOBALS['fiveResults'] .= '<a href="index.php?p=details&amp;id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
                                        '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
       
             $x++;
@@ -69,7 +69,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
               <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
               <span class="title">Ik geef bijles</span>
            </a>
-           <a href="index.php?p=advertenties&course=&city=&level=&male=on&female=on" class="right">	                
+           <a href="index.php?p=advertenties&amp;course=&amp;city=&amp;level=&amp;male=on&amp;female=on" class="right">	                
               <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
               <span class="title">Ik wil bijles</span>
            </a>
