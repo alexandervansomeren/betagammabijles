@@ -69,7 +69,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
               <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
               <span class="title">Ik geef bijles</span>
            </a>
-           <a href="index.php?p=advertenties&course=&city=&level=&male=on&female=on" class="right">	                
+           <a href="index.php?p=advertenties;&course=;&city=;&level=;&male=on;&female=on;" class="right">	                
               <img src="img/student.jpg" width="100%" height="100%" alt="Afbeelding student" />  
               <span class="title">Ik wil bijles</span>
            </a>
