@@ -1,0 +1,36 @@
+Aantekeningen verslag:
+
+Deel 2:
+
+##### de software die nodig is om de site te kunnen gebruiken: ####
+
+Draait goed onder:
+
+OS:	Firefox	IE	Chrome
+Windows	x	-	x
+OSX	x	?	x
+Ubuntu	x	?	x
+Cent OS	x	?	?
+
+Dus wij raden het gebruik van internet explorer af voor het gebruik van de website.
+Functionaliteit.
+
+
+##### de installatieprocedure voor eerste gebruik, #####
+
+- De website is klaar voor gebruikt.
+- Wellicht moet de nieuwe database aangemaakt worden
+
+##### het gebruikte datamodel (schema!), #####
+
+- schema + uitleg normaalvormen? + logica
+- uitleg over database
+
+##### de struktuur van de PHP/javascript code, #####
+
+- uitleg 1 pagina ..
+- uitleg hoe nieuwe pagina toe te voegen
+
+##### instructies met betrekking tot bv. onderhoud aan de site. #####
+
+- 

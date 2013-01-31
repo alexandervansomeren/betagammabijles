@@ -1,37 +1,31 @@
 TO DO
+- validator.w3.org optimalisatie
+- code net maken / comments!
+- VERSLAG
+- Presentatie
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!			   !!!
-!!!      ?FOTO'S UPLOADEN  !!!
-!!!      INLOGGEN          !!!
-!!! 	 Registratiefrom.  !!!
-!!!			   !!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- ?FOTO'S UPLOADEN
+- INLOGGEN
+- Registratiefrom.
+- Pop-up bij gebruik IE ?
 
-BEVEILIGING
+BEHEERDER:
+-rijen/kolommen weg kunnen gooien. 
+-VEREIST?!
+
+BEVELIGING:
+
 -"Je vindt daar ook twee php-klassen "mymysqli" en "mystatement". Dit zijn twee varianten van de klassen die we net bespraken, met ingebouwde foutafhandeling. Ze werken samen met "fatalerror.inc.php" om mysql-foutmeldingen te vertonen of te loggen.Door deze klassen te gebruiken in plaats van de standaard php mysqli-klassen, bespaar je je het herhaalde typwerk van de foutafhandeling!"
 
-REGISTRATIEFORM
-- margin-bottom paragraph zodat <br> wegkan
-- Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc
-- Input elementen mooi krijgen in Firefox
 
-HOME
-- tekst in orange field netter
+REGISTRATIEFORM
+- Uitzoeken input andere types dan text ivm geboortedatum, postcode, email, huisnummer etc
 
 ALGEMENE NICE TO HAVES
- - Achtergrond afbeelding op IP
- - validator.w3.org optimalisatie
+
  - Aantal keer bekeken op profielpagina
  - Bij meerdere adressen voorkeur welk adres
  - Footer perfectioneren
-
-TABLES:
-- Samenvoegen user_personal_data & user_data
-- Hoogste getal uit tabel ipv ingewikkelde query
-
-VERSLAG:
--
 
 BEHEERDER:
 -rijen/kolommen weg kunnen gooien. 
