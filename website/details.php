@@ -83,14 +83,7 @@
 
 ?>
 
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-		
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsPfMQFJt8kVhRafB7uXxY2H0QAy1ipMI&sensor=false"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsPfMQFJt8kVhRafB7uXxY2H0QAy1ipMI&amp;sensor=false"></script>
 <script type="text/javascript">      
       var geocoder;
       var map;
@@ -125,50 +118,6 @@
 
       
 </script>
-	
-<title>webdb13BG2</title>
-<!-- Hieronder een verwijzing naar de algemene stylesheet -->
-<link rel="stylesheet" type="text/css" href="style.css"/>
-		
-<style>
-	.content .details
-	{
-		width: inherit;
-		position: relative;
-		margin: 0px 0px 20px 0px;
-	}
-	
-	.content .details .imgbtn { width: 305px; float: left; }
-	.content .details .imgbtn .image { position: relative; width: 100%; border: 2px solid #FF7F00; overflow:hidden; }
-	.content .details .imgbtn .image:hover .info { visibility: hidden }
-	.content .details .imgbtn .image .info { position: absolute; bottom: 0px; width: 305px; padding: 5px; height: 25px; background-color: #FF7F00; opacity: 0.85; }
-	.content .details .imgbtn .image
-	{
-		width: 100%; height: 400px;            
-	}
-	.content .details .imgbtn .button { width: 100%; text-indent: 25px; height: 30px; cursor:pointer; line-height: 30px; margin-top: 25px; display: block; border: 2px solid #FF7F00; background-color: #FF7F00; opacity: 0.85; }
-        .content .details .imgbtn .button:hover { opacity: 1; }
-	
-	.content .details .information
-	{
-		width: 555px; float: right;
-	}
-	.content .details .geo
-	{
-		width: inherit; height: 175px; float: left;
-		position: relative;
-		margin: 25px 0px 25px 0px;
-		border: 2px solid #FF7F00;
-	}
-	.content .details .geo:hover > .info { visibility: hidden; }
-	.content .details .geo .info { position: absolute; bottom: 0; background-color: #FF7F00; width: 880px; padding: 10px; height:20px; opacity: 0.85; }
-	
-	.content .details .information .category { width: inherit; height: 40px; float: left; line-height: 40px; font-weight:600; }
-	.content .details .information .label { width: 45%; height: 30px; float: left; line-height:30px;  }
-	.content .details .information .content { width: 55%; height: 30px; float: left; line-height:30px; }
-</style>	
-</head>
-
 	
 <div class="content">        
 
@@ -245,3 +194,5 @@
         </a>
     </div>             
 </div>
+
+	
