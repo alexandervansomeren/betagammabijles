@@ -348,15 +348,13 @@
                         {
                             //Connecting to the database and querying
                 		    makeQuery();
-                		    makeVakkenQuery();
-	                        //Disconnect from the database
-                            $GLOBALS['db'] -> Disconnect();  
+                		    makeVakkenQuery(); 
+                		    disconnectGoodbye();
                 	    }
                 	} else {
                 	    //Connecting to the database and querying
                 	    makeQuery();
-                	    //Disconnect from the database
-                        $GLOBALS['db'] -> Disconnect();  
+                        disconnectGoodbye();
                 	}
 			    }
 			
@@ -440,29 +438,29 @@
                     }
                 }
                 
-                if (false) /*Hier komt iets over wanneer een formulier fout is*/
+                function disconnectGoodbye()
                 {
-	                wrongEntry();
-                }
-                else
-                {
-                    echo
-                    '
-                    <div class="page-field">
-                        Bedankt voor het invullen!
-                    </div>
-                    ';
-                }
-
-                // function that displays that there are no results for the query
-                function wrongEntry() 
-                {
-	                echo 
-	                '
-	                <div class="page-field"> 
-		                Er is iets misgegaan met het invullen van je registratieformulier. Probeer opnieuw!
-	                </div>
-	                ';
+                    //Disconnect from the database
+                    $GLOBALS['db'] -> Disconnect(); 
+                    if (false) /*Hier komt iets over wanneer een formulier fout is*/
+                    {
+                        // function that displays that there are no results for the query
+    	                echo 
+	                    '
+	                    <div class="page-field"> 
+		                    Er is iets misgegaan met het invullen van je registratieformulier. Probeer opnieuw!
+	                    </div>
+	                    ';
+                    }
+                    else
+                    {
+                        echo
+                        '
+                        <div class="page-field">
+                            Bedankt voor het invullen!
+                        </div>
+                        ';
+                    }
                 }
             ?>
 	    </div>
