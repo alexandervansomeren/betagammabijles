@@ -1,6 +1,6 @@
 <div class="content">
         <div class="page-intro">
-            <form class="selection" method="get" action="<?php echo($_SERVER['PHP_SELF']); ?>">
+            <form class="selection" method="get" action="">
                 <div class="part">
                     <div class="text"> Vak: </div>
                     <input class="inputfield" type="text" name="course" placeholder="bijv. Natuurkunde"/>
@@ -213,7 +213,7 @@
     function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
     {		
             echo '
-                    <a href="index.php?p=details&id='.$user_id.'">
+                    <a href="index.php?p=details&amp;id='.$user_id.'">
                             <object class="card">
                                     <div class="frame">
                                             <div class="photoframe">';
