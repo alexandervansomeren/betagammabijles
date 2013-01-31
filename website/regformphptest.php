@@ -213,7 +213,6 @@
     
     <?php
         // Connect to the database
-        include 'shielded/connector.php';
         include 'shielded/login.php';
         $db = new ConnectorClass;
 
