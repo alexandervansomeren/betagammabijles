@@ -345,6 +345,8 @@
                 else
                 {
         		    makeQuery();
+                    echo "usertype:";
+        		    echo $_POST['user_type'];
         	    }
 			}
 			
@@ -419,10 +421,8 @@
                 $N = count($GLOBALS['courseTest']);
                 $localCourse = array();
                 $localCourse = $GLOBALS['courseTest'];
-                echo("Je hebt $N vakken gekozen ");
                 for($i=0; $i < $N; $i++)
                 {
-                    echo($localCourse[$i] . " ");
 			        $course_code = $localCourse[$i];
                     enterCourseCode($course_code);
                 }       
