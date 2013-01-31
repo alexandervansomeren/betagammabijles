@@ -19,7 +19,7 @@
 <body onload="startJava();">
     <div class="header">
 	    <div class="center">
-        	<div class="left"> <a href="index.php?n=home;" class="left"> <img src="img/logo.png" alt="Openbijles.nl" /> </a> </div>
+        	<div class="left"> <a href="index.php?p=home" class="left"> <img src="img/logo.png" alt="Openbijles.nl" /> </a> </div>
             <div class="middle"></div>
             <div class="right">
             	<?php
