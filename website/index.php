@@ -96,7 +96,7 @@ function startJava()
         <div class="centerwrapper">
             <a href="index.php?p=about">Wie zijn wij?</a>
             <a href="index.php?p=indexZ">Welkom</a>
-            <a href="index.php?p=advertenties">Advertenties</a>
+            <a href="index.php?p=advertenties&course=&city=&level=&male=on&female=on">Advertenties</a>
             <a href="index.php?p=registratieformulier">Meld je aan</a>
         </div>
     </div>
