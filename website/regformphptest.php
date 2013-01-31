@@ -193,28 +193,6 @@
                     <label class="ques"><input type="checkbox" value="31" name="bijlesvak[]" />Kunst Alg.</label>
                     <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak[]" />CKV</label >
                     
-                    <?php
-                    	/*$bijlesOptions = array();
-                    	function makeOption (str)
-                    		{
-                    			
-                    		}*/
-               	        function makeOption()
-    					    {
-					            $GLOBALS['db'] -> Query = null;
-            					$GLOBALS['db'] -> QueryResult = null;
-            
-					            $N = count($GLOBALS['courseTest']);
-            					$localCourse = array();
-            					$localCourse = $GLOBALS['courseTest'];
-            					for($i=0; $i < $N; $i++)
-            					{
-                					$course_code = $localCourse[$i];
-                					enterCourseCode($course_code);
-            					}
-        					}
-                	?>
-                    
                     <div class="field">Heb je ervaring met bijles geven?</div>
                     <div class="field">
                         <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
@@ -233,6 +211,23 @@
             </div>
         </div>
     </form>
+    
+    <script language="javascript" type="text/javascript">
+        function makeOptionVisible()
+        {
+        	document.getElementById("321").style.display="block";
+        }
+        function makeOptionInvisible()
+    	{
+    		document.getElementById("321").style.display="none";
+        }
+    </script>
+    <div id="321" style="display:none">
+    	<div class="page-field">
+    		Dit is leesbaar!
+    	</div>
+    </div>
+    	
     
     <?php
         // Connect to the database
@@ -362,8 +357,6 @@
     
         function enterCourseCode($course_code)
         {
-                $course_code = $course_code*100 + 11;
-                $course_int = intval($course_code);
                 $ui_int = intval($GLOBALS['user_id']);
                 $GLOBALS['db'] -> Query =
                     "
@@ -428,19 +421,22 @@
         
         function makeVakkenQuery()
         {
-            // Bijlesvoorkeur wordt doorgegeven
-            $GLOBALS['db'] -> Query = null;
-            $GLOBALS['db'] -> QueryResult = null;
-            
             $N = count($GLOBALS['courseTest']);
             $localCourse = array();
             $localCourse = $GLOBALS['courseTest'];
             for($i=0; $i < $N; $i++)
             {
                 $course_code = $localCourse[$i];
-                enterCourseCode($course_code);
                 makeOption($course_code);
             }
+        }
+        
+        function makeOption($course_code)
+        {
+    		$course_code = $course_code*100 + 11;
+    	    $course_int = intval($course_code);
+    	    makeOptionVisible();
+    	    enterCourseCode($course_code);       	
         }
         
         function disconnectGoodbye()
