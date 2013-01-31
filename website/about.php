@@ -47,16 +47,14 @@
 <div class="content">
         <div class="firstRow">
             <div class="oneThirdWidth">
-            <div class= "title">Wie zijn wij?</div> 
-    <img src = "file:///home/10198539/Downloads/bril.jpg" width="230" height="230" />
+            <div class= "title">Kosten</div> 
+            <p>aSdoihfu aps  asfdpgiuashdf aapidusf napsdi </p>
 </div>             
 
             <div class= "twoThirdWidth" style="margin-left:30px;">
                         <div class= "title">Onze missie!</div> 
-                        <p>Openbijles.nl is niet het zoveelste bijles bedrijfje wat probeert een stabiel plekje op de bijlesmarkt te veroveren. Wij hebben geen pandje op de herengracht. Wij hebben geen bijlesgevers in dienst. Wij worden niet betaald door bijlesnemers. Sterker nog, wij worden helemaal niet betaald. Het is ons doel om de bijles-gever en bijlesnemer door heel Nederland bijeen te brengen. Wij zijn voor een open bijlesmarkt die vrij toegankelijk is voor bijlesgevers bijlesnemers. </p>
+                        <p>Openbijles.nl is niet het zoveelste bijles bedrijfje wat probeert een stabiel plekje op de bijlesmarkt te veroveren. Wij hebben geen pandje op de herengracht. Wij hebben geen bijlesgevers in dienst. Wij worden niet betaald door bijlesnemers. Sterker nog, wij worden helemaal niet betaald. Het is ons doel om de bijles-gever en bijlesnemer door heel Nederland bijeen te brengen. Wij zijn voor een open bijlesmarkt die vrij toegankelijk is voor bijlesgevers bijlesnemers. </p> <br />
                         <p>Het is principe is eigenlijk ontzettend simpel. Als je bijles wil gaan geven, kan je je bij ons aanmelden, je maakt dan een profiel aan, waarin je aangeeft waar je woont en in welke vakken je op welk niveau bijles zou willen geven. Vervolgens kunnen mensen die op zoek zijn naar bijles je vinden op onze website.</p>
-                        <p>Liefs,</p>
-                        <p>Openbijles.nl</p>
             </div>
         </div>
         <div class="secondRow">
