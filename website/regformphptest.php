@@ -348,10 +348,16 @@
                     }
                     else
                     {
+                        //Connecting to the database and querying
             		    makeQuery();
+	                    //Disconnect from the database
+                        $GLOBALS['db'] -> Disconnect();  
             	    }
             	} else {
+            	    //Connecting to the database and querying
             	    makeQuery();
+            	    //Disconnect from the database
+                    $GLOBALS['db'] -> Disconnect();  
             	}
 			}
 			
@@ -430,10 +436,7 @@
                 {
 			        $course_code = $localCourse[$i];
                     enterCourseCode($course_code);
-                }       
-                
-                //Disconnect from the database
-                $GLOBALS['db'] -> Disconnect();   
+                }        
             }
                 
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
