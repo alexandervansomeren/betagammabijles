@@ -192,6 +192,29 @@
                     <label class="ques"><input type="checkbox" value="30" name="bijlesvak[]" />Filosofie</label>
                     <label class="ques"><input type="checkbox" value="31" name="bijlesvak[]" />Kunst Alg.</label>
                     <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak[]" />CKV</label >
+                    
+                    <?php
+                    	/*$bijlesOptions = array();
+                    	function makeOption (str)
+                    		{
+                    			
+                    		}*/
+               	        function makeOption()
+    					    {
+					            $GLOBALS['db'] -> Query = null;
+            					$GLOBALS['db'] -> QueryResult = null;
+            
+					            $N = count($GLOBALS['courseTest']);
+            					$localCourse = array();
+            					$localCourse = $GLOBALS['courseTest'];
+            					for($i=0; $i < $N; $i++)
+            					{
+                					$course_code = $localCourse[$i];
+                					enterCourseCode($course_code);
+            					}
+        					}
+                	?>
+                    
                     <div class="field">Heb je ervaring met bijles geven?</div>
                     <div class="field">
                         <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
@@ -416,6 +439,7 @@
             {
                 $course_code = $localCourse[$i];
                 enterCourseCode($course_code);
+                makeOption($course_code);
             }
         }
         
