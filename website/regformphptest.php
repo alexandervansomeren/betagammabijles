@@ -361,7 +361,9 @@
 			    function enterCourseCode($course_code)
 			    {
                         $course_code = $course_code*100 + 11;
+                        $course_int = int;
                         $course_int = intval($course_code);
+                        $ui_int = int;
                         $ui_int = intval($GLOBALS['user_id']);
                         $GLOBALS['db'] -> Query =
                             "
