@@ -77,11 +77,11 @@ function login( $username, $shaPassword )
 		$tryPW = sha1( $salted.$shaPassword.$salt );
 		if ( $pw == $tryPW )
 		{
-                        $setLastLogin = new ConnectorClass;
-                        $setLastLogin -> Query = 
-                        "UPDATE webdb13BG2.user_personal_data SET last_login = '1234' WHERE user_id = '3'";       
-                        echo $setLastLogin -> Query;
-                        $resultOfQ = $setLastLogin -> Querying();
+                        //$setLastLogin = new ConnectorClass;
+                        //$setLastLogin -> Query = 
+                        //"UPDATE webdb13BG2.user_personal_data SET last_login = '1234' WHERE user_id = '3'";       
+                        //echo $setLastLogin -> Query;
+                        //$resultOfQ = $setLastLogin -> Querying();
                         
                         print_r($resultOfQ);
 						$user_typeINT = intval( $user_type );
