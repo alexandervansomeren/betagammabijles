@@ -10,9 +10,12 @@
 <script type="text/javascript">
 function startJava()
 {
-	alert("javascript started! dit verdwijnt binnenkort");
+	if (document.getElementById('map_canvas'))
+	{
+		initialize();
+	}
 	bijLaden();
-	initialize();
+	
 }
 </script>
 
