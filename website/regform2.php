@@ -184,7 +184,7 @@
 							alert(" gevonden	");
 						}
 						else alert( "niet gevonden" );
-						document.getElementById("123").style.visibilty="visible";
+						document.getElementById("123").style.visibility="visible";
 					}
 					</script>
                     <div id="123" style="visibility:hidden">
