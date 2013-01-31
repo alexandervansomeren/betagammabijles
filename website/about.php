@@ -8,7 +8,7 @@
             width: 240px; height: inherit;
             float: left;
             padding: 15px;
-            background-color:orange;
+            background-color:#FF7F00;
             border-radius:10px;
         }
 
@@ -17,7 +17,7 @@
             width: 570px; height: inherit;
             float: left;		    
             padding: 15px;
-            background-color:orange;
+            background-color:#FF7F00;
             border-radius:10px;
         }
 
@@ -48,7 +48,7 @@
         <div class="firstRow">
             <div class="oneThirdWidth">
             <div class= "title">Kosten</div> 
-            <p>aSdoihfu aps  asfdpgiuashdf aapidusf napsdi </p>
+            <p>Heb je op onze hele website niets gevonden over kosten? Dat klopt. Openbijles.nl is volledig gratis :) </p>
 </div>             
 
             <div class= "twoThirdWidth" style="margin-left:30px;">
