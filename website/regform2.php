@@ -179,7 +179,11 @@
                     <script>
 					function makeVisible()
 					{
-						alert("	");
+						if(document.getElementById("123")!=null)
+						{
+							alert(" gevonden	");
+						}
+						else alert( "niet gevonden" );
 						document.getElementById("123").style.visibilty="visible";
 					}
 					</script>
