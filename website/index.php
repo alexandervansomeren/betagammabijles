@@ -7,7 +7,16 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body onload="initialize()">
+<script type="text/javascript">
+function startJava()
+{
+	alert("javascript started! dit verdwijnt binnenkort");
+	bijLaden();
+	initialize();
+}
+</script>
+
+<body onload="startJava();">
     <div class="header">
 	    <div class="center">
         	<div class="left"> <a href="index.php?n=home" class="left"> <img src="img/logo.png"  /> </a> </div>
