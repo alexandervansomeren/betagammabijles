@@ -55,7 +55,8 @@
             $female="1";
     }
     else $female="0";
-
+	
+	// This creates the part of the query that selects on gender 
     if ($male=="1" && $female=="1")
     {
             $genderQuery = "";
@@ -132,9 +133,6 @@
             }
             $usersQuery=implode(" OR ", $users);
 
-            //echo "Start making Second Query";
-            //echo "<br>";
-
             $GLOBALS['db'] -> Query = 
             "
                     SELECT course_user.user_id, course_name  
@@ -146,12 +144,7 @@
             ;";
             $courseNamesArray = $GLOBALS['db'] -> Querying();
 
-            //echo('<pre>');
-            //print_r( $courseNamesArray );
-            //echo('</pre>');
-
             $GLOBALS['db'] -> QueryResult = null;
-
             $GLOBALS['db'] -> Query = 
             "
                     SELECT DISTINCT course_user.user_id, first_name, middle_name, last_name, city  
@@ -162,28 +155,16 @@
             ;";
 
             $nameCityArray = $GLOBALS['db'] -> Querying();
-            //echo $GLOBALS['db'] -> Query;
 
             // Disconnect from the database
             $GLOBALS['db']  -> Disconnect();
-
-            //echo('<pre>');
-            //print_r( $nameCityArray );
-            //echo('</pre>');
-
-            //echo "lengte array:";
-            //echo sizeOf( $nameCityArray );
-
-
+			
             // Create an array with unique user_id's from selection
             for($i=1;$i<=sizeof($nameCityArray); $i++)
             {
                     $user[$i-1]=$currentUser=$nameCityArray[$i][0];
             }
             $user=array_unique($user);
-            //print_r($user);
-
-            //echo "sizeof($courseNamesArray)", sizeof($courseNamesArray);
 
             // Create an array with user_ids as keys and an array with course_names as values
             for($i=0;$i<sizeof($user); $i++)
@@ -195,10 +176,7 @@
                             array_push($coursesPerUser[$user[$i]], $courseNamesArray[$j][1]);
                     }
             }
-
             echo '<div class="page-field">';
-
-
             for($i=1;$i<=sizeof($nameCityArray); $i++)
             {
                     printVisitCard(
@@ -225,6 +203,13 @@
     }
 
     // Function that creates a "visitcard" from given parameters
+	/*	The function searches for a user_image in user_img/<user_id>.jpg, but places
+		a default picture if none are found (picture upload function is not included 
+		in this web-application so far.
+		The div's are created in such a way that, when adding multple "Visit-Cards", 
+		they are well displayed and the frame in which they are placed extends its
+		height.
+	*/
     function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
     {		
             echo '
@@ -288,7 +273,7 @@
             </a>-->
       </div>
   </div> 
-    <div class="clear"></div>
+	<div class="clear"></div>
 </div>
 <div class="clear"></div>
 </div>
