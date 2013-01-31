@@ -337,18 +337,22 @@
                     
         	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
         	{
-        	    $GLOBALS['courseTest'] = $_POST['bijlesvak'];
-                if(empty($courseTest))
-                {
-                    echo("Je hebt geen vak gekozen. ");
-                }
-                else
-                {
-        		    makeQuery();
-        		    if(//HIER BEN IK BEZIG
+        	    if($_POST['user_type']==1)
+        	    {
                     echo "usertype:";
-        		    echo $_POST['user_type'];
-        	    }
+            		echo $_POST['user_type'];
+            	    $GLOBALS['courseTest'] = $_POST['bijlesvak'];
+                    if(empty($courseTest))
+                    {
+                        echo("Je hebt geen vak gekozen. ");
+                    }
+                    else
+                    {
+            		    makeQuery();
+            	    }
+            	} else {
+            	    makeQuery();
+            	}
 			}
 			
 			function enterCourseCode($course_code)
