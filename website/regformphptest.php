@@ -345,6 +345,7 @@
                 else
                 {
         		    makeQuery();
+        		    if(//HIER BEN IK BEZIG
                     echo "usertype:";
         		    echo $_POST['user_type'];
         	    }
