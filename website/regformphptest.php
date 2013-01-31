@@ -378,7 +378,7 @@
                     //user_id wordt geinitialiseerd via user_data
                     $GLOBALS['db'] -> Query = 
                     "INSERT INTO webdb13BG2.user_data(username, password, user_type, salt) 
-                    VALUES ('".$GLOBALS['username']."', '".$GLOBALS['DBpassword']."', ".$GLOBALS['user_type'].", '".$GLOBALS['DBsalt']."');
+                    VALUES ('".$GLOBALS['username']."', '".$GLOBALS['DBpassword']."', '".$GLOBALS['user_type']."', '".$GLOBALS['DBsalt']."');
                     ";
                     // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
 				    $GLOBALS['db'] -> Querying();
@@ -405,7 +405,7 @@
                     	"
                         INSERT INTO webdb13BG2.user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
                         VALUES ('".$GLOBALS['first_name']."', '".$GLOBALS['middle_name']."', '".$GLOBALS['last_name']."', '".$GLOBALS['date_of_birth']."', ".$GLOBALS['gender'].", 
-                        '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
+                        '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', '".$GLOBALS['user_id']."');
                         ";
                     $GLOBALS['db'] -> Querying();
                                 	                
@@ -417,7 +417,7 @@
                     $GLOBALS['db'] -> Query =   
                         "
                         INSERT INTO webdb13BG2.adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
-                        VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
+                        VALUES ('".$GLOBALS['user_id']."', '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', '".$GLOBALS['postal']."', '".$GLOBALS['postal_extra']."');
                         ";
                     $GLOBALS['db'] -> Querying();      
                 }
