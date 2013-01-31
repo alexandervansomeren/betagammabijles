@@ -172,7 +172,7 @@
                            Wil je bijles geven of een profiel aanmaken?
                         </div>
                         <div class="field">
-                            <div class="ques"><input type="radio" name="user_type" value="2" />Ik zoek bijles</div>
+                            <div class="ques"><input type="radio" name="user_type" value="2" onclick="makeInvisible();" />Ik zoek bijles</div>
                             <div class="ques"><input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil graag bijles geven!</div>
                         </div>
                     </div>
@@ -180,6 +180,10 @@
 					function makeVisible()
 					{
 						document.getElementById("123").style.display="block";
+					}
+					function makeInvisible()
+					{
+						document.getElementById("123").style.display="none";
 					}
 					</script>
                     <div id="123" style="display:none">
