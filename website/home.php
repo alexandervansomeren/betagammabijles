@@ -52,7 +52,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             }
             
             // Create a div for each of 5         
-            $GLOBALS['fiveResults'] .= '<a href="index.php?p=details&id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
+            $GLOBALS['fiveResults'] .= '<a href="index.php?p=details&amp;id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
                                        '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
       
             $x++;
