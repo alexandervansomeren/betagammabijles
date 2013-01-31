@@ -26,8 +26,9 @@ Er zijn veiligheidsmaatregelen getroffen om de gegevens van de cliënten te besc
 
 De verbinding met de database komt tot stand via het "connector.php" programma. Dit is een object-georiënteerd PHP programma waarin de ConnectorClass gedefinieerd wordt. De ConnectorClass maakt verbinding met de database. Dit gebeurt tot nu toe via de verouderde mysql_connect() methode, maar met de juiste database gegevens kan dit eenvoudig worden ge-upgrade naar de modernere PDO manier. De code daarvoor is in principe al geschreven en staat als comment in de connector.php. 
 
-# 
+# Login
 
+Deze web-applicatie maakt gebruik van  password encryptie door middel van salted SHA-1 passwords worden dus niet als String opgeslagen in de database. De precieze werking van deze encryptie wordt om veiligheidsredenen niet in dit verslag beschreven. Deze kan bekeken worden in de login.php in de shielded map. 
 
 
 
