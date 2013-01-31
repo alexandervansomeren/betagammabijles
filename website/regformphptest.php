@@ -335,109 +335,110 @@
                 
                 $courseTest = array();
                     
-        	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
-        	{
-        	    if($_POST['user_type']==1)
-        	    {
-                    echo "usertype:";
-            		echo $_POST['user_type'];
-            	    $GLOBALS['courseTest'] = $_POST['bijlesvak'];
-                    if(empty($courseTest))
-                    {
-                        echo("Je hebt geen vak gekozen. ");
-                    }
-                    else
-                    {
-                        //Connecting to the database and querying
-            		    makeQuery();
-	                    //Disconnect from the database
+            	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit']) && isset($_POST['user_type']))
+            	{
+            	    if($_POST['user_type']==1)
+            	    {
+                	    $GLOBALS['courseTest'] = $_POST['bijlesvak'];
+                        if(empty($courseTest))
+                        {
+                            echo("Je hebt geen vak gekozen. ");
+                        }
+                        else
+                        {
+                            //Connecting to the database and querying
+                		    makeQuery();
+                		    makeVakkenQuery();
+	                        //Disconnect from the database
+                            $GLOBALS['db'] -> Disconnect();  
+                	    }
+                	} else {
+                	    //Connecting to the database and querying
+                	    makeQuery();
+                	    //Disconnect from the database
                         $GLOBALS['db'] -> Disconnect();  
-            	    }
-            	} else {
-            	    //Connecting to the database and querying
-            	    makeQuery();
-            	    //Disconnect from the database
-                    $GLOBALS['db'] -> Disconnect();  
-            	}
-			}
+                	}
+			    }
 			
-			function enterCourseCode($course_code)
-			{
-                    $course_code = $course_code*100 + 11;
-                    $GLOBALS['db'] -> Query =
-                        "
-                        INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                        VALUES ('".$course_code."', '".$GLOBALS['user_id']."');
-                        ";
-                    $GLOBALS['db'] -> Querying();
-                    
+			    function enterCourseCode($course_code)
+			    {
+                        $course_code = $course_code*100 + 11;
+                        $GLOBALS['db'] -> Query =
+                            "
+                            INSERT INTO webdb13BG2.course_user (course_code, user_id) 
+                            VALUES ('".$course_code."', '".$GLOBALS['user_id']."');
+                            ";
+                        $GLOBALS['db'] -> Querying();
+                        
+                        $GLOBALS['db'] -> Query = null;
+                        $GLOBALS['db'] -> QueryResult = null;
+                }
+			
+                // Making query
+                function makeQuery()
+                {
+                    //user_id wordt geinitialiseerd via user_data
+                    $GLOBALS['db'] -> Query = 
+                    "INSERT INTO webdb13BG2.user_data(username, password, user_type, salt) 
+                    VALUES ('".$GLOBALS['username']."', '".$GLOBALS['DBpassword']."', ".$GLOBALS['user_type'].", '".$GLOBALS['DBsalt']."');
+                    ";
+                    // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
+				    $GLOBALS['db'] -> Querying();
+				
+                    // Resetting db's variables
                     $GLOBALS['db'] -> Query = null;
                     $GLOBALS['db'] -> QueryResult = null;
-            }
-			
-            // Making query
-            /*salt nog toevoegen aan INSERT INTO*/
-            function makeQuery()
-            {
-                //user_id wordt geinitialiseerd via user_data
-                $GLOBALS['db'] -> Query = 
-                "INSERT INTO webdb13BG2.user_data(username, password, user_type, salt) 
-                VALUES ('".$GLOBALS['username']."', '".$GLOBALS['DBpassword']."', ".$GLOBALS['user_type'].", '".$GLOBALS['DBsalt']."');
-                ";
-                // Dit wordt een "Undefined Offset" genoemd, weet niet of dat erg is
-				$GLOBALS['db'] -> Querying();
-				
-                // Resetting db's variables
-                $GLOBALS['db'] -> Query = null;
-                $GLOBALS['db'] -> QueryResult = null;
 
-                //de geinitialiseerde user_id wordt opgehaald en opgeslagen in een variabele
-                $GLOBALS['db'] -> Query =     
-                    "
-                    SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';
-                    ";
+                    //de geinitialiseerde user_id wordt opgehaald en opgeslagen in een variabele
+                    $GLOBALS['db'] -> Query =     
+                        "
+                        SELECT user_id FROM webdb13BG2.user_data WHERE username='".$GLOBALS['username']."';
+                        ";
 	
-                $currentUserArray = $GLOBALS['db'] -> Querying();
-            	$GLOBALS['user_id'] = $currentUserArray[1][0];
-            	                
-                // Resetting db's variables
-                $GLOBALS['db'] -> Query = null;
-                $GLOBALS['db'] -> QueryResult = null;
+                    $currentUserArray = $GLOBALS['db'] -> Querying();
+                	$GLOBALS['user_id'] = $currentUserArray[1][0];
+                	                
+                    // Resetting db's variables
+                    $GLOBALS['db'] -> Query = null;
+                    $GLOBALS['db'] -> QueryResult = null;
+                    
+                    //de user_personal_data wordt toegevoegd
+                    $GLOBALS['db'] -> Query =     
+                    	"
+                        INSERT INTO webdb13BG2.user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
+                        VALUES ('".$GLOBALS['first_name']."', '".$GLOBALS['middle_name']."', '".$GLOBALS['last_name']."', '".$GLOBALS['date_of_birth']."', ".$GLOBALS['gender'].", 
+                        '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
+                        ";
+                    $GLOBALS['db'] -> Querying();
+                                	                
+                    // Resetting db's variables
+                    $GLOBALS['db'] -> Query = null;
+                    $GLOBALS['db'] -> QueryResult = null;
+                    
+                    //de adress_data van de user wordt toegevoegd
+                    $GLOBALS['db'] -> Query =   
+                        "
+                        INSERT INTO webdb13BG2.adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
+                        VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
+                        ";
+                    $GLOBALS['db'] -> Querying();      
+                }
                 
-                //de user_personal_data wordt toegevoegd
-                $GLOBALS['db'] -> Query =     
-                	"
-                    INSERT INTO webdb13BG2.user_personal_data (first_name, middle_name, last_name, date_of_birth, gender, emailadress, phone_1, phone_2,about_me, user_id) 
-                    VALUES ('".$GLOBALS['first_name']."', '".$GLOBALS['middle_name']."', '".$GLOBALS['last_name']."', '".$GLOBALS['date_of_birth']."', ".$GLOBALS['gender'].", 
-                    '".$GLOBALS['emailadress']."', '".$GLOBALS['phone_1']."', '".$GLOBALS['phone_2']."', '".$GLOBALS['about_me']."', ".$GLOBALS['user_id'].");
-                    ";
-                $GLOBALS['db'] -> Querying();
-                            	                
-                // Resetting db's variables
-                $GLOBALS['db'] -> Query = null;
-                $GLOBALS['db'] -> QueryResult = null;
-                
-                //de adress_data van de user wordt toegevoegd
-                $GLOBALS['db'] -> Query =   
-                    "
-                    INSERT INTO webdb13BG2.adress_data (user_id, city, street, streetnumber, postal, postal_extra) 
-                    VALUES (".$GLOBALS['user_id'].", '".$GLOBALS['city']."', '".$GLOBALS['street']."', '".$GLOBALS['streetnumber']."', ".$GLOBALS['postal'].", '".$GLOBALS['postal_extra']."');
-                    ";
-                $GLOBALS['db'] -> Querying();
-                
-                // Bijlesvoorkeur wordt doorgegeven
-                $GLOBALS['db'] -> Query = null;
-                $GLOBALS['db'] -> QueryResult = null;
-                
-                $N = count($GLOBALS['courseTest']);
-                $localCourse = array();
-                $localCourse = $GLOBALS['courseTest'];
-                for($i=0; $i < $N; $i++)
+                function makeVakkenQuery()
                 {
-			        $course_code = $localCourse[$i];
-                    enterCourseCode($course_code);
-                }        
-            }
+                    // Bijlesvoorkeur wordt doorgegeven
+                    $GLOBALS['db'] -> Query = null;
+                    $GLOBALS['db'] -> QueryResult = null;
+                    
+                    $N = count($GLOBALS['courseTest']);
+                    $localCourse = array();
+                    $localCourse = $GLOBALS['courseTest'];
+                    for($i=0; $i < $N; $i++)
+                    {
+			            $course_code = $localCourse[$i];
+                        enterCourseCode($course_code);
+                    }
+                }
                 
                 if (false) /*Hier komt iets over wanneer een formulier fout is*/
                 {
