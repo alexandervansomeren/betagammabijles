@@ -179,15 +179,10 @@
                     <script>
 					function makeVisible()
 					{
-						if(document.getElementById("123")!=null)
-						{
-							alert(" gevonden	");
-						}
-						else alert( "niet gevonden" );
-						document.getElementById("123").style.visibility="visible";
+						document.getElementById("123").style.display="block";
 					}
 					</script>
-                    <div id="123" style="visibility:hidden">
+                    <div id="123" style="display:none">
                         <em><br />De bijles</em>
                         <div class="paragraph">
                             <div class="field">
