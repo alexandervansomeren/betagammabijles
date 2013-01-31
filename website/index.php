@@ -14,8 +14,6 @@ function startJava()
 	{
 		initialize();
 	}
-	bijLaden();
-	
 }
 </script>
 
