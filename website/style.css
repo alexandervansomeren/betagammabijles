@@ -266,6 +266,7 @@ a:hover { text-decoration: underline; }
 .card .frame:hover
 {
 	background-image:url(img/card-backgroundSmall.png);
+	background-repeat:
 }
 .card .frame .photoframe
 {
