@@ -16,6 +16,9 @@ TO DO
 - Registratiefrom.
 - Pop-up bij gebruik IE ?
 
+- Kosten-pagina maken
+- About text updaten
+
 BEHEERDER:
 -rijen/kolommen weg kunnen gooien. 
 -VEREIST?!
