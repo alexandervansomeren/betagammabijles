@@ -57,7 +57,7 @@
             <div class= "twoThirdWidth" style="margin-left:30px;">
                         <div class= "title">Onze missie!</div> 
                         <br />
-                        <p>Openbijles.nl is niet het zoveelste bijles bedrijfje wat probeert een stabiel plekje op de bijlesmarkt te veroveren. Wij hebben geen pandje op de herengracht. Wij hebben geen bijlesgevers in dienst. Wij worden niet betaald door bijlesnemers. Sterker nog, wij worden helemaal niet betaald. Het is ons doel om de bijles-gever en bijlesnemer door heel Nederland bijeen te brengen. Wij zijn voor een open bijlesmarkt die vrij toegankelijk is voor bijlesgevers bijlesnemers. </p> <br />
+                        <p>Openbijles.nl is niet het zoveelste bijles bedrijf wat probeert een stabiel plekje op de bijlesmarkt te veroveren. Wij hebben geen pandje op de Herengracht. Wij hebben geen bijlesgevers in dienst. Wij worden niet betaald door bijlesnemers. Sterker nog, wij worden helemaal niet betaald. Het is ons doel om de bijles-gever en bijlesnemer door heel Nederland bijeen te brengen. Wij zijn voor een open bijlesmarkt die vrij toegankelijk is voor bijlesgevers bijlesnemers. </p> <br />
                         <p>Het is principe is eigenlijk ontzettend simpel. Als je bijles wil gaan geven, kan je je bij ons aanmelden, je maakt dan een profiel aan, waarin je aangeeft waar je woont en in welke vakken je op welk niveau bijles zou willen geven. Vervolgens kunnen mensen die op zoek zijn naar bijles je vinden op onze website.</p>
             </div>
         </div>
