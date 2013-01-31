@@ -1,5 +1,8 @@
 Aantekeningen verslag:
 
+Deel 1:
+Emma
+
 Deel 2:
 
 ##### de software die nodig is om de site te kunnen gebruiken: ####
@@ -22,12 +25,13 @@ Functionaliteit.
 - Wellicht moet de nieuwe database aangemaakt worden
 
 ##### het gebruikte datamodel (schema!), #####
+Emma
 
 - schema + uitleg normaalvormen? + logica
 - uitleg over database
 
 ##### de struktuur van de PHP/javascript code, #####
-
+Alexander & Tim
 - uitleg 1 pagina ..
 - uitleg hoe nieuwe pagina toe te voegen
 
