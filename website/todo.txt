@@ -1,9 +1,16 @@
 TO DO
+
 - validator.w3.org optimalisatie
 - code net maken / comments!
 - VERSLAG
+	- Deel 1
+	- Deel 2
 - Presentatie
-
+	- Inleiding uitleg concept
+	- Kleine presentatie website
+	- Uitleg Database
+	- Uitleg php / JS ?
+	- Afsluiting
 - ?FOTO'S UPLOADEN
 - INLOGGEN
 - Registratiefrom.
