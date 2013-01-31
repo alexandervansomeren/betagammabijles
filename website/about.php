@@ -53,11 +53,10 @@
 
             <div class= "twoThirdWidth" style="margin-left:30px;">
                         <div class= "title">Onze missie!</div> 
-                        <p>Wij zijn 5 enthousiaste studenten die een bijles-site begonnen zijn. Via deze site is het mogelijk om je te registreren om bijles te gaan geven of bijles te nemen. </p>
-                        <p>Je kan ook eerst even rondkijken of er een persoon bij zit die jou zou kunnen bijlessen.Er wordt in bijna elk vak wel bijles gegeven, dus neem een kijkje!</p>
+                        <p>Openbijles.nl is niet het zoveelste bijles bedrijfje wat probeert een stabiel plekje op de bijlesmarkt te veroveren. Wij hebben geen pandje op de herengracht. Wij hebben geen bijlesgevers in dienst. Wij worden niet betaald door bijlesnemers. Sterker nog, wij worden helemaal niet betaald. Het is ons doel om de bijles-gever en bijlesnemer door heel Nederland bijeen te brengen. Wij zijn voor een open bijlesmarkt die vrij toegankelijk is voor bijlesgevers bijlesnemers. </p>
+                        <p>Het is principe is eigenlijk ontzettend simpel. Als je bijles wil gaan geven, kan je je bij ons aanmelden, je maakt dan een profiel aan, waarin je aangeeft waar je woont en in welke vakken je op welk niveau bijles zou willen geven. Vervolgens kunnen mensen die op zoek zijn naar bijles je vinden op onze website.</p>
                         <p>Liefs,</p>
-                        <p>Alexander, Bastiaan, Emma, Laura en Tim</p>
-                        <p>lorum ipsum</p>
+                        <p>Openbijles.nl</p>
             </div>
         </div>
         <div class="secondRow">
@@ -82,7 +81,7 @@
             <div class= "oneThirdWidth">				    
             <div class= "title">Contactgegevens</div> 
             <p>
-            Alexander, Bastiaan, Emma, Laura en Tim<br/>
+            Open bijles.nl<br/>
             Science Park 409<br/>
     1098 XH Amsterdam<br/>
     Nederland

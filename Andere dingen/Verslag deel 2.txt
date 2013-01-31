@@ -18,6 +18,8 @@ De aanbod-pagina, waar advertenties gezocht kunnen worden, maakt gebruik van een
 
 Het is is niet vreemd om te denken dat de functionaliteit van deze pagina eventueel in de toekomst uitgebreid zou kunnen worden. Zo zou door gebruik van AJAX voor ofwel "autocompletion" of "instant-search" kunnen worden toegevoegd. Waar bij "autocompletion" de lijst met vakken en/of steden uit de database gehaald zou kunnen worden om de input van de cliënt "life" aan te vullen met opties. Bij "instant-search" zou je "life" de input van de cliënt kunnen verwerken door meteen de lijst advertenties aan te vullen. Nu wordt de lijst pas ge-update als iemand op de "zoeken"-knop drukt. Mocht deze functionaliteit nodig zijn, is het nuttig om te snappen hoe op onze website verbinding wordt gemaakt met de database. Zie hiervoor de bijbehorende paragraaf. Verder kan gewoon gebruikt gemaakt worden van dezelfde Queries, zoals te vinden in advertenties.php.
 
+Het zou ook kunnen dat in de database-structuur in de toekomst aangepast zou kunnen worden. Voor een precieze uitleg over de originele database-structuur kunt u de bijbehorende paragraaf hierboven lezen. Hier staat alleen een kort technisch stukje. De database is van het type MySQL en is gemaakt in het programma PhpMyAdmin.
+
 ## Beveiliging 
 
 Er zijn veiligheidsmaatregelen getroffen om de gegevens van de cliënten te beschermen. Zo maakt deze web-applicatie gebruik van het HTTPS protocol om gegevens die via POST worden doorgestuurd naar andere pagina's te beschermen tegen onderschepping van hackers. Daarnaast bevindt de php-code voor zowel het verbinden met de database als het inloggen zich in een aparte map "shielded". Voor deze map kan door middel van de .htacces map bepaald worden welk type gebruiker de gegevens kan bekijken. 
@@ -30,9 +32,5 @@ De verbinding met de database komt tot stand via het "connector.php" programma. 
 
 Deze web-applicatie maakt gebruik van  password encryptie door middel van salted SHA-1 passwords worden dus niet als String opgeslagen in de database. De precieze werking van deze encryptie wordt om veiligheidsredenen niet in dit verslag beschreven. Deze kan bekeken worden in de login.php in de shielded map. 
 
-
-
-
-
-
+## Onderhoud
 
