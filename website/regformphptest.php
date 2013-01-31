@@ -164,15 +164,15 @@
                             <div class="ques"><input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil graag bijles geven!</div>
                         </div>
                     </div>
-                    <script>
-					function makeVisible()
-					{
-						document.getElementById("123").style.display="block";
-					}
-					function makeInvisible()
-					{
-						document.getElementById("123").style.display="none";
-					}
+                    <script language="javascript" type="text/javascript">
+					    function makeVisible()
+					    {
+						    document.getElementById("123").style.display="block";
+					    }
+					    function makeInvisible()
+					    {
+						    document.getElementById("123").style.display="none";
+					    }
 					</script>
                     <div id="123" style="display:none">
                         <em><br />De bijles</em>
