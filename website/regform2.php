@@ -180,10 +180,10 @@
 					function makeVisible()
 					{
 						alert("	");
-						document.getElementById("blgeven").style.visibilty="visible";
+						document.getElementById("123").style.visibilty="visible";
 					}
 					</script>
-                    <div id="blgeven" style="visibility:hidden">
+                    <div id="123" style="visibility:hidden">
                         <em><br />De bijles</em>
                         <div class="paragraph">
                             <div class="field">
