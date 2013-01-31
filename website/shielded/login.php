@@ -83,7 +83,7 @@ function login( $username, $shaPassword )
                         //echo $setLastLogin -> Query;
                         //$resultOfQ = $setLastLogin -> Querying();
                         
-                        print_r($resultOfQ);
+                        //print_r($resultOfQ);
 						$user_typeINT = intval( $user_type );
                         return ( $user_typeINT );
                 }
