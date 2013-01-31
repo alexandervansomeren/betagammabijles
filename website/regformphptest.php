@@ -361,10 +361,12 @@
 			    function enterCourseCode($course_code)
 			    {
                         $course_code = $course_code*100 + 11;
+                        int $course_int = intval($course_code);
+                        int $ui_int = intval($GLOBALS['user_id']);
                         $GLOBALS['db'] -> Query =
                             "
                             INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                            VALUES ('".$course_code."', '".$GLOBALS['user_id']."');
+                            VALUES (".$course_int.", ".$ui_int.");
                             ";
                         $GLOBALS['db'] -> Querying();
                         
