@@ -219,7 +219,7 @@
                                             <div class="photoframe">';
                                             if ( file_exists( 'user_img/'.$user_id.'.jpg' ))
                                             {
-                                                    echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" />';
+                                                    echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" alt="docent_',$user_id,'" />';
                                             }
                                             echo '</div>
                                             <div class="infoframe">
