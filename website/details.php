@@ -44,11 +44,11 @@
                         	
                         if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
                         {
-                            $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" />';
+                            $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
                         }
                         else
                         {
-                            $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" ></img>';
+                            $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
                         }                        
                         
                         $GLOBALS['db'] -> Query = 
@@ -158,8 +158,8 @@
 
 
     <div class="populair">
-        <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" /></a>
-        <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" /></a>
+        <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="arrow Left"/></a>
+        <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="arrow Right" /></a>
         <a href="details.php?id=1" class="docent">
             <span class="name">Emma</span>
             <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
