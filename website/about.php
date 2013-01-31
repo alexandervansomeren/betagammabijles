@@ -50,7 +50,7 @@
             <div class= "title">Kosten</div> 
             <br />
             <p>Openbijles.nl is volledig gratis :) De tarieven van de bijles-gevers worden onderling individueel bepaald. </p> <br />
-            <p> Daarbij moet je denken aan een richtprijs van € 15,- per uur. </p>
+            <p> Daarbij moet je denken aan een richtprijs van € 15,- per uur. </p> <br />
             <p> Verder vragen wij onze bijlesgevers of ze de eerste bijles gratis willen geven, bij wijze van kennismaking, om te kijken of het klikt. </p>
 </div>             
 
