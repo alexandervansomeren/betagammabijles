@@ -868,7 +868,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <div class="field">Heb je ervaring met bijles geven?</div>
+                    <div class="field"><br /><br />Heb je ervaring met bijles geven?</div>
                     <div class="field">
                         <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
                     </div>
