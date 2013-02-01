@@ -70,7 +70,7 @@
             print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
         ?>
     </div>
-    <form action="" method="post">
+    <form method="post">
         <div class="page-field">
             <em>Profiel</em>
             <div class="paragraph">
