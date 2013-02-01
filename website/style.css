@@ -414,7 +414,7 @@ a:hover { text-decoration: underline; }
 {
 	width: 98%;
 	padding: 1%;
-	background-color: green;	
+	background-color: blue;	
 }
 .sectionHolder > * { float: left; display: block; }
 
@@ -436,18 +436,17 @@ a:hover { text-decoration: underline; }
     height: 25px;
     display: block;
     line-height: 25px;
-	overflow: hidden;
 }
 
 .sectionHolder .mainHolder input
 {
-    width: 10%;
+    width: 5%;
     height: 100%;
 }
 
 .sectionHolder .mainHolder label
 {
-    width: 45%;
+    width: 50%;
     height: 100%;
 	display: block;
 }
