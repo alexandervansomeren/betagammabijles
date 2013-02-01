@@ -351,7 +351,7 @@ a:hover { text-decoration: underline; }
 
 /* Registratieformulierpagina */
 		.content .ques {
-            min-width: 155px;
+            min-width: 175px;
             float: left;
             height: 30px;
             line-height: 30px;
