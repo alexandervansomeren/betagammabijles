@@ -77,10 +77,12 @@
             
             <div class="label">Gebruikersnaam</div>
             <div class="input"><input type="text" name="username" id="username" onkeyup="unAvailable(this.value)"/></div>
+            <div class="feedback" id="fbu"></div>
             
             <div class="label">Wachtwoord</div>
             <div class="input"><input type="password" name="password" style="width:155px;" onkeyup="pwStrength()" id="password" onblur="feedbackGone()" /></div>
-                    
+            <div class="feedback" id="fbp"></div>
+            
             <div class="clear"></div>
         </div>            
             
