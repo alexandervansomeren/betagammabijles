@@ -355,7 +355,7 @@
             }
         }
     
-        function enterCourseCode($course_code)
+        function enterCourseCode($course_int)
         {
                 $ui_int = intval($GLOBALS['user_id']);
                 $GLOBALS['db'] -> Query =
@@ -444,7 +444,7 @@
             echo "Je hebt een vak ingevoerd: ";
             echo $course_int;
             echo '</div>';
-            enterCourseCode($course_code);
+            enterCourseCode($course_int);
         }
         
         function disconnectGoodbye()
