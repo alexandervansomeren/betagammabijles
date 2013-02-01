@@ -192,18 +192,15 @@
                 $coursesPerUser[$nameCityArray[$i][0]]
             );
         }
-        echo '
-        	<div class="field"></div>
-        	</div>';
     }
 
     // function that displays that there are no results for the query
     function showNoResults() 
     {
         echo 
-            '
+        	'
             <div class="page-field"> 
-                    <h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .'. </h1>
+                <h1> Er zijn helaas (nog) geen bijlesgevers die '. $GLOBALS['course'] .' geven in '. $GLOBALS['city'] .'. </h1>
             </div>
             ';
     }
@@ -219,64 +216,59 @@
     function printVisitCard( $user_id, $FirstName, $MiddleName, $LastName, $City, $CoursesArray )
     {		
             echo '
-                    <a href="index.php?p=details&amp;id='.$user_id.'">
-                            <object class="card">
-                                    <div class="frame">
-                                            <div class="photoframe">';
-                                            if ( file_exists( 'user_img/'.$user_id.'.jpg' ))
-                                            {
-                                                    echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" alt="docent_',$user_id,'" />';
-                                            }
-                                            echo '</div>
-                                            <div class="infoframe">
-                                                    <div class = "name">
-                                                            <h1>'; 
-                                                                    echo ucfirst( $FirstName ),' ' , $MiddleName,' ' , ucfirst( $LastName );
-                                                            echo '</h1>
-                                                    </div>
-                                                    <div class="attributes">';
-                                                    if( sizeOf( $CoursesArray )==1 )
-                                                    {
-                                                            echo '<h1>Vak:</h1>';
-                                                            echo '<p>', $CoursesArray[0], '</p>';
-                                                    }
-                                                    else if( sizeOf( $CoursesArray )>1 )
-                                                    {
-                                                            echo '<h1>Vakken:</h1>';
-                                                            echo '<p>';
-                                                            echo $CoursesArray[0];
-                                                            for($i=1; $i<sizeOf( $CoursesArray ); $i++)
-                                                            {
-                                                                    echo ', ', $CoursesArray[$i];
-                                                            }
-                                                            echo '.</p>';
-                                                    }
-                                                    echo '
-                                                    </div>
-                                                    <div class="attributes">
-                                                            <h1>Locatie:</h1>
-                                                            <p>';
-                                                            echo $City;
-                                                            echo '</p>
-                                                    </div>
-                                             </div>
-                                      </div>
-                            </object>
-            </a>';
+                <a href="index.php?p=details&amp;id='.$user_id.'">
+                    <object class="card">
+                        <div class="frame">';
+                        
+                        	//Initializing photo
+                        	echo '<div class="photoframe">';
+            	                if ( file_exists( 'user_img/'.$user_id.'.jpg' ))
+                                {
+                                    echo '<img src="user_img/',$user_id,'.jpg" width="150" height="200" alt="docent_',$user_id,'" />';
+                                }
+                            echo '</div>';
+                            
+                            //Initializing info
+                            echo '<div class="infoframe">
+                                <div class = "name">
+                                    <h1>'; 
+                                		echo ucfirst( $FirstName ),' ' , $MiddleName,' ' , ucfirst( $LastName );
+                                	echo '</h1>
+                                </div>';
+                                    
+                	            echo '<div class="attributes">';
+                                	if( sizeOf( $CoursesArray )==1 )
+                                	{
+    	                            	echo '<h1>Vak:</h1>';
+                                    	echo '<p>', $CoursesArray[0], '</p>';
+                                	}
+                                	else if( sizeOf( $CoursesArray )>1 )
+                                	{
+                                    	echo '<h1>Vakken:</h1>';
+                                    	echo '<p>';
+                                        	echo $CoursesArray[0];
+                                        	for($i=1; $i<sizeOf( $CoursesArray ); $i++)
+                                        	{
+                                            	echo ', ', $CoursesArray[$i];
+                                        	}
+                                    	echo '.</p>';
+                                	}
+                                echo '</div>
+                                
+                                <div class="attributes">
+                                    <h1>Locatie:</h1>
+                                    <p>';
+                                        echo $City;
+                                    echo '</p>
+                                </div>
+                            </div>
+                        </div>
+                    </object>
+            	</a>';
     }
-    ?>
-    <div class="prevnexbuttons">
+?>
+	<div class="prevnexbuttons">
         <div class="prevnexbuttonsCenter">
-            <!--<a href="#">
-                <object class="previousbutton">
-                Vorige
-                </object>
-            </a>
-            <a href="#">
-                <object class="nextbutton">
-                Volgende
-                </object>
-            </a>-->
       </div>
   </div> 
 	<div class="clear"></div>

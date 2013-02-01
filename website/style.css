@@ -310,44 +310,6 @@ a:hover { text-decoration: underline; }
 	margin-top:0px;
 	margin-bottom:0px;
 }
-.prevnexbuttons
-{
-	float:left;
-	width:890px;
-	margin-top:30px;
-	margin-bottom:30px;
-}
-.prevnexbuttonsCenter
-{
-	width:250px;
-	background-color:#0FF;	
-	margin-left:auto;
-	margin-right:auto;	
-}
-.nextbutton
-{
-	float:right;
-	width:80px;
-	border-right:3px solid white;
-	border-left:2px solid white;	
-	text-align:center;
-}
-.nextbutton:hover
-{
-	background-color:#FC6;	
-}
-.previousbutton
-{
-	float:left;	
-	width:80px;
-	border-left:3px solid white;
-	border-right:2px solid white;
-	text-align:center;
-}
-.previousbutton:hover
-{
-	background-color:#FC6;	
-}
 
 /* Registratieformulierpagina */
 		.content .ques {
