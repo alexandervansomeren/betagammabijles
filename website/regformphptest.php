@@ -162,7 +162,7 @@
                     </div>
                     
                     <label class="ques">
-                    <input type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau1();" />Aardrijkskunde<div class="ques" id="301"></div>
+                    <input type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau1();" />Aardrijkskunde<div id="301"></div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau1()
                             {
@@ -179,7 +179,7 @@
                         </select>
                     </label>
                     
-                    <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" onclick="makeNiveau2();"/>Biologie<div class="ques" id="302"></div>
+                    <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" onclick="makeNiveau2();"/>Biologie<div id="302"></div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau2()
                             {
