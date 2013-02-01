@@ -111,13 +111,14 @@
 							<input name='email' type='text'><br>
 						<div class='label'>Onderwerp: </div>	
 							<input name='subject' type='text'><br>
-							<div class='label'>Uw bericht aan ons</div>
-							<div class='input' style='float:left;'>
-							  <textarea name='message' rows='15' cols='40'>
-							  </textarea><br>
-							</div>
-							  <input type='submit'>
-							  </form>";
+					</div>
+					<div class='label'>Uw bericht aan ons</div>
+					<div class='input' style='float:left;'>
+					  <textarea name='message' rows='15' cols='40'>
+					  </textarea><br>
+					</div>
+					  <input type='submit'>
+					  </form>";
 	  }
 	?>
                 </div>
