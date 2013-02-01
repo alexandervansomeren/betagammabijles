@@ -354,11 +354,9 @@ function setViewState(sender_id)
                 }
                 else
                 {
-					print_r($_POST['bijlesvak']);
-					print_r($_POST['bijlesniveau']);
                     //Connecting to the database and querying
-                    //makeQuery();
-                    //makeVakkenQuery();
+                    makeQuery();
+                    makeVakkenQuery();
                     //disconnectGoodbye();
                 }
             } else {
@@ -441,43 +439,28 @@ function setViewState(sender_id)
                 ';
             }
         }
-        
-        function enterCourseCode($course_int)
-        {
-                $ui_int = intval($GLOBALS['user_id']);
-                $GLOBALS['db'] -> Query =
-                    "
-                    INSERT INTO webdb13BG2.course_user (course_code, user_id) 
-                    VALUES (".$course_int.", ".$ui_int.");
-                    ";
-                $GLOBALS['db'] -> Querying();
-                
-                $GLOBALS['db'] -> Query = null;
-                $GLOBALS['db'] -> QueryResult = null;
-        }
-        
+               
         function makeVakkenQuery()
         {
-            $N = count($GLOBALS['courseTest']);
-            $localCourse = array();
-            $localCourse = $GLOBALS['courseTest'];
-            for($i=0; $i < $N; $i++)
-            {
-                $course_code = $localCourse[$i];
-                makeOption($course_code);
-            }
+			foreach($_POST['bijlesvak'] as $key => $value)
+			{
+				// Voor ieder vak haal niveau op
+				$vakNiveau = $_POST['bijlesniveau'][$key];
+				$vakCode = $key * 100 + $vakNiveau;
+				$userID = intval($GLOBALS['user_id']);
+				
+				echo ("To DB:" + $vakCode + "<br />");
+				
+				$GLOBALS['db'] -> Query =
+				"
+				INSERT INTO webdb13BG2.course_user (course_code, user_id) 
+				VALUES (".$vakCode.", ".$userID.");
+				";
+				$GLOBALS['db'] -> Querying();			
+				$GLOBALS['db'] -> Query = null;
+				$GLOBALS['db'] -> QueryResult = null;
+			}
         }
-        
-        function makeOption($course_code)
-        {
-            if(isset($_POST['niveau']))
-            {
-                $course_code = $course_code*100 + $_POST['niveau'];
-            } else {
-                $course_code = $course_code*100 + 11;
-            }
-	        $course_int = intval($course_code);
-	        enterCourseCode($course_int);       	
-        }
+
     ?>
 </div>
