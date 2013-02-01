@@ -435,7 +435,7 @@
         {
     		$course_code = $course_code*100 + 11;
     	    $course_int = intval($course_code);
-    	    makeOptionVisible();       	
+    	    makeOptionVisible($course_int);       	
         }
         
         function makeOptionVisible($course_int)
