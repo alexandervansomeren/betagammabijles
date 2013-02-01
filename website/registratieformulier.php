@@ -150,27 +150,17 @@
             <script language="javascript" type="text/javascript">
                 function makeVisible()
                 {
-                    document.getElementById("123").style.display="block";
+                    document.getElementById("vakkenHolder").style.display="block";
                 }
                 function makeInvisible()
                 {
-                    document.getElementById("123").style.display="none";
+                    document.getElementById("vakkenHolder").style.display="none";
                 }
             </script>
-            <div id="123" style="display:none">
+            <div id="vakkenHolder" style="display:none">
                 <em><br />De bijles</em>
-                <div class="paragraph">
-                    
-                    <!---ques = holder -->
-                    <label class="mainHolder">
-                    <input class="input" type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau1();" /><div id="301">Aardrijkskunde</div>
-                        <script language="javascript" type="text/javascript">
-                            function makeNiveau1()
-                            {
-                                document.getElementById("201").style.display="block";
-                                document.getElementById("301").style.display="hidden";
-                            }
-                        </script>
+                <div class="paragraph">                   
+                   
                         
 <?php
 
@@ -209,7 +199,8 @@ foreach ($GLOBALS['vakkenArray'] as $vakRow)
 	';
 }								
 ?>
-     <div class="clear"></div>
+				</div>
+    		</div>
                     <div class="field"><br /><br />Heb je ervaring met bijles geven?</div>
                     <div class="field">
                         <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
