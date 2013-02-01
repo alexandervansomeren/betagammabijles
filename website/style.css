@@ -380,6 +380,7 @@ a:hover { text-decoration: underline; }
         .content .ques input[type="checkbox"] {
             min-width: 30px;
             display: block;
+            float: left;
         }
         /*k weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
             maar hiermee zouden we de breedte voor de velden kunnen veranderen */
