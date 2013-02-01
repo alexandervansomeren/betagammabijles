@@ -375,6 +375,10 @@ a:hover { text-decoration: underline; }
             width: 155px;
             display: block;
         }
+        .content .ques input[type="checkbox"] {
+            min-width: 20px;
+            display: block;
+        }
         /*k weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
             maar hiermee zouden we de breedte voor de velden kunnen veranderen */
 /*einde regform*/
