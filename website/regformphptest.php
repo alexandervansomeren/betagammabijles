@@ -160,7 +160,19 @@
                     <div class="field">
                         In welk vak wil je bijles geven?
                     </div>
-                    <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" />Aardrijkskunde</label>
+                    <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau();" />Aardrijkskunde</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeVisible()
+                            {
+                                document.getElementById("200").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="200" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
                     <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" />Biologie</label>
                     <label class="ques"><input type="checkbox" value="3" name="bijlesvak[]" /> Scheikunde</label>
                     <label class="ques"><input type="checkbox" value="4" name="bijlesvak[]" />Engels</label>
