@@ -453,7 +453,7 @@ a:hover { text-decoration: underline; }
 .mainHolder
 {
     margin-top: 30px;
-    width: 100%;
+    width: 50%;
     height: 30px;
     display: block;
     background-color: red;
@@ -462,19 +462,19 @@ a:hover { text-decoration: underline; }
 .mainHolder div
 {
     float: left;
-    width: 200px;
+    width: 20%;
     height: 100%;
 }
 .mainHolder input
 {
-    width: 200px;
+    width: 40%;
     float: left;
     height: 100%;
 }
 
 .mainHolder select
 {
-    width: 200px;
+    width: 40%
     float: left;
     height: 100%;
 }
