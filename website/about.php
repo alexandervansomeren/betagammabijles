@@ -98,7 +98,7 @@
 				$email = $_REQUEST['email'] ;
 				$subject = $_REQUEST['subject'] ;
 				$message = $_REQUEST['message'] ;
-				mail("someone@example.com", "Subject: $subject",
+				mail("info@betagammabijles.nl", "Subject: $subject",
 				$message, "From: $email" );
 				echo "Thank you for using our mail form";
 			}
