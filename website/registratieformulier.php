@@ -182,7 +182,7 @@ foreach ($GLOBALS['vakkenArray'] as $vakRow)
 			<input type="checkbox" value="'. $tmp_id .'" id="'. $tmp_id .'" name="bijlesvak['. $tmp_id .']" onclick="setViewState('. $tmp_id .');"/>
 			<label for="'. $tmp_id .'">'. $tmp_name .'</label>
 			
-			<select id="select'. $tmp_id .'" name="bijlesniveau['. $tmp_id .'] style="display:none">
+			<select id="select'. $tmp_id .'" name="bijlesniveau['. $tmp_id .']" style="display:none">
 				<option value="1">Basic</option>
 				<option value="2">Basisschool</option>
 				<option value="3">PRO</option>
