@@ -204,7 +204,7 @@
                             function makeNiveau3()
                             {
                                 document.getElementById("203").style.display="block";
-                                document.getElementById("303").style.display="none";
+                                document.getElementById("303").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="203" style="display:none">
@@ -226,7 +226,7 @@
                             function makeNiveau4()
                             {
                                 document.getElementById("204").style.display="block";
-                                document.getElementById("304").style.display="none";
+                                document.getElementById("304").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="204" style="display:none">
@@ -248,7 +248,7 @@
                             function makeNiveau5()
                             {
                                 document.getElementById("205").style.display="block";
-                                document.getElementById("305").style.display="none";
+                                document.getElementById("305").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="205" style="display:none">
@@ -269,7 +269,7 @@
                             function makeNiveau6()
                             {
                                 document.getElementById("206").style.display="block";
-                                document.getElementById("306").style.display="none";
+                                document.getElementById("306").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="206" style="display:none">
@@ -290,7 +290,7 @@
                             function makeNiveau7()
                             {
                                 document.getElementById("207").style.display="block";
-                                document.getElementById("307").style.display="none";
+                                document.getElementById("307").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="207" style="display:none">
@@ -311,7 +311,7 @@
                             function makeNiveau8()
                             {
                                 document.getElementById("208").style.display="block";
-                                document.getElementById("308").style.display="none";
+                                document.getElementById("308").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="208" style="display:none">
@@ -332,7 +332,7 @@
                             function makeNiveau9()
                             {
                                 document.getElementById("209").style.display="block";
-                                document.getElementById("309").style.display="none";
+                                document.getElementById("309").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="209" style="display:none">
@@ -353,7 +353,7 @@
                             function makeNiveau10()
                             {
                                 document.getElementById("210").style.display="block";
-                                document.getElementById("310").style.display="none";
+                                document.getElementById("310").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="210" style="display:none">
@@ -374,7 +374,7 @@
                             function makeNiveau11()
                             {
                                 document.getElementById("211").style.display="block";
-                                document.getElementById("311").style.display="none";
+                                document.getElementById("311").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="211" style="display:none">
@@ -395,7 +395,7 @@
                             function makeNiveau12()
                             {
                                 document.getElementById("212").style.display="block";
-                                document.getElementById("312").style.display="none";
+                                document.getElementById("312").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="212" style="display:none">
@@ -416,7 +416,7 @@
                             function makeNiveau13()
                             {
                                 document.getElementById("213").style.display="block";
-                                document.getElementById("313").style.display="none";
+                                document.getElementById("313").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="213" style="display:none">
@@ -437,7 +437,7 @@
                             function makeNiveau14()
                             {
                                 document.getElementById("214").style.display="block";
-                                document.getElementById("314").style.display="none";
+                                document.getElementById("314").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="214" style="display:none">
@@ -458,7 +458,7 @@
                             function makeNiveau15()
                             {
                                 document.getElementById("215").style.display="block";
-                                document.getElementById("315").style.display="none";
+                                document.getElementById("315").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="215" style="display:none">
@@ -479,7 +479,7 @@
                             function makeNiveau16()
                             {
                                 document.getElementById("216").style.display="block";
-                                document.getElementById("316").style.display="none";
+                                document.getElementById("316").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="216" style="display:none">
@@ -500,7 +500,7 @@
                             function makeNiveau17()
                             {
                                 document.getElementById("217").style.display="block";
-                                document.getElementById("317").style.display="none";
+                                document.getElementById("317").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="217" style="display:none">
@@ -521,7 +521,7 @@
                             function makeNiveau18()
                             {
                                 document.getElementById("218").style.display="block";
-                                document.getElementById("318").style.display="none";
+                                document.getElementById("318").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="218" style="display:none">
@@ -542,7 +542,7 @@
                             function makeNiveau19()
                             {
                                 document.getElementById("219").style.display="block";
-                                document.getElementById("319").style.display="none";
+                                document.getElementById("319").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="219" style="display:none">
@@ -563,7 +563,7 @@
                             function makeNiveau20()
                             {
                                 document.getElementById("220").style.display="block";
-                                document.getElementById("320").style.display="none";
+                                document.getElementById("320").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="220" style="display:none">
@@ -584,7 +584,7 @@
                             function makeNiveau21()
                             {
                                 document.getElementById("221").style.display="block";
-                                document.getElementById("321").style.display="none";
+                                document.getElementById("321").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="221" style="display:none">
@@ -605,7 +605,7 @@
                             function makeNiveau22()
                             {
                                 document.getElementById("222").style.display="block";
-                                document.getElementById("322").style.display="none";
+                                document.getElementById("322").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="222" style="display:none">
@@ -626,7 +626,7 @@
                             function makeNiveau23()
                             {
                                 document.getElementById("223").style.display="block";
-                                document.getElementById("323").style.display="none";
+                                document.getElementById("323").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="223" style="display:none">
@@ -647,7 +647,7 @@
                             function makeNiveau24()
                             {
                                 document.getElementById("224").style.display="block";
-                                document.getElementById("324").style.display="none";
+                                document.getElementById("324").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="224" style="display:none">
@@ -668,7 +668,7 @@
                             function makeNiveau25()
                             {
                                 document.getElementById("225").style.display="block";
-                                document.getElementById("325").style.display="none";
+                                document.getElementById("325").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="225" style="display:none">
@@ -689,7 +689,7 @@
                             function makeNiveau26()
                             {
                                 document.getElementById("226").style.display="block";
-                                document.getElementById("326").style.display="none";
+                                document.getElementById("326").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="226" style="display:none">
@@ -710,7 +710,7 @@
                             function makeNiveau27()
                             {
                                 document.getElementById("227").style.display="block";
-                                document.getElementById("327").style.display="none";
+                                document.getElementById("327").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="227" style="display:none">
@@ -731,7 +731,7 @@
                             function makeNiveau28()
                             {
                                 document.getElementById("228").style.display="block";
-                                document.getElementById("328").style.display="none";
+                                document.getElementById("328").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="228" style="display:none">
@@ -752,7 +752,7 @@
                             function makeNiveau29()
                             {
                                 document.getElementById("229").style.display="block";
-                                document.getElementById("329").style.display="none";
+                                document.getElementById("329").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="229" style="display:none">
@@ -773,7 +773,7 @@
                             function makeNiveau30()
                             {
                                 document.getElementById("230").style.display="block";
-                                document.getElementById("330").style.display="none";
+                                document.getElementById("330").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="230" style="display:none">
@@ -794,7 +794,7 @@
                             function makeNiveau31()
                             {
                                 document.getElementById("231").style.display="block";
-                                document.getElementById("331").style.display="none";
+                                document.getElementById("331").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="231" style="display:none">
@@ -815,7 +815,7 @@
                             function makeNiveau32()
                             {
                                 document.getElementById("232").style.display="block";
-                                document.getElementById("332").style.display="none";
+                                document.getElementById("332").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="232" style="display:none">
@@ -858,7 +858,7 @@
         }
         function makeOptionInvisible()
     	{
-    		document.getElementById("321").style.display="none";
+    		document.getElementById("321").style.display="hidden";
         }
     </script>
     <div id="321" style="display:none">
