@@ -416,7 +416,9 @@ a:hover { text-decoration: underline; }
 	padding: 1%;
 	background-color: blue;	
 }
-.sectionHolder > * { float: left; display: block; }
+.sectionHolder > * ,
+.sectionHolder > * > * 
+{ float: left; display: block; }
 
 .sectionHolder .title
 {
