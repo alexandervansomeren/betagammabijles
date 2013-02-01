@@ -351,10 +351,11 @@ a:hover { text-decoration: underline; }
 
 /* Registratieformulierpagina */
 		.content .ques {
-            width: 100%;
+            width: 155px;
+            display: block;
             float: left;
-            height: 50px;
-            line-height: 50px;
+            height: 30px;
+            line-height: 30px;
         }
         
         .content .ans {
