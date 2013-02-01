@@ -182,7 +182,7 @@ foreach ($GLOBALS['vakkenArray'] as $vakRow)
 			<input type="checkbox" value="'. $tmp_id .'" id="'. $tmp_id .'" onclick="setViewState();"/>
 			<label for="'. $tmp_id .'">'. $tmp_name .'</label>
 			
-			<select id="'. $tmp_id .'" style="display:hidden">
+			<select id="'. $tmp_id .'" style="display:none">
 				<option value="1">Basic</option>
 				<option value="2">Basisschool</option>
 				<option value="3">PRO</option>
@@ -199,6 +199,15 @@ foreach ($GLOBALS['vakkenArray'] as $vakRow)
 	';
 }								
 ?>
+<script language="javascript" type="text/javascript">
+function setViewState(sender, eventArgs)
+{
+	alert("function started");
+	alert(sender.get_id());
+}
+</script>
+
+
 				</div>
     		</div>
                     <div class="field"><br /><br />Heb je ervaring met bijles geven?</div>
