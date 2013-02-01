@@ -267,6 +267,7 @@
             	</a>';
     }
 ?>
-	<div class="clear"></div>
-	<div class="clear"></div>
+		<div class="clear"></div>
+		<div class="clear"></div>
+	</div>
 </div>
