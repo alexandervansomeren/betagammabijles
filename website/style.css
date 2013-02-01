@@ -410,33 +410,48 @@ a:hover { text-decoration: underline; }
 
 
 
+.sectionHolder
+{
+	width: 98%;
+	padding: 1%;
+	background-color: green;	
+}
 
+.sectionHolder .title
+{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: red;
+	float: left;	
+}
 
-.mainHolder
+.sectionHolder .mainHolder
 {
     margin-top: 15px;
     width: 50%;
     height: 25px;
     display: block;
     line-height: 30px;
+	overflow: hidden;
     float: left;
 }
 
-.mainHolder input
+.sectionHolder .mainHolder input
 {
-    width: 15%;
+    width: 10%;
     float: left;
     height: 100%;
 }
 
-.mainHolder label
+.sectionHolder .mainHolder label
 {
     float: left;
     width: 45%;
     height: 100%;
 }
 
-.mainHolder select
+.sectionHolder .mainHolder select
 {
     width: 40%;
     float: left;

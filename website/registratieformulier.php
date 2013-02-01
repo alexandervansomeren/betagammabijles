@@ -157,87 +157,82 @@
                     document.getElementById("vakkenHolder").style.display="none";
                 }
             </script>
-            <div id="vakkenHolder" style="display:none">
-                <em><br />De bijles</em>
-                <div class="paragraph">                   
-                   
-                        
-<?php
-
-// Connect to the database
-$db = new ConnectorClass;
-
-$GLOBALS['db'] -> Query = 
-"SELECT * FROM webdb13BG2.course_id";
-
-$GLOBALS['vakkenArray'] = $GLOBALS['db'] -> Querying();
-
-foreach ($GLOBALS['vakkenArray'] as $vakRow)
-{
-	$tmp_name = $vakRow['course_name'];
-	$tmp_id = $vakRow['course_id'];
-	
-	echo '
-		<div class="mainHolder">
-			<input type="checkbox" value="'. $tmp_id .'" id="'. $tmp_id .'" name="bijlesvak['. $tmp_id .']" onclick="setViewState('. $tmp_id .');"/>
-			<label for="'. $tmp_id .'">'. $tmp_name .'</label>
-			
-			<select id="select'. $tmp_id .'" name="bijlesniveau['. $tmp_id .']" style="display:none">
-				<option value="1">Basic</option>
-				<option value="2">Basisschool</option>
-				<option value="3">PRO</option>
-				<option value="4">VMBO-BBL</option>
-				<option value="5">VMBO-KBL</option>
-				<option value="6">VMBO-GL</option>
-				<option value="7">VMBO-T</option>
-				<option value="8">HAVO-Onderbouw</option>
-				<option value="9">HAVO-Bovenbouw</option>
-				<option value="10">VWO-Onderbouw</option>
-				<option value="11">VWO-Bovenbouw</option>
-			</select>
-		</div>
-	';
-}								
-?>
-<script language="javascript" type="text/javascript">
-function setViewState(sender_id)
-{
-	if(document.getElementById(sender_id))
-	{
-		if(document.getElementById(sender_id).checked == 1)
-		{
-			document.getElementById("select" + sender_id).style.display="block";
-		}
-		else
-		{
-			document.getElementById("select" + sender_id).style.display="none";
-		}
-	}
-}
-</script>
-
-
-				</div>
+            
+            
+            
+            <div id="sectionHolder" style="display:none">
+                <div class="title">Geeft u hieronder aan in welke vakken u bijles geeft:</div> 
+				<?php
+                
+                // Connect to the database
+                $db = new ConnectorClass;
+                
+                $GLOBALS['db'] -> Query = 
+                "SELECT * FROM webdb13BG2.course_id";
+                
+                $GLOBALS['vakkenArray'] = $GLOBALS['db'] -> Querying();
+                
+                foreach ($GLOBALS['vakkenArray'] as $vakRow)
+                {
+                    $tmp_name = $vakRow['course_name'];
+                    $tmp_id = $vakRow['course_id'];
+                    
+                    echo '
+                        <div class="mainHolder">
+                            <input type="checkbox" value="'. $tmp_id .'" id="'. $tmp_id .'" 
+							name="bijlesvak['. $tmp_id .']" onclick="setViewState('. $tmp_id .');"/>
+							
+                            <label for="'. $tmp_id .'">'. $tmp_name .'</label>
+                            
+                            <select id="select'. $tmp_id .'" name="bijlesniveau['. $tmp_id .']" style="display:none">
+                                <option value="1">Basic</option>
+                                <option value="2">Basisschool</option>
+                                <option value="3">PRO</option>
+                                <option value="4">VMBO-BBL</option>
+                                <option value="5">VMBO-KBL</option>
+                                <option value="6">VMBO-GL</option>
+                                <option value="7">VMBO-T</option>
+                                <option value="8">HAVO-Onderbouw</option>
+                                <option value="9">HAVO-Bovenbouw</option>
+                                <option value="10">VWO-Onderbouw</option>
+                                <option value="11">VWO-Bovenbouw</option>
+                            </select>
+                        </div>
+                    ';
+                }								
+                ?>
+                <script language="javascript" type="text/javascript">
+                function setViewState(sender_id)
+                {
+                    if(document.getElementById(sender_id))
+                    {
+                        if(document.getElementById(sender_id).checked == 1)
+                        {
+                            document.getElementById("select" + sender_id).style.display="block";
+                        }
+                        else
+                        {
+                            document.getElementById("select" + sender_id).style.display="none";
+                        }
+                    }
+                }
+                </script>
+                <div class="clear"></div>
     		</div>
-                    <div class="field"><br /><br />Heb je ervaring met bijles geven?</div>
-                    <div class="field">
-                        <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
-                    </div>
-                </div>
+            
+            <div class="sectionHolder">
+            	<div class="title">Heb je ervaring met bijles geven?</div>
+                <textarea name="ervaring" style="width:419px; height:200px; vertical-align:text-top;" placeholder="Mijn ervaring..."></textarea>
+            	<div class="clear"></div>
             </div>
-            <div class="paragraph">
-                <div class="field">
-                    <input type="submit" value="Registreer" style="background-color:orange;" name="submit" />
-                </div>
-                <div class="field">
-                    <a href="http://validator.w3.org/check?uri=referer">
-                        <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
-                    </a>
-                </div>
+            
+			<div class="sectionHolder">
+            	<div class="title">Verzend mijn formulier</div>
+                <input type="submit" value="Registreer" style="background-color:orange;" name="submit" />
+            	<div class="clear"></div>
             </div>
-        </div>
-    </form>
-    
+            
+   		</form>    
     </div>
     	
     
@@ -447,7 +442,7 @@ function setViewState(sender_id)
 				// Voor ieder vak haal niveau op
 				$vakNiveau = $_POST['bijlesniveau'][$key];
 				$vakCode = $key * 100 + $vakNiveau;
-				$userID = 250;//intval($GLOBALS['user_id']);
+				$userID = intval($GLOBALS['user_id']);
 				
 				echo ("To DB:" + $vakCode + "<br />");
 				
