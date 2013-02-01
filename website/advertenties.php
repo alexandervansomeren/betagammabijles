@@ -21,8 +21,8 @@
             <input class="part" style="width:60px; height:25px; margin-left:10px;" type="submit" value="Zoeken"/>
         </form>
     </div>
-<?php
 
+<?php
     // Connect to the database
     $db = new ConnectorClass;
 
@@ -31,17 +31,17 @@
     // Initializing variables and secure that they are not mysql-injections
     if (isset($_GET['course']))
     {
-            $course = mysql_real_escape_string($_GET['course']);
+            $course = mysql_real_escape_string(strip_tags($_GET['course']));
     }
     else $course="";
     if (isset($_GET['city']))
     {
-            $city = mysql_real_escape_string($_GET['city']);
+            $city = mysql_real_escape_string(strip_tags($_GET['city']));
     }
     else $city="";
     if (isset($_GET['level']))
     {
-            $level = mysql_real_escape_string($_GET['level']);
+            $level = mysql_real_escape_string(strip_tags($_GET['level']));
     }
     else $level="";
 
