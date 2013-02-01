@@ -85,7 +85,72 @@
             
             <div class="clear"></div>
         </div>            
+           
+           
+        <div class="sectionHolder">
+            <div class="title">Over jou</div>
             
+            <div class="label">Voornaam</div>
+            <div class="input"><input type="text" name="firstname" placeholder="Voornaam" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Tussenvoegsel</div>
+            <div class="input"><input type="text" name="middlename" placeholder="Bijv. van" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Achternaam</div>
+            <div class="input"><input type="text" name="lastname" placeholder="Achternaam" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Selecteer geslacht</div>
+            <div class="input"><input type="radio" name="gender" value="1" />Man</div>
+            <div class="input"><input type="radio" name="gender" value="0" />Vrouw</div>
+            
+            <div class="label">Geboortedatum</div>
+            <div class="input"><input type="text" name="date_of_birth" placeholder="Bijv. 2000-01-01" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Email</div>
+            <div class="input"><input type="text" name="emailadress" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Telefoon 1</div>
+            <div class="input"><input type="text" name="phone_1" placeholder="Telefoon 1" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Telefoon 2</div>
+            <div class="input"><input type="text" name="phone_2" placeholder="Telefoon 2" /></div>
+            <div class="feedback"></div>
+			
+            <div class="clear"></div>
+        </div> 
+        
+         <div class="sectionHolder">
+            <div class="title">Locatie gegevens</div>
+                           
+            <div class="label">Straatnaam</div>
+            <div class="input"><input type="text" name="street" placeholder="Straatnaam" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Huisnummer + toev</div>
+            <div class="input"><input type="text" name="streetnumber" placeholder="Telefoon 2" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Eerste vier cijfers postcode</div>
+            <div class="input"><input type="text" name="postal" placeholder="Bijv. 1234" /></div>
+            <div class="feedback"></div>
+            
+            <div class="label">Postcode toevoeging</div>
+            <div class="input"><input type="text" name="postal_extra" placeholder="AB" /></div>
+            <div class="feedback"></div>
+            
+			<div class="label">Woonplaats</div>
+            <div class="input"><input type="text" name="city" placeholder="AB" /></div>
+            <div class="feedback"></div>
+            
+            <div class="clear"></div>
+		</div>            
+ 
             
 		<script language="javascript" type="text/javascript">
             function setViewState(sender_id)
