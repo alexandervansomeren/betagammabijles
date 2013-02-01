@@ -351,12 +351,13 @@ a:hover { text-decoration: underline; }
 
 /* Registratieformulierpagina */
 		.content .ques {
-            width: 155px;
+            width: 355px;
             display: block;
             float: left;
             height: 30px;
             line-height: 30px;
         }
+        .content .quest select { float: left; }
         
         .content .ans {
             min-width: 1px;
@@ -377,7 +378,7 @@ a:hover { text-decoration: underline; }
             display: block;
         }
         .content .ques input[type="checkbox"] {
-            min-width: 20px;
+            min-width: 30px;
             display: block;
         }
         /*k weet niet wat er mis is met deze code (hij werkt alleen in chrome en niet in firefox :( 
