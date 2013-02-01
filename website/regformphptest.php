@@ -345,13 +345,13 @@
                 {
                     //Connecting to the database and querying
                     makeQuery();
+                    makeVakkenQuery();
                     disconnectGoodbye();
                 }
             } else {
                 //Connecting to the database and querying
                 disconnectGoodbye();
             }
-            header('Location: regform3.php');
         }
     
         // Making query
@@ -427,6 +427,39 @@
                 </div>
                 ';
             }
+        }
+        
+        function enterCourseCode($course_int)
+        {
+                $ui_int = intval($GLOBALS['user_id']);
+                $GLOBALS['db'] -> Query =
+                    "
+                    INSERT INTO webdb13BG2.course_user (course_code, user_id) 
+                    VALUES (".$course_int.", ".$ui_int.");
+                    ";
+                $GLOBALS['db'] -> Querying();
+                
+                $GLOBALS['db'] -> Query = null;
+                $GLOBALS['db'] -> QueryResult = null;
+        }
+        
+        function makeVakkenQuery()
+        {
+            $N = count($GLOBALS['courseTest']);
+            $localCourse = array();
+            $localCourse = $GLOBALS['courseTest'];
+            for($i=0; $i < $N; $i++)
+            {
+                $course_code = $localCourse[$i];
+                makeOption($course_code);
+            }
+        }
+        
+        function makeOption($course_code)
+        {
+		    $course_code = $course_code*100 + 11;
+	        $course_int = intval($course_code);
+	        enterCourseCode($course_int);       	
         }
     ?>
 </div>
