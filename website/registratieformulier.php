@@ -180,9 +180,9 @@ $db = new ConnectorClass;
 $GLOBALS['db'] -> Query = 
 "SELECT * FROM webdb13BG2.course_id";
 
-$GLOBALS['lijstMetVakken'] = $GLOBALS['db'] -> Querying();
+$GLOBALS['vakkenArray'] = $GLOBALS['db'] -> Querying();
 
-foreach ($GLOBALS['lijstMetVakken'] as $eenVak)
+foreach ($GLOBALS['vakkenArray'] as $vakRow)
 {
 	echo ($vakRow['course_name']);
 }						
