@@ -431,7 +431,7 @@ a:hover { text-decoration: underline; }
 
 .sectionHolder .mainHolder
 {
-    margin-top: 15px;
+	margin-bottom: 10px;
     width: 50%;
     height: 25px;
     display: block;
