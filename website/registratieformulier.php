@@ -68,7 +68,8 @@
 </script>
 
 <div class="content">
-    <div class="page-intro">Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!
+    <div class="sectionHolder">
+    Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul 	hieronder het formulier in!
     </div>
     
     <form method="post">    
@@ -156,7 +157,7 @@
             <div class="feedback"></div>
             
 			<div class="label">Woonplaats</div>
-            <div class="input"><input type="text" name="city" placeholder="AB" /></div>
+            <div class="input"><input type="text" name="city" placeholder="Amsterdam?" /></div>
             <div class="feedback"></div>
             
             <div class="clear"></div>
