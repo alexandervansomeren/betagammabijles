@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 31 jan 2013 om 20:50
+-- Genereertijd: 01 feb 2013 om 15:58
 -- Serverversie: 5.1.61
 -- PHP-versie: 5.3.3
 
@@ -84,7 +84,20 @@ INSERT INTO `adress_data` (`user_id`, `city`, `street`, `postal`, `postal_extra`
 (59, 'Amsterdam', 'Rokin', 1091, 'AC', '32'),
 (60, 'Amsterdam', 'Spuistraat', 1094, 'CD', '23'),
 (61, 'Amsterdam', 'Roetersstraat', 1000, 'XA', '10'),
-(62, 'Amsterdam', 'Spuistraat', 1043, 'XD', '54');
+(62, 'Amsterdam', 'Spuistraat', 1043, 'XD', '54'),
+(63, 'Amsterdam', 'Prinseneiland', 1094, 'AG', '2'),
+(64, 'Diemen', 'Rode Kruislaan', 1111, 'XC', '1318D'),
+(66, 'Amsterdam', 'Driehoekstraat', 1093, 'AC', '8'),
+(67, 'Leiden', 'Willem de Zwijgerlaan', 2335, 'KL', '2'),
+(68, 'Arnhem', 'Van Goghstraat', 1001, 'AW', '2'),
+(74, 'Den Haag', 'Plein', 2335, 'KL', '1'),
+(73, 'Leiden', 'Marienpoelstraat', 2334, 'CX', '37'),
+(75, 'Delft', 'Kerklaan', 2331, 'AC', '17'),
+(76, 'Leiden', 'Marienpoelstraat', 2334, 'CA', '41'),
+(77, 'Amsterdam', 'Prinsengracht', 1013, 'EE', '14'),
+(78, '', '', 0, '', ''),
+(79, 'Asmterdam', 'Keizersgracht', 1013, 'BJ', '103'),
+(80, 'Amsterdam', 'Overtoom', 1234, 'AB', '23');
 
 -- --------------------------------------------------------
 
@@ -562,12 +575,12 @@ CREATE TABLE IF NOT EXISTS `course_user` (
 
 INSERT INTO `course_user` (`course_code`, `user_id`) VALUES
 (101, 2),
-(102, 3),
+(1111, 3),
 (106, 3),
 (106, 4),
 (103, 5),
-(105, 3),
-(103, 3),
+(1408, 3),
+(2805, 3),
 (104, 6),
 (107, 10),
 (311, 54),
@@ -601,7 +614,34 @@ INSERT INTO `course_user` (`course_code`, `user_id`) VALUES
 (1811, 61),
 (2711, 61),
 (1711, 62),
-(2411, 62);
+(2411, 62),
+(211, 66),
+(611, 66),
+(411, 67),
+(511, 67),
+(811, 73),
+(911, 73),
+(211, 74),
+(311, 74),
+(102, 75),
+(202, 75),
+(302, 75),
+(801, 76),
+(1301, 76),
+(201, 77),
+(501, 77),
+(1201, 77),
+(1401, 77),
+(101, 78),
+(301, 78),
+(501, 78),
+(701, 78),
+(901, 78),
+(1101, 78),
+(401, 79),
+(1501, 79),
+(1901, 79),
+(501, 80);
 
 -- --------------------------------------------------------
 
@@ -619,7 +659,7 @@ CREATE TABLE IF NOT EXISTS `user_data` (
   UNIQUE KEY `username` (`username`),
   KEY `username_2` (`username`),
   KEY `username_3` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='In deze tabel wordt de user_data opgeslagen. De primary key ' AUTO_INCREMENT=63 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='In deze tabel wordt de user_data opgeslagen. De primary key ' AUTO_INCREMENT=81 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `user_data`
@@ -636,6 +676,7 @@ INSERT INTO `user_data` (`user_id`, `username`, `password`, `user_type`, `salt`)
 (8, 'usernaampje', 'geheim', 1, ''),
 (9, 'usernaampje2', 'geheim', 1, ''),
 (10, 'Emmam', 'Emaowut', 1, ''),
+(63, 'OpenBijlesGever', 'b89617bed87de2357dd8e3c6a2f07b35554681fd', 1, 'e9c9b773d7bfbe0d8c0cdc2fb71d067e'),
 (62, 'HalleBalle', '02efd9c8f9dcf3191f7a07a14bc886edfda50eab', 1, '370b37c7c541b8b79443e4e2ff15ff3d'),
 (21, 'alexsomer', '16da7bc06a089eb09703f655c7d170b62676f6d5', 1, '8209884f24c895621ab7bd18e252d921'),
 (22, 'alexsomer2', 'c93343504be92e8fb170479d56eadfb70794b4f4', 1, '0d5ffb59286f39fd922b08e27717cfe6'),
@@ -652,7 +693,19 @@ INSERT INTO `user_data` (`user_id`, `username`, `password`, `user_type`, `salt`)
 (54, 'Francine', 'e44c58b73c2fb64a4c39be783a9ae64ad1119074', 1, 'cf90c321a87193c21fe23902285b29df'),
 (53, 'FiekeWieke', '3f230b4e85298d404b90d1dce04befa852cd5c0d', 1, '60236446bffa467da252584eb0c57cf6'),
 (51, 'Lars', '07b7d696f399e6d4e4761459427e4cdc38d42a49', 1, 'dd5c0702b66979f4a06e77cf513e1e1e'),
-(52, 'Bierbierbier', '6931eabcc6b68d33b00c6fa70958faa4a042f278', 2, 'ec60f0d8946fe4d62e114587d9990580');
+(52, 'Bierbierbier', '6931eabcc6b68d33b00c6fa70958faa4a042f278', 2, 'ec60f0d8946fe4d62e114587d9990580'),
+(64, 'KabouterPlop', '14f1c17f70254af4c7a337d1f7f6df1b36d9f73f', 1, 'f1471019d4d2a740c7ef5ba4826d18ab'),
+(66, 'Kromhout', 'a81c28b47ff1733e1cb07701f23c98730051e441', 1, '8368a0fa714639066c63d50919bab7c5'),
+(67, 'AnnekePanneke', '88fb28901778051a706bd36b8d127aa6b075fb60', 1, 'fd6ada57d17c0a5808e7071a13a3d6ee'),
+(68, 'Boomstam', '25c5fc6ba94f57ed36642a6812cbf632e9da6418', 1, '41feaca5df25cc47fa84b107b20522d3'),
+(74, 'Auwoiut', '3d55325797ab3308e4814756234f24cb08eebe6e', 1, '0dcf7f075994909f5fa5b27ec299e2de'),
+(73, 'woeut', 'b311339bbf01dd6cff14dad4425f5e0b0ce140cc', 1, '4183513ed039430c8b70fce6468eacb6'),
+(75, 'Bert', 'd3aa6e1af4a3aeb704c76ec8937573dc8b9ae909', 1, '723af932211f17f791a11faaac9ae653'),
+(76, 'Griekje', '2b77c17ae6cb895fb5e65ef3317ed4f690eb09c1', 1, '4db335477bf6cca081eb03573f564a79'),
+(77, 'alexander', 'be85e88566e300ed8e71b55dc58843637863ef2d', 1, '671c5ccc4f43cfe88c2f8b94ead6c3d4'),
+(78, '', '7c96d80335b7d452c38b02037bd5950cec0ec5d2', 1, '20e48795500239e8ed23d10406073bf3'),
+(79, 'username1234', '342cfdbc96cea2697ca8b3555b7398256c573df4', 1, '13fb94c7b6d3bbd0d20a189d345a5c0a'),
+(80, 'Ilse', '5b0371d6b624f8a9da5839e1b2a43296f4c3aba6', 1, 'db457e337d5ea7b9dbec64b2daf6ea3a');
 
 -- --------------------------------------------------------
 
@@ -689,7 +742,7 @@ INSERT INTO `user_personal_data` (`user_id`, `first_name`, `middle_name`, `last_
 (11, 'Hester', 'van', 'Trommel', 0, 'hes@trom.nl', '0612345678', '0698765432', '2013-01-09', 'Ik ben Hester en ik studeer Pyschologie. Ik woon samen met twee supercoole huisgenoten :D', NULL),
 (0, 'Alexander', 'van ', 'Someren', 1, 'alexanderensomeren@someren.nl', NULL, '0612345678', '2013-01-31', 'Hallo ik ben Alexander van Someren. Ik ga in de zomer op vakantie en ga dan veel van de muziek die nu ook op staat spelen.', 2013),
 (43, 'Salt', 'van', 'Peperen', 0, 'salt@pepper.com', '0634523432', '', '1965-01-01', 'Nee niet echt, ballalalbn', NULL),
-(51, 'Lars', '', 'Kemperman', 1, 'lars@kemperman.nl', '112233441', '', '1990-01-01', 'Ik wil eigenlijk geen bijles geven.', NULL),
+(68, 'Boris', 'de', 'Polski', 1, 'bdp@live.nl', '0614563543', '', '1992-03-04', 'A^2 + B^2 = C^2!', NULL),
 (52, 'Zoey', 'op ''t', 'Veldt', 0, 'Zotv@hotmail.com', '0613245345', '', '1993-01-02', 'Hallo, ik ben Zoey!', NULL),
 (53, 'Fieke', 'de', 'Wieke', 0, 'Fdewieke@live.nl', '0613245678', '0202345465', '1991-01-02', 'Hallo ik ben Fieke de Wieke. Ik hou van paarden en bijles geven. Verder ben ik heel blij en vrolijk. Groetjes!!!!!!!!!!', NULL),
 (54, 'Francine', '', 'Olmenbos', 0, 'folmenbos@live.nl', '0617384654', '', '1998-02-03', 'Hallo ik ben Francine. Ik geef graag bijles. Ik kan heel goed Scheikunde. Tot ziens!', NULL),
@@ -700,7 +753,18 @@ INSERT INTO `user_personal_data` (`user_id`, `first_name`, `middle_name`, `last_
 (59, 'Emma', 'van der', 'Velden', 0, 'evdv@gmail.com', '0634523431', '', '1990-08-01', '', NULL),
 (60, 'Alex-Sander', 'van', 'Zomeren', 1, 'alxvz@gmail.com', '0203457693', '', '1995-01-03', 'Ik geef heel veel bijles.', NULL),
 (61, 'Gea', 'de', 'Boerin', 0, 'gedebe@live.nl', '02013276856', '', '1992-03-01', 'Ik geef alleen bijles ana slimme mensne.', NULL),
-(62, 'Halle', '', 'Groenhart', 1, 'hallegroenhart@live.nl', '0645673543', '', '1981-02-03', '--', NULL);
+(62, 'Halle', '', 'Groenhart', 1, 'hallegroenhart@live.nl', '0645673543', '', '1981-02-03', '--', NULL),
+(63, 'Olaf', 'van', 'Britsen', 1, 'ovbritsen@live.nl', '0746547343', '', '1991-03-02', 'Ik ben Olaf de Polaf. Hallo hallo :)', NULL),
+(64, 'Ik', 'ben', 'Kabouter Plop', 1, 'kbplopperdeplop@live.nl', '0756476487', '', '1982-03-02', 'Ik hou van wiskunde. Plopperdeplop!', NULL),
+(66, 'Reindert', '', 'Kromhout', 1, 'rkromhout@live.nl', '0623495876', '', '1982-04-01', 'Ik wil bijles GEVEN!!!!', NULL),
+(67, 'Anneke', '', 'Leunissen', 0, 'annekep@live.nl', '0675465765', '', '1984-01-02', 'Ik spreek Nederlands. English I speak toooo', NULL),
+(74, 'Laurens', 'de', 'Graaff', 1, 'ldgggg@live.nl', '0656745645', '', '1984-03-02', 'Biopharmacie', NULL),
+(75, 'Bert', 'en', 'Ernie', 1, 'bertenernie@sesamstraat.nl', '02034554654', '', '1922-01-02', '--', NULL),
+(73, 'Wouter', 'de', 'Boskabouter', 1, 'wdboskabouter@live.nl', '0675645634', '', '1999-01-02', 'Wiskunde', NULL),
+(76, 'Griekje', 'uit', 'Griekenland', 0, 'grrr@live.nl', '0614563543', '', '1998-02-03', 'Grieks is mijn passie.', NULL),
+(77, 'Roger', '', 'Overstegen', 1, 'roverstege@hotmai.com', '0611223344', '', '1988-03-01', 'Ik geef heel wat bijles', NULL),
+(79, 'Camille', 'van', 'Dinteren', 0, 'c.dint@jahoo.nl', '0698765321', '', '1992-02-02', 'Ik heb weinig tot geen ervaring met bijles geven.', NULL),
+(80, 'Ilse', 'van der', 'Linden', 0, 'ilse@hotmail.com', '0612343234', '', '1991-04-01', 'Hallo ik ben Ilse', NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
