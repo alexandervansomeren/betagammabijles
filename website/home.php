@@ -5,7 +5,9 @@ $bijlesDocent = new ConnectorClass;
 $GLOBALS['bijlesDocent'] -> Query = 
 '	SELECT *
         FROM webdb13BG2.user_personal_data up
-        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id';
+        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
+        ORDER BY RAND() LIMIT 5
+        ';
 
 $GLOBALS['queryResultsArray'] = $GLOBALS['bijlesDocent'] -> Querying();
 
@@ -78,8 +80,8 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
        <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
 
        <div class="populair">
-       <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
-       <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
+       <a class="ctrlLeft" href=""><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
+       <a class="ctrlRight" href=""><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
        <?php echo($GLOBALS['fiveResults']); ?>
     </div>		    
 </div>

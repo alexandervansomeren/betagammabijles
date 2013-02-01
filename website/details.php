@@ -1,85 +1,151 @@
 <?php
-	// Connect to the database
-	$db = new ConnectorClass;
+
+// Connect to the database
+$db = new ConnectorClass;
+
+$queryResultsArray = null; 
+
+// Initializing variables and secure that they are not mysql-injections
+if (isset($_GET['id']))
+{
+	$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
+    }       
+
+QueryOnId();
+
+// Making first query to find user_id's from submitted inputform
+function QueryOnId()
+{
+	$GLOBALS['db'] -> Query = 
+	'	SELECT *
+		FROM webdb13BG2.user_personal_data up
+		INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
+		WHERE up.user_id = '. $GLOBALS['userID'] .';';
+            
+	$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
 	
-	$queryResultsArray = null; 
-	
-	// Initializing variables and secure that they are not mysql-injections
-	if (isset($_GET['id']))
+	if (sizeOf( $GLOBALS['queryResultsArray'] ) != 1)
 	{
-		$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
-        }       
-	
-	QueryOnId();
-	
-	// Making first query to find user_id's from submitted inputform
-	function QueryOnId()
+		detailsNotFound();
+	}
+	else
 	{
-		$GLOBALS['db'] -> Query = 
-		'	SELECT *
-			FROM webdb13BG2.user_personal_data up
-			INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-			WHERE up.user_id = '. $GLOBALS['userID'] .';';
-                
-		$GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+		$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
+					  $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
+					  $GLOBALS['queryResultsArray'][1]['last_name'];
 		
-		if (sizeOf( $GLOBALS['queryResultsArray'] ) != 1)
-		{
-			detailsNotFound();
-		}
-		else
-		{
-			$GLOBALS['docent_naam'] = $GLOBALS['queryResultsArray'][1]['first_name'] . ' ' . 
-						  $GLOBALS['queryResultsArray'][1]['middle_name'] . ' ' . 
-						  $GLOBALS['queryResultsArray'][1]['last_name'];
-			
-			$GLOBALS['docent_locatie'] = $GLOBALS['queryResultsArray'][1]['city'] . ', ' . 
-                                                     $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
-                                                     $GLOBALS['queryResultsArray'][1]['streetnumber'];	
-                        
-                        $GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
-                        $GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
-                        $GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
-                        $GLOBALS['docent_vakken'] = '';
-                        	
-                        if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
+		$GLOBALS['docent_locatie'] = $GLOBALS['queryResultsArray'][1]['city'] . ', ' . 
+                                                 $GLOBALS['queryResultsArray'][1]['street'] . ' ' . 
+                                                 $GLOBALS['queryResultsArray'][1]['streetnumber'];	
+                    
+                    $GLOBALS['docent_city'] = $GLOBALS['queryResultsArray'][1]['city'];
+                    $GLOBALS['docent_email'] = $GLOBALS['queryResultsArray'][1]['emailadress'];
+                    $GLOBALS['docent_over'] = $GLOBALS['queryResultsArray'][1]['about_me'];
+                    $GLOBALS['docent_vakken'] = '';
+                    	
+                    if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
+                    {
+                        $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
+                    }
+                    else
+                    {
+                        $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
+                    }                        
+                    
+                    $GLOBALS['db'] -> Query = 
+                   'SELECT *
+		FROM webdb13BG2.course_user cu
+		INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
+		INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
+		INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
+		WHERE cu.user_id = '. $GLOBALS['userID'] .';';
+            
+                    $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
+                    if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
+                    {			
+                        foreach ($GLOBALS['queryResultsArray'] as $vakRow)
                         {
-                            $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
+                            $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
                         }
-                        else
-                        {
-                            $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
-                        }                        
-                        
-                        $GLOBALS['db'] -> Query = 
-                       'SELECT *
-			FROM webdb13BG2.course_user cu
-			INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
-			INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
-			INNER JOIN webdb13BG2.course_difficulty cd ON cd.difficulty_id = cc.course_difficulty
-			WHERE cu.user_id = '. $GLOBALS['userID'] .';';
-                
-                        $GLOBALS['queryResultsArray'] = $GLOBALS['db'] -> Querying();
-                        if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
-                        {			
-                            foreach ($GLOBALS['queryResultsArray'] as $vakRow)
-                            {
-                                $GLOBALS['docent_vakken'] .= '<div class="label">'. $vakRow['course_name'] .'</div><div class="content">'. $vakRow['difficulty_name'] .'</div>';
-                            }
-                        }
-                        else
-                        {
-                            $GLOBALS['docent_vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
-                        }
-                        
-                }
-	}
+                    }
+                    else
+                    {
+                        $GLOBALS['docent_vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
+                    }
+                    
+            }
+}
 	
-	function detailsNotFound()
-	{
-		echo "Fout we hebben de door u gekozen contactpersoon niet kunnen vinden.";	
-	}
 	
+	<?php
+$bijlesDocent = new ConnectorClass;
+
+
+$GLOBALS['bijlesDocent'] -> Query = 
+'	SELECT *
+        FROM webdb13BG2.user_personal_data up
+        INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
+        ORDER BY RAND() LIMIT 5
+        ';
+
+$GLOBALS['queryResultsArray'] = $GLOBALS['bijlesDocent'] -> Querying();
+
+$GLOBALS['fiveResults'] = '';
+
+if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
+{
+  $x = 0;
+  foreach ($GLOBALS['queryResultsArray'] as $docentRow)
+  {
+      if($x < 5)
+        {
+            $vakkenConnect = new ConnectorClass;
+            // Get vakken die docent geeft
+            $GLOBALS['vakkenConnect'] -> Query = 
+            'SELECT ci.course_name
+            FROM webdb13BG2.course_user cu
+            INNER JOIN webdb13BG2.course_code cc ON cc.course_code = cu.course_code 
+            INNER JOIN webdb13BG2.course_id ci ON cc.course_id = ci.course_id 
+            WHERE cu.user_id = '. $docentRow['user_id'] .';';
+            
+            $GLOBALS['vakkenArray'] = $GLOBALS['vakkenConnect'] -> Querying();
+            $GLOBALS['vakken'] = "";
+            
+            if (sizeOf( $GLOBALS['vakkenArray'] ) >= 1)
+            {			
+              foreach ($GLOBALS['vakkenArray'] as $vakRow)
+              {
+                  $GLOBALS['vakken'] .= $vakRow['course_name'] .' ';
+              }
+            }
+            else
+            {
+              $GLOBALS['vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
+            }
+          
+            if ( file_exists( 'user_img/'.$docentRow['user_id'].'.jpg' ))
+            {
+              $GLOBALS['docent_img'] = '<img src="user_img/'. $docentRow['user_id'] .'.jpg" width="100%" height="400px" alt="student_.'. $docentRow['user_id'].'" />';
+            }
+            else
+            {
+              $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_.'. $docentRow['user_id'].'" />';
+            }
+            
+            // Create a div for each of 5         
+            $GLOBALS['fiveResults'] .= '<a href="index.php?p=details&amp;id='. $docentRow['user_id'] .'" class="docent last"><span class="name">'. $docentRow['first_name'] .'</span><span class="vak">
+                                       '. $GLOBALS['vakken'] .'</span>'. $GLOBALS['docent_img'] .'</a>';
+      
+            $x++;
+        }
+  }
+}
+	
+function detailsNotFound()
+{
+	echo "Fout we hebben de door u gekozen contactpersoon niet kunnen vinden.";	
+}
+
 
 ?>
 
@@ -158,40 +224,9 @@
 
 
     <div class="populair">
-        <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="arrow Left"/></a>
-        <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="arrow Right" /></a>
-        <a href="details.php?id=1" class="docent">
-            <span class="name">Emma</span>
-            <span class="vak">Natuurkunde, KI, Wiskunde, Scheikunde en FSR</span>
-            <img src="img/student_1.jpg" alt="student_1" /> 
-        </a>
-
-
-        <a href="details.php" class="docent">
-            <span class="name">Jan-roelof</span>
-            <span class="vak">Natuurkunde, KI, Wiskunde, Biologie</span>
-            <img src="img/student_1.jpg" alt="student_1" /> 
-        </a>
-
-        <a href="details.php" class="docent">
-            <span class="name">Emma</span>
-            <span class="vak">Natuurkunde, KI, Wiskunde, Buitenschools opvang</span>
-
-            <img src="img/student_1.jpg" alt="student_1" /> 
-        </a>
-
-        <a href="details.php" class="docent">
-            <span class="name">Berend</span>
-            <span class="vak">Natuurkunde, KI, Wiskunde, Rekent duur tarrief</span>
-            <img src="img/student_1.jpg" alt="student_1" /> 
-        </a>
-
-        <a href="details.php" class="docent last">
-            <span class="name">Henk</span>
-
-            <span class="vak">Natuurkunde, KI, Wiskunde</span>
-            <img src="img/student_1.jpg" alt="student_1" /> 
-        </a>
+        <a class="ctrlLeft" href=""><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="arrow Left"/></a>
+        <a class="ctrlRight" href=""><img src="img/arrowRight.jpg" width="100%" height="100%" alt="arrow Right" /></a>
+        <?php echo($GLOBALS['fiveResults']); ?>
     </div>             
 </div>
 
