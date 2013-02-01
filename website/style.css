@@ -457,7 +457,11 @@ a:hover { text-decoration: underline; }
     display: block;
     background-color: red;
 }
-
+.mainHolder div
+{
+    float: left;
+    width: 200px;
+}
 .mainHolder input
 {
     width: 200px;

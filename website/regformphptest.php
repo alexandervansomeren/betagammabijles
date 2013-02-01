@@ -163,7 +163,7 @@
                     
                     <!---ques = holder -->
                     <label class="mainHolder">
-                    <input class="input" type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau1();" />Aardrijkskunde<div id="301"></div>
+                    <input class="input" type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau1();" /><div id="301">Aardrijkskunde</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau1()
                             {
