@@ -428,8 +428,9 @@ a:hover { text-decoration: underline; }
 	font-weight: bolder;
 	margin-top: 10px;
 }
-.sectionHolder .left { width: 50%; height: 25px; line-height: 25px; }
-.sectionHolder .right { width: 50%; height: 25px; line-height: 25px; }
+.sectionHolder .left { width: 40%; height: 25px; line-height: 25px; }
+.sectionHolder .right { width: 40%; height: 25px; line-height: 25px; }
+.sectionHolder input { width: 10%; height: 25px; line-height: 25px; }
 
 .sectionHolder .mainHolder
 {
