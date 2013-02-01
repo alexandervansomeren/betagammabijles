@@ -1,4 +1,3 @@
-//Zoekbalk voor bijlesdocenten
 <div class="content">
 	<div class="page-intro">
 		<form class="selection" method="get" action="">
