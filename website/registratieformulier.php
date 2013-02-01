@@ -355,7 +355,7 @@ function setViewState(sender_id)
                 else
                 {
                     //Connecting to the database and querying
-                    makeQuery();
+                    //makeQuery();
                     makeVakkenQuery();
                     //disconnectGoodbye();
                 }
