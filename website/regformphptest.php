@@ -70,7 +70,7 @@
             print "Welkom op het registratieformulier. Wil je je aanmelden als bijlesgever of wil je graag bijles ontvangen? Vul hieronder het formulier in!";
         ?>
     </div>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="" method="post">
         <div class="page-field">
             <em>Profiel</em>
             <div class="paragraph">
