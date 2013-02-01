@@ -80,8 +80,8 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
        <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
 
        <div class="populair">
-       <a class="ctrlLeft" href="#"><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
-       <a class="ctrlRight" href="#"><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
+       <a class="ctrlLeft" href=""><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
+       <a class="ctrlRight" href=""><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
        <?php echo($GLOBALS['fiveResults']); ?>
     </div>		    
 </div>
