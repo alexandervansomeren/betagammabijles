@@ -1,24 +1,25 @@
+/* Zoekbalk voor bijlesdocenten */
 <div class="content">
-        <div class="page-intro">
-            <form class="selection" method="get" action="">
-                <div class="part">
-                    <div class="text"> Vak: </div>
-                    <input class="inputfield" type="text" name="course" placeholder="bijv. Natuurkunde"/>
-                </div>
-                <div class="part">
-                    <div class="text"> Stad: </div>
-                    <input class="inputfield" type="text" name="city" placeholder="bijv. Amsterdam"/>
-                </div>
-                <div class="part">
-                    <div class="text"> Niveau: </div>
-                    <input class="inputfield" type="text" name="level"placeholder="bijv. havo"/>
-                </div>
-                <div class="selectpart" style="width:152px"> 
-                    <label >Man <input type="checkbox" name="male"  checked="checked" />	</label>
-                    <label >Vrouw <input type="checkbox" name="female" checked="checked" />	</label>
-                </div> 
-                <input class="inputfield" type="hidden" name="p" value="advertenties" />
-                <input class="part" style="width:60px; height:25px; margin-left:10px;" type="submit" value="Zoeken"/>
+	<div class="page-intro">
+		<form class="selection" method="get" action="">
+    		<div class="part">
+                <div class="text"> Vak: </div>
+                <input class="inputfield" type="text" name="course" placeholder="bijv. Natuurkunde" />
+            </div>
+            <div class="part">
+                <div class="text"> Stad: </div>
+                <input class="inputfield" type="text" name="city" placeholder="bijv. Amsterdam" />
+            </div>
+            <div class="part">
+                <div class="text"> Niveau: </div>
+                <input class="inputfield" type="text" name="level"placeholder="bijv. havo" />
+            </div>
+            <div class="selectpart" style="width:152px"> 
+                <label >Man <input type="checkbox" name="male"  checked="checked" />	</label>
+                <label >Vrouw <input type="checkbox" name="female" checked="checked" />	</label>
+            </div> 
+            <input class="inputfield" type="hidden" name="p" value="advertenties" />
+            <input class="part" style="width:60px; height:25px; margin-left:10px;" type="submit" value="Zoeken"/>
         </form>
     </div>
 <?php
