@@ -32,17 +32,17 @@
                         session_destroy();                        
                     }
                     
-                    if (isset( $_POST['username'] ) && isset( $_POST['password'] ) )
+                    if (isset( $_POST['username1'] ) && isset( $_POST['password1'] ) )
                     {
                             include 'shielded/login.php'; 
-                            $username = $_POST['username'] ;
-                            $shaPassword = sha1( $_POST['password'] );
+                            $username1 = $_POST['username1'] ;
+                            $shaPassword1 = sha1( $_POST['password1'] );
                             
-                            $userType =  (login ($username, $shaPassword));
+                            $userType =  (login ($username1, $shaPassword1));
                             if ( is_int( $userType ) )
                             {
-                                    $_SESSION['user_type']= $userType;
-                                    $_SESSION['user_name']= $username;
+                                    $_SESSION['userType1']= $userType;
+                                    $_SESSION['user_name1']= $username1;
                             }
                             else
                             {
@@ -51,11 +51,11 @@
                             }                            
                     }
                                         
-                    if ( isset($_SESSION['user_type']) )
+                    if ( isset($_SESSION['userType1']) )
                             {
-                            if ( is_int( $_SESSION['user_type'] ) )
+                            if ( is_int( $_SESSION['userType1'] ) )
                             {
-                                    echo '<div class="text"><p> Je bent ingelogt als '.$_SESSION['user_type'];
+                                    echo '<div class="text"><p> Je bent ingelogt als '.$_SESSION['userType1'];
                                     echo '</p>';
                                     echo '<p><form method="post"><input type="hidden" name="logout"/><button type="submit">Logout</button></form></p></div>';
                             }
@@ -65,8 +65,8 @@
                             <div class="label">Voor leden geef je gegevens en log in
                             </div>
                             <div class="login">
-                                    <input type="text" placeholder="Gebruikersnaam" name="username"/> 
-                                    <input type="password" placeholder="Wachtwoord" name="password"/>
+                                    <input type="text" placeholder="Gebruikersnaam" name="username1"/> 
+                                    <input type="password" placeholder="Wachtwoord" name="password1"/>
                                     <button type="submit">Login</button>
                             </div>
                     </form>';
