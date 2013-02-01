@@ -171,6 +171,24 @@
                                 document.getElementById("301").style.display="hidden";
                             }
                         </script>
+                        
+<?php
+
+// Connect to the database
+$db = new ConnectorClass;
+
+$GLOBALS['db'] -> Query = 
+"SELECT * FROM webdb13BG2.course_id";
+
+$GLOBALS['lijstMetVakken'] = $GLOBALS['db'] -> Querying();
+
+foreach ($GLOBALS['lijstMetVakken'] as $eenVak)
+{
+	echo ($vakRow['course_name']);
+}						
+						
+?>
+                        
                         <select name="niveau" id="201" style="display:hidden">                        
                             <option value="1">Basic</option>
                             <option value="2">Basisschool</option>
@@ -909,7 +927,6 @@
     
     <?php
         // Connect to the database
-        include 'shielded/login.php';
         $db = new ConnectorClass;
 
         // Initializing variables and secure that they are not mysql-injections or include tags

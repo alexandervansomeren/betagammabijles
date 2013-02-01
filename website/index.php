@@ -25,6 +25,7 @@
             	<?php
                     session_start();
                     include 'shielded/connector.php'; 
+					include 'shielded/login.php';
                     
                     if(isset( $_POST['logout']))
                     {                        
@@ -34,7 +35,7 @@
                     
                     if (isset( $_POST['username1'] ) && isset( $_POST['password1'] ) )
                     {
-                            include 'shielded/login.php'; 
+ 
                             $username1 = $_POST['username1'] ;
                             $shaPassword1 = sha1( $_POST['password1'] );
                             
