@@ -267,11 +267,6 @@
             	</a>';
     }
 ?>
-	<div class="prevnexbuttons">
-        <div class="prevnexbuttonsCenter">
-      </div>
-  </div> 
 	<div class="clear"></div>
-</div>
-<div class="clear"></div>
+	<div class="clear"></div>
 </div>
