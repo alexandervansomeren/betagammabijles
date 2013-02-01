@@ -447,7 +447,7 @@ function setViewState(sender_id)
 				// Voor ieder vak haal niveau op
 				$vakNiveau = $_POST['bijlesniveau'][$key];
 				$vakCode = $key * 100 + $vakNiveau;
-				$userID = intval($GLOBALS['user_id']);
+				$userID = 250;//intval($GLOBALS['user_id']);
 				
 				echo ("To DB:" + $vakCode + "<br />");
 				
