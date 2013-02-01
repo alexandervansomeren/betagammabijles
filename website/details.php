@@ -149,38 +149,36 @@ function detailsNotFound()
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsPfMQFJt8kVhRafB7uXxY2H0QAy1ipMI&amp;sensor=false"></script>
 <script type="text/javascript">      
-      var geocoder;
-      var map;
-      function initialize() {      
-        var address = "<?php echo($GLOBALS['docent_locatie']); ?>"
-        
-        var image = new google.maps.MarkerImage("img/student_1.jpg",
-        // This marker is 20 pixels wide by 32 pixels tall.
-        new google.maps.Size(300, 300));
-        
-        geocoder = new google.maps.Geocoder();
-        geocoder.geocode( { "address": address}, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            map.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-                map: map,
-                //icon: image,
-                position: results[0].geometry.location,
-                title:"<?php echo($GLOBALS['docent_naam']); ?>"
-            });
-          } else {
-            alert("Geocode was not successful for the following reason: " + status);
-          }
-        });  
-                
-        var mapOptions = {
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-      }
+var geocoder;
+var map;
+function initialize() {      
+var address = "<?php echo($GLOBALS['docent_locatie']); ?>"
 
-      
+var image = new google.maps.MarkerImage("img/student_1.jpg",
+// This marker is 20 pixels wide by 32 pixels tall.
+new google.maps.Size(300, 300));
+
+geocoder = new google.maps.Geocoder();
+geocoder.geocode( { "address": address}, function(results, status) {
+  if (status == google.maps.GeocoderStatus.OK) {
+    map.setCenter(results[0].geometry.location);
+    var marker = new google.maps.Marker({
+        map: map,
+        //icon: image,
+        position: results[0].geometry.location,
+        title:"<?php echo($GLOBALS['docent_naam']); ?>"
+    });
+  } else {
+    alert("Geocode was not successful for the following reason: " + status);
+  }
+});  
+        
+var mapOptions = {
+  zoom: 12,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+}      
 </script>
 	
 <div class="content">        
