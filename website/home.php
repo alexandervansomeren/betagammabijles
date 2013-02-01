@@ -6,7 +6,7 @@ $GLOBALS['bijlesDocent'] -> Query =
 '	SELECT *
         FROM webdb13BG2.user_personal_data up
         INNER JOIN webdb13BG2.adress_data ad ON up.user_id = ad.user_id
-        RDER BY RAND() LIMIT 5
+        ORDER BY RAND() LIMIT 5
         ';
 
 $GLOBALS['queryResultsArray'] = $GLOBALS['bijlesDocent'] -> Querying();
