@@ -157,9 +157,6 @@
             <div id="123" style="display:none">
                 <em><br />De bijles</em>
                 <div class="paragraph">
-                    <div class="field">
-                        In welk vak wil je bijles geven?
-                    </div>
                     
                     <!---ques = holder -->
                     <label class="mainHolder">
