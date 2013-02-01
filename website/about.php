@@ -117,7 +117,7 @@
 					  <textarea name='message' rows='13' cols='35'>
 					  </textarea><br>
 					</div>
-					  <input type='submit' style='float:right; margin-left:20px;'>
+					  <input type='submit' style='float:right; margin-right:20px;'>
 					  </form>";
 	  }
 	?>
