@@ -420,6 +420,7 @@ a:hover { text-decoration: underline; }
     display: block;
     line-height: 30px;
     float: left;
+	background-color: blue;
 }
 
 .mainHolder input
@@ -429,7 +430,7 @@ a:hover { text-decoration: underline; }
     height: 100%;
 }
 
-.mainHolder div
+.mainHolder label
 {
     float: left;
     width: 45%;
@@ -438,7 +439,7 @@ a:hover { text-decoration: underline; }
 
 .mainHolder select
 {
-    width: 40%
+    width: 40%;
     float: left;
     height: 100%;
 }
