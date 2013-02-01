@@ -202,12 +202,17 @@ foreach ($GLOBALS['vakkenArray'] as $vakRow)
 <script language="javascript" type="text/javascript">
 function setViewState(sender_id)
 {
-	if(document.getElementById("select" + sender_id))
+	if(document.getElementById(sender_id))
 	{
-		document.getElementById("select" + sender_id).style.display="block";
+		if(document.getElementById(sender_id).checked == 1)
+		{
+			document.getElementById("select" + sender_id).style.display="block";
+		}
+		else
+		{
+			document.getElementById("select" + sender_id).style.display="none";
+		}
 	}
-	
-	
 }
 </script>
 
