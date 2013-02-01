@@ -101,11 +101,7 @@
             <div class="label">Achternaam</div>
             <div class="input"><input type="text" name="lastname" placeholder="Achternaam" /></div>
             <div class="feedback"></div>
-            
-            <div class="label">Selecteer geslacht</div>
-            <div class="input"><input type="radio" name="gender" value="1" />Man</div>
-            <div class="input"><input type="radio" name="gender" value="0" />Vrouw</div>
-            
+                       
             <div class="label">Geboortedatum</div>
             <div class="input"><input type="text" name="date_of_birth" placeholder="Bijv. 2000-01-01" /></div>
             <div class="feedback"></div>
@@ -125,6 +121,21 @@
             <div class="clear"></div>
         </div> 
         
+        <div class="sectionHolder">
+            <div class="title">Selecteer uw geslacht</div>
+            
+            <div class="left">
+                <input type="radio" name="gender" value="1" />Man
+            </div>
+            
+            <div class="right">
+                <input type="radio" name="gender" value="0" />Vrouw
+            </div>
+                    
+            <div class="clear"></div>
+        </div>
+
+        
          <div class="sectionHolder">
             <div class="title">Locatie gegevens</div>
                            
@@ -133,7 +144,7 @@
             <div class="feedback"></div>
             
             <div class="label">Huisnummer + toev</div>
-            <div class="input"><input type="text" name="streetnumber" placeholder="Telefoon 2" /></div>
+            <div class="input"><input type="text" name="streetnumber" /></div>
             <div class="feedback"></div>
             
             <div class="label">Eerste vier cijfers postcode</div>
