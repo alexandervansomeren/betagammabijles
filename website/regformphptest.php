@@ -435,8 +435,16 @@
         {
     		$course_code = $course_code*100 + 11;
     	    $course_int = intval($course_code);
-    	    makeOptionVisible();
-    	    enterCourseCode($course_code);       	
+    	    makeOptionVisible();       	
+        }
+        
+        function makeOptionVisible($course_int)
+        {
+            echo '<div class="page-field">';
+            echo "Je hebt een vak ingevoerd: ";
+            echo $course_int;
+            echo '</div>';
+            enterCourseCode($course_code);
         }
         
         function disconnectGoodbye()
