@@ -455,6 +455,9 @@
                                 <option value="4">VWO</option>
                             </select>
                         </div>
+                        <div class="field">
+                            <input type="submit" value="Kies" style="background-color:orange;" name="submit" />
+                        </div>
                       </form>';
                 if(isset($_POST['niveau']))
                 {
