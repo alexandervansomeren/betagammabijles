@@ -456,22 +456,26 @@ a:hover { text-decoration: underline; }
     height: 30px;
     display: block;
     background-color: red;
+    line-height: 30px;
 }
 .mainHolder div
 {
     float: left;
     width: 200px;
+    height: 100%;
 }
 .mainHolder input
 {
     width: 200px;
     float: left;
+    height: 100%;
 }
 
 .mainHolder select
 {
     width: 200px;
     float: left;
+    height: 100%;
 }
 
 

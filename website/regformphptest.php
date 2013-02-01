@@ -183,7 +183,7 @@
                     <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" onclick="makeNiveau2();"/>Biologie<div id="302"></div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau2()
-                            {
+                            {                                
                                 document.getElementById("202").style.display="block";
                                 document.getElementById("302").style.display="hidden";
                             }
