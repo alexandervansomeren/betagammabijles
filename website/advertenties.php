@@ -192,7 +192,9 @@
                 $coursesPerUser[$nameCityArray[$i][0]]
             );
         }
-        echo '</div>';
+        echo '
+        	<div class="field"></div>
+        	</div>';
     }
 
     // function that displays that there are no results for the query
