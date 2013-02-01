@@ -417,6 +417,7 @@ a:hover { text-decoration: underline; }
 	margin-bottom: 30px;
 	padding: 1%;	
 }
+
 .sectionHolder > * ,
 .sectionHolder > * > * 
 { float: left; display: block; }
@@ -427,7 +428,7 @@ a:hover { text-decoration: underline; }
 	height: 35px;
 	line-height: 35px;
 	font-weight: bolder;
-	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .sectionHolder .left { width: 40%; height: 25px; line-height: 25px; }
 .sectionHolder .right { width: 40%; height: 25px; line-height: 25px; }
@@ -435,7 +436,7 @@ a:hover { text-decoration: underline; }
 .sectionHolder .label { width: 30%; height: 25px; line-height: 25px; }
 .sectionHolder .input { width: 40%; height: 25px; line-height: 25px;  }
 
-.sectionHolder input { width: 10%; height: 25px; line-height: 25px; }
+.sectionHolder > input { width: 10%; height: 25px; line-height: 25px; }
 
 .sectionHolder .mainHolder
 {
