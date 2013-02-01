@@ -9,7 +9,7 @@ $queryResultsArray = null;
 if (isset($_GET['id']))
 {
 	$GLOBALS['userID'] = $_GET['id']; //mysql_real_escape_string($_GET['id']);
-    }       
+}       
 
 QueryOnId();
 
@@ -45,11 +45,11 @@ function QueryOnId()
                     	
                     if ( file_exists( 'user_img/'.$GLOBALS['userID'].'.jpg' ))
                     {
-                        $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
+                        $GLOBALS['docent_img'] = '<img src="user_img/'. $GLOBALS['userID'] .'.jpg" width="100%" height="400px" alt="student_'. $GLOBALS['userID'] .'" />';
                     }
                     else
                     {
-                        $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_'.$GLOBALS['userID'].'" />';
+                        $GLOBALS['docent_img'] = '<img src="img/bijlesdocent.png" width="100%" height="400px" alt="student_'. $GLOBALS['userID'] .'" />';
                     }                        
                     
                     $GLOBALS['db'] -> Query = 
