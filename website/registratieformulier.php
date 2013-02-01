@@ -1,8 +1,10 @@
 <!-- formvalidaties en formfeedback in javascript -->
 <script language="javascript" type="text/javascript">
     var xmlhttp;
-
-    function GetXMLHTTPObject()
+	
+	// Function that creates an XMLHTTP object for the AJAX application
+	// of checking the availability of a username
+	function GetXMLHTTPObject()
     {
         var xmlhttp = null;
         if (window.XMLHttpRequest) {
@@ -21,7 +23,8 @@
             document.getElementById("fbu").innerHTML = xmlhttp.responseText;
         }
     }
-    
+    // Function that determines the password-strength using only the length of
+    // the password. 
     function pwStrength()
     {
         id = document.getElementById("password");

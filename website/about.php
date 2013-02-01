@@ -65,7 +65,10 @@
         
         <div class= "twoThirdWidth" style="margin-right:25px;">
         	<div class= "title">Wil je ons contacteren?</div>
-        <?php
+        <?php 
+        // The following PHP code is almost an exact copy of
+        // the w3school.com version of Secure Mail see the
+        // README.txt file for an exact location
 		function spamcheck($field)
 	  	{
 			//filter_var() sanitizes the e-mail
