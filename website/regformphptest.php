@@ -160,25 +160,97 @@
                     <div class="field">
                         In welk vak wil je bijles geven?
                     </div>
-                    <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau();" />Aardrijkskunde</label>
+                    <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau1();" />Aardrijkskunde</label>
                         <script language="javascript" type="text/javascript">
-                            function makeNiveau()
+                            function makeNiveau1()
                             {
-                                document.getElementById("200").style.display="block";
+                                document.getElementById("201").style.display="block";
                             }
                         </script>
-                        <select name="niveau" id="200" style="display:none">
+                        <select name="niveau" id="201" style="display:none">
                             <option value="1">VMBO</option>
                             <option value="2">VMBOT</option>
                             <option value="3">HAVO</option>
                             <option value="4">VWO</option>
                         </select>
-                    <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" />Biologie</label>
-                    <label class="ques"><input type="checkbox" value="3" name="bijlesvak[]" /> Scheikunde</label>
-                    <label class="ques"><input type="checkbox" value="4" name="bijlesvak[]" />Engels</label>
-                    <label class="ques"><input type="checkbox" value="5" name="bijlesvak[]" />Nederlands</label>
-                    <label class="ques"><input type="checkbox" value="6" name="bijlesvak[]" />Wiskunde A</label>
-                    <label class="ques"><input type="checkbox" value="7" name="bijlesvak[]" />Wiskunde B</label>
+                    <label class="ques"><input type="checkbox" value="2" name="bijlesvak[]" onclick="makeNiveau2();"/>Biologie</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeNiveau2()
+                            {
+                                document.getElementById("202").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="202" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
+                    <label class="ques"><input type="checkbox" value="3" name="bijlesvak[]" onclick="makeNiveau3();"/> Scheikunde</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeNiveau3()
+                            {
+                                document.getElementById("203").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="203" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
+                    <label class="ques"><input type="checkbox" value="4" name="bijlesvak[]" onclick="makeNiveau4();"/>Engels</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeNiveau4()
+                            {
+                                document.getElementById("204").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="204" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
+                    <label class="ques"><input type="checkbox" value="5" name="bijlesvak[]" onclick="makeNiveau5();" />Nederlands</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeNiveau5()
+                            {
+                                document.getElementById("205").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="205" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
+                    <label class="ques"><input type="checkbox" value="6" name="bijlesvak[]" onclick="makeNiveau6();" />Wiskunde A</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeNiveau6()
+                            {
+                                document.getElementById("206").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="206" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
+                    <label class="ques"><input type="checkbox" value="7" name="bijlesvak[]" onclick="makeNiveau7();" />Wiskunde B</label>
+                        <script language="javascript" type="text/javascript">
+                            function makeNiveau7()
+                            {
+                                document.getElementById("207").style.display="block";
+                            }
+                        </script>
+                        <select name="niveau" id="207" style="display:none">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                        </select>
                     <label class="ques"><input type="checkbox" value="8" name="bijlesvak[]" />Wiskunde C</label>
                     <label class="ques"><input type="checkbox" value="9" name="bijlesvak[]" />Wiskunde D</label>
                     <label class="ques"><input type="checkbox" value="10" name="bijlesvak[]" />Frans</label>
@@ -469,7 +541,12 @@
         
         function makeOption($course_code)
         {
-		    $course_code = $course_code*100 + 11;
+            if(isset($_POST['niveau']))
+            {
+                $course_code = $course_code*100 + $_POST['niveau'];
+            } else {
+                $course_code = $course_code*100 + 11;
+            }
 	        $course_int = intval($course_code);
 	        enterCourseCode($course_int);       	
         }
