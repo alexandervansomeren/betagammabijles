@@ -105,7 +105,7 @@
 	  	}
 		else
 	  {//if "email" is not filled out, display the form
-	  echo "	<form method='post' action='mailform.php'>
+	  echo "	<form method='post' action=''>
 					<div class='half'>
 						<div class='label'>Email: </div>
 							<input name='email' type='text'><br>
