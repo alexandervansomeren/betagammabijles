@@ -67,7 +67,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
 <div class="content">	
      <div class="main_title">Welkom op <em>Open Bijles</em>.nl</div>
         <div class="buttons">
-           <a href="index.php?p=regformphptest" class="left">
+           <a href="index.php?p=registratieformulier" class="left">
               <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
               <span class="title">Ik geef bijles</span>
            </a>
