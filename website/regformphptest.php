@@ -441,9 +441,24 @@
         function makeOptionVisible($course_int)
         {
             echo '<div class="page-field">';
-            echo "Je hebt een vak ingevoerd: ";
-            echo $course_int;
+                echo "Je hebt een vak ingevoerd: ";
+                echo $course_int;
+                echo '<form method="post">';
+                    echo '<div class="ques">';
+                        echo "Op welk niveau wil je dit vak geven?";
+                    echo '</div>';
+                    echo '<div class="ans">';
+                        echo '<select name="niveau">
+                            <option value="1">VMBO</option>
+                            <option value="2">VMBOT</option>
+                            <option value="3">HAVO</option>
+                            <option value="4">VWO</option>
+                            </select>';
+                    echo '</div>';
+                echo '</form>';
+                echo $_POST['niveau'];
             echo '</div>';
+            
             enterCourseCode($course_int);
         }
         
