@@ -147,20 +147,10 @@
                     <div class="ques"><input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil graag bijles geven!</div>
                 </div>
             </div>
-            <script language="javascript" type="text/javascript">
-                function makeVisible()
-                {
-                    document.getElementById("vakkenHolder").style.display="block";
-                }
-                function makeInvisible()
-                {
-                    document.getElementById("vakkenHolder").style.display="none";
-                }
-            </script>
+           
             
             
-            
-            <div id="sectionHolder" style="display:none">
+            <div class="sectionHolder" id="vakkenHolder" style="display:none">
                 <div class="title">Geeft u hieronder aan in welke vakken u bijles geeft:</div> 
 				<?php
                 
@@ -215,6 +205,15 @@
                             document.getElementById("select" + sender_id).style.display="none";
                         }
                     }
+                }
+				
+				function makeVisible()
+                {
+                    document.getElementById("vakkenHolder").style.display="block";
+                }
+                function makeInvisible()
+                {
+                    document.getElementById("vakkenHolder").style.display="none";
                 }
                 </script>
                 <div class="clear"></div>
