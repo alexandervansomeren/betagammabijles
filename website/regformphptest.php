@@ -471,7 +471,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select> 
                     </label>                           
-                    <label class="ques" title="Management &amp; Organisatie"><input type="checkbox" value="15" name="bijlesvak[]" onclick="makeNiveau15();" /><div id="315">M &amp; O</div>
+                    <label class="mainHolder" title="Management &amp; Organisatie"><input type="checkbox" value="15" name="bijlesvak[]" onclick="makeNiveau15();" /><div id="315">M &amp; O</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau15()
                             {
@@ -493,7 +493,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <label class="ques" title="Maatschappijleer"><input type="checkbox" value="16" name="bijlesvak[]" onclick="makeNiveau16();" /></label><div  id="316">MaL</div>
+                    <label class="mainHolder" title="Maatschappijleer"><input type="checkbox" value="16" name="bijlesvak[]" onclick="makeNiveau16();" /></label><div  id="316">MaL</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau16()
                             {
@@ -559,7 +559,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <label class="ques" title="Algemene Natuurwetenschappen"><input type="checkbox" value="19" name="bijlesvak[]" onclick="makeNiveau7();" /></label><div  id="319">ANW</div>
+                    <label class="mainHolder" title="Algemene Natuurwetenschappen"><input type="checkbox" value="19" name="bijlesvak[]" onclick="makeNiveau7();" /></label><div  id="319">ANW</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau19()
                             {
@@ -714,7 +714,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <label class="ques" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="26" name="bijlesvak[]" onclick="makeNiveau26();" /></label ><div  id="326">N, L &amp; T</div>
+                    <label class="mainHolder" title="Natuur, Leven &amp; Techniek"><input type="checkbox" value="26" name="bijlesvak[]" onclick="makeNiveau26();" /></label ><div  id="326">N, L &amp; T</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau26()
                             {
@@ -736,7 +736,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <label class="ques" title="Awesome!"><input type="checkbox" value="27" name="bijlesvak[]" onclick="makeNiveau27();" /></label><div  id="327">Informatica</div>
+                    <label class="mainHolder" title="Awesome!"><input type="checkbox" value="27" name="bijlesvak[]" onclick="makeNiveau27();" /></label><div  id="327">Informatica</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau27()
                             {
@@ -780,7 +780,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <label class="ques" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak[]" onclick="makeNiveau29();" /></label><div  id="329">MaW</div>
+                    <label class="mainHolder" title="Maatschappijwetenschappen"><input type="checkbox" value="29" name="bijlesvak[]" onclick="makeNiveau29();" /></label><div  id="329">MaW</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau29()
                             {
@@ -846,7 +846,7 @@
                             <option value="11">VWO-Bovenbouw</option>
                         </select>
                     </label>
-                    <label class="ques" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak[]" onclick="makeNiveau32();" /></label><div  id="332">CKV</div>
+                    <label class="mainHolder" title="Culturele Kunstzinnige Vorming"><input type="checkbox" value="32" name="bijlesvak[]" onclick="makeNiveau32();" /></label><div  id="332">CKV</div>
                         <script language="javascript" type="text/javascript">
                             function makeNiveau32()
                             {
