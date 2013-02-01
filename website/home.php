@@ -41,7 +41,7 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
             }
             else
             {
-              $GLOBALS['vakken'] .= '<div class="label">Heeft geen vakken opgegeven</div><div class="content"></div>';
+              $GLOBALS['vakken'] .= 'Heeft geen vakken opgegeven';
             }
           
             if ( file_exists( 'user_img/'.$docentRow['user_id'].'.jpg' ))
