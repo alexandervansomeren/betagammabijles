@@ -449,6 +449,7 @@ a:hover { text-decoration: underline; }
 {
     width: 45%;
     height: 100%;
+	display: block;
 }
 
 .sectionHolder .mainHolder select

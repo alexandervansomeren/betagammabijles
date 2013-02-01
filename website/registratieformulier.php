@@ -143,7 +143,31 @@
             
             
             
-           
+            <script language="javascript" type="text/javascript">
+                function setViewState(sender_id)
+                {
+                    if(document.getElementById(sender_id))
+                    {
+                        if(document.getElementById(sender_id).checked == 1)
+                        {
+                            document.getElementById("select" + sender_id).style.display="block";
+                        }
+                        else
+                        {
+                            document.getElementById("select" + sender_id).style.display="none";
+                        }
+                    }
+                }
+				
+				function makeVisible()
+                {
+                    document.getElementById("vakkenHolder").style.display="block";
+                }
+                function makeInvisible()
+                {
+                    document.getElementById("vakkenHolder").style.display="none";
+                }
+                </script>
                     
                     
             <div class="sectionHolder">
@@ -152,6 +176,7 @@
                 <div class="left">
                     <input type="radio" name="user_type" value="2" onclick="makeInvisible();" />Ik zoek bijles
                 </div>
+                
                 <div class="right">
                     <input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil bijles
                 </div>
@@ -201,31 +226,7 @@
                     ';
                 }								
                 ?>
-                <script language="javascript" type="text/javascript">
-                function setViewState(sender_id)
-                {
-                    if(document.getElementById(sender_id))
-                    {
-                        if(document.getElementById(sender_id).checked == 1)
-                        {
-                            document.getElementById("select" + sender_id).style.display="block";
-                        }
-                        else
-                        {
-                            document.getElementById("select" + sender_id).style.display="none";
-                        }
-                    }
-                }
-				
-				function makeVisible()
-                {
-                    document.getElementById("vakkenHolder").style.display="block";
-                }
-                function makeInvisible()
-                {
-                    document.getElementById("vakkenHolder").style.display="none";
-                }
-                </script>
+               
                 <div class="clear"></div>
     		</div>
             
