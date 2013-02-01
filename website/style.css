@@ -457,6 +457,7 @@ a:hover { text-decoration: underline; }
     height: 25px;
     display: block;
     line-height: 30px;
+    float: left;
 }
 
 .mainHolder input
