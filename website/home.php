@@ -65,9 +65,9 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
 ?>
 
 <div class="content">	
-     <div class="main_title">Welkom op <i>Open Bijles</i>.nl</div>
+     <div class="main_title">Welkom op <em>Open Bijles</em>.nl</div>
         <div class="buttons">
-           <a href="index.php?p=registratieformulier" class="left">
+           <a href="index.php?p=regformphptest" class="left">
               <img src="img/docent.jpg" width="100%" height="100%" alt="Afbeelding docent" />
               <span class="title">Ik geef bijles</span>
            </a>
@@ -77,11 +77,11 @@ if (sizeOf( $GLOBALS['queryResultsArray'] ) >= 1)
            </a>
        </div>
 
-       <div class="main_title">Een selectie van onze docenten op basis van uw locatie:</div>
+       <div class="main_title">Een random selectie van docenten:</div>
 
        <div class="populair">
        <a class="ctrlLeft" href=""><img src="img/arrowLeft.jpg" width="100%" height="100%" alt="Arrow Left"/></a>
        <a class="ctrlRight" href=""><img src="img/arrowRight.jpg" width="100%" height="100%" alt="Arrow Right" /></a>
        <?php echo($GLOBALS['fiveResults']); ?>
-    </div>		    
+       </div>		    
 </div>
