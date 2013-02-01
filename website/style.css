@@ -448,6 +448,34 @@ a:hover { text-decoration: underline; }
 
 
 
+
+
+.mainHolder
+{
+    width: 100%;
+    height: 30px;
+    display: block;
+    background-color: red;
+}
+
+.mainHolder input
+{
+    width: 200px;
+    float: left;
+}
+
+.mainHolder select
+{
+    width: 200px;
+    float: left;
+}
+
+
+
+
+
+
+
 /* begin details opmaak */
 .content .details
 {
