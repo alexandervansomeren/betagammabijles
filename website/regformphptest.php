@@ -168,7 +168,7 @@
                             function makeNiveau1()
                             {
                                 document.getElementById("201").style.display="block";
-                                document.getElementById("301").style.display="none";
+                                document.getElementById("301").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="201" style="display:none">
@@ -185,7 +185,7 @@
                             function makeNiveau2()
                             {
                                 document.getElementById("202").style.display="block";
-                                document.getElementById("302").style.display="none";
+                                document.getElementById("302").style.display="hidden";
                             }
                         </script>
                         <select name="niveau" id="202" style="display:none">
