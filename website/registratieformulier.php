@@ -74,20 +74,19 @@
         ?>
     </div>
     <form method="post">
-        <div class="page-field">
-            <em>Profiel</em>
-            <div class="paragraph">
-                <div class="field">
-                   <div class="ques">Gebruikersnaam:</div>
-                   <div class="ans"><input type="text" name="username" id="username" onkeyup="unAvailable(this.value)"/></div>
-                   <p id="fbu"> </p>
-                </div>
-                <div class="field">
-                    <div class="ques">Wachtwoord:</div>
-                    <div class="ans"><input type="password" name="password" style="width:155px;" onkeyup="pwStrength()" id="password" onblur="feedbackGone()" /></div>
-                    <p id="fbp"> </p>
-                </div>
-           </div>
+    
+        <div class="sectionHolder">
+            <div class="title">Uw profiel</div>
+            
+            <div class="label">Gebruikersnaam</div>
+            <div class="input"><input type="text" name="username" id="username" onkeyup="unAvailable(this.value)"/></div>
+            
+            <div class="label">Wachtwoord</div>
+            <div class="input"><input type="password" name="password" style="width:155px;" onkeyup="pwStrength()" id="password" onblur="feedbackGone()" /></div>
+                    
+            <div class="clear"></div>
+        </div>
+    
            <em><br />Over jou</em>
             <div class="paragraph">
                 <div class="field">
