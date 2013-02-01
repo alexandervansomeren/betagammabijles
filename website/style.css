@@ -434,7 +434,7 @@ a:hover { text-decoration: underline; }
 .sectionHolder .right { width: 40%; height: 25px; line-height: 25px; }
 
 .sectionHolder .label { width: 30%; height: 25px; line-height: 25px; }
-.sectionHolder .input { width: 40%; height: 25px; line-height: 25px;  }
+.sectionHolder .input { width: 70%; height: 25px; line-height: 25px;  }
 
 .sectionHolder > input { width: 10%; height: 25px; line-height: 25px; }
 
