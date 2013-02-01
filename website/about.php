@@ -62,21 +62,62 @@
             </div>
         </div>
         <div class="secondRow">
-
-            <div class= "twoThirdWidth" style="margin-right:25px;">
-                    <div class= "title">Wil je ons contacteren?</div>
-
-                    <div class="half">
-                    <div class="label">Naam: </div>
-                    <div class="input"><input /></div>
-
-                    <div class="label">Email-adres: </div>
-                    <div class="input"><input /></div>
-                    </div>
-
-        <div class="half">
-                    <div class="label">Uw bericht aan ons</div>
-                    <div class="input"><textarea style="resize:vertical;" type="text" rows="9" cols="25" placeholder="Typ hier uw bericht"></textarea></div>
+        
+        <div class= "twoThirdWidth" style="margin-right:25px;">
+        	<div class= "title">Wil je ons contacteren?</div>
+        <?php
+		function spamcheck($field)
+	  	{
+			//filter_var() sanitizes the e-mail
+			//address using FILTER_SANITIZE_EMAIL
+			$field=filter_var($field, FILTER_SANITIZE_EMAIL);
+		
+			//filter_var() validates the e-mail
+			//address using FILTER_VALIDATE_EMAIL
+			if(filter_var($field, FILTER_VALIDATE_EMAIL))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
+	  	}
+	
+		if (isset($_REQUEST['email']))
+	  	{//if "email" is filled out, proceed
+	
+			//check if the email address is invalid
+			$mailcheck = spamcheck($_REQUEST['email']);
+			if ($mailcheck==FALSE)
+			{
+				echo "Invalid input";
+			}
+			else
+			{//send email
+				$email = $_REQUEST['email'] ;
+				$subject = $_REQUEST['subject'] ;
+				$message = $_REQUEST['message'] ;
+				mail("someone@example.com", "Subject: $subject",
+				$message, "From: $email" );
+				echo "Thank you for using our mail form";
+			}
+	  	}
+		else
+	  {//if "email" is not filled out, display the form
+	  echo "	<form method='post' action='mailform.php'>
+					<div class='half'>
+						<div class='label'>Email: </div>
+							<input name='email' type='text'><br>
+						<div class='label'>Onderwerp: </div>	
+							<input name='subject' type='text'><br>
+							<div class='label'>Uw bericht aan ons</div>
+							  <textarea name='message' rows='15' cols='40'>
+							  </textarea><br>
+							  <input type='submit'>
+							  </form>";
+	  }
+	?>
                 </div>
             </div>
 
