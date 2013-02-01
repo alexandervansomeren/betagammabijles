@@ -459,16 +459,18 @@ a:hover { text-decoration: underline; }
     background-color: red;
     line-height: 30px;
 }
+
+.mainHolder input
+{
+    width: 15%;
+    float: left;
+    height: 100%;
+}
+
 .mainHolder div
 {
     float: left;
-    width: 20%;
-    height: 100%;
-}
-.mainHolder input
-{
-    width: 40%;
-    float: left;
+    width: 45%;
     height: 100%;
 }
 
