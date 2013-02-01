@@ -100,7 +100,7 @@
 				$message = $_REQUEST['message'] ;
 				mail("info@betagammabijles.nl", "Subject: $subject",
 				$message, "From: $email" );
-				echo "Thank you for using our mail form";
+				echo "Bedankt! Uw bericht is verzonden. Wij zullen zo spoedig mogelijk contact met u opnemen.";
 			}
 	  	}
 		else
@@ -115,7 +115,7 @@
 					<div class='label'>Uw bericht aan ons</div>
 					<div class='input' style='float:left;'>
 					  <textarea name='message' rows='13' cols='35'>
-					  </textarea><br>
+					  </textarea>
 					</div>
 					  <input type='submit' style='float:right; margin-right:20px;'>
 					  </form>";
