@@ -137,17 +137,27 @@
                     <div class="ans"><input type="text" name="city" /></div>
                 </div>
             </div>
-            <em><br />Hamvraag</em>  
-            <div class="paragraph">
-                <div class="field">
-                   Wil je bijles geven of een profiel aanmaken?
-                </div>
-                <div class="field">
-                    <div class="ques"><input type="radio" name="user_type" value="2" onclick="makeInvisible();" />Ik zoek bijles</div>
-                    <div class="ques"><input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil graag bijles geven!</div>
-                </div>
-            </div>
+            
+            
+            
+            
+            
+            
            
+                    
+                    
+            <div class="sectionHolder">
+            	<div class="title">Hamvraag: Wil je bijles geven of een profiel aanmaken?</div>
+                
+                <div class="left">
+                    <input type="radio" name="user_type" value="2" onclick="makeInvisible();" />Ik zoek bijles
+                </div>
+                <div class="right">
+                    <input type="radio" name="user_type" value="1" onclick="makeVisible();" />Ik wil bijles
+                </div>
+                        
+            	<div class="clear"></div>
+            </div>
             
             
             <div class="sectionHolder" id="vakkenHolder" style="display:none">

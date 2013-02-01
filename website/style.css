@@ -416,15 +416,17 @@ a:hover { text-decoration: underline; }
 	padding: 1%;
 	background-color: green;	
 }
+.sectionHolder > * { float: left; }
 
 .sectionHolder .title
 {
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
-	background-color: red;
-	float: left;	
+	background-color: red;	
 }
+.sectionHolder .left { width: 50%; height: 25px; line-height: 25px; }
+.sectionHolder .right { width: 50%; height: 25px; line-height: 25px; }
 
 .sectionHolder .mainHolder
 {
@@ -434,19 +436,16 @@ a:hover { text-decoration: underline; }
     display: block;
     line-height: 30px;
 	overflow: hidden;
-    float: left;
 }
 
 .sectionHolder .mainHolder input
 {
     width: 10%;
-    float: left;
     height: 100%;
 }
 
 .sectionHolder .mainHolder label
 {
-    float: left;
     width: 45%;
     height: 100%;
 }
@@ -454,7 +453,6 @@ a:hover { text-decoration: underline; }
 .sectionHolder .mainHolder select
 {
     width: 40%;
-    float: left;
     height: 100%;
 }
 
