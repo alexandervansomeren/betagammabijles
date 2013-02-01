@@ -415,12 +415,11 @@ a:hover { text-decoration: underline; }
 .mainHolder
 {
     margin-top: 15px;
-    width: 45%;
+    width: 50%;
     height: 25px;
     display: block;
     line-height: 30px;
     float: left;
-	background-color: blue;
 }
 
 .mainHolder input

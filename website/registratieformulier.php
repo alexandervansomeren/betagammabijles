@@ -179,10 +179,10 @@ foreach ($GLOBALS['vakkenArray'] as $vakRow)
 	
 	echo '
 		<div class="mainHolder">
-			<input type="checkbox" value="'. $tmp_id .'" id="'. $tmp_id .'" onclick="setViewState('. $tmp_id .');"/>
+			<input type="checkbox" value="'. $tmp_id .'" id="'. $tmp_id .'" name="bijlesvak['. $tmp_id .']" onclick="setViewState('. $tmp_id .');"/>
 			<label for="'. $tmp_id .'">'. $tmp_name .'</label>
 			
-			<select id="select'. $tmp_id .'" style="display:none">
+			<select id="select'. $tmp_id .'" name="bijlesniveau['. $tmp_id .'] style="display:none">
 				<option value="1">Basic</option>
 				<option value="2">Basisschool</option>
 				<option value="3">PRO</option>
@@ -238,20 +238,6 @@ function setViewState(sender_id)
         </div>
     </form>
     
-    <script language="javascript" type="text/javascript">
-        function makeOptionVisible()
-        {
-        	document.getElementById("321").style.display="block";
-        }
-        function makeOptionInvisible()
-    	{
-    		document.getElementById("321").style.display="hidden";
-        }
-    </script>
-    <div id="321" style="display:none">
-    	<div class="page-field">
-    		Dit is leesbaar!
-    	</div>
     </div>
     	
     
@@ -280,7 +266,7 @@ function setViewState(sender_id)
                 $user_type=$_POST['user_type'];
             }
         
-        //"User_personal_data"
+        	//"User_personal_data"
             //"Over jou"
             if (isset($_POST['firstname']))
             {
@@ -368,10 +354,12 @@ function setViewState(sender_id)
                 }
                 else
                 {
+					print_r($_POST['bijlesvak']);
+					print_r($_POST['bijlesniveau']);
                     //Connecting to the database and querying
-                    makeQuery();
-                    makeVakkenQuery();
-                    disconnectGoodbye();
+                    //makeQuery();
+                    //makeVakkenQuery();
+                    //disconnectGoodbye();
                 }
             } else {
                 //Connecting to the database and querying
