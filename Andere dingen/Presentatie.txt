@@ -1,5 +1,9 @@
 Presentatie:
 
 - Inleiding idee
-	-interactie: vragen wie er bijles geeft/wil geven
-	-iemand een profiel laten aanmaken
+	- Goedenmiddag, fijn dat jullie er allemaal zijn. Wij gaan wat vertellen over onze website.
+	- Bijles
+	- "Wie van jullie geeft er wel eens bijles of heeft wel eens bijles gegeven"
+	- Kies iemand uit: "En geef je bijles via een organisatie of doe je het privé ?"
+	- Als privé: 
+	- Iemand een profiel laten aanmaken
