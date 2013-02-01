@@ -413,6 +413,8 @@ a:hover { text-decoration: underline; }
 .sectionHolder
 {
 	width: 98%; float: left;
+	background-color: #FF7F00;
+	margin-bottom: 30px;
 	padding: 1%;	
 }
 .sectionHolder > * ,
