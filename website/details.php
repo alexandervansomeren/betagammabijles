@@ -75,9 +75,7 @@ function QueryOnId()
                     
             }
 }
-	
-	
-	<?php
+
 $bijlesDocent = new ConnectorClass;
 
 
