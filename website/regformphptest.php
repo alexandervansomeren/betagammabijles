@@ -162,7 +162,7 @@
                     </div>
                     <label class="ques"><input type="checkbox" value="1" name="bijlesvak[]" onclick="makeNiveau();" />Aardrijkskunde</label>
                         <script language="javascript" type="text/javascript">
-                            function makeVisible()
+                            function makeNiveau()
                             {
                                 document.getElementById("200").style.display="block";
                             }
